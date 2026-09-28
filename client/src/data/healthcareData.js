@@ -54,11 +54,11 @@ export const HEALTHCARE_SLUG = "healthcare";
 
 export const hero = {
   eyebrow: "AI for the healthcare industry",
-  titleLead: "Custom",
-  titleAccent: "AI Healthcare Software Development",
-  titleTail: "Services",
+  titleLead: "Healthcare",
+  titleAccent: "Data & AI Solutions",
+  titleTail: "That Reduce Administrative Load",
   body:
-    "We build clinical-grade systems that give time back to the people delivering care. Our AI healthcare software development services help hospitals, telehealth providers, labs and health-tech companies remove documentation load, shorten diagnostic turnaround and close the gaps between EHR, imaging and billing, without ever putting protected health information at risk.",
+    "Axiomra is a Data & AI partner for hospitals, clinics, labs and health-tech teams. We help you apply analytics and AI to documentation, diagnostic workflows, patient flow and revenue-cycle visibility, working with the EHR, imaging and billing systems your teams already use, with clinical oversight and privacy considered from the start.",
   ctaText: "Request a free consultation",
   image: heroImg,
   alt: "A surgical microscope in a theatre lit in clinical blue",
@@ -66,13 +66,13 @@ export const hero = {
 };
 
 export const intro = {
-  titleLead: "Giving Clinical Teams Their Day Back With Custom",
-  titleAccent: "AI Healthcare Software Development Services",
+  titleLead: "Giving Clinical Teams Time Back With",
+  titleAccent: "Healthcare Data & AI Solutions",
   paragraphs: [
-    "Axiomra is a custom healthcare software development company that helps providers, payers and health-tech founders turn fragmented clinical data into systems clinicians actually trust. We design and build HIPAA-ready platforms that reduce administrative load, surface the right information at the point of decision, and integrate with the EHR you already run rather than asking you to replace it.",
-    "Our AI healthcare software development services combine clinical NLP, medical imaging models, predictive analytics and workflow automation to shorten turnaround, cut avoidable readmissions and keep documentation current. Every solution is built consultatively, validated against your own clinical data, and shipped with the evidence pack your governance, information security and procurement teams will ask for.",
+    "Clinical and operational data sits across the EHR, imaging, lab and billing systems, and teams lose hours reconciling it by hand. Axiomra helps providers, payers and health-tech teams turn that fragmented data into analytics and AI use cases clinicians can trust, working with the systems you already run rather than replacing them.",
+    "We combine clinical NLP, medical imaging models, predictive analytics and workflow automation to reduce administrative load, support earlier follow-up and keep documentation current. Each use case is scoped with your clinical and operational leads, validated on your own data, and documented for the governance, information security and procurement reviews your organisation requires.",
   ],
-  ctaText: "Book a Free Tech Consultation",
+  ctaText: "Book a Free Data & AI Consultation",
   image: introImg,
   alt: "A clinician holding a tablet beside an open case notebook",
 };
@@ -84,27 +84,27 @@ export const intro = {
  */
 export const standards = {
   eyebrow: "The part nobody demos",
-  titleLead: "A Clinical System Is Only As Good As The",
+  titleLead: "A Clinical AI Use Case Is Only As Good As The",
   titleAccent: "Record It Can Be Trusted With",
-  orb: { value: "PHI", caption: "Encrypted at rest and in transit" },
+  orb: { value: "PHI", caption: "Access governed by role" },
   lead:
-    "Every order, result and note arrives as a claim about a real person, and the system has one chance to attach it to the right record. Match it wrongly and the failure is not a bad row in a table. It is a medication given to someone it was never meant for.",
-  vial: { value: "FHIR", caption: "R4 native, not bolted on" },
+    "Every order, result and note arrives as a claim about a real person, and the data has one chance to be attached to the right record. Match it wrongly and the failure is not a bad row in a table. It is a medication given to someone it was never meant for.",
+  vial: { value: "FHIR", caption: "Mapped, not assumed" },
   aside:
-    "So we build for the record first and the feature second. Identity resolution runs before anything is written, terminology is mapped rather than assumed, and every access leaves a trail an information governance lead can follow without opening a ticket.",
+    "So we start with the record, not the model. Identity resolution runs before data is joined, terminology is mapped rather than assumed, and every access leaves a trail an information governance lead can follow without opening a ticket.",
   rails: [
     { value: "Capture", caption: "At the point of care" },
     { value: "Decide", caption: "With the reasoning attached" },
   ],
   manifesto:
-    "Between the moment a clinician notices something and the moment the system acts on it sits the part nobody demos and everybody depends on: the identity that resolves, the model that explains itself, and the audit trail that still holds twelve months later.",
+    "Between the moment a clinician notices something and the moment an AI workflow acts on it sits the part nobody demos and everybody depends on: the identity that resolves, the model that explains itself, and the audit trail that still holds twelve months later.",
 };
 
 export const impact = {
   titleLead: "How AI Is Transforming",
   titleAccent: "Diagnostics, Care And Operations",
   body:
-    "AI healthcare software development services are changing how care is documented, diagnosed and coordinated. By automating the administrative layer and putting predictive signal in front of clinicians, these systems shorten time to treatment, reduce avoidable cost and let scarce clinical capacity go where it matters.",
+    "Data & AI are changing how care is documented, diagnosed and coordinated. Applied to well-defined problems with clinical oversight, analytics and AI can reduce administrative work, surface risk earlier and help scarce clinical capacity go where it matters most.",
   stats: [
     {
       value: "1016",
@@ -129,7 +129,7 @@ export const impact = {
 
 /**
  * The challenge rail. Each entry is a barrier care teams hit, and the
- * platform capability we build to remove it.
+ * Data & AI approach we use to address it.
  */
 export const challenges = {
   eyebrow: "Overcoming the barriers that hold clinical teams back",
@@ -139,69 +139,69 @@ export const challenges = {
     {
       title: "Clinician Burnout From Documentation",
       body:
-        "For every hour of patient contact, most clinicians spend close to another on the keyboard. We build ambient capture and clinical NLP that drafts the note, codes the encounter and pre-fills the order set, leaving the clinician to review and sign rather than transcribe. The note stays theirs; the typing stops being their job.",
+        "For every hour of patient contact, many clinicians spend close to another on the keyboard. We apply ambient capture and clinical NLP to draft the note, suggest codes for the encounter and pre-fill the order set, leaving the clinician to review and sign rather than transcribe. The note stays theirs; the typing stops being their job.",
     },
     {
       title: "Fragmented EHR And Departmental Silos",
       body:
-        "The EHR, the LIS, the PACS and the scheduling system each hold a piece of the patient and none hold the whole. We build an HL7 v2 and FHIR R4 interoperability layer with a real patient-matching strategy behind it, so a clinician opens one longitudinal record instead of four partial ones.",
+        "The EHR, the LIS, the PACS and the scheduling system each hold a piece of the patient and none hold the whole. We design HL7 v2 and FHIR R4 data integration with a real patient-matching strategy behind it, so clinicians and analytics work from one longitudinal record instead of four partial ones.",
     },
     {
       title: "Diagnostic Backlogs And Reporting Delays",
       body:
-        "Imaging and pathology volumes keep rising while specialist headcount does not. We deploy triage models that reorder the worklist by likelihood of critical finding, pre-populate structured reports and flag discrepancies for a second read, so the urgent study is seen first rather than in the order it arrived.",
+        "Imaging and pathology volumes keep rising while specialist headcount does not. We deploy triage models that help reorder the worklist by likelihood of critical finding, pre-populate structured reports and flag discrepancies for a second read, subject to clinical validation, so the urgent study is seen first rather than in the order it arrived.",
     },
     {
       title: "HIPAA, GDPR And Audit Exposure",
       body:
-        "Most breaches are access-control failures, not exotic attacks. We design least-privilege by role, encrypt PHI end to end, keep immutable audit logs, and run de-identification pipelines that keep identifiable data out of model training. The evidence your assessor asks for is produced by the system as it runs, rather than assembled before an audit.",
+        "Most breaches are access-control failures, not exotic attacks. We design data and AI workflows with least-privilege access by role, encrypted PHI, audit logging and de-identification pipelines that keep identifiable data out of model training. Which requirements apply is confirmed with your compliance team, and the evidence is produced as the workflow runs rather than assembled before an audit.",
     },
     {
       title: "No-Shows, Rota Gaps And Bed Flow",
       body:
-        "Capacity is lost to empty slots on one ward and overtime on another. We build demand forecasting and smart scheduling that predicts no-show risk per appointment, overbooks intelligently, and models discharge timing so bed managers plan the afternoon instead of reacting to it.",
+        "Capacity is lost to empty slots on one ward and overtime on another. We apply demand forecasting and no-show risk models to each appointment to support better booking decisions, and model discharge timing so bed managers plan the afternoon instead of reacting to it.",
     },
     {
       title: "Revenue Leakage And Claim Denials",
       body:
-        "Denials are rarely a billing problem; they start as a documentation problem. We build computer-assisted coding, eligibility checks at the point of booking and denial-prediction models that flag a claim before submission, with the missing evidence named rather than guessed at.",
+        "Denials are rarely a billing problem; they start as a documentation problem. We apply coding support, eligibility checks at the point of booking and denial-prediction models that flag a claim for human review before submission, with the likely missing evidence named rather than guessed at.",
     },
   ],
 };
 
 /**
- * Ten product categories. Each is a card with a photo and a description.
+ * Ten Data & AI use-case areas. Each is a card with a photo and a description.
  */
 export const services = {
-  eyebrow: "What healthcare solutions do we offer?",
-  titleLead: "AI Healthcare Software Development Services",
+  eyebrow: "Where can Data & AI help in healthcare?",
+  titleLead: "Healthcare Data & AI Solutions",
   titleAccent: "Shaped Around How You Actually Deliver Care",
   body:
-    "Healthcare software fails when it is designed for the org chart instead of the ward round. Every platform below is built around a real clinical or operational workflow, integrated with the systems already in place, and validated on your own data before it ever reaches a patient-facing decision.",
+    "Healthcare AI fails when it is designed for the org chart instead of the ward round. Each use case below starts from a real clinical or operational workflow, works with the systems already in place, and is validated on your own data before it informs a patient-facing decision.",
   items: [
     {
-      title: "EHR & EMR Software Development",
+      title: "EHR & EMR Data Intelligence",
       body:
-        "Whether you are building a specialty EHR or making the one you own usable, we focus on the parts clinicians touch: templated notes, order sets, problem-list hygiene and clean FHIR interfaces. AI drafts the documentation and codes the encounter, so the record is complete at the point of signature rather than at the end of the week.",
+        "We work with the EHR you already run and focus on the data clinicians touch: note drafting, coding suggestions, problem-list quality and clean FHIR data access. AI drafts documentation for clinician review, so the record is more complete at the point of signature rather than at the end of the week.",
       image: svcEhrImg,
       alt: "A doctor reviewing patient records at a desk",
     },
     {
-      title: "Telemedicine & Virtual Care Platforms",
+      title: "Telehealth Analytics & Virtual Triage Support",
       body:
-        "Low-latency video, asynchronous messaging, e-prescribing and remote triage in one platform, with the consultation written straight back into the record. We build for degraded connections and for the patient who is not confident with technology, because those are the visits that fail.",
+        "AI that supports virtual care: triage prioritisation, consultation summaries written back to the record for clinician review, and analytics on demand, wait times and follow-up. We design for degraded connections and less confident patients, because those are the visits that fail.",
       image: svcTelehealthImg,
       alt: "A clinician conducting a video consultation on a laptop",
     },
     {
       title: "Medical Imaging & Diagnostic AI",
       body:
-        "Radiology, pathology and ophthalmology models that integrate with PACS through DICOM rather than sitting in a separate viewer. We handle worklist triage, measurement automation, structured reporting and second-read flags. We are also explicit with you about where a model's performance falls off.",
+        "Radiology, pathology and ophthalmology models that integrate with PACS through DICOM rather than sitting in a separate viewer. We support worklist prioritisation, measurement automation, structured reporting and second-read flags, subject to clinical validation, and we are explicit with you about where a model's performance falls off.",
       image: svcImagingImg,
       alt: "A doctor examining brain MRI scans on a lightbox",
     },
     {
-      title: "Clinical Decision Support Systems",
+      title: "Clinical Decision Support Models",
       body:
         "Risk scores, deterioration alerts, sepsis and readmission prediction delivered inside the clinical workflow with the reasoning attached. Alert fatigue is a design failure, so we tune thresholds against your own outcome data and measure suppression as carefully as we measure sensitivity.",
       image: svcDecisionImg,
@@ -213,44 +213,44 @@ export const services = {
       },
     },
     {
-      title: "Hospital Management & Workflow Automation",
+      title: "Hospital Operations Analytics & Forecasting",
       body:
-        "Bed flow, theatre scheduling, rota planning, supply and sterile-services tracking in a single operational picture. Forecasting sits underneath it, so the day is planned against predicted demand instead of yesterday's census.",
+        "Bed flow, theatre scheduling, rota planning and supply data brought into a single operational view. Forecasting sits underneath it, so the day is planned against predicted demand instead of yesterday's census.",
       image: svcHospitalImg,
       alt: "Healthcare professionals walking through a hospital corridor",
     },
     {
-      title: "Patient Engagement & mHealth Apps",
+      title: "Patient Engagement Analytics",
       body:
-        "Booking, results, medication reminders, care-plan tracking and secure messaging in an app people over sixty can actually use. Accessibility and reading level are requirements here, not polish. Adherence collapses the moment the interface asks too much.",
+        "The analytics and AI behind patient engagement: no-show and adherence risk, reminder timing, care-plan follow-up and message triage, delivered through the patient channels you already run. Reading level and accessibility still matter, because adherence drops the moment communication asks too much.",
       image: svcPatientImg,
-      alt: "A patient tracking health data in a smartphone app",
+      alt: "A patient checking health data on a smartphone",
     },
     {
-      title: "Medical Billing & Revenue Cycle Management",
+      title: "Revenue-Cycle Analytics & Coding Support",
       body:
-        "Computer-assisted coding, eligibility verification, claim scrubbing and denial prediction across ICD-10, CPT and HCC. The model tells you which claim will be denied and which piece of documentation is missing, before submission rather than after the remittance.",
+        "Coding support, eligibility checks, claim scrubbing and denial prediction across ICD-10, CPT and HCC. Models highlight which claims are at risk and which documentation may be missing, for human review before submission rather than after the remittance.",
       image: svcBillingImg,
       alt: "A doctor and patient reviewing medical paperwork together",
     },
     {
-      title: "Pharmacy & Medication Management Systems",
+      title: "Pharmacy & Medication Analytics",
       body:
-        "E-prescribing, interaction and allergy checking, inventory forecasting and adherence monitoring, integrated with dispensing hardware and the record. Reconciliation at admission and discharge is where most medication error lives, so that is where we start.",
+        "Interaction and allergy signal detection, inventory forecasting and adherence monitoring, using data from dispensing systems and the record. Reconciliation at admission and discharge is where most medication error lives, so that is where we start.",
       image: svcPharmacyImg,
       alt: "A pharmacist organising shelves of medication",
     },
     {
-      title: "Remote Patient Monitoring & IoMT",
+      title: "Remote Patient Monitoring Analytics",
       body:
-        "Device ingestion at scale from wearables, glucometers, blood-pressure cuffs and bedside monitors, with the alerting layer tuned so a nurse receives a signal rather than a stream. Chronic-care and post-discharge programmes live or die on that distinction.",
+        "Device data ingestion from wearables, glucometers, blood-pressure cuffs and bedside monitors, with alerting models tuned so a nurse receives a signal rather than a stream. Chronic-care and post-discharge programmes live or die on that distinction.",
       image: svcMonitoringImg,
       alt: "An ECG monitor displaying heart rate and pulse data",
     },
     {
-      title: "Clinical Trial & Life Sciences Platforms",
+      title: "Clinical Trial & Life Sciences Analytics",
       body:
-        "Cohort identification from real-world data, eCRF and EDC systems, decentralised-trial tooling and safety signal detection. Built to 21 CFR Part 11 and GxP expectations, with data lineage recorded because a sponsor audit will ask for it.",
+        "Cohort identification from real-world data, trial data pipelines and safety signal detection, designed with 21 CFR Part 11 and GxP expectations in mind and with data lineage recorded, because a sponsor audit will ask for it.",
       image: svcResearchImg,
       alt: "A scientist using a multichannel pipette in a laboratory",
     },
@@ -259,10 +259,10 @@ export const services = {
 
 export const midCta = {
   eyebrow: "Ready to reduce the load?",
-  title: "We Develop Custom AI-Powered Healthcare Software Solutions Using Clinical-Grade Engineering",
+  title: "Use AI to Reduce Administrative Load and Improve Clinical Workflows",
   body:
-    "Partner with us to build compliance-ready, interoperable systems that shorten diagnosis, cut documentation time and hold up under a security review. Book a consultation and we will scope it against your own workflows, including the parts we would not automate yet.",
-  ctaText: "Get in Touch",
+    "Axiomra helps healthcare organisations identify where Data & AI can safely improve documentation, workflow visibility, patient access and operational efficiency. We work with clinical and operational stakeholders to define the problem, data requirements, governance and human oversight before any AI solution is scaled.",
+  ctaText: "Discuss a Healthcare Data & AI Use Case",
   background: midCtaBgImg,
 };
 
@@ -271,22 +271,22 @@ export const midCta = {
  */
 export const solutions = {
   eyebrow: "See your workflow mapped before you commit",
-  titleLead: "Leading Technologies For Efficient And Secure Healthcare",
-  titleAccent: "AI Solutions",
+  titleLead: "Healthcare Data & AI Services",
+  titleAccent: "From Strategy To Workflow Automation",
   body:
-    "We deliver end-to-end healthcare software solutions that pair clinical understanding with production-grade engineering. Each engagement starts with the workflow as it actually runs, not as the process document describes it, and ends with a system your clinicians, your CISO and your regulator can all live with.",
+    "We pair clinical understanding with production-grade data and AI engineering. Each engagement starts with the workflow as it actually runs, not as the process document describes it, and ends with an AI use case your clinicians, your CISO and your governance teams can review with confidence.",
   items: [
     {
-      title: "AI Consulting & Clinical Strategy",
+      title: "Healthcare AI Strategy & Use-Case Prioritisation",
       body:
-        "We sit with clinicians and operations leads to map where the time and the risk actually go, then rank the candidates by value and feasibility. You get a costed roadmap with a governance and model-risk plan attached, plus a clear statement of which processes are not worth automating yet.",
+        "Start with the workflows creating the most friction and the decisions that would benefit from better data. Axiomra works with clinical, operational and technology stakeholders to assess feasibility, data quality, risk and expected value. The output is a prioritised roadmap with governance, validation and human-review requirements—including processes that should not be automated.",
       image: solConsultingImg,
       alt: "Healthcare workers in discussion during a ward meeting",
     },
     {
-      title: "Custom Healthcare Software Development",
+      title: "Healthcare Data Integration & AI Enablement",
       body:
-        "Custom clinical platforms built from the compliance surface inwards: HIPAA and GDPR controls, SOC 2 readiness, HL7 and FHIR interfaces, and an architecture that keeps new services away from the systems of record. Delivered in increments you can validate clinically, not as one long build.",
+        "Connect clinical and operational data responsibly so analytics and AI use cases have a trustworthy foundation. Axiomra can support data architecture, HL7/FHIR integration, governed data access, analytics pipelines and AI enablement aligned with applicable privacy and security requirements. We confirm compliance readiness with your team against your actual jurisdiction, scope and controls rather than assuming it.",
       image: solDevelopmentImg,
       alt: "An abstract visualisation of a neural network",
     },
@@ -300,7 +300,7 @@ export const solutions = {
     {
       title: "Intelligent Automation For Clinical Workflows",
       body:
-        "Ambient documentation, prior-authorisation automation, referral triage and discharge-summary generation, each with a human in the loop and a full audit trail behind every automated step. Automation that cannot explain itself has no place in a clinical setting.",
+        "Ambient documentation, prior-authorisation triage, referral prioritisation and discharge-summary drafting, each with a human in the loop and a full audit trail behind every automated step. Automation that cannot explain itself has no place in a clinical setting.",
       image: solAutomationImg,
       alt: "A robotic hand reaching into a connected data network",
     },
@@ -309,27 +309,27 @@ export const solutions = {
 
 export const stakeholders = {
   eyebrow: "Every decision-maker in your buying committee has a different question",
-  titleLead: "We Build Healthcare Software Solutions",
+  titleLead: "We Deliver Healthcare Data & AI Solutions",
   titleAccent: "For The Following Organisations",
   items: [
     {
       title: "Hospitals and Health Systems",
       body:
-        "Interoperability, bed flow and documentation load, addressed without ripping out the core EHR. Deployed department by department, with the security evidence pack ready for your review board.",
+        "Interoperability, bed flow and documentation load, addressed without replacing the core EHR. Rolled out department by department, with security and governance documentation prepared for your review board.",
       image: stkHospitalsImg,
       alt: "A modern hospital building lit at dusk",
     },
     {
       title: "Clinicians and Care Teams",
       body:
-        "Tools that take work away rather than adding a new screen. Every alert carries its reasoning, and every automated note lands as a draft the clinician owns and signs.",
+        "AI that takes work away rather than adding a new screen. Every alert carries its reasoning, and every AI-drafted note lands as a draft the clinician owns, reviews and signs.",
       image: stkCliniciansImg,
       alt: "Healthcare workers smiling together on a ward",
     },
     {
       title: "Health-Tech Founders and Payers",
       body:
-        "A defensible clinical product on compliance-ready rails: validated models, FHIR-native integrations, and the documentation a payer contract or an FDA pathway will require.",
+        "A defensible clinical AI use case built on well-governed data: validated models, FHIR-based data integration, and the documentation a payer contract or regulatory pathway may require.",
       image: stkFoundersImg,
       alt: "A team of professionals in a working meeting",
     },
@@ -342,63 +342,63 @@ export const stakeholders = {
  */
 export const subIndustries = {
   eyebrow: "Which part of healthcare do we serve?",
-  titleLead: "AI Healthcare Software Solutions Across",
+  titleLead: "Healthcare Data & AI Solutions Across",
   titleAccent: "Key Care Settings",
   body:
-    "Every care setting carries its own regulator, its own data model and its own definition of an acceptable failure. Hover any card to see what we build for it.",
+    "Every care setting carries its own regulator, its own data model and its own definition of an acceptable failure. Hover any card to see where Data & AI can help.",
   items: [
     {
       label: "Hospitals & Health Systems",
       body:
-        "Interoperability layers, bed and theatre flow, and documentation automation that sits alongside a core EHR you are not going to replace this year.",
-      points: ["FHIR interoperability layer", "Bed and theatre flow", "Ambient documentation"],
+        "Data integration, bed and theatre flow forecasting, and documentation assistance that works alongside a core EHR you are not going to replace this year.",
+      points: ["FHIR data integration", "Bed and theatre flow forecasting", "Ambient documentation support"],
       image: subHospitalsImg,
       alt: "A quiet hospital corridor with clinical equipment",
     },
     {
       label: "Telehealth",
       body:
-        "Virtual-first care built for real networks: resilient video, asynchronous triage, e-prescribing and consultation notes written straight back to the record.",
-      points: ["Low-latency video", "Async triage", "E-prescribing"],
+        "Data & AI for virtual-first care: triage prioritisation, consultation summaries written back to the record for clinician review, and demand and follow-up analytics.",
+      points: ["Virtual triage support", "Consultation summaries", "Demand analytics"],
       image: subTelehealthImg,
       alt: "A patient in bed consulting a doctor over a tablet",
     },
     {
       label: "Diagnostics & Labs",
       body:
-        "LIS integration, specimen tracking and result autoverification, with anomaly detection on the analyser data before a result leaves the bench.",
-      points: ["LIS integration", "Result autoverification", "Specimen chain of custody"],
+        "LIS data integration, specimen tracking analytics and anomaly detection on analyser data, supporting review before a result leaves the bench.",
+      points: ["LIS data integration", "Result review support", "Specimen chain-of-custody analytics"],
       image: subDiagnosticsImg,
       alt: "A scientist working with a microscope in a sterile lab",
     },
     {
       label: "Radiology & Imaging",
       body:
-        "DICOM-native triage, measurement automation and structured reporting inside PACS, with critical findings escalated rather than queued.",
-      points: ["Worklist triage", "Structured reporting", "Critical-finding escalation"],
+        "DICOM-based triage, measurement automation and structured reporting within PACS workflows, with critical findings prioritised for radiologist review.",
+      points: ["Worklist triage", "Structured reporting", "Critical-finding prioritisation"],
       image: subRadiologyImg,
       alt: "A CT scanner in a sterile hospital imaging room",
     },
     {
       label: "Pharma & Life Sciences",
       body:
-        "Trial cohort discovery, decentralised-trial tooling and safety signal detection built to GxP and 21 CFR Part 11 expectations.",
-      points: ["Cohort discovery", "eCRF and EDC", "Safety signal detection"],
+        "Trial cohort discovery, trial data pipelines and safety signal detection, designed with GxP and 21 CFR Part 11 expectations in mind.",
+      points: ["Cohort discovery", "Trial data pipelines", "Safety signal detection"],
       image: subPharmaImg,
       alt: "Pharmaceutical workers packaging tablets on a production line",
     },
     {
       label: "Medical Devices & IoMT",
       body:
-        "Device data ingestion at scale, firmware-to-cloud pipelines and the alerting layer that turns a telemetry stream into a clinical signal.",
-      points: ["Device ingestion pipelines", "Edge processing", "Clinical alert tuning"],
+        "Device data ingestion at scale, device-to-cloud data pipelines and the alerting models that turn a telemetry stream into a clinical signal.",
+      points: ["Device ingestion pipelines", "Edge inference", "Clinical alert tuning"],
       image: subDevicesImg,
       alt: "A smartwatch tracking health data on a wrist",
     },
     {
       label: "Mental & Behavioural Health",
       body:
-        "Measurement-based care, risk screening and therapy-adjacent tooling, designed with consent and confidentiality boundaries handled explicitly.",
+        "Measurement-based care analytics and risk screening models, designed with consent and confidentiality boundaries handled explicitly.",
       points: ["Measurement-based care", "Risk screening", "Consent-aware data sharing"],
       image: subMentalImg,
       alt: "A therapist and client during a counselling session",
@@ -406,24 +406,24 @@ export const subIndustries = {
     {
       label: "Home & Elder Care",
       body:
-        "Remote monitoring, falls and deterioration prediction, carer scheduling and family portals that keep the household informed without exposing the record.",
-      points: ["Remote monitoring", "Deterioration prediction", "Carer scheduling"],
+        "Remote monitoring analytics, falls and deterioration prediction, and carer scheduling forecasts that keep care teams informed without exposing the record.",
+      points: ["Remote monitoring analytics", "Deterioration prediction", "Carer scheduling forecasts"],
       image: subHomecareImg,
       alt: "A nurse sitting with an elderly patient",
     },
     {
       label: "Payers & Insurance",
       body:
-        "Claims adjudication, prior-authorisation automation and risk adjustment, with the decision rationale recorded in a form a regulator will accept.",
-      points: ["Claims adjudication", "Prior-auth automation", "Risk adjustment"],
+        "Claims analytics, prior-authorisation triage and risk adjustment, with the decision rationale recorded for human review and regulatory scrutiny.",
+      points: ["Claims analytics", "Prior-auth triage", "Risk adjustment"],
       image: subPayersImg,
       alt: "Hands reviewing an insurance policy document",
     },
     {
       label: "Dental & Specialty Clinics",
       body:
-        "Imaging assistance, treatment planning and recall automation for single-site practices and multi-clinic groups alike.",
-      points: ["Imaging assistance", "Treatment planning", "Recall automation"],
+        "Imaging assistance, treatment-planning support and recall prediction for single-site practices and multi-clinic groups alike.",
+      points: ["Imaging assistance", "Treatment-planning support", "Recall prediction"],
       image: subDentalImg,
       alt: "A dental team examining a patient with modern equipment",
     },
@@ -431,48 +431,50 @@ export const subIndustries = {
 };
 
 export const benefits = {
-  eyebrow: "What can you optimise with our AI-powered healthcare applications?",
-  titleLead: "Benefits Of Integrating",
-  titleAccent: "AI Solutions For The Healthcare Sector",
+  eyebrow: "What can you optimise with Data & AI?",
+  titleLead: "Where Data & AI",
+  titleAccent: "Can Support Healthcare Operations",
+  body:
+    "We apply AI to defined problems with measurable outcomes and appropriate clinical oversight. Common opportunities include documentation assistance, operational forecasting, patient-flow analytics, imaging workflow support, readmission-risk analysis, coding support and compliance reporting.",
   items: [
     {
-      title: "Earlier, More Consistent Diagnosis",
+      title: "Support Faster Review",
       body:
-        "Imaging and pathology models surface findings a tired eye misses at the end of a list, and triage reorders the worklist so the critical study is read first rather than in arrival order.",
+        "AI can help prioritise selected imaging or pathology worklists, subject to clinical validation and human oversight.",
     },
     {
-      title: "Documentation Time Returned To Care",
+      title: "Reduce Documentation Burden",
       body:
-        "Ambient capture and clinical NLP draft the note and code the encounter. Clinicians review and sign instead of typing, and the record is complete at the point of care.",
+        "Assist with note drafting, coding preparation and information retrieval while clinicians remain responsible for review.",
     },
     {
-      title: "Fewer Avoidable Readmissions",
+      title: "Improve Follow-Up Prioritisation",
       body:
-        "Deterioration and readmission models identify who needs follow-up before discharge, so the intervention is a phone call rather than a second admission.",
+        "Use risk analytics to help teams identify patients who may need closer follow-up.",
     },
     {
-      title: "Operational Capacity Without New Headcount",
+      title: "Improve Capacity Planning",
       body:
-        "Demand forecasting on appointments, theatres and beds recovers the slots that no-shows and poor sequencing quietly consume across a week.",
+        "Forecast appointments, beds or theatre demand to support better resource decisions.",
     },
     {
-      title: "Revenue Protected At Submission",
+      title: "Improve Revenue-Cycle Visibility",
       body:
-        "Computer-assisted coding and denial prediction catch the missing documentation before the claim goes out, instead of after the remittance advice comes back.",
+        "Identify documentation or coding gaps before submission for human review.",
     },
     {
-      title: "Compliance That Produces Its Own Evidence",
+      title: "Strengthen Audit Readiness",
       body:
-        "Least-privilege access, encrypted PHI and immutable audit logs mean the evidence a HIPAA, GDPR or SOC 2 assessment asks for is generated continuously rather than assembled before an audit.",
+        "Create clearer access controls, data lineage and audit evidence around sensitive workflows.",
     },
   ],
 };
 
 export const build = {
-  title: "Built For Healthcare From Day One, Not Adapted To It",
+  title: "Healthcare AI Starts With Workflow, Data and Governance",
   body:
-    "Discover how AI healthcare software development services can lift the administrative load off your clinical teams and shorten time to treatment. Speak with our engineers about a scoped pilot on your own data, and about what we would leave alone.",
-  ctaText: "Hire healthcare software developers",
+    "Axiomra approaches healthcare AI with the clinical context first. We assess the workflow, data quality, privacy constraints and human-review points before recommending a solution. Start with a focused pilot on your own data, measure usefulness and safety, then decide whether wider adoption is justified.",
+  ctaText: "Discuss a Healthcare AI Pilot",
   texture: textureBgImg,
   image: buildVisualImg,
   alt: "A healthcare professional in a virtual appointment with a patient",
@@ -480,10 +482,10 @@ export const build = {
 
 export const techStrip = {
   eyebrow: "Technologies we work with",
-  titleLead: "Expertise In Advanced",
-  titleAccent: "Development Technologies",
+  titleLead: "Expertise In",
+  titleAccent: "Data & AI Technologies",
   body:
-    "The same production-grade toolchain sits under every healthcare platform we ship. Pick a layer to see what it is made of.",
+    "The same data and AI toolchain sits under every healthcare use case we deliver. Pick a layer to see what it is made of.",
   ctaText: "View all tech stack",
   tabs: [
     {
@@ -504,20 +506,17 @@ export const techStrip = {
       ],
     },
     {
-      id: "backend",
-      label: "Backend & Databases",
+      id: "data",
+      label: "Data Engineering & Databases",
       items: [
-        "Node.js", "NestJS", "FastAPI", "Django", "Go", "Java Spring", "GraphQL", "PostgreSQL",
-        "MongoDB", "Redis", "Kafka", "Airflow", "dbt", "Snowflake", "TimescaleDB", "MinIO",
+        "Python", "FastAPI", "PostgreSQL", "MongoDB", "Redis", "Kafka", "Airflow", "dbt",
+        "Snowflake", "Databricks", "BigQuery", "TimescaleDB", "MinIO",
       ],
     },
     {
-      id: "frontend",
-      label: "Frontend",
-      items: [
-        "React", "Next.js", "TypeScript", "Tailwind CSS", "Three.js", "D3.js", "Cornerstone.js",
-        "React Native", "Flutter", "Vite", "Radix UI",
-      ],
+      id: "viz",
+      label: "Analytics & Visualisation",
+      items: ["Streamlit", "React", "TypeScript", "D3.js", "Cornerstone.js"],
     },
     {
       id: "cloud",
@@ -528,57 +527,57 @@ export const techStrip = {
       ],
     },
     {
-      id: "security",
-      label: "Security & Compliance",
+      id: "governance",
+      label: "Privacy & Governance",
       note:
-        "Standards and practices we design and build against, not certifications held by Axiomra. Which of them apply to your project, and what evidence your assessor will want, is confirmed with your compliance team before work starts.",
+        "Frameworks and practices we take into account when designing data and AI workflows, not certifications held by Axiomra. Which of them apply to your project, and what evidence your assessor will want, is confirmed with your compliance team before work starts.",
       items: [
-        "HIPAA", "GDPR", "HITRUST CSF", "SOC 2", "ISO 27001", "ISO 13485", "IEC 62304",
-        "21 CFR Part 11", "De-identification pipelines", "Zero-trust networking", "Penetration testing",
+        "HIPAA", "GDPR", "ISO 27001", "21 CFR Part 11", "De-identification pipelines",
+        "Role-based access control", "Audit logging", "Data lineage", "Consent management",
       ],
     },
     {
-      id: "design",
-      label: "UI / UX",
-      items: ["Figma", "Design Tokens", "Clinical Workflow Prototyping", "WCAG 2.2 Audits", "Usability Testing"],
+      id: "mlops",
+      label: "MLOps & Monitoring",
+      items: ["MLflow", "Docker", "Evidently", "Model Validation", "Drift Monitoring", "Human-in-the-Loop Review"],
     },
   ],
 };
 
 export const businessTypes = {
   eyebrow: "Who do we work with?",
-  titleLead: "Explore The Range Of",
-  titleAccent: "Healthcare Organisations We Support",
+  titleLead: "Who We Support",
+  titleAccent: "in Healthcare",
   body:
-    "We build AI-powered healthcare software that stands up to a clinical safety case, an information governance review and a live ward. Whether you are launching a digital health product or modernising a hospital estate that predates the API era, we turn it into a platform your teams can actually run.",
+    "We help healthcare organisations of every size put data foundations, governance and focused AI use cases in place, working with the systems their teams already run rather than replacing them.",
   rows: [
     {
-      label: "Start-ups",
+      label: "Digital Health Start-ups",
       body:
-        "We help digital health founders reach a defensible first release: a compliant data layer, FHIR-native integrations, validated model behaviour and the clinical evidence a first payer or pilot site will ask to see.",
+        "Establish data foundations, AI governance and evidence needed to test a focused use case responsibly.",
     },
     {
       label: "Scale-ups",
       body:
-        "Growth exposes every manual control. We help scale-ups automate onboarding, monitoring and reporting, and put the HITRUST or SOC 2 groundwork in place before enterprise procurement asks for it.",
+        "Strengthen data operations, monitoring and reporting as product usage and enterprise requirements grow.",
     },
     {
-      label: "Clinics and provider groups",
+      label: "Clinics & Provider Groups",
       body:
-        "Multi-site groups carry hospital-grade obligations with a fraction of the back office. Our scheduling, documentation and billing automation closes that gap without an enterprise budget or a year-long rollout.",
+        "Improve analytics, scheduling, documentation workflows and operational visibility without assuming hospital-scale resources.",
     },
     {
-      label: "Hospitals and enterprises",
+      label: "Hospitals, Health Systems & Enterprise Healthcare",
       body:
-        "We partner with health systems, payers and life sciences organisations on governed clinical data layers, EHR integration and AI systems that satisfy clinical safety, model risk and procurement before they reach production.",
+        "Axiomra can support complex healthcare organisations with governed data platforms, analytics, EHR/data integration and carefully scoped AI use cases. We define clinical ownership, validation, model monitoring, security requirements and procurement obligations with you before production use.",
     },
   ],
 };
 
 export const testimonials = {
   eyebrow: "Why is it worth working with us?",
-  titleLead: "What Care Providers Say",
-  titleAccent: "After The Rollout",
+  titleLead: "What Our Clients Say",
+  titleAccent: "About Working With Us",
   items: [
     {
       name: "Abdullah",
@@ -605,30 +604,30 @@ export const testimonials = {
 };
 
 export const showcase = {
-  eyebrow: "Real results from real healthcare organisations",
+  eyebrow: "Selected Data & AI work",
   titleLead: "Showcasing Our",
-  titleAccent: "AI Development Projects",
+  titleAccent: "Data & AI Projects",
   body:
-    "Discover our portfolio showcasing our expertise as an AI development company, delivering clinical-grade solutions to complex healthcare challenges.",
+    "Explore our portfolio of Data & AI work, where analytics and AI address complex operational and clinical challenges.",
   ctaText: "Check Out Our Full Portfolio",
 };
 
 export const partner = {
   eyebrow: "Why choose Axiomra?",
-  titleLead: "AI Healthcare Software Development Services",
+  titleLead: "Healthcare Data & AI Solutions",
   titleAccent: "Built Around How You Work",
   cards: [
     {
       icon: "ShieldCheck",
-      title: "Compliance Is The Starting Point, Not The Retrofit",
+      title: "Privacy And Governance From The Start, Not The Retrofit",
       body:
-        "HIPAA, GDPR and SOC 2 controls are reviewed with your compliance team and designed into the architecture from the first sprint: least-privilege access, encrypted PHI, de-identified training data and immutable audit trails. Retrofitting them onto a finished product costs more and convinces nobody.",
+        "Applicable privacy and security requirements, such as HIPAA or GDPR, are reviewed with your compliance team and designed into the data and AI workflow from the start: least-privilege access, encrypted PHI, de-identified training data and audit trails. Retrofitting them later costs more and convinces nobody.",
     },
     {
       icon: "Layers",
       title: "We Integrate With Your EHR, We Do Not Replace It",
       body:
-        "Our platforms sit alongside the systems of record through HL7, FHIR and DICOM interfaces, so new capability ships at product speed while the record your clinicians depend on keeps running untouched underneath.",
+        "Our data and AI workflows sit alongside the systems of record through HL7, FHIR and DICOM interfaces, so new analytics and AI capability can be introduced while the record your clinicians depend on keeps running untouched underneath.",
     },
     {
       icon: "Target",
@@ -674,16 +673,16 @@ export const blogs = {
 
 export const faqs = [
   {
-    q: "How do AI healthcare software development services reduce clinician burnout?",
-    a: "By removing the typing rather than adding another screen. Ambient capture drafts the encounter note, clinical NLP codes it and pre-fills the order set, and the clinician reviews and signs. The measured gains in published evaluations sit around a quarter to a third of documentation time. Meaningful, but not the 80% figure vendors quote.",
+    q: "How can Data & AI reduce clinician burnout?",
+    a: "By removing the typing rather than adding another screen. Ambient capture drafts the encounter note, clinical NLP suggests codes and pre-fills the order set, and the clinician reviews and signs. The measured gains in published evaluations sit around a quarter to a third of documentation time. Meaningful, but not the 80% figure vendors quote.",
   },
   {
-    q: "Is a custom healthcare platform HIPAA compliant out of the box?",
-    a: "No product is compliant by itself; compliance is a property of the system, the contracts and the operating practice together. What we build in is the technical half: least-privilege access by role, PHI encrypted at rest and in transit, immutable audit logging, de-identification before model training, and a Business Associate Agreement in place before any data moves.",
+    q: "Can an AI solution guarantee HIPAA compliance?",
+    a: "No. No product or AI solution delivers compliance by itself; compliance is a property of the system, the contracts and the operating practice together, and it is confirmed with your compliance team. What we design into the data and AI workflow is the technical side: least-privilege access by role, PHI encrypted at rest and in transit, audit logging, de-identification before model training, and a Business Associate Agreement in place before any data moves where one is required.",
   },
   {
     q: "Can you integrate with Epic, Cerner or our existing EHR?",
-    a: "Yes, through HL7 v2 interfaces, FHIR R4 APIs and SMART on FHIR apps, depending on what your vendor exposes and what your integration team will approve. We design the layer so the EHR stays the system of record and our services stay outside it. That is what keeps the integration approvable and the upgrade path intact.",
+    a: "Yes, through HL7 v2 interfaces, FHIR R4 APIs and SMART on FHIR, depending on what your vendor exposes and what your integration team will approve. We design the data layer so the EHR stays the system of record and our analytics and AI services stay outside it. That is what keeps the integration approvable and the upgrade path intact.",
   },
   {
     q: "How accurate is AI in medical imaging, honestly?",
@@ -699,26 +698,26 @@ export const faqs = [
   },
   {
     q: "Can AI reduce claim denials and revenue leakage?",
-    a: "Yes, and it is one of the highest-return automations in healthcare because the feedback loop is fast and measurable. Computer-assisted coding improves documentation specificity, and denial-prediction models flag the claim and name the missing evidence before submission. The gain comes from fixing the claim, not appealing it.",
+    a: "Often, because the feedback loop is fast and measurable. Coding support improves documentation specificity, and denial-prediction models flag at-risk claims and name the likely missing evidence for human review before submission. The gain comes from fixing the claim, not appealing it.",
   },
   {
-    q: "How long does it take to deliver a healthcare software platform?",
-    a: "A scoped pilot on de-identified data typically runs eight to twelve weeks. A production clinical deployment depends far more on your governance, security review and integration approvals than on engineering time. Plan for those in parallel from week one rather than discovering them at go-live.",
+    q: "How long does a healthcare AI pilot take?",
+    a: "A scoped pilot on de-identified data typically runs eight to twelve weeks. Moving to production depends far more on your governance, security review and integration approvals than on engineering time, so plan for those in parallel from week one rather than discovering them at go-live.",
   },
   {
-    q: "Do you build software that needs FDA or MHRA clearance?",
-    a: "We build to IEC 62304 and ISO 13485 expectations where a product falls under software-as-a-medical-device, and we work alongside your regulatory lead on the technical file. We are not a regulatory consultancy, and we will say so early rather than let a clearance pathway become a surprise.",
+    q: "Can you support AI use cases that may need FDA or MHRA clearance?",
+    a: "Where a use case may fall under software as a medical device, we work alongside your regulatory lead and document model development, validation and data lineage to support the technical file. We are not a regulatory consultancy, and we will say so early rather than let a clearance pathway become a surprise.",
   },
   {
-    q: "How much does custom healthcare software development cost?",
-    a: "It depends on the regulatory surface, the state of your clinical data and how many systems you need to integrate with. A scoped pilot is the fastest route to a real number. Book a free session and we will size it honestly, including the parts we would not build yet.",
+    q: "How much does a healthcare Data & AI project cost?",
+    a: "It depends on the regulatory scope, the state of your clinical data and how many systems need to be integrated. A scoped pilot is the fastest route to a real number. Book a free session and we will size it honestly, including the parts we would not automate yet.",
   },
 ];
 
 export const finalCta = {
   title: "Grow Smarter, Grow Faster With Axiomra",
   subtitle:
-    "Talk to our engineers and discover how custom AI healthcare software development services can lift administrative load, shorten diagnosis and keep patient data safe.",
+    "Talk to our Data & AI team about how analytics and AI can reduce administrative load, support faster review and keep patient data well governed.",
   buttonText: "Get your project done!",
   background: finalCtaBgImg,
 };

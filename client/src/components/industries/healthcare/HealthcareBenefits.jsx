@@ -14,6 +14,7 @@ export default function HealthcareBenefits() {
               <span className="text-highlight">{benefits.titleLead}</span> {benefits.titleAccent}
             </>
           }
+          subtitle={benefits.body}
         />
 
         <Stagger as="ul" step={0.08} className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

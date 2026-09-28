@@ -31,9 +31,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Custom AI Healthcare Software Development Services | Axiomra";
+const TITLE = "Healthcare Data & AI Solutions | Axiomra";
 const DESCRIPTION =
-  "AI healthcare software development: EHR, telemedicine, medical imaging, clinical decision support, RCM and remote monitoring platforms built HIPAA-ready and FHIR-native.";
+  "Healthcare Data & AI solutions that reduce administrative load: documentation support, imaging workflow, patient-flow forecasting and revenue-cycle analytics.";
 
 export default function HealthcarePage() {
   // Lazy photos land after the triggers were measured; once the page has
