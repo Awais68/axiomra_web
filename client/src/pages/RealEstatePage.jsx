@@ -29,9 +29,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Custom Real Estate App Development Services | Axiomra";
+const TITLE = "AI & Data Solutions for Real Estate | Axiomra";
 const DESCRIPTION =
-  "AI real estate software development: property valuation, listing platforms, CRM, transaction and property management systems that close deals faster and run a portfolio from one place.";
+  "AI and data solutions for real estate: valuation analytics, lead prioritisation, document intelligence and portfolio reporting that fit your existing systems.";
 
 export default function RealEstatePage() {
   // Lazy photos land after the triggers were measured; once the page has

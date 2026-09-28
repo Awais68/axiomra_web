@@ -5,7 +5,7 @@ import { Stagger, StaggerItem } from "../../motion/Reveal";
 import { SERVICES_BASE_PATH } from "../../../routes.constants";
 import { technologies } from "../../../data/realEstateData";
 
-/** The four capabilities that carry a property platform, as numbered cards. */
+/** The four capabilities that carry property data and AI work, as numbered cards. */
 export default function RealEstateTechnologies() {
   return (
     <section className="bg-surface py-24 md:py-32">
