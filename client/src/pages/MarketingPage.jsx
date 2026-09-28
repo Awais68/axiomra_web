@@ -30,9 +30,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Custom AI Marketing Software Development Services | Axiomra";
+const TITLE = "AI & Data Solutions for Smarter Marketing Decisions | Axiomra";
 const DESCRIPTION =
-  "AI marketing software development: campaign automation, marketing analytics, RTB, CRM and personalisation platforms that cut manual work and prove marketing ROI.";
+  "Axiomra helps marketing teams use AI, analytics and automation to improve targeting, cut repetitive work, understand performance and personalise journeys.";
 
 export default function MarketingPage() {
   // Lazy photos land after the triggers were measured; once the page has

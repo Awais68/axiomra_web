@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import { CONTACT_PATH } from "../../../routes.constants";
 import { ArrowUpRight } from "lucide-react";
 import useGsapReveal from "../../../hooks/useGsapReveal";
 import { build } from "../../../data/marketingData";
 
 /**
- * The closing build-with-us band. Its ground is the textured wallpaper from
+ * The closing roadmap CTA band. Its ground is the textured wallpaper from
  * the reference: the photo supplies the grain, a brand-tinted wash sits over
  * it, and a faint hex lattice on top makes it read as a designed surface
  * rather than a stock background. The band is clipped to a shallow arc at the
@@ -56,7 +57,7 @@ export default function MarketingBuild() {
           </p>
           <div data-reveal className="mt-9">
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group inline-flex items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-base font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 focus-ring md:text-lg"
             >
               {build.ctaText}

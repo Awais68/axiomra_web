@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BOOK_CALL_PATH } from "../../../routes.constants";
 import { ArrowUpRight } from "lucide-react";
 import useGsapReveal from "../../../hooks/useGsapReveal";
 import { midCta } from "../../../data/marketingData";
@@ -44,7 +45,7 @@ export default function MarketingMidCta() {
 
         <Link
           data-reveal
-          to="/contact"
+          to={BOOK_CALL_PATH}
           className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-base font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 focus-ring md:text-lg"
         >
           {midCta.ctaText}

@@ -58,25 +58,25 @@ export const MARKETING_SLUG = "marketing";
 
 export const hero = {
   eyebrow: "AI for the marketing industry",
-  titleLead: "Custom",
-  titleAccent: "AI Marketing Software Development",
-  titleTail: "Services",
+  titleLead: "AI & Data Solutions for",
+  titleAccent: "Smarter Marketing Decisions",
+  titleTail: "",
   body:
-    "Rebuild your marketing operations with AI-powered, custom-built software that delivers precision, personalisation and performance. We help marketing leaders, creative agencies and digital enterprises build intelligent solutions that automate workflows, optimise campaigns and connect every touchpoint for measurable growth.",
-  ctaText: "Request a free consultation",
+    "Turn scattered customer, campaign and channel data into clearer actions. Axiomra helps marketing teams use AI, analytics and automation to improve targeting, reduce repetitive work, understand performance and personalise customer journeys. We focus on practical Data & AI use cases that fit your existing marketing stack—so teams can move faster without adding another disconnected platform.",
+  ctaText: "Explore Your Marketing AI Use Case",
   image: heroImg,
   alt: "A hand reaching into a glowing blue network of connected data points",
   reviews: { platform: "Clutch", rating: 5, count: 12 },
 };
 
 export const intro = {
-  titleLead: "Transforming Brands Through Custom",
-  titleAccent: "Marketing Software Development Services",
+  titleLead: "Turning Marketing Data Into",
+  titleAccent: "Clearer, Faster Decisions",
   paragraphs: [
-    "Axiomra is a forward-thinking marketing software development company that builds enterprise-grade, AI-powered solutions for digital marketing and creative teams. We combine deep marketing domain expertise with intelligent automation, data engineering and analytics to help organisations simplify campaigns, improve decision-making and enhance collaboration.",
-    "We design and develop custom AI marketing software that goes beyond off-the-shelf tools, tailored to your exact needs. From workflow automation and personalisation engines to real-time analytics and omnichannel campaign orchestration, our platforms eliminate fragmented processes, reduce manual effort and connect data across every channel. For CMOs, marketing directors and creative strategists, our AI-driven solutions deliver measurable ROI, faster optimisation cycles and marketing intelligence that compounds.",
+    "Axiomra is a Data & AI partner for marketing and creative teams. We combine marketing domain knowledge with data engineering, analytics and applied AI to help organisations simplify campaign operations, improve decision-making and work better across teams.",
+    "We start with the decisions and workflows that cost your team the most, then apply the right approach: workflow automation, personalisation models, near-real-time analytics or better-connected campaign data. We work with the systems your teams already use, not replacing them. For CMOs, marketing directors and creative strategists, that means clearer ROI, faster optimisation cycles and marketing intelligence that compounds.",
   ],
-  ctaText: "Book a Free Tech Consultation",
+  ctaText: "Book a Free Data & AI Consultation",
   image: introImg,
   alt: "A marketing lead reviewing a campaign dashboard on a tablet",
 };
@@ -85,7 +85,7 @@ export const impact = {
   titleLead: "The Role Of AI In",
   titleAccent: "Modern Marketing Operations",
   body:
-    "AI-driven marketing software is transforming how brands plan, execute and measure campaigns in real time. From automating insights and optimising ad performance to enabling tightly personalised experiences, AI gives marketing teams to act faster, smarter and more strategically.",
+    "Data & AI are changing how brands plan, execute and measure campaigns. From automating insights and optimising ad performance to enabling more relevant customer experiences, AI helps marketing teams act faster, smarter and more strategically.",
   stats: [
     {
       value: "77%",
@@ -107,146 +107,144 @@ export const impact = {
 };
 
 /**
- * The challenge rail. Each entry is a barrier marketing teams hit, and the
- * platform capability we build to remove it.
+ * The challenge rail. Each entry is a barrier marketing teams hit, and how
+ * Data & AI removes it.
  */
 export const challenges = {
   eyebrow: "Overcoming key barriers in marketing",
   titleLead: "Solving Key Marketing Challenges",
-  titleAccent: "With Custom Software Development Services",
+  titleAccent: "With Data & AI",
   items: [
     {
       title: "Inability to Measure True Marketing ROI",
       body:
-        "Many marketing teams cannot clearly see which campaigns drive revenue because data sits in different tools and systems. This makes it hard to prove value or adjust budgets. We build custom analytics platforms that connect every channel, giving you a full view of performance and helping you invest where it matters most.",
+        "Many marketing teams cannot clearly see which campaigns drive revenue because data sits in different tools and systems. This makes it hard to prove value or adjust budgets. We connect channel, campaign and revenue data into one trusted analytics layer, giving you a full view of performance so you can invest where it matters most.",
     },
     {
       title: "Manual Reporting and Dashboards",
       body:
-        "Monday mornings disappear into copy-paste reporting that is stale by the time it is read. We automate the whole pipeline, from ingestion to presentation, so dashboards refresh themselves and analysts spend their hours on interpretation rather than assembly.",
+        "Monday mornings disappear into copy-paste reporting that is stale by the time it is read. We automate the data pipeline from ingestion to reporting, so dashboards refresh themselves and analysts spend their hours on interpretation rather than assembly.",
     },
     {
       title: "Inability to Personalise at Scale",
       body:
-        "Personalisation that stops at a first name does not move a number. Our engines segment on behaviour, intent and lifecycle stage, then generate and serve the right message per audience automatically across email, web, app and paid channels.",
+        "Personalisation that stops at a first name does not move a number. We build segmentation models on behaviour, intent and lifecycle stage, so your existing email, web and paid channels can serve the right message to each audience.",
     },
     {
       title: "Inability to Scale Content Production",
       body:
-        "Content demand outruns the team long before quality does. We build assisted production pipelines with brand-tuned generation, human review gates and asset governance, so volume rises without the brand drifting.",
+        "Content demand outruns the team long before quality does. We set up generative AI workflows with brand guidance, human review gates and asset governance, so volume rises without the brand drifting.",
     },
     {
       title: "Lack of Performance Tracking",
       body:
-        "Campaigns get judged after the budget is gone. We wire predictive performance models into live campaigns so underperformance surfaces within hours, with the recommended reallocation attached.",
+        "Campaigns get judged after the budget is gone. We apply predictive performance models to live campaign data so underperformance surfaces within hours, with a recommended reallocation attached.",
     },
     {
       title: "Slow Turnaround Time for Insights",
       body:
-        "When a question takes a week to answer, the answer no longer matters. We ship self-service analytics with natural-language querying on top of a governed data layer, moving insight turnaround from days to minutes.",
+        "When a question takes a week to answer, the answer no longer matters. We enable self-service analytics and natural-language querying on top of a governed data layer, so insight turnaround moves from days to minutes.",
     },
     {
       title: "Poor Email List Segmentation",
       body:
-        "Broad lists burn sender reputation and depress every downstream metric. We rebuild segmentation on engagement and propensity scoring, with automated hygiene and send-time optimisation baked into the platform.",
+        "Broad lists burn sender reputation and depress every downstream metric. We rebuild segmentation on engagement and propensity scoring, with data hygiene and send-time optimisation feeding the email tools you already use.",
     },
   ],
 };
 
 /**
- * Twelve product categories. Each is a card with a photo, a description and a
- * route to the contact page.
+ * Twelve Data & AI capability areas. Each is a card with a photo and a
+ * description.
  */
 export const services = {
-  eyebrow: "What custom marketing solutions do we build?",
-  titleLead: "AI-Driven Marketing Software Development Services",
+  eyebrow: "Where can Data & AI help your marketing team?",
+  titleLead: "Data & AI Capabilities for Marketing",
   titleAccent: "That Power Business Growth",
   body:
-    "Our marketing software development services help teams overcome daily operational bottlenecks with AI-driven precision. From automation to analytics and customer engagement, we build solutions that simplify complex workflows, improve campaign results and enable smarter decisions across every marketing channel.",
+    "Marketing teams lose time to fragmented data, manual reporting and repetitive coordination. We apply analytics, automation and AI to the specific bottlenecks in your workflow, so campaigns run faster, results are clearer and decisions are better informed across every channel.",
   items: [
     {
-      title: "Marketing Automation Software",
+      title: "Marketing Automation & Workflow Intelligence",
       body:
-        "Our custom-built intelligent marketing automation software simplifies complex campaign workflows and eliminates repetitive manual tasks. Many teams waste hours managing multiple tools that never quite connect, but our custom-built platform unifies these systems into one process, ensuring faster execution, fewer errors and campaigns that run with precision.",
+        "Automate repetitive campaign tasks, approvals, routing and follow-up while keeping humans in control of strategy. Axiomra maps your existing workflow, identifies bottlenecks and applies AI where it can save measurable time.",
       image: svcAutomationImg,
       alt: "A laptop showing an automated campaign workflow diagram",
     },
     {
-      title: "Marketing Analytics Software",
+      title: "Marketing Analytics & Performance Intelligence",
       body:
-        "With advanced marketing analytics solutions, you can turn scattered campaign data into clear, usable insights. Most teams struggle to connect data from multiple sources, leaving gaps in performance visibility. Our AI-powered dashboards bring every metric together, helping marketing leaders uncover trends and make faster, data-driven decisions.",
+        "Unify channel, campaign and customer data into a trusted reporting layer. Use AI-assisted analysis to surface trends, attribution gaps and performance changes so teams can act faster with better context.",
       image: svcAnalyticsImg,
       alt: "A dark analytics dashboard with live performance charts",
     },
     {
-      title: "Real-Time Bidding (RTB) Software",
+      title: "Paid Media Optimisation",
       body:
-        "We build real-time bidding software that helps marketing teams optimise ad spend and maximise visibility across digital platforms. Traditional manual bidding methods often lead to budget waste and inconsistent ad performance. Our custom-made system uses AI-driven algorithms to automate bid adjustments in milliseconds, ensuring better reach and cost-efficient advertising outcomes.",
+        "Use performance signals to improve bid, budget and audience decisions while preserving governance.",
       image: svcRtbImg,
       alt: "Trading screens showing live bid activity in green and red",
     },
     {
-      title: "Email Marketing Software",
-      body:
-        "Our tailored email marketing platform delivers personalisation at scale with minimal effort. Marketers often face challenges in keeping messages timely and relevant across diverse audiences. Using behavioural analytics and smart segmentation, our solution ensures each email resonates, driving higher open rates, conversions and loyalty.",
+      title: "Email Personalisation Intelligence",
+      body: "Improve segmentation, timing and content relevance using behavioural data.",
       image: svcEmailImg,
       alt: "Hands typing an email campaign on a laptop",
     },
     {
-      title: "Social Media Marketing Software",
+      title: "Social Media Intelligence",
       body:
-        "Managing multiple social accounts should not mean sacrificing strategy or consistency. That is why we design custom social media marketing software that centralises planning, publishing and analytics. By eliminating manual scheduling chaos, teams gain full visibility into performance and create cohesive, impactful social campaigns.",
+        "Centralise social performance data, identify content patterns and support faster campaign learning.",
       image: svcSocialImg,
-      alt: "Social app icons glowing on a smartphone screen",
+      alt: "Social media icons glowing on a smartphone screen",
     },
     {
-      title: "Sales Automation Software",
+      title: "Marketing-to-Sales Intelligence",
       body:
-        "We develop sales automation software that bridges marketing and sales teams for clean lead handover. Many businesses lose leads due to manual handoffs and poor follow-up tracking. Our intelligent system automates lead scoring, follow-ups and pipeline tracking to ensure every opportunity is nurtured efficiently and converted with precision.",
+        "Improve lead scoring, routing and follow-up visibility so qualified opportunities are less likely to be missed.",
       image: svcSalesImg,
       alt: "A sales team reviewing pipeline figures in a meeting room",
     },
     {
-      title: "Marketing CRM Software",
+      title: "Customer Data & CRM Intelligence",
       body:
-        "We build marketing CRM software that unifies customer data, campaign interactions and engagement metrics in one place. Fragmented data across tools often causes missed personalisation and poor customer experiences. Our CRM integrates every touchpoint to deliver a single customer view, driving stronger relationships and smarter, insight-led engagement strategies.",
+        "Connect customer interactions across systems to create a clearer, more actionable view of each account or audience.",
       image: svcCrmImg,
       alt: "A support specialist working a CRM queue with a headset on",
     },
     {
-      title: "Workflow Automation Software",
-      body:
-        "We develop custom workflow automation software that simplifies operations and accelerates collaboration. Marketing teams often get slowed down by repetitive approvals and manual updates. Our intelligent systems automate these workflows, improving visibility and freeing teams to focus on strategy and creativity.",
+      title: "Workflow Automation",
+      body: "Reduce manual approvals, status updates and repetitive coordination across marketing teams.",
       image: svcWorkflowImg,
       alt: "A kanban board of campaign tasks mapped out on sticky notes",
     },
     {
-      title: "Revenue Management Software",
+      title: "Revenue & Attribution Analytics",
       body:
-        "We build revenue management software that provides real-time visibility into marketing-driven financial performance. Many companies struggle to connect campaign outcomes to actual revenue impact. Our platform integrates financial analytics with marketing data to forecast revenue trends, optimise budgets and ensure better alignment between marketing spend and profitability.",
+        "Connect campaign activity to pipeline and revenue so budget decisions are based on business impact.",
       image: svcRevenueImg,
       alt: "A finance review session with revenue charts on the table",
     },
     {
-      title: "Chatbot Software Development",
+      title: "Conversational AI",
       body:
-        "Conversational AI is reshaping how brands communicate. Our custom chatbot software automates real-time interactions across websites, apps and social channels. Businesses struggling with delayed responses gain instant engagement, stronger lead capture and round-the-clock customer support powered by natural language intelligence.",
+        "Design governed AI assistants for lead capture, FAQ support and guided customer journeys with clear escalation to people.",
       image: svcChatbotImg,
       alt: "A smartphone displaying an AI chat assistant conversation",
     },
     {
-      title: "Customer Loyalty Software",
+      title: "Loyalty & Retention Intelligence",
       body:
-        "We develop customer loyalty software that helps brands retain and reward their most valuable customers. Many organisations rely on generic loyalty programmes that fail to build emotional engagement. Our system personalises rewards based on behaviour, preferences and purchase history, helping brands increase repeat sales and strengthen customer relationships.",
+        "Use behavioural, transaction and engagement data to identify churn risk, next-best actions and more relevant loyalty offers.",
       image: svcLoyaltyImg,
       alt: "A customer redeeming a loyalty card at a shop counter",
       // Optional: links the card to a long-form case study on the same topic.
       caseStudy: caseStudyPath("retail-ai-personalized-marketing"),
     },
     {
-      title: "Advertising Agency Software",
+      title: "Agency Data & Performance Operations",
       body:
-        "We develop custom advertising agency software that brings project management, billing and campaign performance into one intelligent platform. Agencies often juggle multiple clients and tools that create operational inefficiencies. Our custom-built solution centralises everything, improving collaboration, financial accuracy and project turnaround for data-driven campaign execution.",
+        "For agencies managing multiple clients, Axiomra can unify campaign, project and performance data into consistent reporting and AI-assisted insights—reducing manual consolidation and improving visibility across accounts.",
       image: svcAgencyImg,
       alt: "An agency strategist working on a digital advertising deck",
     },
@@ -254,101 +252,101 @@ export const services = {
 };
 
 export const midCta = {
-  title: "Let's Build Your Marketing Software Together",
+  title: "Make Your Marketing Data Work Harder",
   body:
-    "Rebuild your campaigns, content and analytics with AI-powered automation tailored to your brand's goals.",
-  ctaText: "Get in Touch",
+    "If your team is spending too much time moving data between tools, building reports manually or guessing what drives results, start with a focused Data & AI assessment. Axiomra will help identify high-value automation and analytics opportunities that fit your current stack and commercial goals.",
+  ctaText: "Discuss Your Marketing AI Priorities",
   background: midCtaBgImg,
 };
 
 /**
- * The services fold: six alternating photo/copy rows.
+ * The services fold: six alternating photo/copy rows, one per service line.
  */
 export const solutions = {
   eyebrow: "What types of AI services do we offer?",
-  titleLead: "Custom Marketing",
-  titleAccent: "Software Development Services",
+  titleLead: "AI & Data Services",
+  titleAccent: "for Modern Marketing Teams",
   body:
-    "We deliver tailored marketing software development services that help enterprises and agencies achieve operational excellence through AI automation and intelligent system design.",
+    "Axiomra helps enterprises and agencies turn marketing data into measurable business decisions. Our services include AI strategy, data integration, analytics, predictive modelling, workflow automation and generative AI enablement. We work with your existing CRM, advertising, analytics and content systems to solve specific problems rather than forcing a full technology replacement.",
   items: [
     {
-      title: "Digital Transformation in Marketing",
+      title: "Marketing AI Strategy",
       body:
-        "We work closely with stakeholders to identify automation opportunities, optimise workflows and design AI strategies aligned with business objectives. Using AI insights, we help organisations improve decision-making and cut operational waste.",
+        "We work closely with stakeholders to identify automation opportunities, prioritise AI use cases and align them with business objectives. The result is a clear plan for where AI will improve decision-making and cut operational waste.",
       extra:
-        "The work starts with the campaign process that costs your team the most hours, not with a platform rollout. We map how briefs, approvals, launches and reporting actually move today, then automate the steps that never needed a person in the first place.",
+        "The work starts with the campaign process that costs your team the most hours, not with a technology rollout. We map how briefs, approvals, launches and reporting actually move today, then identify the steps where data and AI can take the load.",
       points: [
         "Workflow audit across briefing, approval, launch and reporting cycles",
-        "A costed automation roadmap ranked by hours saved per quarter",
-        "Change plan and training so the new process survives the handover",
+        "A prioritised AI roadmap ranked by expected time and value saved",
+        "Governance, ownership and success measures agreed up front",
       ],
       image: solTransformationImg,
       alt: "A strategist standing in front of a wall of projected data",
     },
     {
-      title: "AI Software Development Consulting",
+      title: "Predictive Modelling",
       body:
-        "Our experts guide marketing teams through every stage of AI adoption, from strategy to implementation. We identify high-impact automation opportunities, design tailored AI models for predictive insights and keep integration clean with your existing tools. The result is smarter marketing operations that reduce costs, enhance personalisation and maximise ROI.",
+        "We build predictive models for the decisions marketing teams make every week: which audiences to target, which leads to prioritise, which customers are at risk and where the next budget shift should go.",
       extra:
-        "You leave with a roadmap that has prices on it, including an honest case against the ideas that will not pay for themselves. Most marketing teams already hold more first-party signal than they use, and far less than the model somebody tried to sell them needs.",
+        "You get an honest view of what your data can support, including the ideas that will not pay for themselves. Most marketing teams already hold more first-party signal than they use, and far less than an over-ambitious model needs.",
       points: [
         "Audit of your CRM, web, ad platform and offline data before any model is scoped",
-        "Model shortlist with expected lift, build effort and monthly running cost",
-        "Integration plan for the martech stack you already pay for",
+        "Model shortlist with expected lift, effort and monthly running cost",
+        "Validation against your own historical results before anything goes live",
       ],
       image: solConsultingImg,
-      alt: "A developer working across multiple code monitors",
+      alt: "An analyst working across multiple monitors",
     },
     {
-      title: "Marketing Custom Product Development",
+      title: "Marketing Analytics & Reporting",
       body:
-        "We build fully custom marketing products that fit your workflows, not the other way around. Whether it is campaign management software, performance analytics dashboards or data-driven recommendation engines, we develop solutions that integrate with your martech stack and evolve alongside your growth objectives.",
+        "We turn scattered campaign and customer data into a trusted analytics layer, with dashboards and AI-assisted analysis that show what is working, what is not and why.",
       extra:
-        "Delivery runs in weekly increments, with the first usable capability live long before the full scope lands. Nothing is built behind a curtain for three months and revealed at the end, which is how most in-house marketing tools quietly die.",
+        "Delivery runs in short increments, with the first useful reporting live long before the full scope lands. Nothing is built behind a curtain for three months and revealed at the end.",
       points: [
-        "Architecture, data model and a costed backlog inside the first three weeks",
-        "Weekly staging releases your marketers can open and comment on",
-        "Documentation, tests and a runbook your own team can maintain",
+        "Agreed metric definitions so every team reads the same numbers",
+        "Regular releases your marketers can open and comment on",
+        "Documentation and handover your own analysts can maintain",
       ],
       image: solProductImg,
-      alt: "A product team mapping a build on a studio whiteboard",
+      alt: "A team mapping a plan on a studio whiteboard",
     },
     {
-      title: "Marketing Mobile App Development",
+      title: "Generative AI Enablement",
       body:
-        "Our team designs and develops mobile-first marketing applications that enhance engagement, speed up campaign execution and deliver real-time insights on the go. From customer engagement tools to campaign performance trackers, our apps let marketers manage, monitor and optimise digital activities anytime and anywhere.",
+        "We help marketing teams adopt generative AI for drafting, content variation, research and summarisation, with brand guidance, human review and clear usage policies built into the workflow.",
       extra:
-        "Approvals, budget shifts and creative sign-off are the moments that stall a campaign while someone is away from a desk, so those are the flows we build for the phone first. Everything else stays where it belongs, on the web.",
+        "We start with the content tasks that consume the most time and carry the least risk, prove the gain, then extend carefully. Review gates stay in place so quality and brand voice hold as volume rises.",
       points: [
-        "Native or cross-platform builds sharing one API with your web tooling",
-        "Push-driven approvals, alerts and budget controls for time-critical calls",
-        "Offline-tolerant reporting with store release and update management included",
+        "Use-case selection based on time saved and brand risk",
+        "Brand guidance, prompt libraries and human review steps",
+        "Usage policies and measurement so adoption can be governed",
       ],
       image: solMobileImg,
       alt: "Hands holding a smartphone above a desk with a keyboard",
     },
     {
-      title: "Custom CMS Integration",
+      title: "Workflow Automation",
       body:
-        "We integrate and customise CMS platforms to align content operations with AI-powered insights and automated workflows. Our CMS integration services enhance content governance, speed up publishing cycles and improve personalisation across digital channels, whether you work with WordPress, Magento, Shopify, Contentful or a headless stack.",
+        "We automate the repetitive steps between content, campaign and reporting systems, whether you work with WordPress, Magento, Shopify, Contentful or a headless stack, so approved work moves faster with fewer manual hand-offs.",
       extra:
-        "Content teams lose most of their time to the gap between writing and publishing: reformatting, re-approving and re-uploading the same asset per channel. We close that gap so one approved piece reaches every surface in the shape each one expects.",
+        "Content teams lose most of their time to the gap between writing and publishing: reformatting, re-approving and re-uploading the same asset per channel. We automate that gap inside the tools you already use.",
       points: [
-        "Headless or traditional CMS wired into your campaign and analytics tooling",
-        "Role-based governance, versioning and audit trails on every publish",
-        "Personalisation rules and localisation handled from a single content source",
+        "Automated routing, approvals and status updates across teams",
+        "Audit trails on every automated step",
+        "Personalisation and localisation rules driven from a single content source",
       ],
       image: solCmsImg,
       alt: "A content manager publishing a campaign page on a laptop",
     },
     {
-      title: "CRM Integration Services",
+      title: "Data Integration",
       body:
-        "We connect your CRM to every marketing surface you run, so lead data, campaign attribution and lifecycle stage move in one direction and stay in sync. Clean handoffs between marketing and sales mean fewer lost leads, accurate reporting and a single customer record everyone can trust.",
+        "We connect your CRM, ad platforms, email, web and support data, so lead data, campaign attribution and lifecycle stage stay in sync. Cleaner data between marketing and sales means fewer lost leads, accurate reporting and a single customer record everyone can trust.",
       extra:
-        "Sync direction is decided per field rather than per system, because the arguments between marketing and sales are almost always about which side owns a value. Once that is settled in the integration layer, attribution reporting stops being contested.",
+        "Data ownership is decided per field rather than per system, because the arguments between marketing and sales are almost always about which side owns a value. Once that is settled in the data layer, attribution reporting stops being contested.",
       points: [
-        "Two-way sync across CRM, ad platforms, email, web and support tooling",
+        "Data pipelines across CRM, ad platforms, email, web and support tools",
         "Deduplication and identity resolution so one person is one record",
         "Attribution that reconciles to the numbers finance already reports",
       ],
@@ -359,28 +357,28 @@ export const solutions = {
 };
 
 export const stakeholders = {
-  eyebrow: "Whom do we build custom solutions for?",
-  titleLead: "Tailored AI Marketing Solutions",
-  titleAccent: "For Key Industry Stakeholders",
+  eyebrow: "Who do we help?",
+  titleLead: "Tailored Data & AI Solutions",
+  titleAccent: "For Key Marketing Stakeholders",
   items: [
     {
       title: "Digital and Advertising Agencies",
       body:
-        "Client work, billing and campaign performance in one platform, so account teams spend their time on strategy instead of status updates.",
+        "Client, project and campaign performance data in one consistent reporting layer, so account teams spend their time on strategy instead of status updates.",
       image: stkAgencyImg,
       alt: "An agency team reviewing campaign work around a laptop",
     },
     {
       title: "CRM Manager",
       body:
-        "A single customer record across every channel, with segmentation and lifecycle automation that runs without a weekly export.",
+        "A single customer view across every channel, with segmentation and lifecycle insights that refresh without a weekly export.",
       image: stkCrmImg,
       alt: "A CRM manager working across a tablet and laptop",
     },
     {
       title: "Product Marketing Manager",
       body:
-        "Launch tracking, message testing and adoption analytics wired together, so the next positioning call is made on evidence.",
+        "Launch tracking, message testing and adoption analytics connected, so the next positioning call is made on evidence.",
       image: stkProductImg,
       alt: "A product marketing manager presenting launch results",
     },
@@ -393,78 +391,78 @@ export const stakeholders = {
  */
 export const subIndustries = {
   eyebrow: "Which marketing sector do we serve?",
-  titleLead: "AI-Powered Software Solutions For",
-  titleAccent: "Every Marketing Sub-Industry",
+  titleLead: "Data & AI Solutions",
+  titleAccent: "Across Marketing Disciplines",
   body:
-    "Every marketing discipline has its own data, its own cadence and its own definition of a good week. Hover any card to see what we build for it.",
+    "Different marketing teams measure success differently—but most face the same challenge: data is fragmented across channels and tools. Axiomra adapts AI and analytics to the operating model of your team, whether the priority is performance marketing, CRM, lifecycle marketing, content, social, agency reporting or customer intelligence.",
   items: [
     {
       label: "Social Media Marketing (SMM)",
-      body: "Planning, publishing and listening in one platform, with AI drafting on brand and analytics that tie posts to pipeline.",
-      points: ["Unified scheduling", "Sentiment listening", "Creative performance scoring"],
+      body: "Social performance data in one view, with AI-assisted drafting on brand and analytics that tie posts to pipeline.",
+      points: ["Unified performance reporting", "Sentiment listening", "Creative performance scoring"],
       image: subSmmImg,
       alt: "A creator filming social content with a ring light",
     },
     {
       label: "Influencer Marketing",
-      body: "Discovery, contracting and measurement for creator programmes, with fraud detection and true incremental lift reporting.",
-      points: ["Creator discovery models", "Automated contracts", "Incrementality measurement"],
+      body: "Data-led creator discovery and measurement, with anomaly detection for fraud and incremental lift reporting.",
+      points: ["Creator discovery models", "Fraud and anomaly detection", "Incrementality measurement"],
       image: subInfluencerImg,
       alt: "An influencer recording a video to camera",
     },
     {
       label: "Email Marketing",
-      body: "Segmentation on propensity rather than demographics, with deliverability monitoring and send-time optimisation built in.",
-      points: ["Propensity segmentation", "Deliverability monitoring", "Lifecycle journeys"],
+      body: "Segmentation on propensity rather than demographics, with deliverability monitoring and send-time optimisation.",
+      points: ["Propensity segmentation", "Deliverability monitoring", "Lifecycle analytics"],
       image: subEmailImg,
       alt: "A marketer building an email campaign at a desk",
     },
     {
       label: "Content Marketing",
-      body: "Brand-tuned generation with human review gates, topic-gap analysis and an asset library that stays governed as volume rises.",
-      points: ["Topic gap analysis", "Assisted drafting", "Asset governance"],
+      body: "Generative AI drafting with brand guidance and human review, plus topic-gap analysis to decide what to write next.",
+      points: ["Topic gap analysis", "Assisted drafting", "Content performance insights"],
       image: subContentImg,
       alt: "A content strategist drafting an outline in a notebook",
     },
     {
       label: "Search Engine Optimisation",
-      body: "Technical crawling, intent clustering and content scoring in one pipeline, so ranking work is prioritised by expected revenue.",
-      points: ["Intent clustering", "Technical crawl automation", "Revenue-weighted prioritisation"],
+      body: "Intent clustering and content scoring in one data pipeline, so ranking work is prioritised by expected revenue.",
+      points: ["Intent clustering", "Crawl data analysis", "Revenue-weighted prioritisation"],
       image: subSeoImg,
       alt: "Two strategists discussing an SEO plan over coffee",
     },
     {
       label: "Performance & PPC",
-      body: "Budget allocation models that reallocate across channels daily, with creative fatigue detection and automated bid guardrails.",
+      body: "Budget allocation models that recommend shifts across channels, with creative fatigue detection and bid guardrails.",
       points: ["Cross-channel budget models", "Creative fatigue alerts", "Bid guardrails"],
       image: subPpcImg,
       alt: "A performance marketer reviewing campaign charts on a laptop",
     },
     {
       label: "Affiliate & Partner Marketing",
-      body: "Partner onboarding, attribution and payout automation, with anomaly detection that catches leakage before the invoice does.",
-      points: ["Partner onboarding flows", "Multi-touch attribution", "Payout automation"],
+      body: "Partner attribution and payout analytics, with anomaly detection that catches leakage before the invoice does.",
+      points: ["Partner performance analytics", "Multi-touch attribution", "Leakage detection"],
       image: subAffiliateImg,
       alt: "A shopper checking out on an online store with a card",
     },
     {
       label: "Video Marketing",
-      body: "Auto-clipping, caption generation and per-platform packaging, with watch-through analytics feeding the next production brief.",
-      points: ["Auto-clipping and captions", "Per-platform packaging", "Watch-through analytics"],
+      body: "AI-assisted clipping and captioning, with watch-through analytics feeding the next production brief.",
+      points: ["AI clipping and captions", "Per-platform performance", "Watch-through analytics"],
       image: subVideoImg,
       alt: "A cinema camera set up on a production shoot",
     },
     {
       label: "Event Marketing",
-      body: "Registration, session intelligence and post-event scoring joined up, so sales follows up on interest rather than a badge scan.",
-      points: ["Registration and check-in", "Session engagement scoring", "Post-event lead routing"],
+      body: "Registration, session and engagement data joined up, so sales follows up on interest rather than a badge scan.",
+      points: ["Attendee data integration", "Session engagement scoring", "Post-event lead routing"],
       image: subEventImg,
       alt: "A speaker presenting on stage to a conference audience",
     },
     {
       label: "Brand Marketing",
-      body: "Brand tracking, share-of-voice monitoring and asset compliance checks that keep a growing team on one visual system.",
-      points: ["Share-of-voice tracking", "Brand compliance checks", "Creative asset system"],
+      body: "Brand tracking, share-of-voice monitoring and AI-assisted consistency checks across a growing team's output.",
+      points: ["Share-of-voice tracking", "Brand consistency checks", "Brand health reporting"],
       image: subBrandImg,
       alt: "A brand moodboard pinned out with reference imagery",
     },
@@ -472,48 +470,44 @@ export const subIndustries = {
 };
 
 export const benefits = {
-  eyebrow: "What you can optimise with our AI-powered solutions?",
-  titleLead: "Key Benefits Of Partnering With",
-  titleAccent: "Axiomra For Marketing Software",
+  eyebrow: "Key benefits of working with Axiomra",
+  titleLead: "What Your Marketing Team Can Improve",
+  titleAccent: "With Data & AI",
+  body:
+    "Axiomra focuses on business outcomes first: faster execution, clearer performance visibility, better customer relevance, connected data, secure AI adoption and scalable analytics. Every engagement begins with a defined problem, measurable success criteria and a clear view of the data required to support it.",
   items: [
     {
-      title: "Accelerated Marketing Efficiency",
-      body:
-        "Our AI-powered workflows reduce repetitive manual processes and improve cross-team collaboration. This enables marketing teams to execute campaigns faster and focus on strategy rather than operations.",
+      title: "Faster Marketing Operations",
+      body: "Automate repetitive analysis and coordination so teams spend more time on decisions.",
     },
     {
-      title: "Enhanced Data-Driven Decision-Making",
-      body:
-        "We centralise data from multiple marketing channels and apply advanced analytics to extract real insights. Teams gain the clarity needed to make informed, performance-oriented decisions in real time.",
+      title: "Better Data-Driven Decisions",
+      body: "Create a trusted view across channels and surface insights faster.",
     },
     {
-      title: "Personalised Customer Experiences",
-      body:
-        "Our AI algorithms analyse customer behaviour to deliver tightly personalised recommendations and campaigns. This helps marketers build stronger connections and increase engagement across digital touchpoints.",
+      title: "More Relevant Customer Experiences",
+      body: "Use behavioural data responsibly to improve segmentation and personalisation.",
     },
     {
-      title: "Integration That Holds",
-      body:
-        "Our custom development approach ensures your CRM, CMS and analytics tools work together effortlessly. The result is a unified marketing ecosystem that eliminates data silos and improves accuracy.",
+      title: "Connected Data",
+      body: "Integrate CRM, analytics, content and campaign sources into one usable data layer.",
     },
     {
-      title: "Enterprise-Grade Security and Compliance",
-      body:
-        "We work to the GDPR, SOC 2 and ISO 27001 requirements that apply to your data, and confirm them with your team before development starts. Every solution is built with privacy, transparency and reliability at its core.",
+      title: "Responsible & Secure AI",
+      body: "Design access, privacy and governance controls around the use case and data sensitivity.",
     },
     {
-      title: "Scalable Architecture That Lasts",
-      body:
-        "Our platforms are built to evolve with your growing business needs. Whether expanding to new markets or adding new channels, your marketing system scales without disruption.",
+      title: "Scalable Data Foundations",
+      body: "Build pipelines and models that can expand as channels, markets and data volumes grow.",
     },
   ],
 };
 
 export const build = {
-  title: "Build Your Custom AI Marketing Software with Axiomra",
+  title: "Build a Practical AI Roadmap for Marketing",
   body:
-    "Rebuild your marketing operations with intelligent automation and data-driven personalisation designed to boost efficiency and ROI.",
-  ctaText: "Request a Consultation",
+    "Start with the workflows, data gaps and decisions that create the most friction today. Axiomra can help prioritise opportunities across analytics, automation, personalisation and generative AI, then define the data, governance and measurement needed to scale responsibly.",
+  ctaText: "Request a Data & AI Consultation",
   texture: textureBgImg,
   image: buildVisualImg,
   alt: "A campaign performance report beside a phone showing live figures",
@@ -522,9 +516,9 @@ export const build = {
 export const techStrip = {
   eyebrow: "Technologies we work with",
   titleLead: "Expertise In Advanced",
-  titleAccent: "Development Technologies",
+  titleAccent: "Data & AI Technologies",
   body:
-    "The same production-grade toolchain sits under every marketing platform we ship. Pick a layer to see what it is made of.",
+    "The same proven toolchain sits under every marketing data and AI engagement we deliver. Pick a layer to see what it is made of.",
   ctaText: "View all tech stack",
   tabs: [
     {
@@ -538,7 +532,7 @@ export const techStrip = {
     },
     {
       id: "backend",
-      label: "Backend & Databases",
+      label: "Data & Backend",
       items: [
         "Node.js", "NestJS", "Express", "FastAPI", "Django", "GraphQL", "PostgreSQL", "MongoDB",
         "Redis", "Elasticsearch", "Qdrant", "Pinecone", "Kafka", "Airflow", "dbt", "Snowflake",
@@ -546,10 +540,10 @@ export const techStrip = {
     },
     {
       id: "frontend",
-      label: "Frontend",
+      label: "Dashboards & Frontend",
       items: [
         "React", "Next.js", "Vue", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js",
-        "React Native", "Flutter", "Vite", "Radix UI", "D3.js",
+        "Vite", "Radix UI", "D3.js",
       ],
     },
     {
@@ -580,23 +574,23 @@ export const businessTypes = {
   titleLead: "Explore The Range Of",
   titleAccent: "Marketing Businesses We Support",
   body:
-    "We excel in custom AI-powered marketing software development that drives measurable growth. Whether you are validating a new product idea or consolidating a sprawling martech stack, we turn it into a platform your team actually runs on.",
+    "We help marketing teams of every size turn their data into measurable growth. Whether you are testing a first AI use case or making sense of a sprawling martech stack, we start with the problem and the data you already have.",
   rows: [
     {
       label: "Startups",
-      body: "We work with startups to get a first marketing platform live fast: concept validation, an MVP that proves the loop, and the analytics to show it working before the next raise.",
+      body: "We help startups get reliable marketing analytics in place early: clear metrics, a first AI use case that proves the loop, and the reporting to show it working before the next raise.",
     },
     {
       label: "Scale-ups",
-      body: "Growth exposes every manual process. We help scale-ups automate campaign operations, unify reporting and move from tool sprawl to a platform that supports the next order of magnitude.",
+      body: "Growth exposes every manual process. We help scale-ups automate campaign operations, unify reporting and connect the data spread across a growing tool stack.",
     },
     {
       label: "Small and medium-sized businesses",
-      body: "SMB marketing teams carry enterprise workloads with a fraction of the headcount. Our automation and analytics tooling closes that gap without an enterprise budget or a year-long rollout.",
+      body: "SMB marketing teams carry enterprise workloads with a fraction of the headcount. Focused automation and analytics close that gap without an enterprise budget or a year-long rollout.",
     },
     {
       label: "Enterprises",
-      body: "We partner with enterprise marketing organisations on governed data layers, multi-brand orchestration and AI systems that satisfy security, privacy and procurement before they ever reach production.",
+      body: "We partner with enterprise marketing organisations on governed data layers, multi-brand analytics and AI use cases designed around security, privacy and procurement requirements from the start.",
     },
   ],
 };
@@ -631,11 +625,11 @@ export const testimonials = {
 };
 
 export const showcase = {
-  eyebrow: "What innovations have we delivered to businesses?",
+  eyebrow: "What have we delivered for businesses?",
   titleLead: "Showcasing Our",
-  titleAccent: "AI Development Projects",
+  titleAccent: "Data & AI Projects",
   body:
-    "A look at the marketing systems we have built, and the number each one was measured against.",
+    "A look at the Data & AI work we have delivered, and the result each one was measured against.",
   ctaText: "Check Out Our Full Portfolio",
   // Healthcare work is off-topic for a marketing audience.
   excludeTags: ["Healthcare"],
@@ -643,26 +637,26 @@ export const showcase = {
 
 export const partner = {
   eyebrow: "Why is it worth working with us?",
-  titleLead: "Why Partner With Axiomra For",
-  titleAccent: "Intelligent Marketing Software Development",
+  titleLead: "Why Marketing Teams Work With",
+  titleAccent: "Axiomra",
   cards: [
     {
       icon: "Target",
-      title: "Marketing Operators, Not Just Engineers",
+      title: "Business-first Data & AI thinking",
       body:
-        "Our developers and strategists understand marketing operations from campaign analytics to automation, so every solution we ship is designed around a metric you already report on rather than a feature list.",
+        "We start from the decision or workflow you need to improve, then choose the right analytics or AI approach.",
     },
     {
       icon: "Layers",
-      title: "Integrates With Your Stack",
+      title: "Works with your existing stack",
       body:
-        "From CRM to CMS and analytics tools, our solutions drop into your existing marketing ecosystem. We build modular so the platform adapts as your channels, tools and business needs change.",
+        "Connect CRM, analytics, content and advertising data instead of replacing everything.",
     },
     {
       icon: "ShieldCheck",
-      title: "Visible At Every Stage",
+      title: "Clear delivery and governance",
       body:
-        "Our agile process ensures full visibility at every stage, with continuous updates and proactive technical guidance. We also provide post-launch technical support for up to 60 days, within the scope agreed in the engagement.",
+        "Define scope, data access, measurement and ownership from the start, with regular visibility throughout the engagement.",
     },
   ],
   stats: [
@@ -702,43 +696,43 @@ export const blogs = {
 
 export const faqs = [
   {
-    q: "What is marketing software development and how does it support business growth?",
-    a: "It is the design and build of the systems a marketing organisation runs on: campaign automation, analytics, CRM and content operations. Off-the-shelf tools force your process to match their assumptions. Custom software matches your funnel, your data and your reporting, which is where the compounding return comes from.",
+    q: "How can Data & AI support marketing growth?",
+    a: "By connecting the data behind your campaigns, automating repetitive analysis and coordination, and applying AI to the decisions that matter most: targeting, budget, personalisation and retention. We work with the tools you already use, so the value comes from better decisions rather than another platform.",
   },
   {
-    q: "How does AI marketing software development help improve campaign ROI?",
-    a: "By shortening the loop between spend and signal. Predictive models flag underperformance within hours instead of at month end, budget allocation moves on live data, and personalisation lifts conversion on traffic you have already paid for.",
+    q: "How does AI help improve campaign ROI?",
+    a: "By shortening the loop between spend and signal. Predictive models flag underperformance within hours instead of at month end, budget decisions move on live data, and personalisation lifts conversion on traffic you have already paid for.",
   },
   {
-    q: "Why should a company build custom marketing software instead of using existing tools?",
-    a: "Most teams do both. You build custom where the tools fracture: the joins between systems, the reporting layer nobody's vendor owns, and the workflows specific to how you go to market. We will tell you honestly which parts are not worth building.",
+    q: "Do we need to replace our existing marketing tools?",
+    a: "No. We connect and improve the systems you already run: CRM, ad platforms, analytics and content tools. The work focuses on the joins between them, the reporting layer nobody's vendor owns, and the AI use cases specific to how you go to market. We will tell you honestly which ideas are not worth pursuing.",
   },
   {
-    q: "What services does a marketing software development company provide?",
-    a: "Strategy and AI consulting, custom product development, mobile apps, CMS and CRM integration, data engineering, and the analytics layer on top. We also take on modernisation work where an existing platform needs to keep running while it changes underneath.",
+    q: "What Data & AI services does Axiomra provide for marketing teams?",
+    a: "AI strategy, data integration, analytics, predictive modelling, workflow automation and generative AI enablement. Each engagement is scoped around a specific problem, with clear success measures from the start.",
   },
   {
-    q: "How much does it cost to develop custom marketing management software?",
-    a: "It depends on the channel count, the state of your data and how much AI capability is in scope. A scoped pilot is the fastest route to a real number. Book a free session and we will size it honestly, including what we would not build.",
+    q: "How much does a marketing Data & AI engagement cost?",
+    a: "It depends on the channel count, the state of your data and how much AI capability is in scope. A scoped pilot is the fastest route to a real number. Book a free session and we will size it honestly, including what we would not recommend.",
   },
   {
-    q: "How long does a marketing platform build take?",
-    a: "A scoped MVP with one capability, such as an analytics layer or a campaign automation engine, typically runs eight to twelve weeks. A full platform spanning automation, analytics and integrations runs four to nine months, delivered in weekly increments you can use from the first sprint.",
+    q: "How long does a marketing Data & AI engagement take?",
+    a: "A scoped pilot with one use case, such as an analytics layer or a campaign automation workflow, typically runs eight to twelve weeks. A broader programme spanning automation, analytics and data integration runs four to nine months, delivered in increments you can use along the way.",
   },
   {
-    q: "Can AI software track social media ROI and engagement?",
-    a: "Yes. We connect platform APIs to your revenue data so social performance is reported against pipeline and revenue rather than impressions, with incrementality testing where attribution alone is not trustworthy.",
+    q: "Can AI track social media ROI and engagement?",
+    a: "Yes. We connect platform data to your revenue data so social performance is reported against pipeline and revenue rather than impressions, with incrementality testing where attribution alone is not trustworthy.",
   },
   {
-    q: "Do you handle data privacy and compliance?",
-    a: "Yes. GDPR, SOC 2 and ISO 27001 requirements are reviewed with your compliance team and designed in from the first architecture session, covering consent capture, data residency, retention and the audit trail your security review will ask for.",
+    q: "How do you handle data privacy?",
+    a: "We review the privacy and regulatory requirements that apply to your data with your team before work starts, and design consent, access, data residency, retention and audit needs into the use case from the first session.",
   },
 ];
 
 export const finalCta = {
   title: "Show Us The Campaign Problem You Want Solved",
   subtitle:
-    "Ready to automate workflows, personalise campaigns and maximise your marketing performance? Talk to our AI software experts.",
+    "Ready to automate workflows, personalise campaigns and improve your marketing performance? Talk to our Data & AI team.",
   buttonText: "Get your project done!",
   background: finalCtaBgImg,
 };

@@ -1,5 +1,6 @@
 import { Suspense, lazy, useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { CONTACT_PATH } from "../../../routes.constants";
 import { ArrowUpRight, Megaphone, Star } from "lucide-react";
 import { gsap, MOTION_OK } from "../../../lib/gsap";
 import { hero } from "../../../data/marketingData";
@@ -76,7 +77,8 @@ export default function MarketingHero() {
             data-hero
             className="font-display text-4xl font-semibold leading-[1.06] tracking-tight text-inverse-fg sm:text-5xl lg:text-[3.4rem] xl:text-[4rem]"
           >
-            {hero.titleLead} <span className="text-highlight">{hero.titleAccent}</span> {hero.titleTail}
+            {hero.titleLead} <span className="text-highlight">{hero.titleAccent}</span>
+            {hero.titleTail ? ` ${hero.titleTail}` : null}
           </h1>
 
           <p data-hero className="mt-8 max-w-2xl text-lg leading-relaxed text-inverse-fg/70 md:text-xl">
@@ -85,7 +87,7 @@ export default function MarketingHero() {
 
           <div data-hero className="mt-10 flex flex-wrap items-center gap-6">
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group inline-flex items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-lg font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 active:scale-[0.98] focus-ring"
             >
               {hero.ctaText}

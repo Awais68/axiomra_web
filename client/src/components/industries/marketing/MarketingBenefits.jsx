@@ -9,6 +9,7 @@ export default function MarketingBenefits() {
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={benefits.eyebrow}
+          subtitle={benefits.body}
           title={
             <>
               <span className="text-highlight">{benefits.titleLead}</span> {benefits.titleAccent}
