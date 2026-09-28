@@ -80,7 +80,7 @@ export default function SportsWeServe() {
           eyebrow={sportsWeServe.eyebrow}
           title={
             <>
-              <span className="text-gradient">{sportsWeServe.titleLead}</span> {sportsWeServe.titleAccent}
+              <span className="text-highlight">{sportsWeServe.titleLead}</span> {sportsWeServe.titleAccent}
             </>
           }
           subtitle={sportsWeServe.body}

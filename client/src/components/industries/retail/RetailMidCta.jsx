@@ -51,7 +51,7 @@ export default function RetailMidCta() {
 
             <Link
               to="/contact"
-              className="group mt-10 inline-flex items-center gap-3 rounded-full bg-cta-gradient py-2 pl-7 pr-2 text-lg font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 active:scale-[0.98] focus-ring"
+              className="group mt-10 inline-flex items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-lg font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 active:scale-[0.98] focus-ring"
             >
               {midCta.buttonText}
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-inverse/15 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-[1px] group-hover:scale-105">

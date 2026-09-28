@@ -236,7 +236,7 @@ export default function BusinessTypeModal({ item, onClose }) {
               <Link
                 to="/#contact"
                 onClick={close}
-                className="group mt-9 inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-accent-vivid to-brand px-7 py-4 text-base font-semibold text-inverse-fg transition-opacity hover:opacity-90 focus-ring"
+                className="group mt-9 inline-flex items-center gap-2.5 rounded-full bg-accent-vivid px-7 py-4 text-base font-semibold text-inverse transition-opacity hover:opacity-90 focus-ring"
               >
                 {item.cta}
                 <ArrowUpRight

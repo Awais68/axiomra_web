@@ -76,7 +76,7 @@ export default function RealEstateApps() {
           data-apps
           className="max-w-5xl font-display text-3xl font-semibold leading-[1.1] tracking-tight text-inverse-fg md:text-4xl lg:text-5xl"
         >
-          <span className="text-gradient">{apps.titleLead}</span> {apps.titleAccent}
+          <span className="text-highlight">{apps.titleLead}</span> {apps.titleAccent}
         </h2>
         <p data-apps className="mt-6 max-w-3xl text-base leading-relaxed text-inverse-fg/75 md:text-lg">
           {apps.body}

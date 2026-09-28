@@ -58,7 +58,7 @@ export default function EducationSpecialisms() {
           title={
             <>
               {specialisms.titleLead}{" "}
-              <span className="text-gradient">{specialisms.titleAccent}</span>
+              <span className="text-highlight">{specialisms.titleAccent}</span>
             </>
           }
         />
@@ -84,7 +84,7 @@ export default function EducationSpecialisms() {
                   onClick={() => setIndex(i)}
                   className={`rounded-full border px-6 py-3 text-sm font-medium transition-colors duration-300 focus-ring md:text-base ${
                     isActive
-                      ? "border-transparent bg-cta-gradient text-inverse"
+                      ? "border-transparent bg-accent-vivid text-inverse"
                       : "border-inverse-fg/20 bg-inverse-fg/5 text-inverse-fg/75 backdrop-blur-sm hover:border-accent-vivid/60 hover:text-inverse-fg"
                   }`}
                 >

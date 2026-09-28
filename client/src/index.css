@@ -177,11 +177,14 @@
   border-radius: 8px;
 }
 
-.text-gradient {
-  background: linear-gradient(90deg, #14d8c4 0%, #788be3 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+/* Accent words in headings. One solid logo colour, never a gradient: brand
+   indigo on light surfaces, logo teal on the always-dark blocks where indigo
+   would lose contrast. */
+.text-highlight {
+  color: rgb(var(--brand));
+}
+:is(.bg-inverse, .bg-inverse-soft, .bg-inverse-card, [data-nav-tone="dark"]) .text-highlight {
+  color: rgb(var(--accent-vivid));
 }
 
 .scrollbar-hide::-webkit-scrollbar {

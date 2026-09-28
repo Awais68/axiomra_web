@@ -51,7 +51,7 @@ export default function AiDevIndustries() {
                 onClick={() => setActive(i)}
                 className={`rounded-xl2 px-5 py-3 text-base font-semibold transition-colors focus-ring md:text-lg ${
                   selected
-                    ? "bg-cta-gradient text-inverse"
+                    ? "bg-accent-vivid text-inverse"
                     : "bg-inverse text-inverse-fg hover:opacity-90"
                 }`}
               >

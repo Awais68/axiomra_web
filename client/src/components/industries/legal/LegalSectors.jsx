@@ -35,7 +35,7 @@ export default function LegalSectors() {
           eyebrow={subIndustries.eyebrow}
           title={
             <>
-              <span className="text-gradient">{subIndustries.titleLead}</span> {subIndustries.titleAccent}
+              <span className="text-highlight">{subIndustries.titleLead}</span> {subIndustries.titleAccent}
             </>
           }
           subtitle={subIndustries.body}

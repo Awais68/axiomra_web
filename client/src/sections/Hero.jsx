@@ -54,7 +54,7 @@ export default function Hero() {
           className="font-display text-4xl font-semibold leading-[1.08] tracking-tight text-inverse-fg md:text-7xl"
         >
           Custom AI Development That{" "}
-          <span className="text-gradient">Moves Your Business Forward</span>
+          <span className="text-highlight">Moves Your Business Forward</span>
         </h1>
 
         <p

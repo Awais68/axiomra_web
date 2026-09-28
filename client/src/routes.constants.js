@@ -15,6 +15,10 @@ export const FAQS_PATH = "/faqs";
 export const PORTFOLIO_PATH = "/portfolio";
 export const INDUSTRIES_PATH = "/industries";
 export const CASE_STUDIES_PATH = "/case-studies";
+export const CONTACT_PATH = "/contact";
+// Where "Discuss ..." CTAs send people: the site's Book a Call destination.
+// It is the contact form today; point this at a scheduler if one is added.
+export const BOOK_CALL_PATH = "/contact";
 
 /** Route for one industry's detail page. */
 export const industryPath = (slug) => `${INDUSTRIES_PATH}/${slug}`;

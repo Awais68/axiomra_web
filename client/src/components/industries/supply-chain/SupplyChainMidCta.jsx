@@ -59,15 +59,17 @@ export default function SupplyChainMidCta() {
         className="pointer-events-none absolute -left-24 top-0 -z-10 h-80 w-80 rounded-full bg-brand/35 blur-[120px]"
       />
 
-      <div className="mx-auto flex max-w-8xl flex-col items-start gap-8 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <div>
+      {/* The lane clip notches 3% into each side, so the copy is centred and
+          inset past the notch (6vw) to keep every line in the safe area. */}
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-[max(1rem,6vw)] text-center">
+        <div className="flex flex-col items-center">
           <h2
             data-reveal
-            className="max-w-2xl font-display text-3xl font-semibold leading-[1.1] tracking-tight text-inverse-fg md:text-4xl lg:text-5xl"
+            className="max-w-3xl text-balance font-display text-3xl font-semibold leading-[1.1] tracking-tight text-inverse-fg md:text-4xl lg:text-5xl"
           >
             {midCta.title}
           </h2>
-          <p data-reveal className="mt-5 max-w-xl text-base leading-relaxed text-inverse-fg/75 md:text-lg">
+          <p data-reveal className="mt-5 max-w-2xl text-base leading-relaxed text-inverse-fg/75 md:text-lg">
             {midCta.body}
           </p>
         </div>
@@ -75,7 +77,7 @@ export default function SupplyChainMidCta() {
         <Link
           data-reveal
           to="/contact"
-          className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-cta-gradient py-2 pl-7 pr-2 text-base font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 focus-ring md:text-lg"
+          className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-base font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 focus-ring md:text-lg"
         >
           {midCta.ctaText}
           <span className="flex h-11 w-11 items-center justify-center rounded-full bg-inverse/15 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-[1px]">

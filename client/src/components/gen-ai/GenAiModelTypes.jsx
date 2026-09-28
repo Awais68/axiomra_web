@@ -34,7 +34,7 @@ export default function GenAiModelTypes() {
             {modelTypes.eyebrow}
           </p>
           <h2 className="font-display text-4xl font-semibold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl">
-            <span className="text-gradient">{modelTypes.titleAccent}</span> {modelTypes.titleLead}
+            <span className="text-highlight">{modelTypes.titleAccent}</span> {modelTypes.titleLead}
           </h2>
           <p className="mx-auto mt-6 max-w-4xl text-lg leading-relaxed text-white/70 md:text-xl">
             {modelTypes.subtitle}
@@ -60,7 +60,7 @@ export default function GenAiModelTypes() {
                 />
 
                 <div className="relative flex items-center gap-4">
-                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl2 bg-cta-gradient text-inverse">
+                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl2 bg-accent-vivid text-inverse">
                     <Icon size={22} aria-hidden="true" />
                   </span>
                   <span

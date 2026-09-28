@@ -94,7 +94,7 @@ export default function FlowTimeline({
         aria-hidden="true"
       >
         <motion.div
-          className="h-full w-full origin-left bg-cta-gradient"
+          className="h-full w-full origin-left bg-accent-vivid"
           initial={false}
           animate={{ scaleX: progress }}
           transition={{ duration: reduced ? 0 : 0.6, ease: "easeInOut" }}
@@ -127,7 +127,7 @@ export default function FlowTimeline({
               {i < count - 1 && (
                 <span
                   className={`absolute left-7 top-14 -bottom-8 w-px lg:hidden ${
-                    i < activeIndex ? "bg-cta-gradient" : t.rail
+                    i < activeIndex ? "bg-accent-vivid" : t.rail
                   }`}
                   aria-hidden="true"
                 />

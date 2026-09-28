@@ -14,7 +14,7 @@ export default function FinanceStakeholders() {
           eyebrow={stakeholders.eyebrow}
           title={
             <>
-              <span className="text-gradient">{stakeholders.titleLead}</span> {stakeholders.titleAccent}
+              <span className="text-highlight">{stakeholders.titleLead}</span> {stakeholders.titleAccent}
             </>
           }
         />

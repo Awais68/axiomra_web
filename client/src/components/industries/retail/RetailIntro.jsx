@@ -25,7 +25,7 @@ export default function RetailIntro() {
             data-reveal
             className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-content md:text-4xl lg:text-5xl"
           >
-            {intro.titleLead} <span className="text-gradient">{intro.titleAccent}</span>
+            {intro.titleLead} <span className="text-highlight">{intro.titleAccent}</span>
           </h2>
 
           <div data-reveal className="mt-8">
@@ -33,7 +33,7 @@ export default function RetailIntro() {
                 same circle, so the gap you see is exactly `shape-margin`. */}
             <span
               aria-hidden="true"
-              className="shape-orb flex items-center justify-center bg-cta-gradient text-inverse shadow-glow"
+              className="shape-orb flex items-center justify-center bg-accent-vivid text-inverse shadow-glow"
             >
               <ShoppingBag size={64} strokeWidth={1} />
             </span>

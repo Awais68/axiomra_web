@@ -101,7 +101,7 @@ export default function HealthcareStandards() {
           eyebrow={standards.eyebrow}
           title={
             <>
-              {standards.titleLead} <span className="text-gradient">{standards.titleAccent}</span>
+              {standards.titleLead} <span className="text-highlight">{standards.titleAccent}</span>
             </>
           }
         />

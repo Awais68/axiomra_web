@@ -60,7 +60,7 @@ export default function GenAiWhyUs() {
             </p>
             <Link
               to="/contact"
-              className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-cta-gradient px-7 py-4 text-base font-semibold text-inverse-fg shadow-glow transition-transform hover:-translate-y-0.5 focus-ring md:text-lg"
+              className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-accent-vivid px-7 py-4 text-base font-semibold text-inverse-fg shadow-glow transition-transform hover:-translate-y-0.5 focus-ring md:text-lg"
             >
               {whyUs.ctaText}
               <ArrowRight size={19} className="transition-transform group-hover:translate-x-1" />

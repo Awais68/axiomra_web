@@ -35,7 +35,7 @@ export default function InsuranceLines() {
           eyebrow={lines.eyebrow}
           title={
             <>
-              <span className="text-gradient">{lines.titleLead}</span> {lines.titleAccent}
+              <span className="text-highlight">{lines.titleLead}</span> {lines.titleAccent}
             </>
           }
           subtitle={lines.body}

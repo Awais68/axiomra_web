@@ -16,7 +16,7 @@ export default function FashionStreamline() {
           eyebrow={streamline.eyebrow}
           title={
             <>
-              {streamline.titleLead} <span className="text-gradient">{streamline.titleAccent}</span>
+              {streamline.titleLead} <span className="text-highlight">{streamline.titleAccent}</span>
             </>
           }
         />

@@ -31,7 +31,7 @@ function BigNumber({ value }) {
   }, [value]);
 
   return (
-    <p ref={ref} className="font-display text-6xl font-semibold tracking-tight text-gradient md:text-7xl">
+    <p ref={ref} className="font-display text-6xl font-semibold tracking-tight text-highlight md:text-7xl">
       {value}
     </p>
   );
@@ -45,7 +45,7 @@ export default function FashionImpact() {
           align="left"
           title={
             <>
-              {impact.titleLead} <span className="text-gradient">{impact.titleAccent}</span>
+              {impact.titleLead} <span className="text-highlight">{impact.titleAccent}</span>
             </>
           }
           subtitle={impact.body}

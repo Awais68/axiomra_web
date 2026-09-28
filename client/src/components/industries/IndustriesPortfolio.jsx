@@ -6,6 +6,7 @@ import { Reveal } from "../motion/Reveal";
 import { caseStudies } from "../../data/portfolioData";
 import { PORTFOLIO_PATH } from "../../routes.constants";
 import { showcase } from "../../data/industriesData";
+import BrandMark from "../case-study/BrandMark";
 
 /**
  * Case studies running as a continuous marquee. The list is repeated until one
@@ -21,8 +22,12 @@ const SECONDS_PER_CARD = 4;
 
 export default function IndustriesPortfolio({ data = showcase }) {
   const reduced = useReducedMotion();
-  const pass = Array.from({ length: Math.ceil(MIN_PASS / caseStudies.length) }, () => caseStudies).flat();
-  const studies = reduced ? caseStudies : [...pass, ...pass];
+  // A page can hide projects that are off-topic for it, by tag prefix.
+  const shown = data.excludeTags?.length
+    ? caseStudies.filter((s) => !data.excludeTags.some((t) => s.tag.startsWith(t)))
+    : caseStudies;
+  const pass = Array.from({ length: Math.ceil(MIN_PASS / shown.length) }, () => shown).flat();
+  const studies = reduced ? shown : [...pass, ...pass];
 
   return (
     <section className="overflow-hidden border-t border-line bg-surface py-24 md:py-32">
@@ -31,7 +36,7 @@ export default function IndustriesPortfolio({ data = showcase }) {
           eyebrow={data.eyebrow}
           title={
             <>
-              {data.titleLead} <span className="text-gradient">{data.titleAccent}</span>
+              {data.titleLead} <span className="text-highlight">{data.titleAccent}</span>
             </>
           }
           subtitle={data.body}
@@ -63,16 +68,16 @@ export default function IndustriesPortfolio({ data = showcase }) {
             {studies.map((study, i) => (
               <li
                 key={`${study.slug}-${i}`}
-                aria-hidden={i >= caseStudies.length ? "true" : undefined}
+                aria-hidden={i >= shown.length ? "true" : undefined}
                 className="w-[82vw] shrink-0 sm:w-[24rem] lg:w-[26rem]"
               >
                 <Link
                   to={study.caseStudy ?? PORTFOLIO_PATH}
-                  tabIndex={i >= caseStudies.length ? -1 : undefined}
+                  tabIndex={i >= shown.length ? -1 : undefined}
                   className="group block h-full rounded-[2rem] border border-line bg-surface-subtle p-2 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:shadow-card focus-ring"
                 >
                   <div
-                    className="overflow-hidden rounded-[calc(2rem-0.5rem)]"
+                    className="relative overflow-hidden rounded-[calc(2rem-0.5rem)]"
                     style={{ backgroundColor: study.band ?? study.accent }}
                   >
                     <img
@@ -84,6 +89,7 @@ export default function IndustriesPortfolio({ data = showcase }) {
                       decoding="async"
                       className="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.04]"
                     />
+                    <BrandMark />
                   </div>
                   <div className="flex items-start justify-between gap-4 px-4 pb-4 pt-5">
                     <div>

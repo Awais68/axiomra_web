@@ -162,7 +162,7 @@ export default function NlpIntro() {
               <Link
                 data-intro-cta
                 to="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-cta-gradient px-8 py-4 text-base font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring md:text-lg"
+                className="group inline-flex items-center gap-2 rounded-full bg-accent-vivid px-8 py-4 text-base font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring md:text-lg"
               >
                 {hero.ctaText}
                 <ArrowUpRight
@@ -265,7 +265,7 @@ export default function NlpIntro() {
                     <span
                       data-pred-bar
                       aria-hidden="true"
-                      className="block h-full w-full origin-left rounded-full bg-cta-gradient"
+                      className="block h-full w-full origin-left rounded-full bg-accent-vivid"
                       style={{ transform: `scaleX(${o.confidence})` }}
                     />
                   </div>

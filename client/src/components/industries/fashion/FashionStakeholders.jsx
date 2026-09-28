@@ -11,7 +11,7 @@ export default function FashionStakeholders() {
           eyebrow={stakeholders.eyebrow}
           title={
             <>
-              {stakeholders.titleLead} <span className="text-gradient">{stakeholders.titleAccent}</span>
+              {stakeholders.titleLead} <span className="text-highlight">{stakeholders.titleAccent}</span>
             </>
           }
         />

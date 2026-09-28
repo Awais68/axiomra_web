@@ -45,7 +45,7 @@ export default function TechBusinesses() {
           title={
             <>
               {businesses.titleLead}{" "}
-              <span className="text-gradient">{businesses.titleAccent}</span>
+              <span className="text-highlight">{businesses.titleAccent}</span>
             </>
           }
           subtitle={businesses.body}

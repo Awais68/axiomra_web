@@ -15,7 +15,7 @@ export default function InsuranceValueChain() {
           eyebrow={valueChain.eyebrow}
           title={
             <>
-              <span className="text-gradient">{valueChain.titleLead}</span> {valueChain.titleAccent}
+              <span className="text-highlight">{valueChain.titleLead}</span> {valueChain.titleAccent}
             </>
           }
           subtitle={valueChain.body}

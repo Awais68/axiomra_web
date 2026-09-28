@@ -29,7 +29,7 @@ export default function GenAiProcess() {
             </p>
             <Link
               to="/contact"
-              className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-cta-gradient px-7 py-4 text-base font-semibold text-inverse-fg shadow-glow transition-transform hover:-translate-y-0.5 focus-ring md:text-lg"
+              className="group mt-8 inline-flex items-center gap-2.5 rounded-full bg-accent-vivid px-7 py-4 text-base font-semibold text-inverse-fg shadow-glow transition-transform hover:-translate-y-0.5 focus-ring md:text-lg"
             >
               {process.ctaText}
               <ArrowRight size={19} className="transition-transform group-hover:translate-x-1" />
@@ -40,7 +40,7 @@ export default function GenAiProcess() {
             <div className="absolute bottom-0 left-[13px] top-2 w-px bg-line md:left-[17px]" aria-hidden="true">
               <motion.div
                 style={{ scaleY: fill, transformOrigin: "top" }}
-                className="h-full w-full bg-cta-gradient"
+                className="h-full w-full bg-accent-vivid"
               />
             </div>
 

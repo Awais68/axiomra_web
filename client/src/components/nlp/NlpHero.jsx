@@ -78,7 +78,7 @@ export default function NlpHero() {
           className="max-w-5xl font-display text-[2.1rem] font-light leading-[1.12] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[4.2rem]"
         >
           <span data-hero-line className="block">
-            {hero.titleLead} <span className="text-gradient font-medium">{hero.titleAccent}</span>
+            {hero.titleLead} <span className="text-highlight font-medium">{hero.titleAccent}</span>
           </span>
           <span data-hero-line className="mt-1 block text-white/85">
             {hero.titleTail}

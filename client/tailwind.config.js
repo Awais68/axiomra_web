@@ -57,10 +57,6 @@ export default {
         glow: "0 0 70px -15px rgba(120,139,227,0.55)",
         card: "0 10px 40px -15px rgba(10,20,40,0.15)",
       },
-      backgroundImage: {
-        // Brand gradients are fixed by identity, they do not flip per theme.
-        "cta-gradient": "linear-gradient(120deg, #14D8C4 0%, #788BE3 55%, #777ACF 100%)",
-      },
       animation: {
         marquee: "marquee 30s linear infinite",
         "marquee-rev": "marquee-rev 34s linear infinite",

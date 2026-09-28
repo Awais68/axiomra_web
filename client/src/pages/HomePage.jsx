@@ -15,7 +15,6 @@ import Certifications from "../sections/Certifications";
 import RoiCalculator from "../sections/RoiCalculator";
 import ProvenResults from "../sections/ProvenResults";
 import Awards from "../sections/Awards";
-import Resources from "../sections/Resources";
 import FAQ from "../sections/FAQ";
 import Contact from "../sections/Contact";
 import Seo from "../seo/Seo";
@@ -61,7 +60,6 @@ export default function HomePage() {
       <RoiCalculator />
       <ProvenResults />
       <Awards />
-      <Resources />
       <FAQ />
       <Contact />
       <GradientCTA

@@ -61,7 +61,7 @@ export default function RetailImpact() {
           onInverse
           title={
             <>
-              {impact.titleLead} <span className="text-gradient">{impact.titleAccent}</span>
+              {impact.titleLead} <span className="text-highlight">{impact.titleAccent}</span>
             </>
           }
           subtitle={impact.body}

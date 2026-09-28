@@ -37,7 +37,7 @@ export default function AgenticSecurity() {
             {security.eyebrow}
           </p>
           <h2 className="font-display text-3xl font-semibold leading-[1.12] tracking-tight text-white sm:text-4xl md:text-5xl">
-            <span className="text-gradient">{security.titleAccent}</span> {security.titleLead}
+            <span className="text-highlight">{security.titleAccent}</span> {security.titleLead}
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">
             {security.subtitle}

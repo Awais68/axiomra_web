@@ -109,7 +109,7 @@ export default function AdminForgotPasswordPage() {
               <button
                 type="submit"
                 disabled={busy}
-                className="focus-ring mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-cta-gradient py-3 text-sm font-semibold text-[#0A1428] transition-opacity hover:opacity-90 disabled:opacity-60"
+                className="focus-ring mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-accent-vivid py-3 text-sm font-semibold text-[#0A1428] transition-opacity hover:opacity-90 disabled:opacity-60"
               >
                 {busy && <Loader2 size={16} className="animate-spin" aria-hidden="true" />}
                 {busy ? "Sending…" : "Send reset link"}

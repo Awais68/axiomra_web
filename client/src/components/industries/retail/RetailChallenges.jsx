@@ -20,7 +20,7 @@ export default function RetailChallenges() {
           eyebrow={challenges.eyebrow}
           title={
             <>
-              {challenges.titleLead} <span className="text-gradient">{challenges.titleAccent}</span>
+              {challenges.titleLead} <span className="text-highlight">{challenges.titleAccent}</span>
             </>
           }
           subtitle={challenges.body}

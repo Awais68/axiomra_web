@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { gsap, MOTION_OK } from "../../lib/gsap";
+import BrandMark from "../case-study/BrandMark";
 
 /**
  * One case study, rendered as a full-bleed alternating row.
@@ -254,6 +255,7 @@ export default function CaseStudyRow({ study, index }) {
               decoding="async"
               className="h-auto w-full"
             />
+            <BrandMark />
           </div>
         </div>
       </div>

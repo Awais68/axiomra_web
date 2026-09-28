@@ -105,7 +105,7 @@ export default function LegalDoctrine() {
           eyebrow={doctrine.eyebrow}
           title={
             <>
-              {doctrine.titleLead} <span className="text-gradient">{doctrine.titleAccent}</span>
+              {doctrine.titleLead} <span className="text-highlight">{doctrine.titleAccent}</span>
             </>
           }
         />

@@ -79,7 +79,7 @@ export default function TransportationModes() {
           eyebrow={modes.eyebrow}
           title={
             <>
-              <span className="text-gradient">{modes.titleLead}</span> {modes.titleAccent}
+              <span className="text-highlight">{modes.titleLead}</span> {modes.titleAccent}
             </>
           }
           subtitle={modes.body}

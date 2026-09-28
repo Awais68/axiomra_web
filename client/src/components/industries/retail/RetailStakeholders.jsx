@@ -18,7 +18,7 @@ export default function RetailStakeholders() {
           title={
             <>
               {stakeholders.titleLead}{" "}
-              <span className="text-gradient">{stakeholders.titleAccent}</span>
+              <span className="text-highlight">{stakeholders.titleAccent}</span>
             </>
           }
         />

@@ -351,7 +351,7 @@ export default function AdminLeadsPage() {
                   eyebrow rather than taking a third line of its own. */}
               <h1 className="font-display text-[clamp(1.25rem,2.2vw,1.65rem)] font-semibold leading-tight tracking-tight text-content">
                 Lead Management{" "}
-                <span className="bg-cta-gradient bg-clip-text text-transparent">System</span>
+                <span className="text-highlight">System</span>
               </h1>
               <p className="mt-0.5 text-[12px] text-content-dim">
                 Every enquiry from the website and the team, in one pipeline.

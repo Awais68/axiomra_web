@@ -65,8 +65,8 @@ export default function CvHero() {
               custom={1}
               className="font-display text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-[3.4rem] lg:text-[3.15rem] xl:text-[3.6rem]"
             >
-              <span className="text-gradient">{hero.titleLead}</span>{" "}
-              <span className="text-gradient">{hero.titleAccent}</span>
+              <span className="text-highlight">{hero.titleLead}</span>{" "}
+              <span className="text-highlight">{hero.titleAccent}</span>
               <span className="mt-2 block">{hero.titleTail}</span>
             </motion.h1>
 
@@ -89,7 +89,7 @@ export default function CvHero() {
             >
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-cta-gradient px-8 py-4 text-base font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring md:text-lg"
+                className="group inline-flex items-center gap-2 rounded-full bg-accent-vivid px-8 py-4 text-base font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring md:text-lg"
               >
                 {hero.ctaText}
                 <ArrowUpRight

@@ -30,7 +30,7 @@ export default function RetailAppTypes() {
           eyebrow={appTypes.eyebrow}
           title={
             <>
-              {appTypes.titleLead} <span className="text-gradient">{appTypes.titleAccent}</span>
+              {appTypes.titleLead} <span className="text-highlight">{appTypes.titleAccent}</span>
             </>
           }
         />

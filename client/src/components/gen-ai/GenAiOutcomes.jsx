@@ -23,7 +23,7 @@ export default function GenAiOutcomes() {
             {outcomes.eyebrow}
           </p>
           <h2 className="mt-4 font-display text-3xl font-semibold leading-[1.15] text-inverse-fg sm:text-4xl md:text-5xl">
-            <span className="text-gradient">{outcomes.titleAccent}</span> {outcomes.titleLead}
+            <span className="text-highlight">{outcomes.titleAccent}</span> {outcomes.titleLead}
           </h2>
         </div>
 
@@ -41,7 +41,7 @@ export default function GenAiOutcomes() {
                 className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-brand/25 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
                 aria-hidden="true"
               />
-              <span className="relative font-display text-4xl font-semibold text-gradient md:text-5xl">
+              <span className="relative font-display text-4xl font-semibold text-highlight md:text-5xl">
                 {item.value}
               </span>
               <h3 className="relative mt-4 font-display text-xl font-semibold text-inverse-fg md:text-2xl">

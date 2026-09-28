@@ -14,6 +14,7 @@ import {
   COMPUTER_VISION_SLUG,
   GENERATIVE_AI_SLUG,
   AGENTIC_AI_SLUG,
+  NLP_SLUG,
 } from "../routes.constants";
 
 /**
@@ -26,7 +27,7 @@ const LINK_ROUTES = {
   "Computer Vision": `${SERVICES_BASE_PATH}/${COMPUTER_VISION_SLUG}`,
   "Generative AI": `${SERVICES_BASE_PATH}/${GENERATIVE_AI_SLUG}`,
   "Agentic AI Development": `${SERVICES_BASE_PATH}/${AGENTIC_AI_SLUG}`,
-  "Software Development": SERVICES_BASE_PATH,
+  "Natural Language Processing": `${SERVICES_BASE_PATH}/${NLP_SLUG}`,
   "AI for Fashion": industryPath("fashion"),
   "AI for Sports": industryPath("sports"),
   "AI for Education": industryPath("education"),
@@ -47,7 +48,7 @@ const cols = [
     links: [
       "Artificial Intelligence",
       "Computer Vision",
-      "Software Development",
+      "Natural Language Processing",
       "Generative AI",
       "Agentic AI Development",
     ],
@@ -65,7 +66,7 @@ const cols = [
   },
   {
     title: "Quick Links",
-    links: ["Blogs", "Contact Us", "About Us", "Tech Stack", "Awards and Recognition", "FAQs"],
+    links: ["Contact Us", "About Us", "Tech Stack", "Awards and Recognition", "FAQs"],
   },
 ];
 

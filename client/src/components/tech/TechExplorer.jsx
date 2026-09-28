@@ -101,7 +101,7 @@ export default function TechExplorer() {
           eyebrow={explorer.eyebrow}
           title={
             <>
-              {explorer.titleLead} <span className="text-gradient">{explorer.titleAccent}</span>
+              {explorer.titleLead} <span className="text-highlight">{explorer.titleAccent}</span>
             </>
           }
           subtitle={explorer.body}

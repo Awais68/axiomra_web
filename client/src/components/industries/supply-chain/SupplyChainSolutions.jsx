@@ -58,7 +58,7 @@ export default function SupplyChainSolutions() {
           eyebrow={solutions.eyebrow}
           title={
             <>
-              {solutions.titleLead} <span className="text-gradient">{solutions.titleAccent}</span>
+              {solutions.titleLead} <span className="text-highlight">{solutions.titleAccent}</span>
             </>
           }
           subtitle={solutions.body}

@@ -27,7 +27,7 @@ export default function RealEstateBenefits() {
           eyebrow={benefits.eyebrow}
           title={
             <>
-              {benefits.titleLead} <span className="text-gradient">{benefits.titleAccent}</span>
+              {benefits.titleLead} <span className="text-highlight">{benefits.titleAccent}</span>
             </>
           }
         />

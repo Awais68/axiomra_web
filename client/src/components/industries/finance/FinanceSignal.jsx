@@ -109,7 +109,7 @@ export default function FinanceSignal() {
           eyebrow={signal.eyebrow}
           title={
             <>
-              {signal.titleLead} <span className="text-gradient">{signal.titleAccent}</span>
+              {signal.titleLead} <span className="text-highlight">{signal.titleAccent}</span>
             </>
           }
         />

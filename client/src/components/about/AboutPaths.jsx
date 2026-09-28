@@ -38,7 +38,7 @@ export default function AboutPaths() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.55, ease: "easeOut", delay: i * 0.12 }}
                 className={`group flex flex-col overflow-hidden rounded-[2rem] ${
-                  brand ? "bg-cta-gradient" : "bg-inverse"
+                  brand ? "bg-accent-vivid" : "bg-inverse"
                 }`}
               >
                 <div className="p-8 md:p-10">

@@ -53,7 +53,7 @@ export default function RetailServices() {
           eyebrow={services.eyebrow}
           title={
             <>
-              <span className="text-gradient">{services.titleLead}</span> {services.titleAccent}
+              <span className="text-highlight">{services.titleLead}</span> {services.titleAccent}
             </>
           }
           subtitle={services.body}

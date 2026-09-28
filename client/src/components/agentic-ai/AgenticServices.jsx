@@ -146,13 +146,13 @@ export default function AgenticServices() {
                       {isActive &&
                         (reduced ? (
                           <span
-                            className="absolute inset-y-0 left-0 w-[3px] bg-cta-gradient"
+                            className="absolute inset-y-0 left-0 w-[3px] bg-accent-vivid"
                             aria-hidden="true"
                           />
                         ) : (
                           <motion.span
                             layoutId={`${ID}-marker`}
-                            className="absolute inset-y-0 left-0 w-[3px] bg-cta-gradient"
+                            className="absolute inset-y-0 left-0 w-[3px] bg-accent-vivid"
                             transition={{ type: "spring", stiffness: 320, damping: 30 }}
                             aria-hidden="true"
                           />
@@ -191,7 +191,7 @@ export default function AgenticServices() {
           {/* Panel stack. All eight live here, one on top of the other. */}
           <Reveal
             from="scale"
-            className="relative grid rounded-xl2 bg-cta-gradient p-px"
+            className="relative grid rounded-xl2 bg-accent-vivid p-px"
             id={`${ID}-panel`}
             role="tabpanel"
             aria-labelledby={`${ID}-tab-${active}`}

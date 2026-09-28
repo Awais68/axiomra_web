@@ -37,7 +37,7 @@ export default function NlpStack() {
           eyebrow={stack.eyebrow}
           title={
             <>
-              <span className="text-gradient">{stack.titleAccent}</span> {stack.titleLead}
+              <span className="text-highlight">{stack.titleAccent}</span> {stack.titleLead}
             </>
           }
           subtitle={stack.subtitle}
@@ -62,7 +62,7 @@ export default function NlpStack() {
                 onClick={() => setActive(i)}
                 className={`rounded-full px-6 py-3 text-sm font-medium transition-colors focus-ring md:text-base ${
                   selected
-                    ? "bg-cta-gradient text-inverse"
+                    ? "bg-accent-vivid text-inverse"
                     : "border border-white/20 text-white/70 hover:border-brand/60 hover:text-white"
                 }`}
               >

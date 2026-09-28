@@ -72,7 +72,7 @@ export default function FaqsHero({ query, onQueryChange, onSubmit }) {
             className="mt-5 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-inverse-fg sm:text-5xl lg:text-[3.25rem] xl:text-6xl"
           >
             {hero.titleLead}{" "}
-            <span className="text-gradient">{hero.titleAccent}</span>
+            <span className="text-highlight">{hero.titleAccent}</span>
           </motion.h1>
 
           <motion.p

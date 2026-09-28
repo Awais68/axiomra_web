@@ -20,7 +20,7 @@ export default function GenAiStack() {
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <div className="overflow-hidden rounded-xl2 bg-cta-gradient p-px shadow-card">
+            <div className="overflow-hidden rounded-xl2 bg-accent-vivid p-px shadow-card">
               <div className="overflow-hidden rounded-[calc(1.25rem-1px)]">
                 <img
                   src={techStack.image}

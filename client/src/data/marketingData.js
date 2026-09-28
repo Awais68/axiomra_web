@@ -637,6 +637,8 @@ export const showcase = {
   body:
     "A look at the marketing systems we have built, and the number each one was measured against.",
   ctaText: "Check Out Our Full Portfolio",
+  // Healthcare work is off-topic for a marketing audience.
+  excludeTags: ["Healthcare"],
 };
 
 export const partner = {

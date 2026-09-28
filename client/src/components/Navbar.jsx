@@ -117,7 +117,7 @@
 //           </a>
 //           <a
 //             href="#contact"
-//             className="text-sm font-medium bg-gradient-to-r from-teal to-periwinkle text-white px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity focus-ring"
+//             className="text-sm font-medium bg-accent-vivid text-inverse px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity focus-ring"
 //           >
 //             Book a call
 //           </a>
@@ -153,7 +153,7 @@
 //             <a
 //               href="#contact"
 //               onClick={() => setOpen(false)}
-//               className="bg-gradient-to-r from-teal to-periwinkle text-white text-center py-2.5 rounded-full font-medium"
+//               className="bg-accent-vivid text-inverse text-center py-2.5 rounded-full font-medium"
 //             >
 //               Book a call
 //             </a>
@@ -305,7 +305,7 @@ export default function Navbar() {
           </a>
           <a
             href="/contact"
-            className="text-sm font-medium bg-gradient-to-r from-teal to-periwinkle text-white px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity focus-ring"
+            className="text-sm font-medium bg-accent-vivid text-inverse px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity focus-ring"
           >
             Book a call
           </a>
@@ -344,7 +344,7 @@ export default function Navbar() {
             <a
               href="/contact"
               onClick={() => setOpen(false)}
-              className="bg-gradient-to-r from-teal to-periwinkle text-white text-center py-2.5 rounded-full font-medium"
+              className="bg-accent-vivid text-inverse text-center py-2.5 rounded-full font-medium"
             >
               Book a call
             </a>

@@ -45,7 +45,7 @@ export default function CvServices() {
                     onClick={() => setActive(i)}
                     className={`rounded-lg px-5 py-4 text-left text-base font-medium transition-colors focus-ring md:text-lg ${
                       selected
-                        ? "bg-cta-gradient text-inverse"
+                        ? "bg-accent-vivid text-inverse"
                         : "text-content-dim hover:bg-surface-inset hover:text-content"
                     }`}
                   >

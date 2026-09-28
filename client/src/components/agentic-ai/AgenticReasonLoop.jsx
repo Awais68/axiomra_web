@@ -31,7 +31,7 @@ export default function AgenticReasonLoop() {
             {reactLoop.eyebrow}
           </p>
           <h2 className="font-display text-4xl font-semibold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl">
-            <span className="text-gradient">{reactLoop.titleAccent}</span> {reactLoop.titleLead}
+            <span className="text-highlight">{reactLoop.titleAccent}</span> {reactLoop.titleLead}
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-white/70 md:text-xl">{reactLoop.body}</p>
         </motion.div>

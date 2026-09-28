@@ -65,7 +65,7 @@ export default function TechPartner() {
           eyebrow={partner.eyebrow}
           title={
             <>
-              {partner.titleLead} <span className="text-gradient">{partner.titleAccent}</span>
+              {partner.titleLead} <span className="text-highlight">{partner.titleAccent}</span>
             </>
           }
         />

@@ -53,7 +53,7 @@ export default function AboutMilestones() {
           eyebrow={milestones.eyebrow}
           title={
             <>
-              <span className="text-gradient">{milestones.titleAccent}</span> {milestones.titleLead}
+              <span className="text-highlight">{milestones.titleAccent}</span> {milestones.titleLead}
             </>
           }
         />
@@ -77,7 +77,7 @@ export default function AboutMilestones() {
                   onClick={() => selectYear(i)}
                   className={`shrink-0 rounded-xl px-7 py-3.5 text-lg font-semibold transition-all focus-ring lg:w-full ${
                     active
-                      ? "bg-cta-gradient text-inverse"
+                      ? "bg-accent-vivid text-inverse"
                       : "bg-white/5 text-inverse-fg/60 hover:bg-white/10 hover:text-inverse-fg"
                   }`}
                 >

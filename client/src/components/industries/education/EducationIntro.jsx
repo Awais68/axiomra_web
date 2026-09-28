@@ -19,7 +19,7 @@ export default function EducationIntro() {
             data-reveal
             className="font-display text-3xl font-semibold leading-[1.12] tracking-tight text-content md:text-4xl lg:text-[2.75rem]"
           >
-            {intro.titleLead} <span className="text-gradient">{intro.titleAccent}</span>
+            {intro.titleLead} <span className="text-highlight">{intro.titleAccent}</span>
           </h2>
 
           {intro.paragraphs.map((p) => (

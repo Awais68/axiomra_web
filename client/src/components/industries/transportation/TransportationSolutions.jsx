@@ -24,7 +24,7 @@ export default function TransportationSolutions() {
           eyebrow={solutions.eyebrow}
           title={
             <>
-              <span className="text-gradient">{solutions.titleLead}</span> {solutions.titleAccent}
+              <span className="text-highlight">{solutions.titleLead}</span> {solutions.titleAccent}
             </>
           }
           subtitle={solutions.body}

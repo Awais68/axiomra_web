@@ -36,7 +36,7 @@ export default function AgenticProcess() {
           >
             <motion.div
               style={{ scaleY: fill }}
-              className="h-full w-full origin-top bg-cta-gradient"
+              className="h-full w-full origin-top bg-accent-vivid"
             />
           </div>
 
@@ -57,7 +57,7 @@ export default function AgenticProcess() {
                     className="absolute left-0 top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-brand bg-surface md:left-1/2 md:-translate-x-1/2"
                     aria-hidden="true"
                   >
-                    <span className="h-2 w-2 rounded-full bg-cta-gradient" />
+                    <span className="h-2 w-2 rounded-full bg-accent-vivid" />
                   </span>
 
                   <div
@@ -86,7 +86,7 @@ export default function AgenticProcess() {
         <div className="mt-12 text-center">
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-2.5 rounded-full bg-cta-gradient px-7 py-4 text-base font-semibold text-inverse-fg shadow-glow transition-transform hover:-translate-y-0.5 focus-ring md:text-lg"
+            className="group inline-flex items-center gap-2.5 rounded-full bg-accent-vivid px-7 py-4 text-base font-semibold text-inverse-fg shadow-glow transition-transform hover:-translate-y-0.5 focus-ring md:text-lg"
           >
             {process.ctaText}
             <ArrowRight size={19} className="transition-transform group-hover:translate-x-1" />

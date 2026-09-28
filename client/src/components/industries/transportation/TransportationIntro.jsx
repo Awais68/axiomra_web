@@ -28,7 +28,7 @@ export default function TransportationIntro() {
             data-reveal
             className="font-display text-4xl font-semibold leading-[1.1] tracking-tight text-content md:text-5xl"
           >
-            {intro.titleLead} <span className="text-gradient">{intro.titleAccent}</span>
+            {intro.titleLead} <span className="text-highlight">{intro.titleAccent}</span>
           </h2>
 
           <p
@@ -50,7 +50,7 @@ export default function TransportationIntro() {
           <div data-reveal className="mt-9">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-cta-gradient py-2 pl-7 pr-2 text-base font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 focus-ring md:text-lg"
+              className="group inline-flex items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-base font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 focus-ring md:text-lg"
             >
               {intro.ctaText}
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-inverse/15 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-[1px]">

@@ -75,7 +75,7 @@ export default function BookCallModal() {
             <Link
               to="/contact"
               onClick={close}
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-vivid to-brand px-6 py-3 font-medium text-inverse-fg transition-opacity hover:opacity-90 focus-ring"
+              className="inline-flex items-center gap-2 rounded-full bg-accent-vivid px-6 py-3 font-medium text-inverse transition-opacity hover:opacity-90 focus-ring"
             >
               Book My Free Consultation <ArrowUpRight size={16} />
             </Link>

@@ -39,7 +39,7 @@ export default function RetailTechnologies() {
               title={
                 <>
                   {technologies.titleLead}{" "}
-                  <span className="text-gradient">{technologies.titleAccent}</span>
+                  <span className="text-highlight">{technologies.titleAccent}</span>
                 </>
               }
               subtitle={technologies.body}

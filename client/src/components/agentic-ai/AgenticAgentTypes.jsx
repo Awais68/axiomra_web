@@ -50,7 +50,7 @@ export default function AgenticAgentTypes() {
                   {selected && (
                     <motion.span
                       layoutId="agent-type-marker"
-                      className="absolute inset-y-3 left-0 w-[3px] rounded-full bg-cta-gradient"
+                      className="absolute inset-y-3 left-0 w-[3px] rounded-full bg-accent-vivid"
                       aria-hidden="true"
                     />
                   )}

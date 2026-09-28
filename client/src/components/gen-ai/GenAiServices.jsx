@@ -26,7 +26,7 @@ function ServiceBlock({ item, index }) {
         aria-hidden="true"
       />
 
-      <div className="relative rounded-xl2 bg-cta-gradient p-px shadow-card">
+      <div className="relative rounded-xl2 bg-accent-vivid p-px shadow-card">
         <div className="overflow-hidden rounded-[calc(1.25rem-1px)]">
           <img
             src={item.image}

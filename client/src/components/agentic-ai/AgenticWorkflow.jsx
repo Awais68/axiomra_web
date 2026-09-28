@@ -72,7 +72,7 @@ export default function AgenticWorkflow() {
               {workflow.eyebrow}
             </p>
             <h2 className="font-display text-4xl font-semibold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-[3.4rem]">
-              <span className="text-gradient">{workflow.titleAccent}</span>{" "}
+              <span className="text-highlight">{workflow.titleAccent}</span>{" "}
               {workflow.titleLead}
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">

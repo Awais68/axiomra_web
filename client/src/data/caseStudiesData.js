@@ -8,9 +8,7 @@
  *
  * @typedef {{ src: string, width: number }} ImageSource
  * @typedef {{ photographer: string, site: string, url: string }} ImageCredit
- * @typedef {{ sources: ImageSource[], width: number, height: number, alt: string, imageCredit?: ImageCredit, logoBaked?: boolean }} CaseImage
- * `logoBaked` marks legacy files with the Axiomra mark already in the pixels,
- * so <BrandedImage> skips its overlay. Never set it on a new image.
+ * @typedef {{ sources: ImageSource[], width: number, height: number, alt: string, imageCredit?: ImageCredit }} CaseImage
  * Entries come in two kinds. "client" studies describe delivered work.
  * "blueprint" studies are representative solution designs: they carry a
  * visible badge, use `highlights` instead of `stats`, and put any outcome
@@ -219,7 +217,6 @@ export const caseStudies = {
       width: 1400,
       height: 1050,
       alt: "A salesperson at a laptop in an open office, talking through a qualified inquiry",
-      logoBaked: true,
     },
 
     stats: [
@@ -253,7 +250,6 @@ export const caseStudies = {
       width: 1400,
       height: 788,
       alt: "Support staff on headsets at their desks handling first responses by hand",
-      logoBaked: true,
     },
 
     challenge: {
@@ -329,7 +325,6 @@ export const caseStudies = {
       width: 1400,
       height: 788,
       alt: "Two people in a meeting room talking across a laptop, the kind of sales call the flow ends with",
-      logoBaked: true,
     },
 
     phases: [

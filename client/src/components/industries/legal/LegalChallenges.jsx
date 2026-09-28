@@ -39,7 +39,7 @@ export default function LegalChallenges() {
           eyebrow={challenges.eyebrow}
           title={
             <>
-              <span className="text-gradient">{challenges.titleLead}</span> {challenges.titleAccent}
+              <span className="text-highlight">{challenges.titleLead}</span> {challenges.titleAccent}
             </>
           }
         />

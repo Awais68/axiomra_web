@@ -17,7 +17,7 @@ export default function RealEstateTechnologies() {
             eyebrow={technologies.eyebrow}
             title={
               <>
-                <span className="text-gradient">{technologies.titleLead}</span> {technologies.titleAccent}
+                <span className="text-highlight">{technologies.titleLead}</span> {technologies.titleAccent}
               </>
             }
             subtitle={technologies.body}

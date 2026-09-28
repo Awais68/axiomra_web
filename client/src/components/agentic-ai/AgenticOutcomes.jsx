@@ -34,7 +34,7 @@ export default function AgenticOutcomes() {
               transition={{ duration: 0.45, delay: (i % 3) * 0.07 }}
               className="group bg-surface-card p-8 transition-colors hover:bg-surface-inset md:p-10"
             >
-              <span className="block font-display text-4xl font-semibold leading-none text-gradient md:text-5xl">
+              <span className="block font-display text-4xl font-semibold leading-none text-highlight md:text-5xl">
                 {item.value}
               </span>
               <h3 className="mt-5 font-display text-lg font-semibold text-content md:text-xl">

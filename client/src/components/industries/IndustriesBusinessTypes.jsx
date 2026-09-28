@@ -15,7 +15,7 @@ export default function IndustriesBusinessTypes({ data = businessTypes }) {
           title={
             <>
               {data.titleLead}{" "}
-              <span className="text-gradient">{data.titleAccent}</span>
+              <span className="text-highlight">{data.titleAccent}</span>
             </>
           }
         />

@@ -65,7 +65,7 @@ export default function AgenticUseCases() {
                       className="flex items-start gap-2.5 text-sm text-content-dim md:text-base"
                     >
                       <span
-                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cta-gradient"
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-vivid"
                         aria-hidden="true"
                       />
                       {b}

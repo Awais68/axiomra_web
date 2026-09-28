@@ -1,4 +1,4 @@
-import logoLight from "../../assets/logo-light.webp";
+import BrandMark from "./BrandMark";
 
 /**
  * A case study photo with the Axiomra wordmark laid over its bottom-right
@@ -8,9 +8,6 @@ import logoLight from "../../assets/logo-light.webp";
  * `className` styles the frame (aspect, radius, ring, shadow); the photo
  * fills it. When the image carries an `imageCredit` and `credit` is on, the
  * credit is set in small text under the frame.
- *
- * `logoBaked` exists only for legacy files that already carry the mark; the
- * overlay is skipped so it never appears twice. New images must not set it.
  */
 export default function BrandedImage({ image, sizes, priority = false, credit = true, className = "" }) {
   const largest = image.sources[image.sources.length - 1];
@@ -32,19 +29,7 @@ export default function BrandedImage({ image, sizes, priority = false, credit = 
         decoding="async"
         className="h-full w-full object-cover"
       />
-      {/* ~10% of the frame's width, floored so it stays legible on phones. */}
-      {!image.logoBaked && (
-        <img
-          src={logoLight}
-          alt=""
-          aria-hidden="true"
-          width={500}
-          height={91}
-          loading="lazy"
-          decoding="async"
-          className="pointer-events-none absolute bottom-[4%] right-[4%] h-auto w-[10%] min-w-[4.5rem] select-none opacity-80 drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]"
-        />
-      )}
+      <BrandMark />
     </div>
   );
 

@@ -51,7 +51,7 @@ export default function AboutHero() {
             className="font-display text-4xl font-semibold leading-[1.06] tracking-tight text-inverse-fg sm:text-5xl md:text-6xl lg:text-[4.25rem]"
           >
             {hero.titleLead}
-            <span className="mt-2 block text-gradient">{hero.titleAccent}</span>
+            <span className="mt-2 block text-highlight">{hero.titleAccent}</span>
           </motion.h1>
 
           <motion.p
@@ -67,7 +67,7 @@ export default function AboutHero() {
           <motion.div variants={fadeUp} initial="hidden" animate="show" custom={3} className="mt-10">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-cta-gradient px-8 py-4 text-lg font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring"
+              className="group inline-flex items-center gap-2 rounded-full bg-accent-vivid px-8 py-4 text-lg font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring"
             >
               {hero.ctaText}
               <ArrowUpRight

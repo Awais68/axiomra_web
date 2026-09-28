@@ -75,7 +75,7 @@ export default function TechHero() {
             className="font-display text-4xl font-semibold leading-[1.06] tracking-tight text-inverse-fg sm:text-5xl lg:text-[3.4rem] xl:text-[4rem]"
           >
             {hero.titleLead}
-            <span className="mt-2 block text-gradient">{hero.titleAccent}</span>
+            <span className="mt-2 block text-highlight">{hero.titleAccent}</span>
           </motion.h1>
 
           <motion.p
@@ -91,7 +91,7 @@ export default function TechHero() {
           <motion.div variants={fadeUp} initial="hidden" animate="show" custom={3} className="mt-10">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-cta-gradient py-2 pl-7 pr-2 text-lg font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 active:scale-[0.98] focus-ring"
+              className="group inline-flex items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-lg font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 active:scale-[0.98] focus-ring"
             >
               {hero.ctaText}
               {/* Button-in-button: the arrow gets its own well so the pill reads

@@ -49,7 +49,7 @@ function IndustrySection({ industry, index }) {
             id={headingId}
             className="mt-4 font-display text-3xl font-semibold leading-[1.12] tracking-tight text-content md:text-4xl lg:text-5xl"
           >
-            {industry.titleLead} <span className="text-gradient">{industry.titleAccent}</span>
+            {industry.titleLead} <span className="text-highlight">{industry.titleAccent}</span>
           </h2>
           <p className="mt-5 max-w-[58ch] text-base leading-relaxed text-content-dim md:text-lg">
             {industry.description}

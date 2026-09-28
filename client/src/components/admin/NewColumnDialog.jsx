@@ -149,7 +149,7 @@ function ColumnForm({ onClose, onCreate }) {
             <button
               type="submit"
               disabled={busy}
-              className="focus-ring rounded-xl bg-cta-gradient px-5 py-2.5 text-sm font-semibold text-[#0A1428] transition-opacity hover:opacity-90 disabled:opacity-60"
+              className="focus-ring rounded-xl bg-accent-vivid px-5 py-2.5 text-sm font-semibold text-[#0A1428] transition-opacity hover:opacity-90 disabled:opacity-60"
             >
               {busy ? "Adding…" : "Add column"}
             </button>

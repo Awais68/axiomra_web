@@ -13,7 +13,7 @@ export default function LegalStakeholders() {
           eyebrow={stakeholders.eyebrow}
           title={
             <>
-              <span className="text-gradient">{stakeholders.titleLead}</span>{" "}
+              <span className="text-highlight">{stakeholders.titleLead}</span>{" "}
               {stakeholders.titleAccent}
             </>
           }

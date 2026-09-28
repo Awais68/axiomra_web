@@ -39,7 +39,7 @@ export default function IndustriesTechStrip({ data = techStrip }) {
           eyebrow={data.eyebrow}
           title={
             <>
-              {data.titleLead} <span className="text-gradient">{data.titleAccent}</span>
+              {data.titleLead} <span className="text-highlight">{data.titleAccent}</span>
             </>
           }
           subtitle={data.body}

@@ -355,7 +355,7 @@ function FullWidthDropdown({
           <NavLink
             href="/contact"
             onClick={onNavigate}
-            className="mt-auto inline-flex w-fit items-center gap-1.5 rounded-full bg-gradient-to-r from-accent-vivid to-brand px-5 py-2.5 text-base font-medium text-inverse-fg transition-opacity hover:opacity-90 focus-ring"
+            className="mt-auto inline-flex w-fit items-center gap-1.5 rounded-full bg-accent-vivid px-5 py-2.5 text-base font-medium text-inverse transition-opacity hover:opacity-90 focus-ring"
           >
             Book a call
             <ArrowRight className="h-4 w-4" />
@@ -527,7 +527,7 @@ function MobileNav({ fg }: { fg: (typeof TONE)[Tone] }) {
               <NavLink
                 href="/contact"
                 onClick={close}
-                className="w-full rounded-full bg-gradient-to-r from-accent-vivid to-brand px-5 py-2.5 text-center text-base font-medium text-inverse-fg hover:opacity-90 focus-ring"
+                className="w-full rounded-full bg-accent-vivid px-5 py-2.5 text-center text-base font-medium text-inverse hover:opacity-90 focus-ring"
               >
                 Book a call
               </NavLink>
@@ -606,7 +606,7 @@ export function Navbar({ className }: { className?: string }) {
             </NavLink>
             <NavLink
               href="/contact"
-              className="rounded-full bg-gradient-to-r from-accent-vivid via-brand to-accent-vivid bg-[length:200%_100%] bg-left px-6 py-2.5 text-base font-medium text-inverse-fg transition-all duration-500 hover:-translate-y-0.5 hover:bg-right hover:shadow-glow focus-ring"
+              className="rounded-full bg-accent-vivid px-6 py-2.5 text-base font-medium text-inverse transition-all duration-500 hover:-translate-y-0.5 hover:shadow-glow focus-ring"
             >
               Book a call
             </NavLink>

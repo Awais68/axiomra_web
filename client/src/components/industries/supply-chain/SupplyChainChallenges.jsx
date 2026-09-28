@@ -39,7 +39,7 @@ export default function SupplyChainChallenges() {
           eyebrow={challenges.eyebrow}
           title={
             <>
-              <span className="text-gradient">{challenges.titleLead}</span> {challenges.titleAccent}
+              <span className="text-highlight">{challenges.titleLead}</span> {challenges.titleAccent}
             </>
           }
           subtitle="Your supply chain runs into the same roadblocks: poor visibility, guesswork in planning, rising freight and inventory costs, and manual processes that do not scale. Here is what holds teams back, and how our custom software addresses it."

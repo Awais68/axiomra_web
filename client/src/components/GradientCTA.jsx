@@ -12,7 +12,7 @@ export default function GradientCTA({
   image,
 }) {
   return (
-    <section className={`relative overflow-hidden px-6 py-24 ${dark ? "bg-inverse" : "bg-cta-gradient"}`}>
+    <section className={`relative overflow-hidden px-6 py-24 ${dark ? "bg-inverse" : "bg-accent-vivid"}`}>
       {/* Optional photographic base coat. The scrim over it is what keeps the
           headline readable, so the two always ship together. */}
       {image && (

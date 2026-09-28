@@ -58,7 +58,7 @@ export default function ServicesHero() {
           >
             {/* Two deliberate lines, the old copy wrapped to three and pushed the CTA row below the fold on laptop viewports. */}
             Custom AI Services{" "}
-            <span className="block text-gradient">Built Around Your Business</span>
+            <span className="block text-highlight">Built Around Your Business</span>
           </motion.h1>
 
           <motion.p
@@ -82,7 +82,7 @@ export default function ServicesHero() {
           >
             <a
               href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-cta-gradient px-9 py-4 text-base font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring"
+              className="group inline-flex items-center gap-2 rounded-full bg-accent-vivid px-9 py-4 text-base font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring"
             >
               Book a Free Consultation
               <ArrowUpRight

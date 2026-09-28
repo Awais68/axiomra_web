@@ -66,7 +66,7 @@ export default function FashionSolutions() {
           data-sol-reveal
           className="mx-auto max-w-4xl font-display text-4xl font-semibold leading-[1.1] tracking-tight text-inverse-fg md:text-5xl"
         >
-          {solutions.titleLead} <span className="text-gradient">{solutions.titleTail}</span>
+          {solutions.titleLead} <span className="text-highlight">{solutions.titleTail}</span>
         </h2>
 
         <div

@@ -23,7 +23,7 @@ export default function AgenticStack() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="overflow-hidden rounded-xl2 bg-cta-gradient p-px shadow-card"
+          className="overflow-hidden rounded-xl2 bg-accent-vivid p-px shadow-card"
         >
           <div className="overflow-hidden rounded-[calc(1.25rem-1px)]">
             <img

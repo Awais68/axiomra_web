@@ -27,7 +27,7 @@ export default function SupplyChainBenefits() {
           eyebrow={benefits.eyebrow}
           title={
             <>
-              <span className="text-gradient">{benefits.titleLead}</span> {benefits.titleAccent}
+              <span className="text-highlight">{benefits.titleLead}</span> {benefits.titleAccent}
             </>
           }
         />
