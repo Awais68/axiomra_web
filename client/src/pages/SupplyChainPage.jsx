@@ -30,9 +30,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Custom AI Supply Chain Software Development Services | Axiomra";
+const TITLE = "AI and Data Solutions for Supply Chain Operations | Axiomra";
 const DESCRIPTION =
-  "AI supply chain software development: ERP, MRP, WMS, TMS and OMS platforms, demand forecasting, control-tower visibility and logistics optimisation built around your data.";
+  "Data & AI for supply chains: demand forecasting, inventory optimisation, logistics and control-tower analytics on top of your ERP, WMS and TMS.";
 
 export default function SupplyChainPage() {
   // Lazy photos land after the triggers were measured; once the page has

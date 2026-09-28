@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "../../SectionHeading";
 import { Stagger, StaggerItem } from "../../motion/Reveal";
 import { services } from "../../../data/supplyChainData";
+import { CONTACT_PATH } from "../../../routes.constants";
 
 /**
  * Twelve product categories, image over copy in a two-column grid as in the
@@ -59,7 +60,7 @@ export default function SupplyChainServices() {
                 <p className="mt-3 text-base leading-relaxed text-content-dim">{item.body}</p>
 
                 <Link
-                  to="/contact"
+                  to={CONTACT_PATH}
                   className="mt-auto inline-flex w-fit items-center gap-2 pt-6 text-sm font-medium text-brand transition-colors duration-300 hover:text-accent focus-ring"
                 >
                   Contact us

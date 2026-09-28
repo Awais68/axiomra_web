@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, Boxes, Star } from "lucide-react";
 import { gsap, MOTION_OK } from "../../../lib/gsap";
 import { hero } from "../../../data/supplyChainData";
+import { CONTACT_PATH } from "../../../routes.constants";
 
 // three.js stays behind a dynamic import so it never blocks first paint.
 const NetworkBackground = lazy(() => import("../../NetworkBackground"));
@@ -68,15 +69,15 @@ export default function SupplyChainHero() {
         <div className="lg:col-span-7">
           <p
             data-hero
-            className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2 font-mono text-sm uppercase tracking-[0.18em] text-white/75 backdrop-blur-sm"
+            className="mb-7 inline-flex max-w-full items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-mono text-xs uppercase tracking-[0.14em] text-white/75 backdrop-blur-sm sm:px-5 sm:text-sm sm:tracking-[0.18em]"
           >
-            <Boxes size={15} strokeWidth={1.5} className="text-accent-vivid" aria-hidden="true" />
+            <Boxes size={15} strokeWidth={1.5} className="shrink-0 text-accent-vivid" aria-hidden="true" />
             {hero.eyebrow}
           </p>
 
           <h1
             data-hero
-            className="font-display text-4xl font-semibold leading-[1.06] tracking-tight text-inverse-fg sm:text-5xl lg:text-[3.4rem] xl:text-[4rem]"
+            className="text-balance break-words font-display text-4xl font-semibold leading-[1.06] tracking-tight text-inverse-fg sm:text-5xl lg:text-[3.4rem] xl:text-[4rem]"
           >
             {hero.titleLead} <span className="text-highlight">{hero.titleAccent}</span> {hero.titleTail}
           </h1>
@@ -101,8 +102,8 @@ export default function SupplyChainHero() {
 
           <div data-hero className="mt-10 flex flex-wrap items-center gap-6">
             <Link
-              to="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-lg font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 active:scale-[0.98] focus-ring"
+              to={CONTACT_PATH}
+              className="group inline-flex max-w-full items-center gap-3 rounded-full bg-accent-vivid py-2 pl-6 pr-2 text-base font-semibold sm:pl-7 sm:text-lg text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 active:scale-[0.98] focus-ring"
             >
               {hero.ctaText}
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-inverse/15 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-[1px] group-hover:scale-105">

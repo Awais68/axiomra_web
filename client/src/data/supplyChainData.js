@@ -59,11 +59,11 @@ export const SUPPLY_CHAIN_SLUG = "supply-chain";
 
 export const hero = {
   eyebrow: "AI for the supply chain industry",
-  titleLead: "Custom",
-  titleAccent: "AI Supply Chain Software Development",
-  titleTail: "Services",
+  titleLead: "AI and Data Solutions",
+  titleAccent: "for Supply Chain",
+  titleTail: "Operations",
   body:
-    "We build custom AI software that shows your stock, orders and shipments in real time. Our supply chain software development services improve forecasts, reduce stockouts and lower shipping costs by automating planning, inventory and delivery.",
+    "We turn the data already sitting in your ERP, WMS, TMS and carrier systems into forecasts, alerts and decisions your teams can act on. Better visibility of stock, orders and shipments, fewer stockouts and lower freight cost, working with the systems your teams already use, not replacing them.",
   ctaText: "Request a free consultation",
   image: heroImg,
   alt: "A planner tracing a live logistics network above a lit warehouse floor",
@@ -71,13 +71,13 @@ export const hero = {
 };
 
 export const intro = {
-  titleLead: "AI Supply Chain Management",
-  titleAccent: "Software Development Services That Deliver",
+  titleLead: "Supply Chain Data & AI",
+  titleAccent: "That Delivers Measurable Value",
   paragraphs: [
-    "Axiomra is an AI supply chain software development company that designs and builds custom tools for planning, inventory, warehousing and transport. We fix the common pain points (poor visibility, weak forecasts, stockouts, high freight costs and manual work) by unifying your data, adding real-time alerts, applying predictive models and automating routine steps.",
-    "We create simple, reliable apps your teams use every day: demand forecasting, replenishment, slotting, routing, control-tower dashboards and document automation. Built for inventory management, manufacturing, transportation and logistics teams, and for leaders across logistics providers, distributors and wholesalers, suppliers, regulatory bodies and B2B customers. Our approach is model-agnostic and practical: time-series ML, optimisation, computer vision and LLMs, all selected for your use case.",
+    "Axiomra is a Data & AI partner for planning, inventory, warehousing and transport teams. Poor visibility, weak forecasts, stockouts, high freight costs and manual work usually share one cause: data split across systems nobody can see together. We connect those sources, add real-time alerts, apply predictive models and automate routine decisions.",
+    "Typical use cases include demand forecasting, replenishment, slotting, routing, control-tower analytics and document intelligence, for inventory, manufacturing, transport and logistics teams, and for leaders across logistics providers, distributors and wholesalers. Our approach is model-agnostic and practical: time-series ML, optimisation, computer vision and LLMs, each selected for the use case and validated against your data.",
   ],
-  ctaText: "Book a Free Tech Consultation",
+  ctaText: "Book a Free Data & AI Consultation",
   image: introImg,
   alt: "An operations lead reviewing live inventory levels on a tablet",
 };
@@ -86,7 +86,7 @@ export const impact = {
   titleLead: "The Role Of AI In",
   titleAccent: "Modern Supply Chain Operations",
   body:
-    "AI supply chain software is redefining how companies plan, source, move and deliver. By automating manual processes and enabling real-time data intelligence, these solutions drive smarter decisions, faster operations and stronger resilience across global networks.",
+    "AI is changing how companies plan, source, move and deliver. By turning operational data into real-time intelligence and automating routine decisions, it supports smarter planning, faster operations and stronger resilience across global networks.",
   stats: [
     {
       value: "15%",
@@ -108,22 +108,22 @@ export const impact = {
 
 /**
  * The challenge rail. Each entry is a barrier supply chain teams hit, and the
- * platform capability we build to remove it.
+ * data and AI capability we apply to remove it.
  */
 export const challenges = {
   eyebrow: "Overcoming key barriers in supply chain",
   titleLead: "Supply Chain Challenges We Solve",
-  titleAccent: "With Custom AI Development",
+  titleAccent: "With Data & AI",
   items: [
     {
       title: "Lack of end-to-end visibility",
       body:
-        "Teams cannot see live orders, inventory and shipments across sites and partners, so problems surface late and costs rise. This happens because data sits in many systems with manual updates and mismatched IDs. With AI supply chain software development we unify data streams, predict ETAs and flag exceptions early. You get one source of truth, faster fixes, higher on-time delivery and less buffer stock.",
+        "Teams cannot see live orders, inventory and shipments across sites and partners, so problems surface late and costs rise. The data sits in many systems with manual updates and mismatched IDs. We unify those data streams, predict ETAs and flag exceptions early, giving you one trusted view, faster fixes, higher on-time delivery and less buffer stock.",
     },
     {
       title: "Demand forecasting inaccuracy",
       body:
-        "Spreadsheet forecasts miss seasonality, promotions and sudden demand shifts, so you carry the wrong stock in the wrong place. We build time-series and causal models that read orders, pricing, weather and campaign calendars together, then feed replenishment automatically. Planners stop rebuilding the forecast every week and start managing exceptions.",
+        "Spreadsheet forecasts miss seasonality, promotions and sudden demand shifts, so you carry the wrong stock in the wrong place. We build time-series and causal models that read orders, pricing, weather and campaign calendars together, then feed the results into your replenishment process. Planners stop rebuilding the forecast every week and start managing exceptions.",
     },
     {
       title: "Supplier disruptions and single-source risk",
@@ -138,198 +138,198 @@ export const challenges = {
     {
       title: "Component and raw material shortages",
       body:
-        "Exploded BOMs, netting errors and unposted receipts turn material planning into guesswork, and expedite freight quietly eats margin. We build MRP that nets on-hand and open orders in real time, applies live lead times and MOQ rules, and flags shortages far enough ahead to fix them cheaply.",
+        "Exploded BOMs, netting errors and unposted receipts turn material planning into guesswork, and expedite freight quietly eats margin. We add predictive shortage detection on top of your MRP data, using live lead times and MOQ rules to flag shortages far enough ahead to fix them cheaply.",
     },
     {
       title: "Inefficient warehouse operations",
       body:
-        "Slow picks, high labour cost and accuracy issues are usually fixed at the source: layout, slotting and task sequencing. We orchestrate receiving, putaway, picking, packing and shipping, balance labour across shifts and give supervisors live visibility into work and exceptions.",
+        "Slow picks, high labour cost and accuracy issues usually start with layout, slotting and task sequencing. We analyse WMS and labour data to recommend slotting, forecast workload across shifts and give supervisors live visibility into work and exceptions.",
     },
     {
       title: "High returns and reverse logistics complexity",
       body:
-        "Returns arrive unplanned, grading is manual and resale value falls the longer a unit sits. We automate return authorisation, use computer vision for condition grading and route each unit to the disposition that recovers the most value. Cycle time drops and recovery rate rises.",
+        "Returns arrive unplanned, grading is manual and resale value falls the longer a unit sits. We forecast return volumes, use computer vision for condition grading and recommend the disposition that recovers the most value. Cycle time drops and recovery rate rises.",
     },
   ],
 };
 
 export const services = {
   eyebrow: "What solution do we offer?",
-  titleLead: "Custom AI Supply Chain",
-  titleAccent: "Software Development Solutions Do We Offer",
+  titleLead: "Supply Chain Data & AI",
+  titleAccent: "Solutions We Offer",
   body:
-    "We deliver custom supply chain software development services that improve visibility, planning, inventory, operations and returns, built around your data, processes and governance.",
+    "We add forecasting, optimisation, analytics and automation on top of the ERP, WMS, TMS and OMS platforms you already run, built around your data, processes and governance.",
   items: [
     {
-      title: "Enterprise Resource Planning (ERP)",
+      title: "ERP Data & Predictive Analytics",
       body:
-        "We deliver ERP tailored to supply chains that unifies orders, inventory, finance and operations to remove silos and slow reporting. It works as one shared data model with common workflows and real-time views, so everyone sees the same truth. We build it using Python, PyTorch and Transformers for NLP, OCR and computer vision where needed, along with machine learning and predictive analytics aligned with AI-driven supply chain management.",
+        "Orders, inventory, finance and operations data often sit in ERP modules that do not talk to each other, which slows reporting. We connect that data into one shared model with real-time views, so everyone sees the same numbers. On top we apply machine learning, predictive analytics, and NLP, OCR or computer vision where they add value.",
       image: svcErpImg,
       alt: "An ERP dashboard projected above a laptop on a desk",
     },
     {
-      title: "Material Requirements Planning (MRP)",
+      title: "AI-Assisted Material Planning (MRP)",
       body:
-        "We develop MRP that tells you what to buy and make, and when, so shortages, overbuys and last-minute expedites do not disrupt plans. It works by exploding BOMs, netting on-hand and open orders, and applying lead times and MOQ rules to create time-phased supply plans. You gain higher schedule adherence, better inventory turns, fewer line stops and lower premium freight.",
+        "We add AI to material planning so shortages, overbuys and last-minute expedites stop disrupting plans. Models read BOMs, on-hand and open orders, live lead times and MOQ rules from your MRP data to predict shortages and recommend time-phased buys. You gain higher schedule adherence, better inventory turns, fewer line stops and lower premium freight.",
       image: svcMrpImg,
       alt: "A global planning network rendered over a world map",
     },
     {
-      title: "Asset Tracking Solutions",
+      title: "Asset Tracking Analytics",
       body:
-        "Our custom-built asset tracking solution locates tools, pallets, containers and equipment to stop loss and idle time that slow throughput. It works by blending signals like RFID, BLE, GPS and computer vision to show location, status and usage in near real time. Results include higher asset utilisation, lower loss rate, faster maintenance response and improved OEE.",
+        "We turn signals from RFID, BLE, GPS and computer vision into a near real-time view of where tools, pallets, containers and equipment are, and how they are used. Analytics flag idle and at-risk assets before loss slows throughput. Results include higher asset utilisation, lower loss rate, faster maintenance response and improved OEE.",
       image: svcAssetImg,
       alt: "An analyst reviewing asset utilisation charts on a laptop",
     },
     {
-      title: "Order Management Software (OMS)",
+      title: "Order Intelligence (OMS)",
       body:
-        "We design OMS that centralises multi-channel orders to reduce errors, missed promises and manual re-keying that drive customer pain. It works by validating orders, promising realistic ship dates, allocating to the best node and orchestrating fulfilment and returns end to end. We build it using Python, PyTorch, ETA prediction, allocation optimisation and transformer-based NLP for validations.",
+        "Multi-channel orders bring errors, missed promises and manual re-keying. We add AI to your order management system to validate orders, predict realistic ship dates and recommend the best fulfilment node. It uses ETA prediction, allocation optimisation and transformer-based NLP for order validation.",
       image: svcOmsImg,
       alt: "Stacked cartons beside a rising order-volume chart",
     },
     {
-      title: "Warehouse Management Systems (WMS)",
+      title: "Warehouse Analytics (WMS)",
       body:
-        "We craft WMS that runs receiving, putaway, picking, packing and shipping, so slow picks, high labour cost and accuracy issues are fixed at the source. It works by orchestrating tasks, slotting fast movers well, balancing labour and giving supervisors live visibility into work and exceptions. You see more picks per hour, lower cost per order, fewer mis-picks and shorter dock-to-stock times.",
+        "Slow picks, high labour cost and accuracy issues are best fixed at the source. We use your WMS data to optimise slotting for fast movers, forecast labour by shift and surface exceptions to supervisors as they happen. You see more picks per hour, lower cost per order, fewer mis-picks and shorter dock-to-stock times.",
       image: svcWmsImg,
-      alt: "A warehouse supervisor operating a WMS console on a tablet",
+      alt: "A supervisor reviewing warehouse analytics on a tablet",
     },
     {
-      title: "Document Management",
+      title: "Document Intelligence",
       body:
-        "Axiomra builds document management that captures, classifies and routes POs, invoices, BOLs, specs and quality records to remove manual keying and audit stress. It works by ingesting files and images, extracting key fields, validating against master data and pushing approvals through clear workflows. Benefits are faster cycle time, fewer errors and chargebacks, quick audit readiness and stronger compliance.",
+        "Axiomra applies AI to POs, invoices, BOLs, specs and quality records to remove manual keying and audit stress. Models extract key fields from files and images, validate them against master data and route exceptions for review. Benefits are faster cycle time, fewer errors and chargebacks, and quicker audit preparation.",
       image: svcDocumentImg,
       alt: "Digital documents flowing through an automated approval workflow",
     },
     {
-      title: "Supply Chain Risk Management",
+      title: "Supply Chain Risk Analytics",
       body:
-        "We implement risk management that spots supplier issues, weather events, strikes and route delays early so teams can act before service drops. It works by fusing internal metrics like lead times and quality with external signals such as news and geo risks to score and alert on disruption. We build it with Python, NLP transformers for news, predictive analytics for early warning and machine learning scoring models.",
+        "We spot supplier issues, weather events, strikes and route delays early so teams can act before service drops. Internal metrics such as lead times and quality are combined with external signals such as news and geographic risk to score and alert on disruption, using NLP for news, predictive analytics for early warning and machine learning scoring models.",
       image: svcRiskImg,
       alt: "A risk map highlighting disrupted lanes across a live network",
     },
     {
-      title: "Logistics Management",
+      title: "Logistics Optimisation",
       body:
-        "Our team creates logistics management to plan, tender, route and track shipments so freight cost and missed windows go down. It works by consolidating loads, choosing the right mode and carrier, optimising routes and predicting ETAs using live signals. We develop this with Python, PyTorch, routing optimisation, ETA prediction and predictive analytics inside supply chain management software development solutions.",
+        "We help cut freight cost and missed windows by adding optimisation to how shipments are planned, tendered and routed. Models recommend load consolidation, mode and carrier choice and routes, and predict ETAs from live signals, all fed back into the TMS your team already uses.",
       image: svcLogisticsImg,
       alt: "A logistics controller checking inventory movement on a tablet",
     },
     {
-      title: "Procurement Management",
+      title: "Procurement Analytics",
       body:
-        "Axiomra engineers procurement management that shortens source-to-pay to cut long cycle times, price variance and maverick spend. It works by guiding requests, ranking suppliers, checking prices and terms and automating approvals and three-way matches with clear evidence. We build it using Python, transformer-based NLP to normalise items and suppliers, machine learning for supplier scoring and price anomaly detection.",
+        "Axiomra applies AI to source-to-pay data to cut long cycle times, price variance and maverick spend. We normalise items and suppliers with transformer-based NLP, rank suppliers with machine learning, detect price anomalies and flag three-way-match exceptions with clear evidence.",
       image: svcProcurementImg,
-      alt: "A buyer running a digital procurement workflow on a laptop",
+      alt: "A buyer reviewing procurement analytics on a laptop",
     },
     {
-      title: "Supplier Relationship Management",
+      title: "Supplier Performance Analytics",
       body:
-        "We design SRM to improve supplier performance and collaboration so late POs, defects and communication gaps reduce over time. It works by sharing plans, tracking scorecards, flagging trends early and running structured reviews with clear actions and owners. We create it with Python, predictive analytics for quality and delivery, NLP for sentiment in notes and machine learning risk scoring.",
+        "We help improve supplier performance so late POs, defects and communication gaps reduce over time. Scorecards track delivery and quality trends, predictive analytics flag issues early and NLP reads sentiment in notes, giving structured reviews clear actions and owners.",
       image: svcSupplierImg,
       alt: "A supplier collaboration network shown as connected hex tiles",
     },
     {
       title: "Supply Chain Analytics",
       body:
-        "Axiomra develops supply chain analytics that turns raw data into clear insights and what-if scenarios to end blind spots and slow decisions. It works by harmonising data, surfacing drivers and letting users test scenarios against targets and constraints with a simple planning view. We build it using Python, PyTorch for forecasting, causal and optimisation models, and an NLP copilot for AI-powered supply chain solutions.",
+        "Axiomra turns raw data into clear insights and what-if scenarios to end blind spots and slow decisions. We harmonise data, surface the drivers behind performance and let users test scenarios against targets and constraints, using forecasting, causal and optimisation models and an NLP assistant for questions in plain language.",
       image: svcAnalyticsImg,
       alt: "Interlocking gears representing an analytics pipeline",
     },
     {
-      title: "Mobile Application Development",
+      title: "Frontline Data Capture & Vision AI",
       body:
-        "We create mobile apps that put key warehouse, logistics and field workflows in the hands of frontline teams to remove paper and delays. It works by enabling scanning, task updates, approvals and issue capture on any device with offline support and push alerts. Our team builds cross-platform apps with Python backends, on-device OCR and computer vision, so actions are simple and timely.",
+        "Scans, photos and task updates from warehouse, logistics and field teams are valuable data that often arrives late or on paper. We apply OCR and computer vision to capture it accurately at the source and feed it into your core systems and analytics, so exceptions surface in minutes rather than at end of day.",
       image: svcMobileImg,
-      alt: "A field team reviewing a 3D logistics map on a mobile device",
+      alt: "A field team reviewing a 3D logistics map on a handheld device",
     },
   ],
 };
 
 export const midCta = {
-  title: "Kickstart Custom AI Supply Chain Optimisation With Axiomra Experts",
+  title: "Turn Supply Chain Data Into Faster, Better Decisions",
   body:
-    "Find quick wins in planning, logistics and fulfilment, then build a realistic roadmap to scale value. Get practical guidance on integrations, data readiness and the success metrics your teams need.",
-  ctaText: "Get in Touch",
+    "Identify practical AI opportunities across demand planning, inventory, logistics and fulfilment. Axiomra helps teams assess data readiness, connect operational sources and prioritise use cases that can improve forecast accuracy, visibility and decision speed. Start with measurable quick wins, then scale only where the data and results support it.",
+  ctaText: "Discuss Your Supply Chain AI Priorities",
   background: midCtaBgImg,
 };
 
 export const solutions = {
   eyebrow: "What types of services do we offer?",
-  titleLead: "Custom AI Supply Chain Management Software",
-  titleAccent: "Development Services For Enterprises",
+  titleLead: "Supply Chain Data & AI",
+  titleAccent: "Services For Enterprises",
   body:
-    "We design and build custom AI and workflow solutions across the end-to-end supply chain. Our teams integrate with your ERP, WMS, TMS, PLM, YMS and carrier platforms to orchestrate planning, sourcing, manufacturing, logistics and service, whether that runs on-premise, in a private cloud, or in a hybrid environment.",
+    "We deliver data and AI across the end-to-end supply chain, working on top of your ERP, WMS, TMS, PLM, YMS and carrier platforms rather than replacing them. Planning, sourcing, manufacturing, logistics and service all benefit, whether your data runs on-premise, in a private cloud or in a hybrid environment.",
   items: [
     {
-      title: "Supply chain management AI software consulting",
+      title: "Supply chain AI consulting",
       body:
-        "We offer hands-on consulting that starts with stakeholder workshops, data and master data reviews, and a quick maturity scan across planning, logistics, warehousing and procurement. The outcome is a clear roadmap with high-value use cases, security and governance, and an ROI model. This solves S&OP misalignment, rigid networks and fragmented data that slow decisions.",
+        "We start with stakeholder workshops, data and master data reviews, and a quick maturity scan across planning, logistics, warehousing and procurement. The outcome is a clear roadmap with high-value use cases, governance and an ROI model. This tackles S&OP misalignment, rigid networks and fragmented data that slow decisions.",
       image: solConsultingImg,
       alt: "A consultant mapping a global supply network in a workshop",
     },
     {
-      title: "End-to-end AI supply chain management software development",
+      title: "End-to-end supply chain AI use cases",
       body:
-        "Our custom builds cover demand sensing, inventory and replenishment, order orchestration, yard and dock scheduling, transportation intelligence and last-mile delivery optimisation. We design, develop and validate apps that respect your constraints and policies, then deploy on-premise, private cloud or hybrid. This fixes late orders, mis-picks, capacity bottlenecks and compliance gaps.",
+        "We deliver models for demand sensing, inventory and replenishment, order allocation, yard and dock scheduling, transport intelligence and last-mile optimisation. Each is validated against your constraints and policies before it goes live, on-premise, private cloud or hybrid. This reduces late orders, mis-picks and capacity bottlenecks.",
       image: solEndToEndImg,
       alt: "A control room view of an automated distribution centre",
     },
     {
-      title: "AI integration into existing SCM software",
+      title: "AI integration into existing SCM systems",
       body:
-        "Axiomra builds AI add-ons that sit cleanly on your ERP, WMS, TMS, YMS, PLM and carrier platforms using APIs and EDI, backed by strong master data management and data quality. These integrations bring tender acceptance prediction, mode and carrier mix optimisation, predictive ETA and track and trace, and dynamic allocation into tools your teams already use. This replaces email and spreadsheet work and reduces freight cost volatility.",
+        "Axiomra adds AI on top of your ERP, WMS, TMS, YMS, PLM and carrier platforms through APIs and EDI, backed by strong master data management and data quality. Tender acceptance prediction, mode and carrier mix optimisation, predictive ETA and dynamic allocation arrive inside the tools your teams already use, replacing email and spreadsheet work.",
       image: solIntegrationImg,
       alt: "An integration layer connecting enterprise supply systems",
     },
     {
-      title: "Supply chain control tower dashboards",
+      title: "Supply chain control tower analytics",
       body:
-        "We build a single operating picture across suppliers, plants, carriers and customers, with exception queues instead of static reports. Live ETAs, inventory positions and risk scores sit next to the action each owner can take, so escalations are resolved in the tower rather than over email. Leaders get one number everyone trusts at the daily stand-up.",
+        "We bring data from suppliers, plants, carriers and customers into a single operating picture, with exception queues instead of static reports. Live ETAs, inventory positions and risk scores sit next to the action each owner can take, so escalations are resolved quickly. Leaders get one number everyone trusts at the daily stand-up.",
       image: solControlTowerImg,
       alt: "A control tower dashboard tracking shipments in real time",
     },
     {
-      title: "Mobile and frontline supply chain apps",
+      title: "Frontline data and computer vision",
       body:
-        "Warehouse, yard and field teams work on handhelds, not desktops. We ship cross-platform apps for scanning, task updates, proof of delivery and issue capture, with offline support and push alerts so a lost connection never stops the shift. Data lands in your core systems immediately rather than at end of day.",
+        "Warehouse, yard and field teams generate data on handhelds, not desktops. We apply computer vision and OCR to scans, photos and proof-of-delivery images so errors are caught at the source and events reach your core systems and analytics immediately rather than at end of day.",
       image: solMobileImg,
       alt: "A driver capturing proof of delivery on a rugged handheld",
     },
     {
-      title: "Legacy SCM modernisation",
+      title: "Data modernisation for legacy SCM",
       body:
-        "We modernise ageing planning and warehouse stacks without a big-bang switch. Capabilities move across in slices behind a stable interface, with data migrated and reconciled as we go, so operations keep running while the platform changes underneath. You retire technical debt on a schedule your business can absorb.",
+        "Ageing planning and warehouse systems often hold years of useful history in hard-to-reach formats. We migrate and reconcile that data into a modern, governed data layer in slices, so operations keep running while analytics and AI get the clean data they need.",
       image: solModerniseImg,
-      alt: "Engineers migrating a legacy logistics platform to the cloud",
+      alt: "A team moving legacy logistics data to the cloud",
     },
   ],
 };
 
 export const stakeholders = {
-  eyebrow: "Whom do we build custom solutions for?",
+  eyebrow: "Who do we deliver Data & AI for?",
   titleLead: "Stakeholders We Serve",
   titleAccent: "Across Supply Chains",
   items: [
     {
       title: "Supply Chain Directors & Managers",
       body:
-        "One operating picture across planning, inventory and logistics, with the exception queues and scenario tools needed to hit service targets without carrying dead working capital.",
+        "One operating picture across planning, inventory and logistics, with the exception queues and scenario analysis needed to hit service targets without carrying dead working capital.",
       image: stkDirectorsImg,
       alt: "A supply chain manager reviewing operations on a tablet",
     },
     {
       title: "Logistics Providers & 3PLs",
       body:
-        "Multi-client orchestration, carrier and mode optimisation, predictive ETAs and billing-grade event data, so margin holds as volumes and service commitments grow.",
+        "Multi-client analytics, carrier and mode optimisation, predictive ETAs and billing-grade event data, so margin holds as volumes and service commitments grow.",
       image: stk3plImg,
       alt: "A logistics supervisor coordinating a yard by phone",
     },
     {
       title: "Distributors & Wholesalers",
       body:
-        "Demand sensing, multi-echelon replenishment and order promising built for wide catalogues and thin margins, so fill rates rise while slow-moving stock comes down.",
+        "Demand sensing, multi-echelon replenishment and order promising models built for wide catalogues and thin margins, so fill rates rise while slow-moving stock comes down.",
       image: stkDistributorsImg,
       alt: "A distribution team confirming a delivery handover",
     },
@@ -341,13 +341,13 @@ export const subIndustries = {
   titleLead: "Sub-Industries We Support",
   titleAccent: "Across Supply Chains",
   body:
-    "Every sector carries its own constraints: shelf life, dangerous goods, serialisation, seasonality. We build to those constraints rather than around them.",
+    "Every sector carries its own constraints: shelf life, dangerous goods, serialisation, seasonality. We model those constraints directly rather than working around them.",
   items: [
     {
       label: "Manufacturing",
       body:
-        "Production plans that hold when materials slip, built on live BOM netting and capacity constraints rather than a weekly spreadsheet.",
-      points: ["MRP and finite scheduling", "Line-stop early warning", "OEE and quality analytics"],
+        "Production plans that hold when materials slip, driven by live BOM netting and capacity data rather than a weekly spreadsheet.",
+      points: ["Shortage prediction", "Line-stop early warning", "OEE and quality analytics"],
       image: subManufacturingImg,
       alt: "A robotic arm working a lit production line",
     },
@@ -355,7 +355,7 @@ export const subIndustries = {
       label: "Inventory Management",
       body:
         "Multi-echelon policies that set cover by actual demand variability, so service targets and working capital stop fighting each other.",
-      points: ["Safety-stock optimisation", "Automated replenishment", "Slow and excess recovery"],
+      points: ["Safety-stock optimisation", "Replenishment recommendations", "Slow and excess recovery"],
       image: subInventoryImg,
       alt: "Warehouse staff checking stock levels on a tablet",
     },
@@ -363,14 +363,14 @@ export const subIndustries = {
       label: "Transportation",
       body:
         "Load building, carrier selection and route optimisation with predictive ETAs, so freight spend falls without missing delivery windows.",
-      points: ["Mode and carrier mix", "Predictive ETA", "Track and trace"],
+      points: ["Mode and carrier mix", "Predictive ETA", "Track and trace analytics"],
       image: subTransportImg,
       alt: "A freight fleet moving through a distribution hub at dusk",
     },
     {
       label: "Warehousing",
       body:
-        "Slotting, task interleaving and labour balancing that raise picks per hour without adding headcount or new racking.",
+        "Slotting, task interleaving and labour forecasting that raise picks per hour without adding headcount or new racking.",
       points: ["Dynamic slotting", "Pick-path optimisation", "Labour forecasting"],
       image: subWarehousingImg,
       alt: "High racking inside a modern distribution centre",
@@ -394,40 +394,40 @@ export const subIndustries = {
     {
       label: "Cold Chain",
       body:
-        "Temperature-controlled lanes with excursion detection, shelf-life aware routing and the audit trail regulators expect.",
-      points: ["IoT excursion alerts", "Shelf-life aware allocation", "Compliance reporting"],
+        "Temperature-controlled lanes with excursion detection, shelf-life aware routing and a clear, reviewable audit trail.",
+      points: ["IoT excursion alerts", "Shelf-life aware allocation", "Temperature reporting"],
       image: subColdChainImg,
       alt: "A temperature-controlled cold storage facility",
     },
     {
       label: "E-commerce Fulfilment",
       body:
-        "Order orchestration across nodes and channels, with promise dates customers can trust and returns handled as a first-class flow.",
-      points: ["Distributed order management", "Ship-from-store logic", "Automated returns grading"],
+        "Allocation across nodes and channels, with promise dates customers can trust and returns treated as a first-class flow.",
+      points: ["Node allocation optimisation", "Ship-from-store analytics", "AI returns grading"],
       image: subEcommerceImg,
       alt: "A fulfilment operator packing e-commerce orders",
     },
     {
       label: "Automotive",
       body:
-        "Sequenced supply for assembly lines, tier-n visibility and shortage simulation so a single component does not stop production.",
-      points: ["Tier-n supplier visibility", "Sequenced JIT delivery", "Shortage scenario planning"],
+        "Tier-n visibility and shortage simulation for sequenced assembly supply, so a single component does not stop production.",
+      points: ["Tier-n supplier visibility", "JIT delivery risk alerts", "Shortage scenario planning"],
       image: subAutomotiveImg,
       alt: "An automotive assembly line in operation",
     },
     {
       label: "Pharmaceutical",
       body:
-        "Serialisation, lot genealogy and chain-of-custody built to GxP expectations, with recall traceability in minutes rather than days.",
-      points: ["Serialisation and track-trace", "Lot genealogy", "GxP-ready audit trail"],
+        "Serialisation data, lot genealogy and chain-of-custody analytics that make recall traceability a matter of minutes rather than days.",
+      points: ["Serialisation analytics", "Lot genealogy", "Traceable audit trail"],
       image: subPharmaImg,
       alt: "A pharmaceutical packaging and inspection line",
     },
     {
       label: "Air Cargo",
       body:
-        "Capacity booking, ULD build-up and customs documentation automated so tight connection windows are actually met.",
-      points: ["Capacity and ULD planning", "Customs document automation", "Connection risk alerts"],
+        "Capacity forecasting, ULD planning and AI-assisted customs documents so tight connection windows are actually met.",
+      points: ["Capacity and ULD planning", "Customs document AI", "Connection risk alerts"],
       image: subAirCargoImg,
       alt: "Air cargo being loaded onto a freighter aircraft",
     },
@@ -483,7 +483,7 @@ export const benefits = {
 export const build = {
   title: "Schedule Your Supply Chain AI Strategy Consultation With Axiomra",
   body:
-    "Map priority use cases, ROI and a secure delivery plan aligned to your systems and policies. Accelerate from discovery to a validated pilot in weeks with clear governance and adoption steps.",
+    "Map priority use cases, ROI and a secure delivery plan aligned to your systems and policies. Move from discovery to a validated pilot with clear governance and adoption steps.",
   ctaText: "Request a Consultation",
   texture: textureBgImg,
   image: buildVisualImg,
@@ -493,9 +493,9 @@ export const build = {
 export const techStrip = {
   eyebrow: "Technologies we work with",
   titleLead: "Expertise In Advanced",
-  titleAccent: "Development Technologies",
+  titleAccent: "Data & AI Technologies",
   body:
-    "The same production-grade toolchain sits under every supply chain platform we ship. Pick a layer to see what it is made of.",
+    "The same production-grade toolchain sits under every supply chain AI use case we deliver. Pick a layer to see what it is made of.",
   ctaText: "View all tech stack",
   tabs: [
     {
@@ -509,18 +509,18 @@ export const techStrip = {
     },
     {
       id: "backend",
-      label: "Backend & Databases",
+      label: "Data & Databases",
       items: [
-        "Node.js", "NestJS", "FastAPI", "Django", "GraphQL", "PostgreSQL", "MongoDB", "TimescaleDB",
-        "Redis", "Elasticsearch", "Kafka", "RabbitMQ", "Airflow", "dbt", "Snowflake", "Databricks",
+        "FastAPI", "GraphQL", "PostgreSQL", "MongoDB", "TimescaleDB", "Redis", "Elasticsearch", "Kafka",
+        "RabbitMQ", "Airflow", "dbt", "Snowflake", "Databricks", "Node.js", "NestJS", "Django",
       ],
     },
     {
       id: "frontend",
-      label: "Frontend",
+      label: "Visualisation & UI",
       items: [
         "React", "Next.js", "TypeScript", "Tailwind CSS", "Three.js", "D3.js", "Deck.gl", "Mapbox GL",
-        "AG Grid", "React Native", "Flutter", "Vite",
+        "AG Grid", "Vite",
       ],
     },
     {
@@ -530,7 +530,7 @@ export const techStrip = {
     },
     {
       id: "devops",
-      label: "DevOps",
+      label: "MLOps & DevOps",
       items: ["Docker", "Kubernetes", "Terraform", "GitHub Actions", "GitLab CI", "Nginx", "Prometheus", "Grafana", "Sentry"],
     },
     {
@@ -551,23 +551,23 @@ export const businessTypes = {
   titleLead: "Explore The Range Of",
   titleAccent: "Supply Chain Businesses We Support",
   body:
-    "We excel in custom AI-powered supply chain software development that drives measurable results. Whether you are digitising a single warehouse or orchestrating a multi-country network, we turn it into a platform your operations team actually runs on.",
+    "We deliver supply chain data and AI that drives measurable results. Whether you are analysing a single warehouse or a multi-country network, we start with the data you already have and the decisions it should improve.",
   rows: [
     {
       label: "Startups",
-      body: "We help logistics and supply chain startups get a first platform live fast: a working order or inventory core, the integrations that win a pilot customer, and the metrics that prove the model before the next raise.",
+      body: "We help logistics and supply chain startups get value from data early: a clean data foundation, a first forecasting or optimisation use case that wins a pilot customer, and the metrics that prove the model before the next raise.",
     },
     {
       label: "Scale-ups",
-      body: "Volume exposes every manual step. We help scale-ups automate fulfilment and transport operations, unify reporting across sites, and move from spreadsheet workarounds to systems that hold at ten times the throughput.",
+      body: "Volume exposes every manual step. We help scale-ups unify reporting across sites, automate routine planning decisions and replace spreadsheet workarounds with analytics that hold at ten times the throughput.",
     },
     {
       label: "Small and medium-sized businesses",
-      body: "SMB operations teams carry enterprise complexity with a fraction of the headcount. Our forecasting, replenishment and warehouse tooling closes that gap without an enterprise budget or a year-long rollout.",
+      body: "SMB operations teams carry enterprise complexity with a fraction of the headcount. Our forecasting, replenishment and warehouse analytics close that gap without an enterprise budget or a year-long rollout.",
     },
     {
       label: "Enterprises",
-      body: "We partner with enterprise supply chain organisations on governed data layers, multi-site orchestration and AI systems that satisfy security, compliance and procurement before they ever reach production.",
+      body: "We partner with enterprise supply chain organisations on governed data layers, multi-site analytics and AI use cases that pass your security, risk and procurement reviews before they reach production.",
     },
   ],
 };
@@ -575,7 +575,7 @@ export const businessTypes = {
 export const testimonials = {
   eyebrow: "Why is it worth working with us?",
   titleLead: "What Operators Say",
-  titleAccent: "Once The System Is Running",
+  titleAccent: "About Working With Us",
   items: [
     {
       name: "Faisal",
@@ -604,34 +604,34 @@ export const testimonials = {
 export const showcase = {
   eyebrow: "What innovations have we delivered to businesses?",
   titleLead: "Showcasing Our",
-  titleAccent: "AI Development Projects",
+  titleAccent: "Data & AI Projects",
   body:
-    "Platforms we have built for planners, warehouses and carriers, and what they replaced.",
+    "Data and AI work we have delivered for planners, warehouses and carriers, and what it changed.",
   ctaText: "Check Out Our Full Portfolio",
 };
 
 export const partner = {
   eyebrow: "Why is it worth working with us?",
-  titleLead: "Why Axiomra For Custom AI",
-  titleAccent: "Supply Chain Management Software Development",
+  titleLead: "Why Axiomra For",
+  titleAccent: "Supply Chain Data & AI",
   cards: [
     {
       icon: "Target",
-      title: "Built For You, No Vendor Lock-In",
+      title: "Built Around Your Data, No Lock-In",
       body:
-        "We design and ship software that fits your process, uses your data and tools, and runs where you choose, so you keep control and flexibility. No licence trap, no forced migration when priorities change.",
+        "We fit AI to your process, your data and the tools you already use, and it runs where you choose, so you keep control and flexibility. No licence trap, no forced migration when priorities change.",
     },
     {
       icon: "Layers",
       title: "Integration Without Rework",
       body:
-        "ERP, WMS, TMS, PLM and MDM connect through APIs and EDI, which gives 3PL visibility and partner onboarding while removing manual work and shadow spreadsheets.",
+        "ERP, WMS, TMS, PLM and MDM data connect through APIs and EDI, giving 3PL visibility and faster partner onboarding while removing manual work and shadow spreadsheets.",
     },
     {
       icon: "ShieldCheck",
       title: "60-Day Support And Enablement",
       body:
-        "Our team stays engaged for 60 days to monitor performance, resolve issues and apply small improvements. We train planners, warehouse staff and leaders with role-based sessions so adoption accelerates as users learn how to run workflows and act on AI insights.",
+        "Our team stays engaged for 60 days to monitor model performance, resolve issues and apply small improvements. We train planners, warehouse staff and leaders with role-based sessions so adoption accelerates as users learn to act on AI insights.",
     },
   ],
   stats: [
@@ -671,12 +671,12 @@ export const blogs = {
 
 export const faqs = [
   {
-    q: "What services do you offer in supply chain software development?",
-    a: "Strategy and AI consulting, custom platform development across ERP, MRP, WMS, TMS and OMS, AI integration into the systems you already run, mobile apps for frontline teams, data engineering and the analytics layer on top. We also take on modernisation work where a legacy stack has to keep running while it changes underneath.",
+    q: "What Data & AI services do you offer for supply chains?",
+    a: "Strategy and AI consulting, data engineering across your ERP, MRP, WMS, TMS and OMS data, forecasting and optimisation models, AI added into the systems you already run, computer vision for frontline data, and the analytics layer on top. We also modernise legacy data so older systems can feed analytics while they keep running.",
   },
   {
-    q: "How do you measure ROI for a new platform or AI feature?",
-    a: "We agree the baseline before we build: fill rate, forecast error, cost per order, premium freight spend, dock-to-stock time. Each use case is scoped against one of those numbers, measured after go-live against the same definition, and dropped if it does not move.",
+    q: "How do you measure ROI for a new AI use case?",
+    a: "We agree the baseline before we start: fill rate, forecast error, cost per order, premium freight spend, dock-to-stock time. Each use case is scoped against one of those numbers, measured after go-live against the same definition, and dropped if it does not move.",
   },
   {
     q: "Can AI help with driver and labour shortages?",
@@ -684,46 +684,46 @@ export const faqs = [
   },
   {
     q: "How do you address component and raw material shortages?",
-    a: "Real-time MRP netting with live lead times surfaces shortages weeks earlier than a batch run. We add supplier risk scoring and alternate-source suggestions so buyers can act while the cheap options are still open, instead of paying for expedited freight.",
+    a: "Predictive shortage detection on live MRP data and lead times surfaces shortages weeks earlier than a batch run. We add supplier risk scoring and alternate-source suggestions so buyers can act while the cheap options are still open, instead of paying for expedited freight.",
   },
   {
     q: "How do you fix inventory discrepancies between system records and physical counts?",
-    a: "By finding the process step that creates them. We instrument receiving, putaway and picking, add cycle counting driven by discrepancy risk rather than a flat schedule, and use computer vision or scan validation at the points where errors actually occur.",
+    a: "By finding the process step that creates them. We analyse receiving, putaway and picking data, target cycle counts by discrepancy risk rather than a flat schedule, and use computer vision or scan validation at the points where errors actually occur.",
   },
   {
-    q: "Can you modernise a legacy stack without a big switch?",
-    a: "Yes, and we recommend it. Capabilities move across in slices behind a stable interface, with data migrated and reconciled as we go. Operations keep running throughout, and you can stop or re-sequence between slices without stranding the investment.",
+    q: "Can you modernise legacy supply chain data without a big switch?",
+    a: "Yes, and we recommend it. Data moves across in slices into a governed data layer, reconciled as we go. Operations keep running throughout, and you can stop or re-sequence between slices without stranding the investment.",
   },
   {
-    q: "Do you build custom WMS, TMS and OMS for large networks?",
-    a: "Yes, for multi-site and multi-client networks including 3PL models. We build what your network genuinely needs and integrate the rest. Where a packaged product already fits a function well, we will say so rather than rebuild it.",
+    q: "Do you replace our WMS, TMS or OMS?",
+    a: "No. We add forecasting, optimisation and analytics on top of the WMS, TMS and OMS you already run, for single sites and multi-client 3PL networks alike. Where a packaged product already does a job well, we work with it rather than around it.",
   },
   {
-    q: "How long does a typical MVP take from kick-off to pilot?",
-    a: "A scoped MVP with one capability, such as demand forecasting or a warehouse task engine, typically runs eight to twelve weeks to a live pilot. A full platform spanning planning, warehousing and transport runs four to nine months, delivered in increments your teams can use from the first sprint.",
+    q: "How long does a typical pilot take from kick-off?",
+    a: "A scoped pilot with one use case, such as demand forecasting or warehouse labour forecasting, typically runs eight to twelve weeks to live results. A wider programme spanning planning, warehousing and transport runs four to nine months, delivered in increments your teams can use early.",
   },
   {
     q: "Can you integrate with our current ERP, WMS and TMS without disrupting operations?",
-    a: "Yes. Integrations run through APIs and EDI against a hardened master data layer, are built and validated in a parallel environment, and cut over per flow. Nothing goes live until it reconciles against the system of record.",
+    a: "Yes. Integrations run through APIs and EDI against a hardened master data layer, are validated in a parallel environment, and go live one flow at a time. Nothing goes live until it reconciles against the system of record.",
   },
   {
     q: "How do you reduce risk on a complex multi-site programme?",
     a: "One site becomes the reference implementation and proves the model end to end. Later sites inherit a tested template with only local variations configured, so risk and cost fall with each rollout instead of repeating from zero.",
   },
   {
-    q: "Are you a supply chain software development company or do you sell a product?",
-    a: "We are a development company. You own the code and the data, deployment runs where your policies require (on-premise, private cloud or hybrid), and there is no licence dependency holding the platform hostage.",
+    q: "Do you sell a packaged product or licence?",
+    a: "No. We are a Data & AI partner. You own the models and the data, deployment runs where your policies require (on-premise, private cloud or hybrid), and there is no licence dependency.",
   },
   {
-    q: "Why partner with Axiomra for supply chain software development services?",
-    a: "Because we build for operators, not demos. Our teams work inside your constraints (master data quality, union rules, customs, cold chain, GxP) and stay engaged for 60 days after delivery to tune performance and train the people who run it every day.",
+    q: "Why partner with Axiomra for supply chain Data & AI?",
+    a: "Because we work for operators, not demos. Our teams work inside your constraints (master data quality, union rules, customs, cold chain, GxP) and stay engaged for 60 days after delivery to tune performance and train the people who use it every day.",
   },
 ];
 
 export const finalCta = {
   title: "Schedule Your Supply Chain AI Consultation Today",
   subtitle:
-    "Share your goals, pain points and current systems, and we will map quick wins and a realistic roadmap. Get a clear estimate, timeline and deployment plan that fits your security and compliance needs.",
+    "Share your goals, pain points and current systems, and we will map quick wins and a realistic roadmap. Get a clear estimate, timeline and delivery plan that fits your security and governance requirements.",
   buttonText: "Contact our team",
   background: finalCtaBgImg,
 };

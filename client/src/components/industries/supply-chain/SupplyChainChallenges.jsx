@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "../../SectionHeading";
 import { Reveal } from "../../motion/Reveal";
 import { challenges } from "../../../data/supplyChainData";
+import { CONTACT_PATH } from "../../../routes.constants";
 
 const EASE = [0.16, 1, 0.3, 1];
 
@@ -42,7 +43,7 @@ export default function SupplyChainChallenges() {
               <span className="text-highlight">{challenges.titleLead}</span> {challenges.titleAccent}
             </>
           }
-          subtitle="Your supply chain runs into the same roadblocks: poor visibility, guesswork in planning, rising freight and inventory costs, and manual processes that do not scale. Here is what holds teams back, and how our custom software addresses it."
+          subtitle="Your supply chain runs into the same roadblocks: poor visibility, guesswork in planning, rising freight and inventory costs, and manual processes that do not scale. Here is what holds teams back, and how data and AI address it."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
@@ -116,7 +117,7 @@ export default function SupplyChainChallenges() {
             </AnimatePresence>
 
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="relative mt-9 inline-flex items-center gap-3 rounded-full border border-inverse-fg/20 py-2 pl-6 pr-2 text-base font-medium text-inverse-fg transition-colors duration-300 hover:border-accent-vivid focus-ring"
             >
               Solve this with us
