@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import useGsapReveal from "../../../hooks/useGsapReveal";
 import { intro } from "../../../data/fashionData";
+import { BOOK_CALL_PATH } from "../../../routes.constants";
 
 /** Text left, photo right, tight. The first light section after the dark hero. */
 export default function FashionIntro() {
@@ -30,7 +31,7 @@ export default function FashionIntro() {
 
           <div data-reveal className="mt-9">
             <Link
-              to="/contact"
+              to={BOOK_CALL_PATH}
               className="group inline-flex items-center gap-3 rounded-full bg-inverse py-2 pl-7 pr-2 text-base font-medium text-inverse-fg transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 focus-ring"
             >
               {intro.ctaText}

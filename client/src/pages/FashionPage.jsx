@@ -28,9 +28,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Custom Fashion App Development Services | Axiomra";
+const TITLE = "AI & Data Solutions for Fashion Brands | Axiomra";
 const DESCRIPTION =
-  "AI-powered fashion software development: virtual fitting rooms, demand forecasting, fashion analytics, e-commerce personalisation and design tools that cut returns and lift margins.";
+  "AI and data solutions that help fashion brands reduce returns, forecast demand, personalise shopping and improve margins, using the systems you already have.";
 
 export default function FashionPage() {
   // Lazy photos land after the triggers were measured; once the page has

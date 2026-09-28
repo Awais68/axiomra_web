@@ -28,24 +28,24 @@ export const FASHION_SLUG = "fashion";
 
 export const hero = {
   eyebrow: "AI for the fashion industry",
-  titleLead: "Custom Fashion App",
-  titleAccent: "Development Services",
+  titleLead: "AI & Data Solutions for Fashion Brands",
+  titleAccent: "That Reduce Returns and Improve Margins",
   body:
-    "As a leading fashion app development company, we deliver AI-powered fashion software that cuts return rates, improves sizing accuracy and simplifies operations. Our custom fashion platforms help brands boost profitability, elevate customer experience and accelerate digital transformation.",
-  ctaText: "Request a free consultation",
+    "Turn fragmented product, customer and supply-chain data into decisions your teams can act on. Axiomra helps fashion brands use AI, analytics and automation to improve size-and-fit accuracy, forecast demand, personalise shopping journeys and identify operational waste. Our Data & AI services are designed around the systems you already use, helping you improve conversion, reduce avoidable returns and make faster merchandising decisions.",
+  ctaText: "Explore Your Fashion AI Use Case",
   image: heroImg,
   alt: "A rail of brightly coloured jackets hanging in a boutique window",
   reviews: { platform: "Clutch", rating: 5, count: 12 },
 };
 
 export const intro = {
-  titleLead: "AI-Powered Fashion Software Development Services For",
-  titleAccent: "Sustainable, Transparent, Profitable Growth Worldwide",
+  titleLead: "Build a Smarter Fashion Business With",
+  titleAccent: "AI, Data & Traceability",
   paragraphs: [
-    "We provide AI fashion software development services for brands, retailers and manufacturers. We build end-to-end platforms for demand forecasting, design-to-shelf acceleration and transparent supply chains. They tackle waste, greenwashing risk and counterfeits with real-time traceability, so merchandisers, designers and sustainability teams gain trustworthy insight that lifts quality and consumer trust.",
-    "Built on a composable data fabric, computer vision and foundation models with no-code tools, the platform learns from sales, social and supplier signals. It predicts demand, flags quality issues and personalises journeys to lower CAC. Automation speeds up sourcing and compliance, supporting faster launches and measurable impact reductions. The result is resilient operations, higher margins and delighted customers across shifting trends.",
+    "Axiomra helps fashion brands, retailers and manufacturers connect sales, product, supplier and customer data so teams can forecast demand, spot quality issues earlier and improve traceability.",
+    "We use AI and analytics to support faster planning, more transparent supply chains and better inventory decisions—without forcing your business into a one-size-fits-all platform. The goal is practical: less waste, clearer decisions and stronger margins across changing fashion cycles.",
   ],
-  ctaText: "Request a Demo",
+  ctaText: "Discuss Your Data & AI Priorities",
   image: introImg,
   alt: "Rows of patterned shirts on wooden hangers in a clothing store",
 };
@@ -54,7 +54,7 @@ export const impact = {
   titleLead: "AI's Measurable Impact On",
   titleAccent: "Global Fashion Outcomes",
   body:
-    "AI fashion software development is reshaping how brands design, forecast and sell by unifying product, customer, social and supply data into actionable intelligence. Teams move from intuition to measurable outcomes across trend discovery, assortment planning, dynamic pricing and omnichannel merchandising, all while keeping creative direction aligned.",
+    "AI and analytics are reshaping how brands design, forecast and sell by unifying product, customer, social and supply data into actionable intelligence. Teams move from intuition to measurable outcomes across trend discovery, assortment planning, dynamic pricing and omnichannel merchandising, all while keeping creative direction aligned.",
   stats: [
     {
       value: "82%",
@@ -80,152 +80,180 @@ export const impact = {
  * halves short and free of trailing punctuation.
  */
 export const services = {
-  eyebrow: "What types of fashion apps are we experts in?",
-  titleLead: "Custom AI-Powered",
-  titleAccent: "Fashion Software Development Services",
+  eyebrow: "Where do we apply Data & AI in fashion?",
+  titleLead: "Data & AI Services",
+  titleAccent: "For Fashion Brands And Retailers",
   items: [
     {
-      title: "Fashion Analytics and Insights Tools",
+      title: "Fashion Analytics That Turn Data Into Decisions",
       body:
-        "Put your data to work with AI-driven fashion analytics. From consumer behaviour tracking to sales forecasting, our tools turn raw data into insight you can act on so brands make smarter decisions, optimise strategy and stay ahead in a fast-moving market.",
+        "Make sales, customer, product and store data easier to understand and act on. Axiomra builds AI and analytics solutions that help fashion teams identify demand shifts, compare store performance, understand customer behaviour and detect emerging trends earlier. Instead of static reports, decision-makers get focused insights that support merchandising, pricing, allocation and campaign planning.",
       image: analyticsImg,
       alt: "A store manager reviewing stock on a tablet beside a rail of garments",
       points: [
-        { name: "Fashion Analytics Tools", outcome: "Overcome unclear consumer patterns with real-time insights" },
-        { name: "Business Intelligence Solutions", outcome: "Eliminate guesswork through data-backed decisions" },
-        { name: "Trend Prediction Software", outcome: "Avoid missed fashion trends with AI-powered forecasting" },
-        { name: "Store Analytics", outcome: "Cut inefficiencies with store-level performance insights" },
+        { name: "Fashion Analytics", outcome: "Spot demand shifts and customer patterns sooner" },
+        { name: "Business Intelligence", outcome: "Replace static reports with focused, decision-ready insight" },
+        { name: "Trend Forecasting", outcome: "Detect emerging trends earlier with AI-powered forecasting" },
+        { name: "Store-Performance Analytics", outcome: "Compare stores and act on the gaps" },
       ],
     },
     {
-      title: "Virtual Fitting Rooms & AR Try-Ons",
+      title: "AI Size & Fit Intelligence for More Confident Purchases",
       body:
-        "Tackle one of fashion's biggest challenges: sizing and fit. Our AR-based virtual fitting rooms and try-on apps reduce return rates, boost customer confidence and enhance the shopping journey across both online and in-store experiences.",
+        "Sizing uncertainty drives abandoned carts and avoidable returns. Axiomra applies AI, computer vision and product data to help fashion businesses create smarter fit guidance and virtual try-on experiences. These solutions can support online and in-store journeys, giving shoppers clearer expectations before they buy while helping brands understand fit-related return patterns.",
       image: fittingImg,
       alt: "A shopper in sunglasses and a burgundy coat carrying several shopping bags",
       points: [
-        { name: "Virtual Fitting Rooms", outcome: "Reduce costly returns caused by poor sizing" },
-        { name: "AR Try-On Apps", outcome: "Eliminate uncertainty in online shopping" },
-        { name: "Mobile Integration", outcome: "Deliver try-on experiences that work anywhere" },
-        { name: "Customer Confidence Boost", outcome: "Enhance trust with accurate fit previews" },
+        { name: "Size Recommendation Intelligence", outcome: "Guide shoppers to the right size before they buy" },
+        { name: "Virtual Try-On", outcome: "Give clearer expectations of look and fit" },
+        { name: "Mobile Experiences", outcome: "Bring fit guidance to the channels shoppers use" },
+        { name: "Fit-Confidence Analytics", outcome: "Understand the patterns behind fit-related returns" },
       ],
     },
     {
-      title: "Fashion Supply Chain & Inventory Solutions",
+      title: "AI Supply Chain & Inventory Intelligence for Fashion",
       body:
-        "Manage your supply chain smarter with AI-powered inventory and logistics tools. We help brands reduce stockouts, cut excess inventory costs and improve fulfilment efficiency with real-time data and predictive models.",
+        "Reduce overstock, stockouts and slow fulfilment by connecting inventory, supplier, sales and logistics data. Axiomra helps fashion businesses forecast demand, identify replenishment risks, monitor supplier performance and improve inventory visibility across locations. Our Data & AI services focus on the decisions that affect working capital and customer availability—not another disconnected system.",
       image: supplyImg,
       alt: "A garment factory stitching line with folded apparel stacked along the benches",
       points: [
-        { name: "Inventory Management", outcome: "Avoid stockouts and overstock issues" },
-        { name: "AI Demand Forecasting", outcome: "Stop losses with accurate demand prediction" },
-        { name: "Logistics Optimisation", outcome: "Reduce delays and improve delivery times" },
-        { name: "Vendor Management", outcome: "Simplify supplier coordination for smoother operations" },
+        { name: "Demand Forecasting", outcome: "Plan buys and allocation against likely demand" },
+        { name: "Inventory Optimisation", outcome: "Cut overstock and stockouts across locations" },
+        { name: "Logistics Analytics", outcome: "Find the causes of slow fulfilment" },
+        { name: "Supplier-Performance Insights", outcome: "Spot replenishment and supplier risks early" },
       ],
     },
     {
-      title: "Fashion E-Commerce & Customer Experience Platforms",
+      title: "Personalisation & Customer Experience Intelligence",
       body:
-        "Turn your online store into a high-performance sales channel. From personalised shopping experiences to AI-driven recommendations, our solutions help fashion businesses increase engagement, retention and conversions.",
+        "Generic shopping journeys lose customers. Axiomra applies recommendation models, customer segmentation and behavioural analytics to your e-commerce and CRM data so each visit feels more relevant—working with the storefront your teams already run, not replacing it.",
       image: ecommerceImg,
       alt: "A flat lay of a knitted hat, jumper, jeans, a watch and tulips on white linen",
       points: [
-        { name: "Personalised Shopping", outcome: "End generic experiences with tailored journeys" },
-        { name: "AI Recommendation Engines", outcome: "Boost sales with smarter product suggestions" },
-        { name: "Omnichannel Integration", outcome: "Close the gap between online and in-store" },
-        { name: "Secure Payments", outcome: "Reduce cart abandonment with a shorter checkout" },
+        { name: "Personalised Journeys", outcome: "Replace generic experiences with relevant ones" },
+        { name: "Recommendation Models", outcome: "Lift sales with smarter product suggestions" },
+        { name: "Omnichannel Customer View", outcome: "Connect online and in-store behaviour" },
+        { name: "Checkout Analytics", outcome: "Understand where and why carts are abandoned" },
       ],
     },
     {
-      title: "Fashion Design & Product Innovation Tools",
+      title: "Design & Product Development Intelligence",
       body:
-        "Give designers modern tools that speed up creativity and reduce errors. We support everything from digital prototyping to sustainable product development, helping brands bring winning designs to market faster.",
+        "Give design teams better signals, earlier. We use generative AI and analytics to organise inspiration, surface trend signals and automate repetitive product-data work, connecting insights to the 3D and product lifecycle tools your teams already use.",
       image: designImg,
       alt: "A flat lay of leopard-print shoes, a leather wallet, sunglasses and accessories",
       points: [
-        { name: "3D Design Software", outcome: "Avoid delays with faster digital prototyping" },
-        { name: "AI Style Generators", outcome: "Reduce creative block with AI-assisted design ideas" },
-        { name: "Collaboration Platforms", outcome: "Eliminate siloed workflows with team-based design tools" },
-        { name: "Sustainability Tracking", outcome: "Minimise waste with eco-focused product insights" },
+        { name: "Trend Signal Analysis", outcome: "Ground design choices in demand evidence" },
+        { name: "Generative Concept Support", outcome: "Explore more concept directions, faster" },
+        { name: "Product-Data Automation", outcome: "Cut manual work in specifications and product data" },
+        { name: "Sustainability Insights", outcome: "Minimise waste with material and product data" },
       ],
     },
     {
-      title: "Fashion Retail & In-Store Experience Solutions",
+      title: "In-Store Retail Analytics",
       body:
-        "Reimagine physical retail with intelligent in-store solutions. From smart mirrors to real-time customer analytics, we bridge the gap between offline and online experiences to keep fashion retail competitive.",
+        "Understand what happens on the shop floor. Axiomra applies computer vision and analytics to footfall, layout and transaction data, helping retail teams improve store layouts, staffing and in-store personalisation, and connect offline behaviour with online data.",
       image: retailImg,
       alt: "A shopper smiling at a boutique counter while staff use a tablet point-of-sale",
       points: [
-        { name: "Smart Mirrors", outcome: "Enhance shopping with interactive try-ons" },
         { name: "Customer Heatmaps", outcome: "Fix poor layouts with foot-traffic insights" },
-        { name: "Digital Kiosks", outcome: "Speed up purchases with self-service options" },
-        { name: "Unified Loyalty Programs", outcome: "Retain shoppers with personalised rewards" },
+        { name: "Layout & Staffing Insights", outcome: "Match staff and space to real demand" },
+        { name: "Try-On Behaviour Analytics", outcome: "Learn which items get tried but not bought" },
+        { name: "Loyalty Analytics", outcome: "Retain shoppers with better-targeted rewards" },
       ],
     },
   ],
 };
 
 export const solutions = {
-  eyebrow: "What types of fashion apps are we experts in?",
+  eyebrow: "Where can AI make a difference in fashion?",
   titleLead: "Building AI-Powered Fashion",
   titleTail: "Solutions Using The Latest Technology",
   image: solutionsBgImg,
   tabs: [
     {
       id: "apparel",
-      label: "Apparel and Store Apps",
-      title: "Apparel and store apps that sell on every screen",
+      label: "Apparel & Retail Commerce",
+      title: "AI for Apparel & Retail Commerce",
       body:
-        "Native and cross-platform storefronts with AI product discovery, size guidance and one-tap checkout. Built to keep the brand experience consistent from the feed to the fitting room.",
-      bullets: ["Personalised catalogue feeds", "Size and fit guidance at add-to-cart", "Loyalty, wishlists and restock alerts"],
+        "Help shoppers find the right product faster and help your teams understand what drives conversion. Axiomra can apply recommendation models, search intelligence, customer segmentation and size-and-fit analytics across your digital retail ecosystem. The focus is on improving product discovery and customer relevance using the data you already own.",
+      bullets: [
+        "Personalised product feeds",
+        "Intelligent search",
+        "Fit guidance",
+        "Behavioural segmentation",
+        "Loyalty analytics",
+        "Restock propensity",
+      ],
     },
     {
       id: "design",
-      label: "Clothing Design Softwares",
-      title: "Design software that shortens the sketch-to-sample loop",
+      label: "Design & Product Development",
+      title: "Generative AI for Fashion Design & Product Development",
       body:
-        "Generative design assistants, 3D garment visualisation and tech-pack automation so design teams iterate in hours, not weeks, and pass production-ready specs downstream.",
-      bullets: ["AI mood boards and style generation", "3D pattern and drape previews", "Automated tech packs and BOMs"],
+        "Shorten early-stage research and concept development with AI-assisted design intelligence. Axiomra can help teams organise inspiration, analyse trend signals, generate concept directions and automate repetitive product-data tasks. When 3D or product lifecycle tools are already in use, our Data & AI layer can connect insights to existing workflows rather than replacing them.",
+      bullets: [
+        "Trend and mood-board intelligence",
+        "Generative concept support",
+        "Product-data extraction",
+        "Automated specification workflows",
+      ],
     },
     {
       id: "ecommerce",
-      label: "Fashion Ecommerce App",
-      title: "E-commerce platforms tuned for conversion",
+      label: "Commerce Intelligence",
+      title: "AI Commerce Intelligence for Fashion",
       body:
-        "Headless commerce with recommendation engines, visual search, dynamic pricing and returns prediction wired into the same customer profile across web, app and marketplace.",
-      bullets: ["Visual and semantic product search", "Dynamic bundles and pricing", "Returns risk scoring before dispatch"],
+        "Improve conversion by making product discovery, pricing and personalisation more relevant. Axiomra uses customer, catalogue and transaction data to build recommendation, search and predictive analytics models that support better digital merchandising decisions. We can also help identify return-risk patterns and opportunities for smarter bundling or promotional targeting.",
+      bullets: [
+        "Visual and semantic search",
+        "Recommendations",
+        "Dynamic offer intelligence",
+        "Customer propensity models",
+        "Return-risk analytics",
+      ],
     },
     {
       id: "closet",
-      label: "Virtual Closet Apps",
-      title: "Virtual closets that keep customers coming back",
+      label: "Wardrobe & Recommendations",
+      title: "AI Wardrobe & Recommendation Intelligence",
       body:
-        "Digitised wardrobes with outfit generation, wear tracking and resale hooks. The data feeds recommendations that feel personal because they are built on what the customer already owns.",
-      bullets: ["Wardrobe digitisation from photos", "Daily outfit suggestions by weather and calendar", "Resale and rental integrations"],
+        "Create more useful customer experiences from wardrobe, preference and product data. Axiomra can apply computer vision and recommendation models to classify items, understand style preferences and generate context-aware outfit suggestions. For resale, rental or loyalty ecosystems, these insights can also support repeat engagement and smarter product discovery.",
+      bullets: [
+        "Image-based wardrobe classification",
+        "Style profiles",
+        "Outfit recommendations",
+        "Circular-commerce insights",
+      ],
     },
     {
       id: "styling",
-      label: "3D Virtual Styling Apps",
-      title: "3D styling and try-on that removes the guesswork",
+      label: "Computer Vision & 3D Fit",
+      title: "Computer Vision & 3D Fit Intelligence",
       body:
-        "Body-accurate avatars, AR try-on and 3D garment simulation that let shoppers see fit and drape before they buy, cutting the returns that eat fashion margins.",
-      bullets: ["Photogrammetry-based body scanning", "Real-time AR try-on on mobile", "Fit confidence scores at checkout"],
+        "Use visual AI to give customers better fit information before checkout. Axiomra can support body-measurement analysis, garment-image understanding and fit-confidence models that complement AR or 3D experiences. The goal is to reduce uncertainty, learn from fit-related returns and provide clearer recommendations without overstating what automation can guarantee.",
+      bullets: [
+        "Visual measurement analysis",
+        "Fit-confidence scoring",
+        "Garment attribute extraction",
+        "AR/3D data intelligence",
+      ],
     },
   ],
 };
 
 export const technologies = {
-  eyebrow: "Which technologies do we use for fashion solutions?",
-  titleLead: "The Technologies We Build On",
-  titleTail: "For AI Fashion Tools",
+  eyebrow: "Which technologies power our fashion work?",
+  titleLead: "The AI Technologies Behind",
+  titleTail: "Our Fashion Solutions",
   body:
-    "We use current technologies to build scalable, long-lived applications for the fashion industry. Our approach blends AI, data analytics and intelligent automation to enhance creativity, improve efficiency and deliver superior customer experiences.",
+    "We combine AI, data analytics and intelligent automation with the data you already hold, so fashion teams gain faster insight, less waste and more relevant customer experiences.",
   ctaText: "View all services",
   items: [
     {
       title: "Artificial Intelligence",
       body:
-        "AI is reshaping fashion by boosting creativity, speeding up production and personalising shopping journeys. From intelligent recommendations to automated design tools, it lets brands move faster.",
+        "AI is reshaping fashion by supporting creativity, speeding up planning and personalising shopping journeys. From intelligent recommendations to AI-assisted design, it lets brands move faster.",
       metric: "3.2x",
       metricLabel: "faster decisions",
     },
@@ -239,21 +267,21 @@ export const technologies = {
     {
       title: "Generative AI",
       body:
-        "Generative AI opens new possibilities in design and personalisation. It accelerates creative workflows, produces unique styles and enriches customer experiences through innovation.",
+        "Generative AI opens new possibilities in design and personalisation. It accelerates concept development, suggests new style directions and enriches customer experiences.",
       metric: "10x",
       metricLabel: "more design variants",
     },
     {
       title: "Machine Learning",
       body:
-        "Machine learning turns raw data into usable insight. It improves design accuracy, predicts demand and enhances product recommendations, helping brands reduce returns and increase loyalty.",
+        "Machine learning turns raw data into usable insight. It improves fit guidance, predicts demand and sharpens product recommendations, helping brands reduce returns and increase loyalty.",
       metric: "31%",
       metricLabel: "fewer returns",
     },
     {
       title: "Computer Vision",
       body:
-        "Computer vision powers advanced visual analysis in fashion. From automated quality checks to trend forecasting and AR experiences, it enables more accurate, engaging and efficient solutions.",
+        "Computer vision powers visual analysis in fashion. From automated quality checks to trend detection and fit intelligence, it makes decisions more accurate and processes more efficient.",
       metric: "99%",
       metricLabel: "defect detection",
     },
@@ -263,9 +291,9 @@ export const technologies = {
 export const techStrip = {
   eyebrow: "Our tech stack",
   titleLead: "Expertise In Advanced",
-  titleAccent: "Development Technologies",
+  titleAccent: "Data & AI Technologies",
   body:
-    "The same production-grade toolchain sits under every fashion product we ship. Pick a layer to see what it is made of.",
+    "The production-grade Data & AI toolchain behind our fashion analytics, models and data pipelines. Pick a layer to see what it is made of.",
   ctaText: "View all tech stack",
   tabs: [
     {
@@ -290,7 +318,7 @@ export const techStrip = {
       label: "Frontend",
       items: [
         "React", "Next.js", "Vue", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js",
-        "React Native", "Flutter", "Vite", "Radix UI",
+        "Vite", "Radix UI",
       ],
     },
     {
@@ -318,41 +346,41 @@ export const techStrip = {
 
 export const streamline = {
   eyebrow: "What AI can optimise for you?",
-  titleLead: "Discover How AI Can",
-  titleAccent: "Simplify Your Fashion Operations",
+  titleLead: "Where AI Can Create",
+  titleAccent: "Measurable Value in Fashion",
   items: [
     {
-      title: "Boost Revenue",
-      body: "Smart e-commerce platforms increase conversions, improve user experiences and deliver personalised shopping that drives sales.",
+      title: "Improve Conversion",
+      body: "Use customer and product data to make discovery and recommendations more relevant.",
     },
     {
-      title: "Sustainable Resale Market",
-      body: "Eco-focused solutions help brands enter the growing resale market, reducing waste and appealing to sustainability-conscious consumers.",
+      title: "Support Circular Commerce",
+      body: "Identify resale, rental and lifecycle opportunities from product and customer data.",
     },
     {
-      title: "Global Reach & Brand Identity",
-      body: "Scalable digital platforms support international growth, ensuring a consistent brand identity across regions.",
+      title: "Scale With Consistency",
+      body: "Use centralised data and analytics to compare markets while protecting brand standards.",
     },
     {
-      title: "Data-Driven Insights",
-      body: "Actionable analytics refine product offerings, optimise collections and align with shifting customer expectations.",
+      title: "Make Better Decisions",
+      body: "Turn merchandising and operational data into timely insights.",
     },
     {
-      title: "AI and Social Media Integration",
-      body: "AI-powered tools plug straight into social platforms to improve engagement, personalise campaigns and boost visibility.",
+      title: "Improve Campaign Relevance",
+      body: "Connect audience signals with content and campaign performance.",
     },
     {
-      title: "Omnichannel Innovations",
-      body: "Connected shopping experiences, whether in-store, online or in the metaverse, create stronger customer loyalty and future-proof business models.",
+      title: "Connect Channels",
+      body: "Create a consistent data view across store, web, social and marketplace activity.",
     },
   ],
 };
 
 export const midCta = {
-  title: "Create Your Perfect Fashion Software Solution",
+  title: "Turn Your Fashion Data Into Better Decisions",
   body:
-    "Grow your fashion business with our fashion app development services, crafted to enhance efficiency, engage customers and grow revenue.",
-  ctaText: "Contact Us Today",
+    "Whether your challenge is returns, demand planning, customer personalisation or supply-chain visibility, Axiomra can help identify the highest-value AI and data opportunities first. Start with the business problem, validate the available data and build a practical roadmap before scaling.",
+  ctaText: "Discuss Your Fashion AI Opportunity",
   image: ctaImg,
   alt: "A model in a flowing red dress turning in a garden",
   background: midCtaBgImg,
@@ -365,13 +393,13 @@ export const stakeholders = {
   items: [
     {
       title: "Fashion Designers & Manufacturers",
-      body: "Faster prototyping, fewer sampling rounds and production data that reaches the studio before the line is cut.",
+      body: "Earlier trend signals, fewer sampling rounds and production data that reaches the studio before the line is cut.",
       image: designersImg,
       alt: "Sage-green t-shirts on wooden hangers in a manufacturing studio",
     },
     {
       title: "Fashion Brands & Retailers",
-      body: "Personalised storefronts, accurate forecasts and stock that lands where it will actually sell.",
+      body: "Personalised shopping journeys, accurate forecasts and stock that lands where it will actually sell.",
       image: brandsImg,
       alt: "A bright fashion storefront with window displays and a bicycle parked outside",
     },
@@ -389,23 +417,23 @@ export const businessTypes = {
   titleLead: "Explore The Range Of",
   titleAccent: "Fashion Businesses We Support",
   body:
-    "We excel in custom AI-powered fashion software development that drives innovation and efficiency. As a leading fashion app development company, we turn your ideas into products that ship, whether you are developing a new prototype or expanding your market reach.",
+    "We help fashion businesses at every stage apply AI and analytics to the problems that matter most, whether you are validating a first use case or scaling data capabilities across markets.",
   rows: [
     {
       label: "Startups",
-      body: "We collaborate with startups to bring new fashion app ideas to life. Our expertise guides you from initial market analysis and concept validation to developing MVPs and refining your app post-launch.",
+      body: "We help fashion startups test AI ideas early, from assessing the data you have to proving a first use case, such as recommendations or demand forecasting, before you invest further.",
     },
     {
       label: "Scale-ups",
-      body: "As your fashion business grows, new opportunities and challenges arise. We help scale-ups use current technology to boost efficiency, simplify operations and improve market positioning.",
+      body: "As your fashion business grows, new opportunities and challenges arise. We help scale-ups use data and AI to boost efficiency, simplify planning and improve market positioning.",
     },
     {
       label: "Small and medium-sized businesses",
-      body: "Medium-sized fashion businesses often face outdated systems and the need for continuous updates. Our clothing design software solutions address these challenges, improving operational efficiency and competitiveness.",
+      body: "Medium-sized fashion businesses often run on fragmented systems and spreadsheets. We connect that data and apply analytics and AI to improve efficiency and competitiveness, working with the systems you already use.",
     },
     {
       label: "Enterprises",
-      body: "We partner with enterprises to deliver top-tier AI fashion development. Our expertise in apparel app development and AI models for fashion enhances efficiency and performance at scale.",
+      body: "We partner with enterprises to deploy AI models and data pipelines for forecasting, personalisation and supply-chain visibility, improving efficiency and performance at scale.",
     },
   ],
 };
@@ -442,9 +470,9 @@ export const testimonials = {
 export const showcase = {
   eyebrow: "What innovations have we delivered to businesses?",
   titleLead: "Showcasing Our",
-  titleAccent: "AI Development Projects",
+  titleAccent: "AI & Data Projects",
   body:
-    "Work we have shipped for fashion brands, from design tooling through to the storefront.",
+    "Selected AI and data projects we have delivered for our clients.",
   ctaText: "Check Out Our Full Portfolio",
 };
 
@@ -457,19 +485,19 @@ export const partner = {
       icon: "Layers",
       title: "Integration Experts",
       body:
-        "From initial design to deployment, we excel at integrating with any third-party application, system, API or database. Our fashion app development covers third-party and custom integration work to enhance user experience and boost conversions.",
+        "We connect AI models and data pipelines to the third-party systems, APIs and databases you already run, so insights reach your teams without a platform migration.",
     },
     {
       icon: "Target",
       title: "Dedicated To E-commerce",
       body:
-        "Our team is entirely dedicated to e-commerce web development, partnering with global fashion businesses of all sizes and niches. This gives us deep industry insight, enabling expert consulting and proactive project development tailored to fashion.",
+        "We focus on the data behind e-commerce and retail: catalogue, customer, transaction and supply signals. That focus lets us advise honestly on where AI will pay back for your fashion business and where it will not.",
     },
     {
       icon: "ShieldCheck",
       title: "Direct Communication",
       body:
-        "We ensure smooth interactions with clear, efficient processes. As a top fashion app development company, we provide a dedicated project manager to keep you updated and keep collaboration direct throughout your build.",
+        "We keep interactions clear and processes efficient. A dedicated project manager keeps you updated and collaboration direct, from discovery through to deployment.",
     },
   ],
   stats: [
@@ -509,34 +537,34 @@ export const blogs = {
 
 export const faqs = [
   {
-    q: "What is AI fashion app development?",
-    a: "It is the design and build of fashion software where AI does the heavy lifting: size recommendation, virtual try-on, demand forecasting, trend detection and personalised merchandising. We build the app, the models behind it and the data pipelines that keep those models accurate as your catalogue changes.",
+    q: "What does Axiomra do for fashion businesses?",
+    a: "We apply AI, analytics and automation to fashion's hardest problems: size recommendation, virtual try-on, demand forecasting, trend detection and personalised merchandising. We build the models and the data pipelines that keep them accurate as your catalogue changes, working with the systems you already use.",
   },
   {
-    q: "How long does it take to develop a custom AI fashion app?",
-    a: "A scoped MVP with one AI capability, such as a recommendation engine or virtual fitting room, typically takes eight to twelve weeks. A full platform with forecasting, e-commerce and analytics runs four to nine months, delivered in weekly increments you can use from the first sprint.",
+    q: "How long does a fashion AI project take?",
+    a: "A scoped pilot with one AI capability, such as a recommendation model or size-and-fit guidance, typically takes eight to twelve weeks. A broader programme covering forecasting, personalisation and analytics runs four to nine months, delivered in weekly increments you can use from the first sprint.",
   },
   {
-    q: "Can you integrate AI into my existing fashion app?",
-    a: "Yes, and that is most of our fashion work. We build against your existing storefront, PIM, ERP and payment stack rather than asking you to migrate. Where an API does not exist we add a thin service layer so the legacy system is never touched directly.",
+    q: "Can you add AI to my existing fashion systems?",
+    a: "Yes, and that is most of our fashion work. We work with your existing storefront, PIM, ERP and data stack rather than asking you to migrate. Where an API does not exist we add a thin data-integration layer so the legacy system is never touched directly.",
   },
   {
-    q: "Why should I choose Axiomra for AI fashion app development?",
-    a: "Because we have shipped in fashion before and we are judged on your metric. Returns rate, sell-through, conversion or margin: we agree the number before we start and report against it every week. Model accuracy is our problem, not your KPI.",
+    q: "Why choose Axiomra as your fashion Data & AI partner?",
+    a: "Because we are judged on your metric. Returns rate, sell-through, conversion or margin: we agree the number before we start and report against it every week. Model accuracy is our problem, not your KPI.",
   },
   {
-    q: "How much does a fashion app cost?",
-    a: "It depends on the platforms, the AI capabilities and the state of your product data. A scoped pilot is the fastest route to a real number. Book a free session and we will size it honestly, including what we would not build.",
+    q: "How much does a fashion AI project cost?",
+    a: "It depends on the use case, the AI capabilities and the state of your product data. A scoped pilot is the fastest route to a real number. Book a free session and we will size it honestly, including what we would not recommend.",
   },
   {
     q: "Do you handle sustainability and supply-chain traceability?",
-    a: "Yes. We build traceability layers that track materials and suppliers from source to shelf, flag greenwashing risk and produce the audit trail regulators and conscious customers increasingly expect.",
+    a: "Yes. We connect material, supplier and product data to improve traceability from source to shelf, helping teams spot greenwashing risk and keep the records that regulators and conscious customers increasingly ask for.",
   },
 ];
 
 export const finalCta = {
-  title: "Steer Your Business Towards Success With The Trustworthy Partner",
-  subtitle: "Start your journey to iconic success right here.",
-  buttonText: "Get your project done!",
+  title: "Put Your Fashion Data To Work With A Trusted AI Partner",
+  subtitle: "Start with one business problem and a practical plan to solve it.",
+  buttonText: "Start Your Fashion AI Project",
   background: finalCtaBgImg,
 };

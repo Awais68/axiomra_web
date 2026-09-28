@@ -7,7 +7,7 @@ import { solutions } from "../../../data/fashionData";
 const EASE = [0.16, 1, 0.3, 1];
 
 /**
- * Full-bleed photo with a tab rail of app types. The photo is pinned and
+ * Full-bleed photo with a tab rail of AI use cases. The photo is pinned and
  * scrubbed a little slower than the page so it reads as a window, not a card.
  */
 export default function FashionSolutions() {
@@ -72,7 +72,7 @@ export default function FashionSolutions() {
         <div
           data-sol-reveal
           role="tablist"
-          aria-label="Fashion app types"
+          aria-label="Fashion AI use cases"
           className="scrollbar-hide mt-10 flex justify-start gap-2 overflow-x-auto pb-1 md:flex-wrap md:justify-center"
         >
           {solutions.tabs.map((tab) => {

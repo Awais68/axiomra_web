@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import useGsapReveal from "../../../hooks/useGsapReveal";
 import { midCta } from "../../../data/fashionData";
+import { BOOK_CALL_PATH } from "../../../routes.constants";
 
 /** Photo-backed call to action between the benefits and the stakeholder cards. */
 export default function FashionMidCta() {
@@ -38,7 +39,7 @@ export default function FashionMidCta() {
             <p className="mt-5 max-w-xl text-base leading-relaxed text-inverse-fg/75 md:text-lg">{midCta.body}</p>
             <div className="mt-8">
               <Link
-                to="/contact"
+                to={BOOK_CALL_PATH}
                 className="group inline-flex items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-base font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 focus-ring md:text-lg"
               >
                 {midCta.ctaText}
