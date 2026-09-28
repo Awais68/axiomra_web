@@ -32,11 +32,11 @@ export const faqItems = [
   {
     category: "About Axiomra",
     q: "Who is Axiomra and what do you actually do?",
-    a: "We are an AI development company founded in 2021, with 25+ in-house engineers, data scientists and product specialists. We build production AI systems end to end: the model, the service around it, the interface people use and the infrastructure it runs on.",
+    a: "We are a Data & AI partner founded in 2021, with 25+ in-house engineers, data scientists and AI specialists. We deliver production AI end to end: the data pipelines, the model, its integration with the systems you already use and the monitoring that keeps it accurate.",
   },
   {
     category: "About Axiomra",
-    q: "How is Axiomra different from other AI development companies?",
+    q: "How is Axiomra different from other AI providers?",
     a: "Most of the market sells prototypes. We ship systems that survive production traffic, and the engineers who scope your project are the ones who build it. No handover to an unnamed delivery pool after the contract is signed.",
   },
   {
@@ -47,7 +47,7 @@ export const faqItems = [
   {
     category: "About Axiomra",
     q: "How big a team will we work with?",
-    a: "Typically three to six people: a lead engineer, one or two specialists in the relevant discipline, a product designer where there is an interface, and a technical project manager. You meet all of them before you sign.",
+    a: "Typically three to six people: a lead engineer, one or two specialists in the relevant discipline, a product designer where there is a dashboard or interface, and a technical project manager. You meet all of them before you sign.",
   },
 
   {
@@ -57,8 +57,8 @@ export const faqItems = [
   },
   {
     category: "Services & Industries",
-    q: "Do you only build AI, or full products too?",
-    a: "Full products. A model is rarely the deliverable. Most engagements include the backend service, the web or mobile interface, the data pipeline feeding it and the deployment story around all of it.",
+    q: "Do you deliver just the model, or the whole AI solution?",
+    a: "The whole AI solution. A model on its own is rarely the deliverable. Most engagements include the data pipeline feeding it, the integration into the tools your team already uses, and the deployment and monitoring around it.",
   },
   {
     category: "Services & Industries",
@@ -110,7 +110,7 @@ export const faqItems = [
   {
     category: "Integration",
     q: "Will this work on mobile and on low bandwidth?",
-    a: "Interfaces are built and tested on mid-range devices, not just a developer laptop. Where inference has to happen on device, we use quantised models sized for the hardware you actually ship on.",
+    a: "Dashboards and models are tested on mid-range devices, not just an engineer's laptop. Where inference has to happen on device, we use quantised models sized for the hardware you actually ship on.",
   },
 
   {

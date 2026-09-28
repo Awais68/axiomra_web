@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Check } from "lucide-react";
 import { intro } from "../../data/aiDevelopmentData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /** "Stay Ahead In Tech" block, company positioning plus the capability list. */
 export default function AiDevIntro() {
@@ -42,7 +43,7 @@ export default function AiDevIntro() {
           </p>
 
           <Link
-            to="/contact"
+            to={CONTACT_PATH}
             className="group mt-9 inline-flex items-center gap-2.5 rounded-full border border-line px-7 py-4 text-lg font-semibold transition-colors hover:border-brand/50 hover:text-brand focus-ring"
           >
             {intro.ctaText}

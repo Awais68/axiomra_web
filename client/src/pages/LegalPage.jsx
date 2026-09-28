@@ -31,9 +31,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Custom AI Legal Software Development Services | Axiomra";
+const TITLE = "Legal Data & AI Solutions | Axiomra";
 const DESCRIPTION =
-  "AI legal software development: contract lifecycle management, matter and case systems, document automation, eDiscovery and compliance platforms built for privilege and scale.";
+  "Legal Data & AI from Axiomra: contract analytics, document AI, legal research NLP and eDiscovery models that work with the systems your firm already uses.";
 
 export default function LegalPage() {
   // Lazy photos land after the triggers were measured; once the page has

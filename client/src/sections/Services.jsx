@@ -23,7 +23,7 @@ const services = [
   {
     icon: Brain,
     title: "AI Development",
-    desc: "We design and build custom AI products from concept to deployment. Expect a clear roadmap, staged delivery, and measurable ROI.",
+    desc: "We design and build custom AI solutions from concept to deployment. Expect a clear roadmap, staged delivery, and measurable ROI.",
     image: aiDevImg,
   },
   {

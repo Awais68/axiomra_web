@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "../SectionHeading";
 import useGsapReveal from "../../hooks/useGsapReveal";
 import { whyUs } from "../../data/nlpData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /** Differentiation: the stat block, then six numbered reasons. */
 export default function NlpWhyUs() {
@@ -26,7 +27,7 @@ export default function NlpWhyUs() {
             />
 
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group mt-9 inline-flex items-center gap-2 rounded-full border border-line-strong px-7 py-3.5 text-base font-medium text-content transition-colors hover:border-brand hover:text-brand focus-ring md:text-lg"
             >
               {whyUs.ctaText}

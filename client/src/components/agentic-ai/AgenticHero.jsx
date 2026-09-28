@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, Bot, Star } from "lucide-react";
 import AgenticCanvas from "./AgenticCanvas";
 import { hero } from "../../data/agenticAiData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 26 },
@@ -75,7 +76,7 @@ export default function AgenticHero() {
             className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row"
           >
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group inline-flex items-center gap-2 rounded-full bg-accent-vivid px-8 py-4 text-base font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring md:text-lg"
             >
               {hero.ctaText}

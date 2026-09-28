@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "../SectionHeading";
 import { caseStudies } from "../../data/agenticAiData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /** Three shipped systems as full-width rows. */
 export default function AgenticCaseStudies() {
@@ -88,7 +89,7 @@ export default function AgenticCaseStudies() {
                   </div>
 
                   <Link
-                    to="/contact"
+                    to={CONTACT_PATH}
                     className="group mt-8 inline-flex items-center gap-2 self-start font-medium text-brand transition-colors hover:text-accent focus-ring md:text-lg"
                   >
                     Talk about a system like this

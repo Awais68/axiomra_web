@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, X } from "lucide-react";
 import SectionHeading from "../SectionHeading";
 import { challenges } from "../../data/computerVisionData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /** The problem statement, as copy on the left and the one monitoring photograph on the right. */
 export default function CvChallenges() {
@@ -58,7 +59,7 @@ export default function CvChallenges() {
             </p>
 
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group mt-9 inline-flex items-center gap-2 rounded-full border border-line-strong px-7 py-3.5 text-base font-medium text-content transition-colors hover:border-brand hover:text-brand focus-ring md:text-lg"
             >
               {challenges.ctaText}

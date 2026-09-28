@@ -24,7 +24,7 @@ export default function HomePage() {
   return (
     <>
       <Seo
-        title="Axiomra: Result-Driven AI Development Company"
+        title="Axiomra: Result-Driven Data & AI Partner"
         jsonLd={[organizationSchema(), websiteSchema()]}
       />
       <Hero />
@@ -33,7 +33,7 @@ export default function HomePage() {
       <VideoTestimonials />
       <GradientCTA
         title="Want These Results For Your Business?"
-        subtitle="We've done it for 300+ clients. Book a discovery call today, and our AI development partner team will map out a custom AI roadmap to eliminate manual overhead and boost your bottom line."
+        subtitle="We've done it for 300+ clients. Book a discovery call today, and our Data & AI team will map out a custom AI roadmap to eliminate manual overhead and boost your bottom line."
       />
       <Services />
       <GradientCTA

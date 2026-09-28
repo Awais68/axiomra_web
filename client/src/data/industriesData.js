@@ -26,7 +26,7 @@ export const hero = {
   titleAccent: "AI Solutions",
   titleTail: "for Industries",
   body:
-    "Every sector carries its own bottlenecks, its own data and its own rules. We build AI that fits how your industry actually operates, from the first workflow we automate to the system your whole team runs on.",
+    "Every sector carries its own bottlenecks, its own data and its own rules. We apply data and AI to how your industry actually operates, from the first workflow we automate to the insights your whole team relies on.",
   ctaText: "Request a Proposal",
   image: heroImg,
 };
@@ -42,7 +42,7 @@ export const industries = [
     titleLead: "AI for",
     titleAccent: "Fashion",
     description:
-      "Fashion runs on taste and timing, and both are measurable now. We build the sizing, forecasting and personalisation systems that cut returns, clear stock and keep every customer feeling like the drop was made for them.",
+      "Fashion runs on taste and timing, and both are measurable now. We apply AI to sizing, forecasting and personalisation to cut returns, clear stock and keep every customer feeling like the drop was made for them.",
     image: fashionImg,
     alt: "Rows of garments hanging on a rack inside a fashion boutique",
     pains: [
@@ -50,7 +50,7 @@ export const industries = [
       { problem: "Stock that sells out or sits", solution: "Predictive inventory analytics" },
       { problem: "One catalogue for every shopper", solution: "AI product recommendations" },
       { problem: "Guessing next season's demand", solution: "Trend forecasting models" },
-      { problem: "E-commerce ops sprawl", solution: "Unified store management tools" },
+      { problem: "E-commerce ops sprawl", solution: "Unified commerce analytics" },
     ],
   },
   {
@@ -59,14 +59,14 @@ export const industries = [
     titleLead: "AI for",
     titleAccent: "Sports",
     description:
-      "From grassroots clubs to professional leagues, the admin and the analysis both pile up. We ship the tooling that runs the organisation and the models that make every athlete's data useful.",
+      "From grassroots clubs to professional leagues, the admin and the analysis both pile up. We automate the admin that runs the organisation and build the models that make each athlete's data useful.",
     image: sportsImg,
     alt: "College football players in action on the field during a packed stadium game",
     pains: [
-      { problem: "Player records in spreadsheets", solution: "Registration and roster tools" },
-      { problem: "Ticketing that breaks on match day", solution: "Event ticketing systems" },
-      { problem: "Performance data nobody reads", solution: "Sports analysis software" },
-      { problem: "Training sessions organised by hand", solution: "Coaching management platforms" },
+      { problem: "Player records in spreadsheets", solution: "Automated roster data" },
+      { problem: "Ticketing that breaks on match day", solution: "Match-day demand forecasting" },
+      { problem: "Performance data nobody reads", solution: "AI performance analytics" },
+      { problem: "Training sessions organised by hand", solution: "Training-load insights" },
       { problem: "Video reviewed once, then lost", solution: "AI sports coach and video insight" },
     ],
   },
@@ -76,16 +76,16 @@ export const industries = [
     titleLead: "AI for",
     titleAccent: "Education",
     description:
-      "Teachers spend their evenings on grading and admin instead of teaching. We build the EdTech that hands that time back and gives every learner a path that adapts to them.",
+      "Teachers spend their evenings on grading and admin instead of teaching. We apply AI and analytics that hand that time back and give each learner a path that adapts to them.",
     image: educationImg,
     alt: "A teacher guiding students working on laptops in a modern campus library",
     pains: [
-      { problem: "Students disengaging mid-course", solution: "Personalised learning apps" },
+      { problem: "Students disengaging mid-course", solution: "Personalised learning models" },
       { problem: "Grading eating teaching hours", solution: "AI assessment tools" },
-      { problem: "Attendance taken on paper", solution: "Smart attendance systems" },
-      { problem: "Courses that take weeks to build", solution: "E-learning authoring tools" },
-      { problem: "Parents kept in the dark", solution: "Parent communication portals" },
-      { problem: "Collaboration limited to the classroom", solution: "Virtual classrooms" },
+      { problem: "Attendance taken on paper", solution: "Automated attendance analytics" },
+      { problem: "Courses that take weeks to build", solution: "AI-assisted course authoring" },
+      { problem: "Parents kept in the dark", solution: "Automated parent updates" },
+      { problem: "Collaboration limited to the classroom", solution: "Online engagement analytics" },
     ],
   },
   {
@@ -94,14 +94,14 @@ export const industries = [
     titleLead: "AI for",
     titleAccent: "Healthcare",
     description:
-      "Clinical teams are stretched, systems do not talk to each other and every shortcut has a compliance cost. We build healthcare AI that takes the administrative load off clinicians without taking any risk with patient data.",
+      "Clinical teams are stretched, systems do not talk to each other and every shortcut has a compliance cost. We apply healthcare AI to take administrative load off clinicians, with patient-data privacy considered at every step.",
     image: healthcareImg,
     alt: "A radiologist reviewing medical scans across multiple diagnostic monitors",
     pains: [
       { problem: "Staffing gaps on every rota", solution: "AI workforce planning tools" },
       { problem: "Clinician burnout from admin", solution: "Task and documentation automation" },
-      { problem: "Patients waiting too long", solution: "Smart scheduling systems" },
-      { problem: "EHR and lab systems in silos", solution: "AI integration layers" },
+      { problem: "Patients waiting too long", solution: "Scheduling optimisation models" },
+      { problem: "EHR and lab systems in silos", solution: "Connected clinical data" },
       { problem: "Costs rising faster than budgets", solution: "Predictive cost analytics" },
       { problem: "Sensitive data under constant threat", solution: "AI-driven security monitoring" },
     ],
@@ -112,15 +112,15 @@ export const industries = [
     titleLead: "AI for",
     titleAccent: "Real Estate",
     description:
-      "Property moves on information, and most of it arrives too late. We build the market intelligence, transaction and listing systems that let agencies and developers act before the market does.",
+      "Property moves on information, and most of it arrives too late. We apply market intelligence, transaction analytics and listing AI that let agencies and property developers act before the market does.",
     image: realEstateImg,
     alt: "Glass skyscrapers seen from street level, rising into a grey sky",
     pains: [
       { problem: "Affordability shifting under buyers", solution: "Market insight tools" },
-      { problem: "Transactions stalled on paperwork", solution: "Transaction management software" },
-      { problem: "Portfolios run from inboxes", solution: "Property management systems" },
+      { problem: "Transactions stalled on paperwork", solution: "Document AI for transactions" },
+      { problem: "Portfolios run from inboxes", solution: "Portfolio analytics" },
       { problem: "Listings that sit for months", solution: "Predictive sales insights" },
-      { problem: "Good properties nobody sees", solution: "AI-optimised listing platforms" },
+      { problem: "Good properties nobody sees", solution: "AI-optimised listings" },
     ],
   },
   {
@@ -129,15 +129,15 @@ export const industries = [
     titleLead: "AI for",
     titleAccent: "Retail",
     description:
-      "Margins in retail are won at the shelf and at the till. We build the inventory, recommendation and payment systems that keep stock right, baskets bigger and checkout fast.",
+      "Margins in retail are won at the shelf and at the till. We apply AI to inventory, recommendations and payments to keep stock right, baskets bigger and checkout fast.",
     image: retailImg,
     alt: "A modern retail store interior with folded garments on wooden shelving",
     pains: [
-      { problem: "Stock-outs and overstock in the same week", solution: "Inventory management software" },
+      { problem: "Stock-outs and overstock in the same week", solution: "Inventory forecasting models" },
       { problem: "Shoppers browsing without buying", solution: "Recommendation engines" },
-      { problem: "Errors in every transaction batch", solution: "Reliable payment software" },
+      { problem: "Errors in every transaction batch", solution: "Payment anomaly detection" },
       { problem: "Expenses reconciled by hand", solution: "Expense report automation" },
-      { problem: "Queues at the checkout", solution: "AI-assisted POS systems" },
+      { problem: "Queues at the checkout", solution: "Queue and staffing forecasts" },
     ],
   },
   {
@@ -146,7 +146,7 @@ export const industries = [
     titleLead: "AI for",
     titleAccent: "Marketing",
     description:
-      "Marketing teams drown in reporting and still cannot tell which campaign moved the number. We build the analytics, content and optimisation systems that make every channel accountable.",
+      "Marketing teams drown in reporting and still cannot tell which campaign moved the number. We apply analytics, content AI and optimisation models that make each channel accountable.",
     image: marketingImg,
     alt: "A laptop on a desk showing marketing analytics dashboards",
     pains: [
@@ -163,7 +163,7 @@ export const industries = [
     titleLead: "AI for",
     titleAccent: "Supply Chain",
     description:
-      "One late supplier and the whole plan slips. We build the forecasting, risk and routing systems that give operations teams the visibility to absorb disruption instead of chasing it.",
+      "One late supplier and the whole plan slips. We build the forecasting, risk and routing models that give operations teams the visibility to absorb disruption instead of chasing it.",
     image: supplyChainImg,
     alt: "A fulfilment warehouse floor stacked with parcels between tall racking",
     pains: [
@@ -197,12 +197,12 @@ export const industries = [
     titleLead: "AI for",
     titleAccent: "Finance",
     description:
-      "Finance teams carry the compliance burden, the legacy stack and the fraud risk at the same time. We build the systems that automate the controls and surface the exceptions, with an audit trail for every decision.",
+      "Finance teams carry the compliance burden, the legacy stack and the fraud risk at the same time. We apply AI that automates the controls and surfaces the exceptions, with an audit trail for every decision.",
     image: financeImg,
     alt: "A finance team reviewing figures beside trading desk monitors in an office",
     pains: [
-      { problem: "Compliance consuming the team", solution: "AI compliance tooling" },
-      { problem: "Legacy systems nobody dares touch", solution: "AI integration layers" },
+      { problem: "Compliance consuming the team", solution: "AI compliance monitoring" },
+      { problem: "Legacy systems nobody dares touch", solution: "AI on top of existing systems" },
       { problem: "Reconciliation running days late", solution: "Intelligent automation" },
       { problem: "Data quality nobody trusts", solution: "AI data management" },
       { problem: "Fraud and security exposure", solution: "AI risk detection" },
@@ -214,13 +214,13 @@ export const industries = [
     titleLead: "AI for",
     titleAccent: "Legal",
     description:
-      "Legal work is document work, and most of it is repeatable. We build the processing, tracking and client systems that free lawyers for the judgement calls only they can make.",
+      "Legal work is document work, and most of it is repeatable. We apply AI to document processing, time capture and client updates to free lawyers for the judgement calls only they can make.",
     image: legalImg,
     alt: "A bronze statue of Lady Justice holding her scales",
     pains: [
       { problem: "Documents reviewed line by line", solution: "AI document processing" },
-      { problem: "Billable hours leaking untracked", solution: "Smart time tracking" },
-      { problem: "Clients chasing for updates", solution: "AI client portals" },
+      { problem: "Billable hours leaking untracked", solution: "Automated time capture" },
+      { problem: "Clients chasing for updates", solution: "Automated client updates" },
       { problem: "Compliance deadlines tracked by memory", solution: "Intelligent compliance monitoring" },
       { problem: "Overheads eating the margin", solution: "Workflow automation" },
     ],
@@ -231,25 +231,25 @@ export const industries = [
     titleLead: "AI for",
     titleAccent: "Transportation & Logistics",
     description:
-      "Fleets run on tight margins and tighter schedules. We build the planning, routing and maintenance systems that keep vehicles moving, drivers scheduled and deliveries on time.",
+      "Fleets run on tight margins and tighter schedules. We build the planning, routing and maintenance models that keep vehicles moving, drivers scheduled and deliveries on time.",
     image: transportationImg,
     alt: "Container cranes and stacked shipping containers at a busy cargo port",
     pains: [
       { problem: "Driver shortages on every route", solution: "AI workforce planning" },
       { problem: "Fuel costs eating the margin", solution: "Smart route analytics" },
       { problem: "Vehicles failing without warning", solution: "Predictive maintenance" },
-      { problem: "Deliveries late and customers guessing", solution: "Real-time tracking" },
+      { problem: "Deliveries late and customers guessing", solution: "Real-time ETA prediction" },
       { problem: "Dispatch still run on paper", solution: "Intelligent process automation" },
     ],
   },
 ];
 
 export const techStrip = {
-  eyebrow: "What we build with",
+  eyebrow: "Data & AI technologies",
   titleLead: "One Stack,",
   titleAccent: "Every Vertical",
   body:
-    "The same production-grade toolchain sits under every industry solution we ship. Pick a layer to see what it is made of.",
+    "The same production-grade Data & AI toolchain sits under every industry solution we deliver. Pick a layer to see what it is made of.",
   tabs: [
     {
       id: "ai",
@@ -273,7 +273,7 @@ export const techStrip = {
       label: "Frontend",
       items: [
         "React", "Next.js", "Vue", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js",
-        "React Native", "Vite", "Radix UI", "TanStack Query", "Storybook",
+        "Vite", "Radix UI", "TanStack Query", "Storybook",
       ],
     },
     {
@@ -307,7 +307,7 @@ export const showcase = {
   titleLead: "Built for",
   titleAccent: "Real Industries",
   body:
-    "A slice of the systems we have shipped. Each one started as a bottleneck in someone's business.",
+    "A slice of the AI and data solutions we have delivered. Each one started as a bottleneck in someone's business.",
   ctaText: "Check Out Our Full Portfolio",
 };
 
@@ -318,7 +318,7 @@ export const businessTypes = {
   rows: [
     {
       label: "Startups",
-      body: "A scoped MVP, a model proven on real data and a demo you can put in front of investors without a rehearsal.",
+      body: "A scoped AI proof of concept, a model proven on real data and a demo you can put in front of investors without a rehearsal.",
     },
     {
       label: "Scale-ups",
@@ -411,7 +411,7 @@ export const faqs = [
   },
   {
     q: "What does the implementation process look like?",
-    a: "Discovery to understand the workflow and the data, a scoped pilot that proves the model on your numbers, then production build with weekly demos. You see working software every week, and you own the code and the infrastructure from day one.",
+    a: "Discovery to understand the workflow and the data, a scoped pilot that proves the model on your numbers, then production rollout with weekly demos. You see working progress every week, and you own the models, code and infrastructure from day one.",
   },
   {
     q: "How much does an industry AI solution cost?",
@@ -442,6 +442,6 @@ export const faqs = [
 export const finalCta = {
   title: "Start Your Journey To Success With The Trustworthy Partner",
   subtitle:
-    "Tell us the bottleneck. We will come back with the system, the timeline and the number it has to hit.",
+    "Tell us the bottleneck. We will come back with the solution, the timeline and the number it has to hit.",
   buttonText: "Get Your Project Done",
 };

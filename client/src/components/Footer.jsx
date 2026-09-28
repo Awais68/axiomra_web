@@ -15,6 +15,8 @@ import {
   GENERATIVE_AI_SLUG,
   AGENTIC_AI_SLUG,
   NLP_SLUG,
+  CONTACT_PATH,
+  BOOK_CALL_PATH,
 } from "../routes.constants";
 
 /**
@@ -37,7 +39,7 @@ const LINK_ROUTES = {
   "AI for Transportation": industryPath("transportation"),
   "All Industries": INDUSTRIES_PATH,
   "About Us": ABOUT_PATH,
-  "Contact Us": "/contact",
+  "Contact Us": CONTACT_PATH,
   "Tech Stack": TECH_PATH,
   FAQs: FAQS_PATH,
 };
@@ -102,7 +104,7 @@ const UNDERLINE_LINK =
 export default function Footer() {
   // The contact page shows no footer at all, not even on hover.
   const { pathname } = useLocation();
-  if (pathname === "/contact") return null;
+  if (pathname === CONTACT_PATH) return null;
 
   return (
     <div>
@@ -125,7 +127,7 @@ export default function Footer() {
               help businesses measure the value of automation.
             </p>
             <Link
-              to="/contact"
+              to={BOOK_CALL_PATH}
               className="mt-5 inline-block rounded-full bg-inverse-fg px-6 py-3 text-lg font-medium text-inverse transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow focus-ring"
             >
               Discuss Your Project

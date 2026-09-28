@@ -4,12 +4,12 @@ import { Plus } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 
 const defaultFaqs = [
-  { q: "Who does Axiomra serve as an AI development partner?", a: "SMBs, growth-stage companies, and global enterprises (especially in healthcare, finance, and retail), moving from manual workflows to automated, data-driven operations." },
-  { q: "What makes Axiomra different from other AI development companies?", a: "We focus on production-grade engineering, not prototypes. A 100% in-house team of 25+ experts ensures every solution is scalable, secure, and delivers measurable ROI within two quarters." },
-  { q: "Why should I choose an AI development company for my global project?", a: "You get access to elite engineering talent at a competitive price point, with 300+ successful projects delivered globally." },
-  { q: "What industries does your AI development company have experience in?", a: "Extensive experience across healthcare, fashion, sports, education, real estate, and more, 300+ projects delivered or in progress." },
-  { q: "Does Axiomra offer post-development support?", a: "Yes: complete post-launch care across AI, software, data, and design, to keep your solution performing as you scale." },
-  { q: "How much does it cost to build custom software?", a: "Cost depends on project complexity, chosen tech stack, and ongoing maintenance needs. Book a free session and we'll scope it honestly." },
+  { q: "Who does Axiomra serve as a Data & AI partner?", a: "SMBs, growth-stage companies, and global enterprises (especially in healthcare, finance, and retail), moving from manual workflows to automated, data-driven operations." },
+  { q: "What makes Axiomra different from other AI providers?", a: "We focus on production-grade AI, not prototypes. A 100% in-house team of 25+ experts ensures every solution is scalable, secure, and delivers measurable ROI within two quarters." },
+  { q: "Why choose a dedicated Data & AI partner for my global project?", a: "You get experienced data and AI specialists at a competitive price point, with 300+ successful projects delivered globally." },
+  { q: "Which industries does Axiomra have experience in?", a: "Extensive experience across healthcare, fashion, sports, education, real estate, and more, 300+ projects delivered or in progress." },
+  { q: "Does Axiomra offer support after launch?", a: "Yes: ongoing monitoring, model updates and data support to keep your AI solution performing as you scale." },
+  { q: "How much does an AI project cost?", a: "Cost depends on the use case, the state of your data and ongoing maintenance needs. Book a free session and we'll scope it honestly." },
   { q: "How do I get started with Axiomra?", a: "Book a free strategy session. We'll analyze your business challenges and provide a clear roadmap for automating your processes." },
 ];
 

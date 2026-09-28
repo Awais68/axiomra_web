@@ -6,7 +6,7 @@ import { gsap, MOTION_OK } from "../../../lib/gsap";
 import { services } from "../../../data/retailData";
 
 /**
- * Six product families, image and copy swapping sides, each with the modules
+ * Six capability areas, image and copy swapping sides, each with the modules
  * that sit inside it. The photographs are cut to the price-tag polygon and
  * scrubbed a little against the scroll, so the column has depth without any
  * pinning.

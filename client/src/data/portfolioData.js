@@ -379,7 +379,7 @@ export const faqs = [
   },
   {
     q: "What is the typical timeline for an AI project?",
-    a: "A focused assistant or automation reaches live deployment in about four to six weeks. Platforms with multiple roles, dashboards and integrations run three to six months, delivered in two-week sprints with working software at the end of each one.",
+    a: "A focused assistant or automation reaches live deployment in about four to six weeks. Larger solutions with multiple roles, dashboards and integrations run three to six months, delivered in two-week sprints with working results at the end of each one.",
   },
   {
     q: "Can I get a case study relevant to my industry?",

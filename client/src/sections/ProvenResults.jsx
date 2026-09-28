@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import { BOOK_CALL_PATH } from "../routes.constants";
 
 /** Sticky intro on the left, self-stacking case cards on the right. */
 const TOP_BASE_REM = 7; // clears the fixed navbar
@@ -117,7 +118,7 @@ export default function ProvenResults() {
           </p>
 
           <Link
-            to="/contact"
+            to={BOOK_CALL_PATH}
             className="group mt-9 inline-flex items-center gap-2.5 rounded-full border border-line px-7 py-4 text-base font-semibold text-content transition-colors hover:border-brand/50 hover:text-brand focus-ring md:text-lg"
           >
             Discuss Your Challenge

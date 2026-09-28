@@ -23,7 +23,7 @@ export default function TestimonialWall({ showHeading = true }) {
       {showHeading ? (
         <SectionHeading
           className="mb-16"
-          eyebrow="Simply the best AI development partner"
+          eyebrow="Simply the best Data & AI partner"
           titleClassName="lg:whitespace-nowrap lg:text-[2.75vw]"
           title={
             <>

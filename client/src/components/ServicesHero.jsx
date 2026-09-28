@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
+import { CONTACT_PATH } from "../routes.constants";
 
 const NetworkBackground = lazy(() => import("./NetworkBackground"));
 
@@ -81,7 +82,7 @@ export default function ServicesHero() {
             className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <a
-              href="/contact"
+              href={CONTACT_PATH}
               className="group inline-flex items-center gap-2 rounded-full bg-accent-vivid px-9 py-4 text-base font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring"
             >
               Book a Free Consultation

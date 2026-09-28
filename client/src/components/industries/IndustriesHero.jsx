@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Globe2 } from "lucide-react";
 import { hero } from "../../data/industriesData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 // three.js is the only heavy dependency on this page, and it lives here alone.
 const NetworkBackground = lazy(() => import("../NetworkBackground"));
@@ -94,7 +95,7 @@ export default function IndustriesHero() {
 
           <motion.div variants={fadeUp} initial="hidden" animate="show" custom={3} className="mt-10">
             <Link
-              to="/contact"
+              to={hero.ctaTo ?? CONTACT_PATH}
               className="group inline-flex items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-lg font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 active:scale-[0.98] focus-ring"
             >
               {hero.ctaText}

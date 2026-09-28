@@ -21,12 +21,12 @@ import governance from "../assets/gen-ai/ai-governance-security.jpg";
 import horizon from "../assets/gen-ai/generative-ai-horizon.jpg";
 
 export const hero = {
-  eyebrow: "Generative AI Development Company",
+  eyebrow: "Generative AI Partner",
   titleLead: "Custom Generative AI",
   titleAccent: "Development Services",
   titleTail: "For Enterprises And Startups",
   body:
-    "We build generative AI solutions that help your team create content, find information, and automate routine work. By combining suitable models with your business data and existing tools, we develop applications designed for daily use, with evaluation and review controls matched to your needs.",
+    "We build generative AI solutions that help your team create content, find information, and automate routine work. By combining suitable models with your business data and existing tools, we develop solutions designed for daily use, with evaluation and review controls matched to your needs.",
   ctaText: "Book a Free Consultation",
   secondaryCtaText: "Explore Our Solutions",
   proof: { rating: "4.8", reviews: "300+ companies", source: "Reviewed on Clutch" },
@@ -85,7 +85,7 @@ export const challenges = {
     },
     {
       title: "Build AI Features With a Clear Plan",
-      body: "Move from a defined use case to an evaluated application with development and integration support.",
+      body: "Move from a defined use case to an evaluated solution with development and integration support.",
     },
     {
       title: "Extend Your Existing Systems",
@@ -148,16 +148,16 @@ export const services = {
     },
     {
       id: "generative-ai-app-development",
-      title: "Generative AI Application Development",
+      title: "Generative AI Assistants and Features",
       body:
-        "Turn your idea into a usable AI application for web or mobile. We develop writing assistants, AI search tools, content generation applications, and AI features for SaaS products.",
+        "Add generative AI to the tools and products you already run. We build writing assistants, AI search, content generation, and generative AI features, connected to your existing web and mobile products through APIs.",
       bullets: [
-        "Application design and development",
-        "Web and mobile integration",
-        "Custom AI product capabilities",
+        "Assistant and feature design",
+        "Integration with your web and mobile products",
+        "Model and prompt evaluation",
         "APIs designed for growth and maintenance",
       ],
-      ctaText: "Explore AI App Development",
+      ctaText: "Explore Generative AI Assistants",
       image: appDevelopment,
       imageAlt: "Hands using a laptop showing a prompt console beside a generated application layout",
     },
@@ -248,14 +248,14 @@ export const modelTypes = {
       icon: "code",
       name: "Code Assistance",
       body:
-        "Help developers draft code, suggest implementations, refactor existing work, and create tests. Outputs are reviewed against your engineering standards before release.",
+        "Help your engineers draft code, suggest implementations, refactor existing work, and create tests. Outputs are reviewed against your engineering standards before release.",
       tags: ["Codex-class", "Refactoring", "Tests", "Migration"],
     },
     {
       icon: "multimodal",
       name: "Multimodal AI",
       body:
-        "Work across text, images, audio, and video within a connected workflow. Build applications that extract information, answer questions, and summarise supported content formats.",
+        "Work across text, images, audio, and video within a connected workflow. Build workflows that extract information, answer questions, and summarise supported content formats.",
       tags: ["Vision + Text", "Doc AI", "Search", "Summaries"],
     },
   ],
@@ -468,15 +468,15 @@ export const industriesBand = {
 export const faqs = [
   {
     q: "What are generative AI development services?",
-    a: "Generative AI development services cover everything needed to take a model from idea to production: use case selection, data preparation, model selection or fine-tuning, retrieval and grounding, application development, integration with your systems, and monitoring after launch.",
+    a: "Generative AI development services cover everything needed to take a model from idea to production: use case selection, data preparation, model selection or fine-tuning, retrieval and grounding, solution design, integration with your systems, and monitoring after launch.",
   },
   {
     q: "What generative AI services does Axiomra offer?",
-    a: "Consulting and strategy, custom LLM development, generative AI integration, AI app development, copilots and autonomous agents, custom RAG systems, and generative AI workflow automation, plus 60 days of post-deployment support on every build.",
+    a: "Consulting and strategy, custom LLM development, generative AI integration, generative AI assistants and features, copilots and autonomous agents, custom RAG systems, and generative AI workflow automation, plus 60 days of post-deployment support on every build.",
   },
   {
     q: "How much does it cost to build a generative AI solution?",
-    a: "A focused pilot on an existing model typically lands well below a custom fine-tuned platform with multiple integrations. Cost is driven by data readiness, integration count, and inference volume. Book a free session and we will give you an itemised estimate rather than a range.",
+    a: "A focused pilot on an existing model typically lands well below a custom fine-tuned system with multiple integrations. Cost is driven by data readiness, integration count, and inference volume. Book a free session and we will give you an itemised estimate rather than a range.",
   },
   {
     q: "How long does generative AI development take?",

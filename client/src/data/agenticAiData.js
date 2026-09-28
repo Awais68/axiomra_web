@@ -23,7 +23,7 @@ import agentRoi from "../assets/agentic-ai/agent-roi.jpg";
 import industriesImage from "../assets/agentic-ai/agentic-industries.jpg";
 
 export const hero = {
-  eyebrow: "Agentic AI Development Company",
+  eyebrow: "Agentic AI Partner",
   titleLead: "Agentic AI",
   titleAccent: "Development",
   titleTail: "for Connected Business Workflows",
@@ -198,7 +198,7 @@ export const services = {
       image: observability,
       imageAlt: "Profiler trace on a laptop showing an agent run measured step by step",
       body:
-        "Enterprise AI needs accountability. We give you real-time monitoring, full decision and tool-call audit trails, explainability dashboards, and human-in-the-loop controls, so your agents stay inside defined boundaries, satisfy your regulators, and stay reviewable long after go-live.",
+        "Enterprise AI needs accountability. We give you real-time monitoring, full decision and tool-call audit trails, explainability dashboards, and human-in-the-loop controls, so your agents stay inside defined boundaries and remain reviewable by your auditors and regulators long after go-live.",
       bullets: [
         "Trace of every prompt, tool call, and outcome",
         "Cost, latency, and success-rate dashboards",

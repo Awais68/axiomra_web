@@ -32,11 +32,11 @@ export const RETAIL_SLUG = "retail";
 
 export const hero = {
   eyebrow: "AI for the retail industry",
-  titleLead: "Personalised Retail Software for",
+  titleLead: "AI and Data Solutions for",
   titleAccent: "Resilient, Omnichannel",
   titleTail: "Growth",
   body:
-    "We build AI retail platforms that sense demand before it moves, keep the right stock in the right store and make every basket feel picked by hand. Fewer stockouts, less shrink, faster checkout, and margin you can trace to a decision.",
+    "We bring AI into the retail systems you already run to sense demand before it moves, keep the right stock in the right store and make every basket feel picked by hand. Fewer stockouts, less shrink, faster checkout, and margin you can trace to a decision.",
   ctaText: "Request a Proposal",
   image: heroImg,
   alt: "A modern clothing store interior with garments displayed on racks and shelving",
@@ -44,11 +44,11 @@ export const hero = {
 };
 
 export const intro = {
-  titleLead: "AI Retail Software Development For",
+  titleLead: "Retail Data and AI For",
   titleAccent: "Every Channel You Sell Through",
   paragraphs: [
-    "We work as the engineering partner behind data-driven retail operations: a modular, cloud-native platform that fuses demand sensing, inventory optimisation, workforce intelligence and unified commerce. It goes straight at the things that quietly erode loyalty and margin: supply chain disruption, mismanaged inventory, understaffed shifts and channels that never quite agree with each other.",
-    "From grocery to fashion, big-box to DTC, we help retailers under real cost pressure automate low-value work, accelerate replenishment and pricing decisions, and modernise without ripping out the systems that already run the business. Accelerators, change management and training come with the build, so the digital transformation lag closes in weeks rather than quarters.",
+    "We work as the Data & AI partner behind data-driven retail operations, layering demand sensing, inventory optimisation, workforce intelligence and unified commerce analytics over the systems you already run. It goes straight at the things that quietly erode loyalty and margin: supply chain disruption, mismanaged inventory, understaffed shifts and channels that never quite agree with each other.",
+    "From grocery to fashion, big-box to DTC, we help retailers under real cost pressure automate low-value work, accelerate replenishment and pricing decisions, and modernise without ripping out the systems that already run the business. Accelerators, change management and training come with every engagement, so the digital transformation lag closes in weeks rather than quarters.",
   ],
   image: introImg,
   alt: "Escalators and shop fronts across several levels of a busy shopping centre",
@@ -59,7 +59,7 @@ export const intro = {
 };
 
 export const impact = {
-  titleLead: "AI Retail Software",
+  titleLead: "AI in Retail",
   titleAccent: "Driving Measurable Impact",
   body:
     "Merchandising, supply chains and omnichannel journeys are being rebuilt around production-grade AI. The retailers unifying their data first are the ones already turning forecasting, pricing, labour and CX into a compounding advantage.",
@@ -123,31 +123,31 @@ export const challenges = {
       icon: "Network",
       problem: "Channels that never agree on stock",
       solution:
-        "A unified commerce layer with one inventory truth behind e-commerce, marketplace, POS and fulfilment, so ship-from-store stops being a gamble.",
+        "A unified inventory data layer that reconciles e-commerce, marketplace, POS and fulfilment into one stock truth, so ship-from-store stops being a gamble.",
     },
   ],
 };
 
 export const services = {
-  eyebrow: "What types of retail software are we experts in?",
+  eyebrow: "Where do we apply Data & AI in retail?",
   titleLead: "Transforming Business Through Advanced",
-  titleAccent: "Retail Software Development",
+  titleAccent: "Retail Data and AI",
   body:
-    "Six product families, each shipped as production software with your data, your integrations and your compliance requirements built in from the first sprint.",
+    "Six capability areas, each delivered as production AI on your data, connected to the systems you already run, with your compliance requirements built in from the first sprint.",
   items: [
     {
       title: "Retail Operations and Analytics",
       body:
-        "Simplify operations and take smarter decisions with AI-driven retail platforms. Real-time visibility across inventory, supply and production, so cost, stockouts and idle capital all come down together.",
+        "Simplify operations and take smarter decisions with AI-driven retail analytics. Real-time visibility across inventory, supply and production, so cost, stockouts and idle capital all come down together.",
       image: svcOperationsImg,
       alt: "A long supermarket aisle stocked with packaged goods on both sides",
       points: [
-        "Inventory management",
-        "Supply chain management",
+        "Inventory optimisation",
+        "Supply chain analytics",
         "Reporting and analytics",
-        "Supplier order software",
-        "Expense report software",
-        "Logistics software",
+        "Supplier order analytics",
+        "Expense analytics",
+        "Logistics optimisation",
       ],
     },
     {
@@ -157,10 +157,10 @@ export const services = {
       image: svcExperienceImg,
       alt: "A shop assistant taking a card payment at a tablet point-of-sale counter",
       points: [
-        "CRM for retail",
+        "Customer analytics and segmentation",
         "Marketing automation",
         "Loyalty programmes",
-        "Point of sale (POS)",
+        "POS data analytics",
         "Chatbots and virtual assistants",
         "Recommendation engines",
       ],
@@ -173,16 +173,16 @@ export const services = {
     {
       title: "E-commerce and Digital Retail",
       body:
-        "Grow online sales with storefronts built for conversion. Predictive merchandising, faster product discovery and a checkout that holds up on peak trading days.",
+        "Grow online sales with AI that lifts conversion on the storefront you already run. Predictive merchandising, faster product discovery and personalisation that holds up on peak trading days.",
       image: svcCommerceImg,
       alt: "A shopper entering card details on a laptop while shopping online",
       points: [
-        "E-commerce platforms",
-        "Headless storefronts",
-        "Mobile retail apps",
+        "E-commerce conversion analytics",
+        "Predictive merchandising",
+        "Personalised product ranking",
         "Product content automation",
         "Visual and semantic search",
-        "Marketplace integrations",
+        "Marketplace data integration",
       ],
     },
     {
@@ -193,11 +193,11 @@ export const services = {
       alt: "A cluster of surveillance cameras mounted under a glass roof",
       points: [
         "Fraud and shrink detection",
-        "Compliance management",
+        "Compliance reporting",
         "Tax and GST reporting",
         "CCTV and video analytics",
-        "Integration platforms",
-        "IT and access management",
+        "Data integration pipelines",
+        "Data access governance",
       ],
     },
     {
@@ -207,10 +207,10 @@ export const services = {
       image: svcEfficiencyImg,
       alt: "Two colleagues reviewing stock on a tablet inside a store stockroom",
       points: [
-        "Task management",
+        "AI task prioritisation",
         "Workflow automation",
-        "Payment and transaction software",
-        "Barcoding and scanning",
+        "Transaction analytics",
+        "Barcode and image recognition",
         "Accounting automation",
         "Pricing optimisation",
       ],
@@ -244,59 +244,59 @@ export const services = {
 };
 
 export const appTypes = {
-  eyebrow: "What retail apps do we specialise in?",
-  titleLead: "We Develop Custom AI-Powered Retail Software",
-  titleAccent: "Using Proven Technology",
+  eyebrow: "Which retail systems do we bring AI to?",
+  titleLead: "We Add AI and Analytics to the Retail Systems",
+  titleAccent: "You Already Run",
   items: [
     {
       id: "order",
-      label: "Order management software",
-      title: "Order management that never loses a line",
+      label: "Order intelligence",
+      title: "Order data that never loses a line",
       body:
-        "One order record from cart to doorstep, with allocation logic that picks the cheapest fulfilling node and tells the customer the truth about the date.",
-      points: ["Distributed order orchestration", "Ship-from-store and BOPIS", "Automated exceptions handling", "Carrier and 3PL integrations"],
+        "AI over the order management system you already run: one order view from cart to doorstep, allocation models that pick the cheapest fulfilling node and delivery-date predictions that tell the customer the truth.",
+      points: ["Fulfilment node optimisation", "Ship-from-store and BOPIS analytics", "Exception detection and alerts", "Carrier and 3PL performance data"],
     },
     {
       id: "pos",
-      label: "POS and payment software",
-      title: "A till that keeps trading when the line drops",
+      label: "POS and payment analytics",
+      title: "Till data that works harder than the till",
       body:
-        "Offline-first point of sale with tokenised payments, split tenders and a reconciliation report that matches the bank without a spreadsheet.",
-      points: ["Offline-capable POS", "Tokenised and contactless payments", "Automated end-of-day reconciliation", "Queue-busting mobile checkout"],
+        "We connect your POS and payment feeds to one warehouse, reconcile tenders against the bank without a spreadsheet and surface the basket, queue and fraud signals the end-of-day report never shows.",
+      points: ["POS data pipelines", "Payment anomaly detection", "Automated end-of-day reconciliation", "Queue and basket analytics"],
     },
     {
       id: "crm",
-      label: "Retail CRM software",
+      label: "Customer analytics",
       title: "Customer data that actually reaches the floor",
       body:
-        "A single customer profile across channels, feeding segmentation, loyalty and clienteling tools that associates use in the aisle, not after the shift.",
-      points: ["Unified customer profiles", "Segmentation and lifecycle journeys", "Loyalty and rewards engines", "Clienteling for store associates"],
+        "A single customer profile built from your CRM, loyalty and channel data, feeding segmentation, offers and the clienteling tools associates use in the aisle, not after the shift.",
+      points: ["Unified customer profiles", "Segmentation and lifecycle models", "Loyalty and propensity scoring", "Next-best-action for store associates"],
     },
     {
       id: "inventory",
-      label: "Inventory management software",
+      label: "Inventory intelligence",
       title: "One stock truth behind every channel",
       body:
-        "Live positions across stores, warehouses and in-transit, with safety stock and reorder points recalculated by model rather than by habit.",
+        "Live positions across stores, warehouses and in-transit, drawn from the systems you already run, with safety stock and reorder points recalculated by model rather than by habit.",
       points: ["Real-time multi-location stock", "Automated reorder points", "Cycle counting and shrink tracking", "Supplier lead-time modelling"],
     },
     {
       id: "mobile",
-      label: "Retail mobile apps",
-      title: "The store in the shopper's pocket",
+      label: "Shopper-facing AI",
+      title: "The models behind the store in the shopper's pocket",
       body:
-        "Native and cross-platform apps with visual search, scan-and-go, personalised offers and push that is timed by behaviour rather than by calendar.",
-      points: ["Visual and voice search", "Scan-and-go checkout", "Personalised offers and wallets", "In-app support assistants"],
+        "AI for the app and site you already run: visual search, scan-and-go loss detection, personalised offers and push that is timed by behaviour rather than by calendar.",
+      points: ["Visual and voice search", "Scan-and-go loss detection", "Personalised offer models", "AI support assistants"],
     },
   ],
 };
 
 export const technologies = {
   eyebrow: "Which technologies do we use for retail solutions?",
-  titleLead: "Leading Technologies For",
-  titleAccent: "Efficient and Secure Retail Tools",
+  titleLead: "Proven Data and AI Technologies For",
+  titleAccent: "Efficient and Secure Retail Operations",
   body:
-    "The stack under every retail build, chosen for what it has to survive: peak trading, messy master data and audits.",
+    "The stack under every retail engagement, chosen for what it has to survive: peak trading, messy master data and audits.",
   background: techBgImg,
   ctaText: "View all services",
   items: [
@@ -329,7 +329,7 @@ export const technologies = {
 };
 
 export const solutions = {
-  eyebrow: "What can custom retail software optimise for you?",
+  eyebrow: "What can retail AI optimise for you?",
   titleLead: "Explore AI-Powered Retail Solutions",
   titleAccent: "For Simplifying Retail Operations",
   texture: textureBgImg,
@@ -370,7 +370,7 @@ export const solutions = {
 export const midCta = {
   title: "Rebuild Your Retail Operation with AI",
   body:
-    "Tell us the number that hurts, whether that is shrink, stockouts, return rate or conversion, and we will come back with the system, the timeline and the metric it has to hit.",
+    "Tell us the number that hurts, whether that is shrink, stockouts, return rate or conversion, and we will come back with the approach, the timeline and the metric it has to hit.",
   buttonText: "Get in Touch Now",
   background: midCtaBgImg,
 };
@@ -444,11 +444,11 @@ export const blogs = {
 };
 
 export const techStrip = {
-  eyebrow: "Technologies we work with",
+  eyebrow: "Data & AI technologies we work with",
   titleLead: "Expertise in Advanced",
-  titleAccent: "Retail Technologies",
+  titleAccent: "Retail Data and AI Technologies",
   body:
-    "The production toolchain behind our retail builds. Pick a layer to see what it is made of.",
+    "The production toolchain behind our retail Data & AI work. Pick a layer to see what it is made of.",
   tabs: [
     {
       id: "ai",
@@ -469,7 +469,7 @@ export const techStrip = {
     },
     {
       id: "commerce",
-      label: "Commerce",
+      label: "Commerce Integrations",
       items: [
         "Shopify", "Shopify Hydrogen", "Medusa", "commercetools", "Magento", "WooCommerce",
         "Stripe", "Adyen", "Klarna", "Algolia", "Contentful", "Sanity",
@@ -477,10 +477,10 @@ export const techStrip = {
     },
     {
       id: "frontend",
-      label: "Frontend",
+      label: "Dashboards & Frontend",
       items: [
         "React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js",
-        "React Native", "Expo", "Vite", "Radix UI", "TanStack Query",
+        "Vite", "Radix UI", "TanStack Query",
       ],
     },
     {
@@ -506,7 +506,7 @@ export const businessTypes = {
   rows: [
     {
       label: "DTC brands",
-      body: "A storefront that converts, a forecast you can order against, and the analytics to know which channel is actually paying for itself.",
+      body: "Storefront conversion insight, a forecast you can order against, and the analytics to know which channel is actually paying for itself.",
     },
     {
       label: "Multi-store retailers",
@@ -562,9 +562,9 @@ export const testimonials = {
 export const showcase = {
   eyebrow: "What have we delivered to businesses?",
   titleLead: "Showcasing Our",
-  titleAccent: "AI Development Projects",
+  titleAccent: "AI and Data Projects",
   body:
-    "A slice of the systems we have shipped. Each one started as a bottleneck somebody was working around by hand.",
+    "A slice of the AI and data work we have shipped. Each one started as a bottleneck somebody was working around by hand.",
   ctaText: "Check Out Our Full Portfolio",
 };
 
@@ -575,13 +575,13 @@ export const partner = {
   cards: [
     {
       icon: "Layers",
-      title: "Commerce development",
-      body: "End-to-end retail and e-commerce delivery: architecture, UX, back end, front end, QA and the support that follows the launch.",
+      title: "End-to-end Data & AI delivery",
+      body: "From data audit and pipelines to models in production, monitoring and the support that follows the launch, on the retail systems you already run.",
     },
     {
       icon: "ShieldCheck",
       title: "Agile and scalable solutions",
-      body: "Modular architecture that scales with trading peaks and adapts to market changes without disrupting the estate that is already live.",
+      body: "Data pipelines and models that scale with trading peaks and adapt to market changes without disrupting the systems that are already live.",
     },
     {
       icon: "Target",
@@ -616,7 +616,7 @@ export const faqs = [
   },
   {
     q: "Can you integrate with the POS, ERP and e-commerce platform we already run?",
-    a: "Yes, and that is most of the work. We build against your existing APIs and databases rather than asking you to migrate. Where a legacy system has no usable API, we add a thin service layer around it instead of modifying it directly.",
+    a: "Yes, and that is most of the work. We work against your existing APIs and databases rather than asking you to migrate. Where a legacy system has no usable API, we add a thin data connector around it instead of modifying it directly.",
   },
   {
     q: "How long before a retail AI project shows a return?",

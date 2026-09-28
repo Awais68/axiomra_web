@@ -18,7 +18,7 @@ import FAQ from "../sections/FAQ";
 import { faqs } from "../data/generativeAiData";
 import Seo from "../seo/Seo";
 import { serviceSchema } from "../seo/schema";
-import { SERVICES_BASE_PATH } from "../routes.constants";
+import { SERVICES_BASE_PATH, BOOK_CALL_PATH } from "../routes.constants";
 
 const META_DESCRIPTION =
   "Axiomra's generative AI development services: LLM strategy, custom model development, " +
@@ -43,6 +43,7 @@ export default function GenerativeAiPage() {
         title="Find the Right Generative AI Approach"
         subtitle="Share the workflow you want to improve. We will assess suitable approaches, discuss estimated running costs, and help you decide whether generative AI fits your needs."
         buttonText="Discuss Your Use Case"
+        ctaTo={BOOK_CALL_PATH}
       />
 
       <GenAiCaseStudies />
@@ -58,7 +59,7 @@ export default function GenerativeAiPage() {
             We Build Around Them.
           </>
         }
-        subtitle="Regulated data, legacy systems, and low tolerance for wrong answers are normal constraints on our projects, not exceptions. Tell us yours and we will show you what a compliant generative AI system looks like in your environment."
+        subtitle="Regulated data, legacy systems, and low tolerance for wrong answers are normal constraints on our projects, not exceptions. Tell us yours and we will show you what a generative AI system built around those rules looks like in your environment."
         buttonText="Talk To A Generative AI Engineer"
       />
 

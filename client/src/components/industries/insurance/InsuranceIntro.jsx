@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import useGsapReveal from "../../../hooks/useGsapReveal";
 import { intro } from "../../../data/insuranceData";
+import { CONTACT_PATH } from "../../../routes.constants";
 
 /**
  * The positioning statement. Its top edge is the matching half of the hero's
@@ -43,7 +44,7 @@ export default function InsuranceIntro() {
 
           <div data-reveal className="mt-9">
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group inline-flex items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-base font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 focus-ring md:text-lg"
             >
               {intro.ctaText}

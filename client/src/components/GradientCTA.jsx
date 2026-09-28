@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import NetworkBackground from "./NetworkBackground";
 import { Link } from "react-router-dom";
+import { CONTACT_PATH } from "../routes.constants";
 
 export default function GradientCTA({
   title,
@@ -10,6 +11,8 @@ export default function GradientCTA({
   dark = false,
   three = false,
   image,
+  // Pass BOOK_CALL_PATH when the button text starts with "Discuss".
+  ctaTo = CONTACT_PATH,
 }) {
   return (
     <section className={`relative overflow-hidden px-6 py-24 ${dark ? "bg-inverse" : "bg-accent-vivid"}`}>
@@ -54,7 +57,7 @@ export default function GradientCTA({
           <p className="mx-auto mt-6 max-w-4xl text-lg leading-relaxed text-inverse-fg/85 md:text-xl">{subtitle}</p>
         )}
         <Link
-          to="/contact"
+          to={ctaTo}
           className="group mt-10 inline-flex items-center gap-2 rounded-full bg-inverse-fg px-8 py-4 text-base font-medium text-inverse transition-all hover:shadow-glow focus-ring md:text-lg"
         >
           {buttonText}

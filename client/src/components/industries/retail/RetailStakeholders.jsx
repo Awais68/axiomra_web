@@ -3,7 +3,7 @@ import { Stagger, StaggerItem } from "../../motion/Reveal";
 import { stakeholders } from "../../../data/retailData";
 
 /**
- * Four portrait cards, one per audience the software has to serve. The photo is
+ * Four portrait cards, one per audience the work has to serve. The photo is
  * cut to the basket silhouette and the caption rides on glass over its foot, so
  * the copy stays readable whatever the image behind it is doing.
  */

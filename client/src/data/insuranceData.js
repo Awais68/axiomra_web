@@ -51,11 +51,11 @@ import finalCtaBgImg from "../assets/industries/insurance/final-cta.webp";
 
 export const hero = {
   eyebrow: "AI for Insurance",
-  titleLead: "Custom AI Insurance Software",
-  titleAccent: "Development Services",
+  titleLead: "Insurance AI & Data",
+  titleAccent: "Solutions",
   titleTail: "For Modern Carriers",
   body:
-    "We build the systems that decide faster and pay sooner: straight-through underwriting, automated claims triage, fraud scoring that survives a regulator's question and policy administration that does not depend on a spreadsheet. Every model ships with the rationale attached, because in insurance an unexplainable decision is not a decision.",
+    "We help carriers decide faster and pay sooner: underwriting analytics, automated claims triage, fraud scoring that survives a regulator's question and document AI that reads submissions and claims on arrival, working with the policy and claims systems you already run, not replacing them. Every model ships with the rationale attached, because in insurance an unexplainable decision is not a decision.",
   ctaText: "Request a free consultation",
   image: heroImg,
   alt: "An insurance professional working across live risk data on a tablet",
@@ -64,10 +64,10 @@ export const hero = {
 
 export const intro = {
   titleLead: "Cover That Settles At The Speed Of",
-  titleAccent: "Custom AI Insurance Software",
+  titleAccent: "Insurance AI & Analytics",
   paragraphs: [
-    "Axiomra is a custom insurance software development company working with carriers, MGAs, brokers and insurtechs on the parts of the business that decide margin: how a risk is priced, how a claim is triaged and how much of either still needs a human. We design and build the platforms that carry those decisions end to end, on top of the policy administration system you already run.",
-    "Our AI insurance software development services pair document intelligence, behavioural fraud models and portfolio analytics with the governance layer a supervisor will ask for: feature lineage, challenger models, bias testing and a written reason for every automated outcome. The result is a book you can price with confidence and a claims queue your adjusters can actually clear.",
+    "Axiomra is a Data & AI partner working with carriers, MGAs, brokers and insurtechs on the parts of the business that decide margin: how a risk is priced, how a claim is triaged and how much of either still needs a human. We build the data pipelines, models and AI agents that carry those decisions end to end, on top of the policy administration system you already run.",
+    "Our insurance AI services pair document intelligence, behavioural fraud models and portfolio analytics with the governance layer a supervisor will ask for: feature lineage, challenger models, bias testing and a written reason for every automated outcome. The result is a book you can price with confidence and a claims queue your adjusters can actually clear.",
   ],
   ctaText: "Book a free tech consultation",
   image: introImg,
@@ -78,7 +78,7 @@ export const impact = {
   titleLead: "The Role Of AI In",
   titleAccent: "Modern Insurance Operations",
   body:
-    "Insurance was always a data business; what changed is that the data now arrives faster than a manual process can read it. Telematics, imagery, medical records and open claims feeds only pay back when something can act on them in the moment, which is what AI insurance software development services are actually for.",
+    "Insurance was always a data business; what changed is that the data now arrives faster than a manual process can read it. Telematics, imagery, medical records and open claims feeds only pay back when something can act on them in the moment, which is what insurance AI and analytics are actually for.",
   stats: [
     {
       value: "34%",
@@ -114,7 +114,7 @@ export const pledge = {
 
 /**
  * The challenge rail. Each entry is a barrier insurance teams hit, and the
- * platform capability we build to remove it.
+ * Data & AI capability we bring to remove it.
  */
 export const challenges = {
   eyebrow: "Overcoming key barriers in insurance operations",
@@ -124,7 +124,7 @@ export const challenges = {
     {
       title: "Claims cycle times measured in weeks",
       body:
-        "First notice of loss arrives as a phone call, a form and a folder of photographs, and then waits for an adjuster with capacity. We build intake that reads the documents and imagery on arrival, scores severity and complexity, settles the clean low-value claims straight through and routes the rest to the adjuster whose caseload and licence actually fit. The queue stops being first-in-first-out and starts being worst-first.",
+        "First notice of loss arrives as a phone call, a form and a folder of photographs, and then waits for an adjuster with capacity. We put document and image AI at intake that reads the evidence on arrival, scores severity and complexity, settles the clean low-value claims straight through and routes the rest to the adjuster whose caseload and licence actually fit. The queue stops being first-in-first-out and starts being worst-first.",
     },
     {
       title: "Fraud detection that only catches yesterday's pattern",
@@ -134,7 +134,7 @@ export const challenges = {
     {
       title: "Underwriting bottlenecked on manual review",
       body:
-        "Submissions land as PDFs, spreadsheets and broker emails, and a qualified underwriter spends the morning retyping them. We build ingestion that extracts, normalises and enriches the submission automatically, applies appetite rules and hands the underwriter a priced, triaged risk with the exposures already flagged. The judgement stays human; the data entry does not.",
+        "Submissions land as PDFs, spreadsheets and broker emails, and a qualified underwriter spends the morning retyping them. We set up document AI and data pipelines that extract, normalise and enrich the submission automatically, applies appetite rules and hands the underwriter a priced, triaged risk with the exposures already flagged. The judgement stays human; the data entry does not.",
     },
     {
       title: "Pricing built on stale tables",
@@ -142,9 +142,9 @@ export const challenges = {
         "Rating factors refreshed annually cannot see a hardening market or a deteriorating segment until the loss ratio says so. We build the analytics layer that monitors experience continuously, surfaces segment drift while it is still small and lets the actuarial team test a rate change against the live book before it is filed.",
     },
     {
-      title: "Policy administration that blocks every new product",
+      title: "Policy data locked inside the core system",
       body:
-        "When a product change needs a core release, the roadmap is set by the vendor, not the market. We wrap the policy admin system in an event-driven configuration and integration layer so new covers, endorsements and distribution channels ship at product speed while the system of record keeps running untouched underneath.",
+        "When every new report or model needs a core release to reach policy data, insight moves at the vendor's pace, not the market's. We build data pipelines that stream policy, endorsement and billing events out of the admin system into a governed analytics layer, so pricing, product and retention teams work from live data while the system of record keeps running untouched underneath.",
     },
     {
       title: "Regulatory and conduct exposure on automated decisions",
@@ -154,7 +154,7 @@ export const challenges = {
     {
       title: "Customer service running on hold music",
       body:
-        "Most policyholder contact is status chasing that nobody enjoys on either end. We build assistants grounded in the policy wording and the live claim record, so they answer from the schedule rather than a guess, and escalate the moment the question turns into advice.",
+        "Most policyholder contact is status chasing that nobody enjoys on either end. We deploy AI assistants grounded in the policy wording and the live claim record, so they answer from the schedule rather than a guess, and escalate the moment the question turns into advice.",
     },
   ],
 };
@@ -168,12 +168,12 @@ export const valueChain = {
   titleLead: "How We Deliver Custom AI Insurance Solutions",
   titleAccent: "Across The Value Chain",
   body:
-    "We build across the whole policy lifecycle rather than dropping a model into one step of it. Each stage below is a system we have shipped: integrated with the core, governed from day one and measured on the number it was meant to move.",
+    "We apply Data & AI across the whole policy lifecycle rather than dropping a model into one step of it. Each stage below is a use case we deliver: connected to your core systems, governed from day one and measured on the number it was meant to move.",
   items: [
     {
-      title: "Quote, Bind & Digital Distribution",
+      title: "Quote, Bind & Pricing Intelligence",
       body:
-        "Embedded and direct quote journeys that price in real time, pre-fill from third-party data and bind without a callback. Broker and aggregator channels run off the same rating service, so a rate change lands everywhere at once.",
+        "Real-time pricing models and third-party data enrichment that pre-fill the quote and remove the callback before bind. Broker, aggregator and direct channels score off the same governed rating model, so a rate change lands everywhere at once.",
       metric: "Quote-to-bind in one session",
       image: chainQuoteImg,
       alt: "A customer comparing insurance quotes on a laptop",
@@ -187,10 +187,10 @@ export const valueChain = {
       alt: "An underwriter reviewing a submission pack at their desk",
     },
     {
-      title: "Policy Administration & Servicing",
+      title: "Policy Data & Servicing Analytics",
       body:
-        "Configuration-driven products, endorsements and renewals sitting over your system of record, with an event layer that keeps every downstream service (billing, documents, reporting) in step without a nightly batch.",
-      metric: "New product without a core release",
+        "Policy, endorsement and renewal events streamed out of your system of record into a governed data layer, so billing, documents and reporting all read the same live figures without a nightly batch.",
+      metric: "Live policy data without a core release",
       image: chainPolicyImg,
       alt: "Organised policy documentation in a modern office",
     },
@@ -251,9 +251,9 @@ export const midCta = {
  * actually work rather than what we sell.
  */
 export const solutions = {
-  eyebrow: "What kinds of insurance systems do we build?",
-  titleLead: "Our Custom Insurance Software Development Services",
-  titleAccent: "& AI Automation",
+  eyebrow: "What insurance AI services do we offer?",
+  titleLead: "Our Insurance Data, Analytics",
+  titleAccent: "& AI Automation Services",
   body:
     "End-to-end delivery, from the first workshop to the model monitoring dashboard your risk function signs off on. We work alongside your underwriting, claims, actuarial and compliance teams rather than around them.",
   items: [
@@ -265,11 +265,11 @@ export const solutions = {
       alt: "Consultants mapping an insurance process on a whiteboard",
     },
     {
-      title: "Custom Insurance Platform Engineering",
+      title: "Insurance Data Engineering & Core Integration",
       body:
-        "Underwriting workbenches, claims platforms, broker portals and embedded distribution built to sit alongside Guidewire, Duck Creek, Sapiens or a legacy core you are not replacing this year. Event-driven, idempotent integrations, delivered in increments you can put in front of a regulator.",
+        "Data pipelines and AI agents that sit alongside Guidewire, Duck Creek, Sapiens or a legacy core you are not replacing this year, reading from and writing back to the systems your teams already use. Event-driven, idempotent integrations, delivered in increments you can put in front of a regulator.",
       image: solDevelopmentImg,
-      alt: "Engineers building an insurance platform across multiple screens",
+      alt: "Data engineers working on insurance data pipelines across multiple screens",
     },
     {
       title: "Portfolio Analytics & Actuarial Intelligence",
@@ -289,14 +289,14 @@ export const solutions = {
 };
 
 export const stakeholders = {
-  eyebrow: "Whom do we build insurance software for?",
-  titleLead: "We Build Software For Insurance Leaders Driving",
+  eyebrow: "Whom do we deliver insurance AI for?",
+  titleLead: "We Deliver Data & AI For Insurance Leaders Driving",
   titleAccent: "Claims, Underwriting And Risk Transformation",
   items: [
     {
       title: "Brokers & MGAs",
       body:
-        "Submission workbenches, delegated authority reporting and bordereaux automation, so binder compliance stops being a month-end spreadsheet exercise.",
+        "Submission ingestion, delegated authority reporting and bordereaux automation, so binder compliance stops being a month-end spreadsheet exercise.",
       image: stkBrokerImg,
       alt: "An insurance broker working with a client",
     },
@@ -324,7 +324,7 @@ export const stakeholders = {
     {
       title: "Insurtech Founders",
       body:
-        "A ledger built to the rules your regulator applies, a rating service and the reporting asked for on day one, built to survive the first capacity partner's due diligence.",
+        "Pricing models, claims analytics and the reporting asked for on day one, built on data that survives the first capacity partner's due diligence.",
       image: stkFounderImg,
       alt: "An insurtech founder in a modern workspace",
     },
@@ -410,8 +410,8 @@ export const lines = {
 
 export const benefits = {
   eyebrow: "What changes once it is live?",
-  titleLead: "Business Outcomes From Custom",
-  titleAccent: "AI Insurance Software And Automation",
+  titleLead: "Business Outcomes From",
+  titleAccent: "Insurance AI And Automation",
   items: [
     {
       title: "Shorter claims cycles",
@@ -429,9 +429,9 @@ export const benefits = {
         "Enriched submissions and continuously monitored experience data let underwriters see segment drift while it is still small, instead of meeting it in next year's loss ratio.",
     },
     {
-      title: "Faster product launches",
+      title: "Faster product decisions",
       body:
-        "Configuration over code, and an integration layer that isolates the core, means a new cover or channel is a product decision rather than a vendor release slot.",
+        "Policy and claims data flowing into one governed analytics layer means a new cover, rate change or channel can be tested against the live book, rather than waiting on a vendor release slot for a report.",
     },
     {
       title: "Defensible automation",
@@ -457,7 +457,7 @@ export const build = {
     "Bring the parts that hurt: the claims your adjusters argue about, the submissions that sit unread for a week, the renewals priced on instinct. We trace where the data already lives, where it is missing, and which decisions a model should be allowed near.",
     "No slide deck at the end of it. A sequenced plan, a cost range, and a plain list of the things we would leave to your people.",
   ],
-  ctaText: "Hire insurance software developers",
+  ctaText: "Discuss your insurance AI roadmap",
   texture: textureBgImg,
   image: buildVisualImg,
   alt: "A team mapping a delivery plan on a whiteboard",
@@ -466,9 +466,9 @@ export const build = {
 export const techStrip = {
   eyebrow: "Technologies we work with",
   titleLead: "Expertise In Advanced",
-  titleAccent: "Insurance Development Technologies",
+  titleAccent: "Insurance Data & AI Technologies",
   body:
-    "The same production-grade toolchain sits under every insurance platform we ship. Pick a layer to see what it is made of.",
+    "The same production-grade toolchain sits under every insurance data and AI solution we deliver. Pick a layer to see what it is made of.",
   ctaText: "View all tech stack",
   tabs: [
     {
@@ -495,8 +495,8 @@ export const techStrip = {
     },
     {
       id: "frontend",
-      label: "Frontend",
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Three.js", "D3.js", "React Native", "Flutter", "Vite", "Radix UI"],
+      label: "Dashboards & Visualisation",
+      items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Three.js", "D3.js", "Vite", "Radix UI"],
     },
     {
       id: "core",
@@ -523,11 +523,11 @@ export const businessTypes = {
   titleLead: "Explore The Range Of",
   titleAccent: "Insurance Businesses We Support",
   body:
-    "We build insurance software that stands up to a regulator, an auditor and a catastrophe week. Whether you are launching a licensed product or modernising a core that predates the API era, we turn it into a platform your team can actually run.",
+    "We deliver insurance data and AI that stands up to a regulator, an auditor and a catastrophe week. Whether you are launching a licensed product or modernising a core that predates the API era, we put your data and models to work alongside the systems your team already runs.",
   rows: [
     {
       label: "Insurtech start-ups",
-      body: "We help founders get a licensed product live: a rating service, a ledger built to the rules your regulator applies, a claims flow that scales past the first surge, and the reporting a capacity partner will ask for during due diligence.",
+      body: "We help founders launch on solid data: pricing models, claims analytics that scale past the first surge, and the reporting a capacity partner will ask for during due diligence.",
     },
     {
       label: "MGAs and brokers",
@@ -576,7 +576,7 @@ export const testimonials = {
 export const showcase = {
   eyebrow: "What innovations have we delivered to businesses?",
   titleLead: "Showcasing Our",
-  titleAccent: "AI Development Projects",
+  titleAccent: "AI & Data Projects",
   body:
     "Work delivered for insurers, MGAs and brokers, with the number each build had to move.",
   ctaText: "Check out our full portfolio",
@@ -585,7 +585,7 @@ export const showcase = {
 export const partner = {
   eyebrow: "Why choose Axiomra?",
   titleLead: "Why Partner With Axiomra For",
-  titleAccent: "Intelligent Insurance Software Development",
+  titleAccent: "Insurance Data & AI",
   cards: [
     {
       icon: "Target",
@@ -597,7 +597,7 @@ export const partner = {
       icon: "Layers",
       title: "Built around your core, not against it",
       body:
-        "Guidewire, Duck Creek, Sapiens or a legacy core nobody wants to touch: we integrate through an event layer that isolates the system of record, so new products ship without a core release.",
+        "Guidewire, Duck Creek, Sapiens or a legacy core nobody wants to touch: our data pipelines and AI agents connect through an event layer that leaves the system of record untouched, so new models and analytics go live without a core release.",
     },
     {
       icon: "ShieldCheck",
@@ -643,7 +643,7 @@ export const blogs = {
 
 export const faqs = [
   {
-    q: "How do AI insurance software development services shorten claims cycle times?",
+    q: "How does insurance AI shorten claims cycle times?",
     a: "By deciding what a claim is before a human opens it. Document and image understanding at first notice produce a severity and complexity score, clean low-value claims settle straight through, and everything else is routed to the adjuster whose caseload and licence fit. The saving is mostly queueing time, not handling time.",
   },
   {
@@ -656,7 +656,7 @@ export const faqs = [
   },
   {
     q: "Do we have to replace our policy administration system first?",
-    a: "Almost never, and we would usually advise against leading with it. We wrap the core in an event-driven integration and configuration layer, ship the new capability against that, and leave the system of record running. Replacement, if it is still warranted afterwards, becomes a much smaller decision.",
+    a: "Almost never, and we would usually advise against starting with it. We connect data pipelines and AI agents to the core through an event-driven integration layer, deliver the new capability against that, and leave the system of record running. Replacement, if it is still warranted afterwards, becomes a much smaller decision.",
   },
   {
     q: "How does computer vision handle damage assessment accuracy?",
@@ -664,7 +664,7 @@ export const faqs = [
   },
   {
     q: "What data do you need to start, and how is it protected?",
-    a: "Typically policy, claims and third-party enrichment feeds for the line in scope. Work starts in an isolated environment with least-privilege access, pseudonymised where the use case allows, under SOC 2 and ISO 27001 aligned controls with GDPR data-minimisation applied. We scope the data we need rather than the data you have.",
+    a: "Typically policy, claims and third-party enrichment feeds for the line in scope. Work starts in an isolated environment with least-privilege access, pseudonymised where the use case allows, with access controls agreed with your security team and data minimisation applied. We scope the data we need rather than the data you have.",
   },
   {
     q: "How long before an insurance AI project shows a measurable result?",
@@ -675,7 +675,7 @@ export const faqs = [
     a: "Yes, and most of our insurance work is shaped that way. We integrate with incumbent core, rating and document vendors, and we work in your delivery process rather than importing ours. Where a vendor constraint is the real blocker, we will say so instead of engineering around it indefinitely.",
   },
   {
-    q: "How much does custom insurance software development cost?",
+    q: "How much does an insurance AI project cost?",
     a: "It depends on the line of business, the regulatory surface and the state of your data. The last one moves the number more than anything else. A scoped pilot is the fastest route to a real figure. Book a free session and we will size it honestly, including the parts we would not build.",
   },
 ];

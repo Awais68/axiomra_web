@@ -5,7 +5,7 @@ import SectionHeading from "../components/SectionHeading";
 const tabs = {
   "Artificial Intelligence": ["GPT-4o", "Claude", "Gemini", "Llama 3", "MistralAI", "Whisper", "Stable Diffusion", "VertexAI", "Groq", "Guardrails"],
   "Backend & Database": ["Node.js", "Express.js", "FastAPI", "Django", "MongoDB", "PostgreSQL", "Redis", "ChromaDB", "Celery", "NestJS"],
-  Frontend: ["React", "Next.js", "Vue.js", "TypeScript", "React Native", "HTML5", "CSS3"],
+  Frontend: ["React", "Next.js", "Vue.js", "TypeScript", "HTML5", "CSS3"],
   Cloud: ["AWS", "GCP", "Azure", "Docker", "Digital Ocean", "Nginx", "EC2"],
   DevOps: ["GitHub", "GitLab", "CI/CD", "Docker", "Gunicorn"],
   SQA: ["Cypress", "Postman", "Selenium", "Playwright", "JMeter", "Burpsuite"],
@@ -30,7 +30,7 @@ export default function TechStack() {
           subtitleClassName="!max-w-5xl text-justify !text-xl !leading-[1.8] md:!text-2xl md:!leading-[1.85]"
           title={
             <>
-              Expertise In <span className="text-brand">Advanced Development Technologies</span>
+              Expertise In <span className="text-brand">Advanced Data &amp; AI Technologies</span>
             </>
           }
           subtitle="The models, frameworks, and infrastructure we reach for, chosen per project, never by fashion. Every stack decision is made against your data, your integrations, and the load you actually expect in production, so what ships stays maintainable long after launch."

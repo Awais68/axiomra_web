@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { whyUs } from "../../data/agenticAiData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /** Closing argument: four reasons, the numbers, and the human-in-the-loop panel. */
 export default function AgenticWhyUs() {
@@ -52,7 +53,7 @@ export default function AgenticWhyUs() {
             </dl>
 
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group mt-9 inline-flex items-center gap-2.5 rounded-full bg-accent-vivid px-7 py-4 text-base font-semibold text-inverse-fg shadow-glow transition-transform hover:-translate-y-0.5 focus-ring md:text-lg"
             >
               {whyUs.ctaText}

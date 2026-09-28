@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "../SectionHeading";
 import { whyUs } from "../../data/computerVisionData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 const EASE = [0.16, 1, 0.3, 1];
 
@@ -36,7 +37,7 @@ export default function CvWhyUs() {
             />
 
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group mt-9 inline-flex items-center gap-2 rounded-full border border-line-strong px-7 py-3.5 text-base font-medium text-content transition-colors hover:border-brand hover:text-brand focus-ring md:text-lg"
             >
               {whyUs.ctaText}

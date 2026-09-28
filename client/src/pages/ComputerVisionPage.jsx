@@ -17,7 +17,7 @@ import FAQ from "../sections/FAQ";
 import { faqs } from "../data/computerVisionData";
 import Seo from "../seo/Seo";
 import { serviceSchema } from "../seo/schema";
-import { SERVICES_BASE_PATH } from "../routes.constants";
+import { SERVICES_BASE_PATH, BOOK_CALL_PATH } from "../routes.constants";
 
 const META_DESCRIPTION =
   "Axiomra builds computer vision systems for business operations: object " +
@@ -54,6 +54,7 @@ export default function ComputerVisionPage() {
         title="Your Industry Is Not On the List?"
         subtitle="The industries above are examples, not limits. Bring us your use case and we will assess what is achievable with the visual data and equipment you already have, and where the gaps are."
         buttonText="Discuss Your Use Case"
+        ctaTo={BOOK_CALL_PATH}
       />
 
       <CvOutcomes />

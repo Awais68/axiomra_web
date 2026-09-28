@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { process } from "../../data/computerVisionData";
+import { BOOK_CALL_PATH } from "../../routes.constants";
 
 /**
  * The eight delivery stages, as a stepper. The intro sits in a two-column
@@ -38,7 +39,7 @@ export default function CvProcess() {
             </p>
 
             <Link
-              to="/contact"
+              to={BOOK_CALL_PATH}
               className="group mt-7 inline-flex items-center gap-2 rounded-full border border-line-strong px-7 py-3.5 text-base font-medium text-content transition-colors hover:border-brand hover:text-brand focus-ring md:text-lg"
             >
               {process.ctaText}

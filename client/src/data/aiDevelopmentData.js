@@ -12,7 +12,7 @@ import aiops from "../assets/ai-dev/aiops.jpg";
 import { INDUSTRY_IMAGES } from "../lib/media";
 
 export const hero = {
-  eyebrow: "AI Development Company",
+  eyebrow: "Data & AI Partner",
   titleLead: "Custom AI Development",
   titleAccent: "Services for Your Business",
   body:
@@ -38,17 +38,17 @@ export const clientLogos = [
 
 export const intro = {
   titleAccent: "Stay Ahead In Tech With",
-  titleLead: "Our AI Development Company",
+  titleLead: "Your Data & AI Partner",
   paragraphs: [
-    "Axiomra is an AI development company that helps enterprises and startups build custom AI software, AI agents, LLM applications, generative AI systems, and workflow automation solutions. We design, build, and scale production-ready AI products that improve efficiency, reduce manual work, and create measurable business ROI.",
-    "We work with businesses across industries including healthcare, finance, retail, education, logistics, real estate, insurance, and marketing. Our team specializes in machine learning, natural language processing, computer vision, predictive analytics, GPT integration, RAG implementation, chatbot development, and enterprise AI consulting.",
+    "Axiomra is a Data & AI partner that helps enterprises and startups put AI to work: custom AI models, AI agents, LLM and RAG systems, generative AI, and workflow automation. We design, build, and scale production-ready AI systems that connect to the tools your teams already use, improve efficiency, reduce manual work, and create measurable business ROI.",
+    "We work with businesses across industries including healthcare, finance, retail, education, logistics, real estate, insurance, and marketing. Our team specialises in machine learning, natural language processing, computer vision, predictive analytics, GPT integration, RAG implementation, chatbot development, and enterprise AI consulting.",
   ],
   capabilitiesTitle: "Core AI capabilities",
   capabilities: [
-    "Custom AI software development",
+    "Custom AI model development",
     "AI agent development",
     "LLM fine-tuning and integration",
-    "Generative AI application development",
+    "Generative AI solutions",
     "AI automation",
     "Computer vision solutions",
     "Predictive analytics",
@@ -69,19 +69,19 @@ export const whatWeDo = {
   titleAccent: "Custom AI Development Services",
   titleLead: "For Enterprises",
   subtitle:
-    "We build, integrate, and scale AI systems for businesses across industries. Whether you need a full AI product, a smarter workflow, or an AI system connected to your existing tools, our team delivers production-ready results.",
+    "We build, integrate, and scale AI systems for businesses across industries. Whether you need a new AI capability, a smarter workflow, or an AI system connected to your existing tools, our team delivers production-ready results.",
 };
 
 /** The eight sub-services, rendered as alternating image/copy rows. */
 export const subServices = [
   {
     id: "ai-software-development",
-    title: "AI Software Development",
+    title: "Custom AI Solutions",
     description:
-      "We build custom AI software that solves real business problems. From predictive analytics tools and recommendation engines to intelligent automation systems, our AI software development services are built to integrate with your existing systems and scale as your business grows. We work with GPT-4, Llama, Gemini, Claude, LangChain, HuggingFace, AWS Bedrock, and Azure AI. Each build ships with its own evaluation suite, so you can see exactly how the system performs on your data before it ever touches a customer, and a monitored pipeline that catches accuracy drift long before your users do.",
+      "We build custom AI solutions that solve real business problems. From predictive analytics models and recommendation engines to intelligent automation, our AI solutions are built to integrate with your existing systems and scale as your business grows. We work with GPT-4, Llama, Gemini, Claude, LangChain, HuggingFace, AWS Bedrock, and Azure AI. Each build ships with its own evaluation suite, so you can see exactly how the system performs on your data before it ever touches a customer, and a monitored pipeline that catches accuracy drift long before your users do.",
     image: aiSoftwareDevelopment,
     imageAlt:
-      "Developer typing while an AI circuit hub connects cloud, analytics and data service icons",
+      "Engineer typing while an AI circuit hub connects cloud, analytics and data service icons",
   },
   {
     id: "ai-consulting",
@@ -133,9 +133,9 @@ export const subServices = [
   },
   {
     id: "ai-product-development",
-    title: "AI Product Development",
+    title: "AI Features For Your Products",
     description:
-      "We help businesses build AI-powered products from the ground up. From initial concept and consulting to design, development, and launch, we build smart products packed with AI features that are easy to use and built to scale. Anomaly detection, intelligent recommendations, and adaptive AI features are built in from the start. We also design the parts most AI products get wrong: how the interface behaves while a model is thinking, what the user sees when confidence is low, and how feedback from real usage flows back into the next training round.",
+      "We add AI capabilities to the products and services you already run. From initial concept and consulting to model design, integration, and launch, we build AI features that are easy to use and built to scale. Anomaly detection, intelligent recommendations, and adaptive AI features are designed in from the start. We also design the parts most AI features get wrong: how the experience behaves while a model is thinking, what the user sees when confidence is low, and how feedback from real usage flows back into the next training round.",
     image: aiProductDevelopment,
     imageAlt:
       "Product planning desk with a laptop and hand-drawn roadmap, strategy charts and forecast sketches",
@@ -144,7 +144,7 @@ export const subServices = [
     id: "aiops",
     title: "AIOps",
     description:
-      "Enhance application performance, reduce IT expenses, and optimize operations with our tailored AIOps solutions. Using AI-driven monitoring, predictive analytics, and automated incident resolution, our AI development services for businesses keep the user experience solid and tighter IT workflows. We correlate logs, metrics, and traces into a single signal so your on-call engineer sees one root cause instead of two hundred alerts, then automate the runbook steps that never needed a human in the first place, cutting mean time to resolution and the alert fatigue that comes with it.",
+      "Enhance application performance, reduce IT expenses, and optimise operations with our tailored AIOps solutions. Using AI-driven monitoring, predictive analytics, and automated incident resolution, our AI development services for businesses keep the user experience solid and tighter IT workflows. We correlate logs, metrics, and traces into a single signal so your on-call engineer sees one root cause instead of two hundred alerts, then automate the runbook steps that never needed a human in the first place, cutting mean time to resolution and the alert fatigue that comes with it.",
     image: aiops,
     imageAlt: "Hands holding a glowing AI operations dashboard of live charts and system metrics",
   },
@@ -171,7 +171,7 @@ export const capabilities = {
     },
     {
       name: "Natural Language Processing",
-      body: "We build NLP systems for document understanding, semantic search, summarization, sentiment analysis, and entity extraction. RAG pipelines are grounded in your own knowledge base, so answers stay traceable to a source your team can audit. Chunking, embedding choice, and reranking are tuned against your actual documents rather than a default template, and every response carries its citations: if the system cannot find support for an answer, it says so instead of inventing one.",
+      body: "We build NLP systems for document understanding, semantic search, summarisation, sentiment analysis, and entity extraction. RAG pipelines are grounded in your own knowledge base, so answers stay traceable to a source your team can audit. Chunking, embedding choice, and reranking are tuned against your actual documents rather than a default template, and every response carries its citations: if the system cannot find support for an answer, it says so instead of inventing one.",
     },
     {
       name: "AI Chatbot Development",
@@ -208,7 +208,7 @@ export const industries = {
       name: "Education",
       image: INDUSTRY_IMAGES["Education"],
       title: "AI For Education",
-      body: "Adaptive learning turns a fixed syllabus into a path that fits each student. We build AI that personalizes content, automates grading, and gives educators an early warning before a learner falls behind. Teachers keep the final say on every intervention, and the systems we ship report on why a student was flagged, not just that they were.",
+      body: "Adaptive learning turns a fixed syllabus into a path that fits each student. We build AI that personalises content, automates grading, and gives educators an early warning before a learner falls behind. Teachers keep the final say on every intervention, and the systems we ship report on why a student was flagged, not just that they were.",
       bullets: [
         "Adaptive learning paths and content recommendation",
         "Automated grading and feedback generation",
@@ -232,10 +232,10 @@ export const industries = {
       name: "Retail and E-Commerce",
       image: INDUSTRY_IMAGES["Retail"],
       title: "AI For Retail And E-Commerce",
-      body: "Personalization and inventory accuracy decide margin. We build recommendation engines, dynamic pricing, and demand forecasts that raise basket size while cutting dead stock. Pricing models respect the floors your commercial team sets, and every ranking change is proven through live A/B testing against revenue rather than an offline score.",
+      body: "Personalisation and inventory accuracy decide margin. We build recommendation engines, dynamic pricing, and demand forecasts that raise basket size while cutting dead stock. Pricing models respect the floors your commercial team sets, and every ranking change is proven through live A/B testing against revenue rather than an offline score.",
       bullets: [
-        "Personalized product recommendations",
-        "Dynamic pricing and promotion optimization",
+        "Personalised product recommendations",
+        "Dynamic pricing and promotion optimisation",
         "Demand forecasting and inventory planning",
         "AI support agents for pre- and post-purchase queries",
       ],
@@ -270,7 +270,7 @@ export const industries = {
       title: "AI For Transportation And Logistics",
       body: "Route efficiency and downtime are where margin leaks. We build routing, forecasting, and predictive maintenance systems that keep fleets and freight moving. Models account for the constraints dispatchers actually work under (driver hours, load types, depot capacity) so the recommended plan is one your operations team can run, not a theoretical optimum.",
       bullets: [
-        "Route optimization and ETA prediction",
+        "Route optimisation and ETA prediction",
         "Predictive fleet maintenance",
         "Warehouse demand and capacity forecasting",
         "Automated shipment document processing",
@@ -338,7 +338,7 @@ export const process = {
     },
     {
       title: "System Architecture and Integration",
-      body: "We connect the AI capability to your ERP, CRM, and internal tools through a suitable application architecture. We plan authentication, expected usage, running costs, and fallback behaviour so the system fits your operational environment.",
+      body: "We connect the AI capability to your ERP, CRM, and internal tools through a suitable integration architecture. We plan authentication, expected usage, running costs, and fallback behaviour so the system fits your operational environment.",
     },
     {
       title: "Deployment and MLOps",
@@ -366,7 +366,7 @@ export const techStack = {
     {
       name: "LLMs and Foundation Models",
       blurb:
-        "The large language models and foundation models we use to build generative AI, chatbot, NLP, and custom AI software development solutions.",
+        "The large language models and foundation models we use to build generative AI, chatbot, NLP, and custom AI solutions.",
       tools: ["GPT-4o", "Claude", "GPT-3.5", "Phi-3", "Groq", "DALL·E", "PaLM", "Gemini", "Whisper", "Llama 3", "Midjourney", "MistralAI", "Stable Diffusion", "OpenAI Embeddings"],
     },
     {
@@ -392,7 +392,7 @@ export const techStack = {
     {
       name: "NLP Techniques",
       blurb: "The methods we combine for document understanding, search, and conversation.",
-      tools: ["RAG", "Fine-tuning", "Named Entity Recognition", "Semantic Search", "Summarization", "Sentiment Analysis", "Topic Modelling", "Speech-to-Text"],
+      tools: ["RAG", "Fine-tuning", "Named Entity Recognition", "Semantic Search", "Summarisation", "Sentiment Analysis", "Topic Modelling", "Speech-to-Text"],
     },
     {
       name: "Computer Vision",
@@ -437,7 +437,7 @@ export const faqs = [
   },
   {
     q: "How much does AI development cost?",
-    a: "Cost tracks scope, data readiness, and integration depth. A focused PoC typically lands in the low five figures, while a production enterprise system with pipelines and integrations costs considerably more. Book a free session and we'll give you an itemized estimate rather than a range.",
+    a: "Cost tracks scope, data readiness, and integration depth. A focused PoC typically lands in the low five figures, while a production enterprise system with pipelines and integrations costs considerably more. Book a free session and we'll give you an itemised estimate rather than a range.",
   },
   {
     q: "How long does it take to build an AI solution?",
@@ -460,7 +460,7 @@ export const faqs = [
     a: "Consulting answers what to build and whether it's worth building: opportunity assessment, data strategy, architecture, and ROI modelling. Development builds and ships it. Most clients start with consulting so the build begins with a validated target.",
   },
   {
-    q: "How do I choose the right AI development company?",
+    q: "How do I choose the right AI partner?",
     a: "Ask for production references, not demos. Check whether the team owns the full stack (data engineering, modelling, and deployment) and whether they can explain how a model will be monitored after launch. A partner who talks about drift and rollback has shipped before.",
   },
   {
@@ -468,7 +468,7 @@ export const faqs = [
     a: "Yes. You can add individual ML engineers, data engineers, or MLOps specialists to your team, or engage a dedicated pod that reports into your existing process.",
   },
   {
-    q: "What industries do you specialize in?",
+    q: "What industries do you specialise in?",
     a: "Healthcare, finance and fintech, retail and e-commerce, education, fashion, real estate, transportation and logistics, insurance, marketing, and legal, 12+ verticals with delivered projects in each.",
   },
 ];

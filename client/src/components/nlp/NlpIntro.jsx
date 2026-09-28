@@ -4,6 +4,7 @@ import { ArrowUpRight, Star } from "lucide-react";
 
 import { gsap, MOTION_OK } from "../../lib/gsap";
 import { hero } from "../../data/nlpData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /**
  * The band under the video hero: the actual pitch.
@@ -161,7 +162,7 @@ export default function NlpIntro() {
             <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
               <Link
                 data-intro-cta
-                to="/contact"
+                to={CONTACT_PATH}
                 className="group inline-flex items-center gap-2 rounded-full bg-accent-vivid px-8 py-4 text-base font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring md:text-lg"
               >
                 {hero.ctaText}

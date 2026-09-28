@@ -5,7 +5,7 @@ import { Reveal } from "../../motion/Reveal";
 import { appTypes } from "../../../data/retailData";
 
 /**
- * Five application types behind one tab strip on a dark band. Only the panel
+ * Five retail systems we add AI to, behind one tab strip on a dark band. Only the panel
  * swaps, so the section height stays put and the scroll does not jump when a
  * tab is chosen.
  */
@@ -38,7 +38,7 @@ export default function RetailAppTypes() {
         <Reveal>
           <div
             role="tablist"
-            aria-label="Retail application types"
+            aria-label="Retail systems we add AI to"
             className="mt-14 flex flex-wrap justify-center gap-2"
           >
             {appTypes.items.map((item) => {

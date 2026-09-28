@@ -24,7 +24,7 @@ export const journey = {
   titleAccent: "A Developing Venture",
   paragraphs: [
     "Axiomra began in 2021, when a small group of engineers recognised how much of artificial intelligence was still stuck in research notebooks. United by a shared idea, they set out to make AI usable for ordinary businesses, starting from a modest space and a single production deployment.",
-    "What began as a bootstrap startup has grown into a full AI development company. The team has expanded to 25+ in-house specialists across machine learning, computer vision, NLP and full-stack engineering, delivering client-centric solutions in healthcare, finance, retail and education.",
+    "What began as a bootstrap startup has grown into a full-service Data & AI partner. The team has expanded to 25+ in-house specialists across machine learning, computer vision, NLP and data engineering, delivering client-centric solutions in healthcare, finance, retail and education.",
     "What distinguishes us is our approach to delivery. We do not hand over a model and disappear. Every engagement is a partnership built on understanding your data, your compliance requirements and the metric you are actually judged on.",
     "With a focus on scalability, reliability and efficiency, we turn complex challenges into systems that survive production. Every project, large or small, gets the same engineering attention, and that is why clients stay with us past the first launch.",
   ],
@@ -36,7 +36,7 @@ export const vision = {
   titleAccent: "Unbiased World",
   body:
     "We envision a world where AI decisions can be explained, audited and trusted. We aim to stay current with where the field is moving while building a workplace where that expertise drives positive change, solving hard problems and leaving behind systems people are willing to rely on.",
-  ctaText: "Partner with our AI development company",
+  ctaText: "Partner with our Data & AI team",
 };
 
 export const mission = {
@@ -167,7 +167,7 @@ export const paths = {
   titleAccent: "Choose The Right AI Path",
   titleLead: "For Your Business",
   subtitle:
-    "Every company is at a different stage. Some want to automate operations they already run, others want to build a new AI product from the ground up. We support both paths with the right strategy, technology and delivery team.",
+    "Every company is at a different stage. Some want to automate operations they already run, others want to put AI at the heart of a new product. We support both paths with the right strategy, technology and delivery team.",
   items: [
     {
       titleAccent: "AI Automation For",
@@ -181,7 +181,7 @@ export const paths = {
       titleAccent: "Scaling Businesses",
       titleLead: "Through Automation",
       body:
-        "If you are building an AI product or SaaS platform, we become your dedicated AI and software development team. We handle everything from product architecture and UI design to AI model development and deployment, so founders focus on product vision and market growth while our engineers build and scale the technology behind it.",
+        "If you are building an AI-driven product, we become your dedicated Data & AI team. We handle the AI layer, from data pipelines and model development to deployment and monitoring, so founders focus on product vision and market growth while our specialists build and scale the AI behind it.",
       ctaText: "Get started",
       tone: "brand",
     },
@@ -195,7 +195,7 @@ export const faqs = [
   },
   {
     q: "What sets Axiomra apart from other AI companies?",
-    a: "We are an engineering company, not a prototype shop. A 100% in-house team of 25+ specialists owns the full stack, from data engineering through deployment and monitoring, and the same named squad stays with your project from scoping to handover.",
+    a: "We are a Data & AI partner, not a prototype shop. A 100% in-house team of 25+ specialists owns the full stack, from data engineering through deployment and monitoring, and the same named squad stays with your project from scoping to handover.",
   },
   {
     q: "What makes Axiomra's company culture unique?",
@@ -207,6 +207,6 @@ export const faqs = [
   },
   {
     q: "What is the founding journey of Axiomra?",
-    a: "Axiomra started in 2021 as a bootstrap team of engineers who wanted AI to be usable outside research notebooks. It has since grown into a full AI development company with 300+ delivered projects across 12+ industries and 20+ countries, still without outside funding.",
+    a: "Axiomra started in 2021 as a bootstrap team of engineers who wanted AI to be usable outside research notebooks. It has since grown into a full-service Data & AI partner with 300+ delivered projects across 12+ industries and 20+ countries, still without outside funding.",
   },
 ];

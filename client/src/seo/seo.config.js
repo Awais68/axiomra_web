@@ -8,9 +8,9 @@ export const SITE_NAME = "Axiomra";
 // preview deployment does not declare itself the canonical copy.
 export const SITE_URL = (import.meta.env.VITE_SITE_URL || "https://axiomra.co").replace(/\/$/, "");
 
-export const DEFAULT_TITLE = "Axiomra: Result-Driven AI Development Company";
+export const DEFAULT_TITLE = "Axiomra: Result-Driven Data & AI Partner";
 export const DEFAULT_DESCRIPTION =
-  "Axiomra builds production-grade AI systems that automate operations and deliver measurable ROI for SMBs and enterprises.";
+  "Axiomra is a Data & AI partner: analytics, machine learning and AI automation that work with your existing systems and deliver measurable ROI.";
 
 // 1200x630 site-wide share image. Pages with their own image (case studies)
 // pass it in instead.

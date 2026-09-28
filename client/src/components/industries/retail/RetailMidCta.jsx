@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "../../motion/Reveal";
 import { midCta } from "../../../data/retailData";
+import { CONTACT_PATH } from "../../../routes.constants";
 
 /**
  * Mid-page conversion band on a photographic base coat.
@@ -50,7 +51,7 @@ export default function RetailMidCta() {
             <p className="text-lg leading-relaxed text-inverse-fg/75 md:text-xl">{midCta.body}</p>
 
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group mt-10 inline-flex items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-lg font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 active:scale-[0.98] focus-ring"
             >
               {midCta.buttonText}

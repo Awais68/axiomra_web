@@ -3,6 +3,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { process } from "../../data/agenticAiData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /** Eight delivery stages on a centred timeline that fills as you scroll. */
 export default function AgenticProcess() {
@@ -85,7 +86,7 @@ export default function AgenticProcess() {
 
         <div className="mt-12 text-center">
           <Link
-            to="/contact"
+            to={CONTACT_PATH}
             className="group inline-flex items-center gap-2.5 rounded-full bg-accent-vivid px-7 py-4 text-base font-semibold text-inverse-fg shadow-glow transition-transform hover:-translate-y-0.5 focus-ring md:text-lg"
           >
             {process.ctaText}

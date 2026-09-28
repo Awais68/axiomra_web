@@ -3,7 +3,7 @@ import { Stagger, StaggerItem } from "../../motion/Reveal";
 import { solutions } from "../../../data/retailData";
 
 /**
- * Six outcomes a retail build is bought for. Glass cards over a faint texture
+ * Six outcomes a retail AI engagement is bought for. Glass cards over a faint texture
  * so the panel edges stay visible without a border fighting the photograph.
  */
 export default function RetailSolutions() {

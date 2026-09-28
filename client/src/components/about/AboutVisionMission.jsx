@@ -5,6 +5,7 @@ import { vision, mission } from "../../data/aboutData";
 
 import visionImg from "../../assets/about/vision-explainable.webp";
 import missionImg from "../../assets/about/mission-automation.webp";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /**
  * Vision and mission, mirrored left/right like the reference.
@@ -39,7 +40,7 @@ function PhotoPanel({ src, alt, label }) {
   );
 }
 
-function Copy({ block, cta, outline = false }) {
+function Copy({ block, cta, to = CONTACT_PATH, outline = false }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 22 }}
@@ -64,7 +65,7 @@ function Copy({ block, cta, outline = false }) {
       <p className="copy-justify mt-6 max-w-2xl text-lg leading-relaxed text-content-dim">{block.body}</p>
 
       <Link
-        to="/contact"
+        to={to}
         className="group mt-9 inline-flex items-center gap-2 rounded-full border border-line-strong px-7 py-3.5 text-base font-medium text-content transition-colors hover:border-brand hover:text-brand focus-ring"
       >
         {cta}
@@ -82,7 +83,7 @@ export default function AboutVisionMission() {
     <section id="vision" className="bg-surface-subtle py-20 md:py-28">
       <div className="mx-auto flex max-w-8xl flex-col gap-20 px-6 md:gap-28">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <Copy block={vision} cta={vision.ctaText} />
+          <Copy block={vision} cta={vision.ctaText} to={vision.ctaTo} />
           <PhotoPanel
             src={visionImg}
             alt="Two people auditing the numbers behind a model's output"
@@ -96,7 +97,7 @@ export default function AboutVisionMission() {
             alt="A robotic arm running an automated production line"
             label="Automation at scale"
           />
-          <Copy block={mission} cta={mission.ctaText} outline />
+          <Copy block={mission} cta={mission.ctaText} to={mission.ctaTo} outline />
         </div>
       </div>
     </section>

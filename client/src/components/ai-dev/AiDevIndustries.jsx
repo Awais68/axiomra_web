@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "../SectionHeading";
 import { industries } from "../../data/aiDevelopmentData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /** Industry chips over a split copy/photo panel. */
 export default function AiDevIndustries() {
@@ -98,7 +99,7 @@ export default function AiDevIndustries() {
               </ul>
 
               <Link
-                to="/contact"
+                to={CONTACT_PATH}
                 className="group mt-9 inline-flex items-center gap-2.5 rounded-full border border-line px-6 py-3.5 text-lg font-semibold transition-colors hover:border-brand/50 hover:text-brand focus-ring"
               >
                 Read more

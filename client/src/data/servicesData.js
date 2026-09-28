@@ -16,9 +16,6 @@ import chatbotDevelopment from "../assets/services/chatbot-development-services.
 import dataExtraction from "../assets/services/data-extraction-services.jpg";
 import voiceAssistant from "../assets/services/voice-assistant-services.jpg";
 import infoTechnology from "../assets/services/information-technology-services.jpeg";
-import customSoftware from "../assets/services/custom-software-development-services.jpg";
-import webAppDevelopment from "../assets/services/web-app-development-services.webp";
-import mobileAppDevelopment from "../assets/services/mobile-app-development-services.jpg";
 import recommendationSystems from "../assets/services/recommendation-systems-services.jpg";
 import webScraping from "../assets/services/web-scraping-services.jpg";
 import botAutomation from "../assets/services/bot-automation-services.jpg";
@@ -29,10 +26,10 @@ const services = [
     slug: "ai-development-services",
     title: "Artificial Intelligence",
     image: aiDevelopment,
-    imageAlt: "Developer at a laptop surrounded by AI capability icons radiating from a central AI chip",
+    imageAlt: "Person at a laptop surrounded by AI capability icons radiating from a central AI chip",
     description:
-      "We design and ship enterprise-grade AI and machine learning systems built for real business problems. As a hands-on AI partner, we create scalable, secure applications that automate processes, cut operating costs, and speed up decision-making, so your team can focus on growth instead of busywork.",
-    links: ["AI Software Development", "AI Consultation", "AI Agents", "AI Product Development", "AI Integration", "AI Automation", "AI LogOps", "AI Copilots"],
+      "We design and ship enterprise-grade AI and machine learning systems built for real business problems. As a hands-on AI partner, we build scalable, secure AI solutions that automate processes, cut operating costs, and speed up decision-making, so your team can focus on growth instead of busywork.",
+    links: ["AI Model Development", "AI Consultation", "AI Agents", "AI Use-Case Discovery", "AI Integration", "AI Automation", "AI LogOps", "AI Copilots"],
   },
   {
     slug: "generative-ai-services",
@@ -67,8 +64,8 @@ const services = [
     image: processAutomation,
     imageAlt: "Robotic hand and human hand meeting over a board of automated task icons above a night skyline",
     description:
-      "We use artificial intelligence and robotic process automation (RPA) to remove repetitive manual work and simplify entire workflows. Our automation platforms integrate cleanly with your existing systems (data entry, invoice processing, customer support, and supply chain), cutting errors while scaling output.",
-    links: ["Process Automation Consulting", "Intelligent Automation Solutions", "RPA", "RPA Software Development", "Workflow Automation Consulting"],
+      "We use artificial intelligence and robotic process automation (RPA) to remove repetitive manual work and simplify entire workflows. Our automation works with the systems you already use (data entry, invoice processing, customer support, and supply chain), cutting errors while scaling output.",
+    links: ["Process Automation Consulting", "Intelligent Automation Solutions", "RPA", "RPA Bot Implementation", "Workflow Automation Consulting"],
   },
   {
     slug: COMPUTER_VISION_SLUG,
@@ -94,17 +91,17 @@ const services = [
     image: nlp,
     imageAlt: "Wireframe human head resting in an open palm with a language-processing node graph branching out of it",
     description:
-      "We build advanced natural language processing applications that go well beyond basic text analysis. Using large language models, transformers, and modern NLP techniques, our AI solutions deliver accurate sentiment analysis, entity recognition, and conversational intelligence for real-world business use cases.",
+      "We build natural language processing solutions that go well beyond basic text analysis. Using large language models, transformers, and modern NLP techniques, our AI solutions deliver accurate sentiment analysis, entity recognition, and conversational intelligence for real-world business use cases.",
     links: ["Sentiment Analysis", "Text Summarization", "Language Translation", "Text Classification", "Speech Recognition", "Named Entity Recognition"],
   },
   {
     slug: "gpt-integration-services",
     title: "GPT Integration",
     image: gptIntegration,
-    imageAlt: "Developer typing at a laptop showing a Chat AI command prompt beside a glowing AI chip",
+    imageAlt: "Person typing at a laptop showing a Chat AI command prompt beside a glowing AI chip",
     description:
-      "We integrate advanced LLMs (GPT-4o, Gemini, and Llama) directly into your applications to boost customer experience and operational efficiency. Our GPT integration services cover secure API connections, fine-tuned prompts, and scalable deployment, keeping your business ahead in the era of generative AI.",
-    links: ["Prompt Engineering", "Custom Software Solutions with ChatGPT API", "ChatGPT API Integration", "Voice Assistant Integration", "ChatGPT Advisory Services"],
+      "We integrate advanced LLMs (GPT-4o, Gemini, and Llama) directly into the tools and systems you already use to boost customer experience and operational efficiency. Our GPT integration services cover secure API connections, fine-tuned prompts, and scalable deployment, keeping your business ahead in the era of generative AI.",
+    links: ["Prompt Engineering", "ChatGPT API Solutions", "ChatGPT API Integration", "Voice Assistant Integration", "ChatGPT Advisory Services"],
   },
   {
     slug: "predictive-analytics-services",
@@ -139,7 +136,7 @@ const services = [
     image: chatbotDevelopment,
     imageAlt: "Open hand holding a glowing chatbot panel with bot avatars and chat bubbles floating around it",
     description:
-      "We develop intelligent AI chatbots powered by conversational AI and natural language understanding. These personalized assistants provide 24/7 support, resolve inquiries instantly, and integrate cleanly across web, mobile, and messaging platforms, enhancing customer engagement while freeing up your team for high-value tasks.",
+      "We develop intelligent AI chatbots powered by conversational AI and natural language understanding. These personalized assistants provide 24/7 support, resolve inquiries instantly, and connect to the web, mobile and messaging channels you already run, enhancing customer engagement while freeing up your team for high-value tasks.",
     links: ["AI Chatbot Development Solutions", "Chatbot Design and Development", "Multi-language Chatbot Development", "Chatbot Integration", "NLP Chatbot Development"],
   },
   {
@@ -166,35 +163,8 @@ const services = [
     image: infoTechnology,
     imageAlt: "Glowing globe at the centre of a circular network linking laptops, monitors and documents",
     description:
-      "Axiomra provides IT consulting services that align technology with business goals. We design durable IT strategies powered by cloud, AI, and automation to digitize operations, optimize enterprise software, and enhance mobility, giving businesses a scalable, secure technology roadmap for long-term growth.",
-    links: ["IT Consulting", "Cloud Transition and Architecture Strategy", "Digital Transformation Consulting", "Optimized Software Portfolio"],
-  },
-  {
-    slug: "custom-software-development-services",
-    title: "Custom Software Development",
-    image: customSoftware,
-    imageAlt: "Developer working across two screens of application code and interface designs in a bright office",
-    description:
-      "As a hands-on AI development partner, we build custom software solutions designed to fit your exact business requirements. From AI-powered applications to enterprise-grade platforms across mobile and web, we cover the full development lifecycle, ensuring reliability, scalability, and measurable business impact.",
-    links: ["AI Software Development", "Software Development Consulting", "SaaS Application Development", "Web Application Development", "Mobile Application Development"],
-  },
-  {
-    slug: "web-app-development-services",
-    title: "Web App Development",
-    image: webAppDevelopment,
-    imageAlt: "Developer coding across dual monitors and a tablet with holographic app and analytics panels floating above the desk",
-    description:
-      "Axiomra delivers dependable web app development services tailored to your business objectives. Using modern frameworks, APIs, and cloud-native architectures, we create secure, high-performance applications that scale with your growth and deliver a user experience that holds up from day one.",
-    links: ["Website Development", "Front-End Development", "Full-Stack Applications", "Back-End Development"],
-  },
-  {
-    slug: "mobile-app-development-services",
-    title: "Mobile App Development",
-    image: mobileAppDevelopment,
-    imageAlt: "Finger tapping a tablet as app icons and mobile source code float above the screen",
-    description:
-      "Our mobile app development services cover both enterprise and consumer applications, built on clean architecture and scalable backends. We design and deploy cross-platform, iOS, and Android apps that expand customer reach, improve enterprise mobility, and deliver smooth user experiences.",
-    links: ["Hybrid App Development", "Android Application Development", "Hybrid Architecture", "App/Soft Design", "iPhone App Development"],
+      "Axiomra provides IT consulting services that align technology with business goals. We design durable IT strategies powered by cloud, AI, and automation to digitise operations and make better use of the systems you already run, giving businesses a scalable, secure technology roadmap for long-term growth.",
+    links: ["IT Consulting", "Cloud Transition and Architecture Strategy", "Digital Transformation Consulting", "Data & AI Roadmapping"],
   },
   {
     slug: "recommendation-systems-services",

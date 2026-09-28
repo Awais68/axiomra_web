@@ -31,9 +31,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Custom AI Insurance Software Development Services | Axiomra";
+const TITLE = "Insurance AI & Data Solutions | Axiomra";
 const DESCRIPTION =
-  "AI insurance software development: claims automation, underwriting intelligence, fraud detection and policy administration built to stay explainable and auditable.";
+  "Insurance AI and data solutions: claims triage, underwriting analytics, fraud models and document AI that work with your core systems and stay explainable.";
 
 export default function InsurancePage() {
   // Lazy photos land after the triggers were measured; once the page has

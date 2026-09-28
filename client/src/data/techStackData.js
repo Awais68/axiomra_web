@@ -4,9 +4,9 @@
  */
 
 export const hero = {
-  eyebrow: "What we build with",
+  eyebrow: "Data & AI technologies",
   titleLead: "The AI Tech Stack Behind",
-  titleAccent: "Every System We Ship",
+  titleAccent: "Every Solution We Deliver",
   body:
     "Models, frameworks and infrastructure chosen against your data and your load, never by fashion.",
   ctaText: "Talk to our engineers",
@@ -197,9 +197,9 @@ export const stackGroups = [
   {
     id: "frontend",
     label: "Front-End",
-    title: "Front-End & Interfaces",
+    title: "Dashboards & Interfaces",
     description:
-      "The surface your users judge everything by. Accessible, fast on a mid-range phone, and typed end to end.",
+      "Where your team sees the model's output. Accessible, fast on a mid-range phone, and typed end to end.",
     items: [
       { name: "React", slug: "react" },
       { name: "Next.js", slug: "nextdotjs" },
@@ -208,7 +208,6 @@ export const stackGroups = [
       { name: "Tailwind CSS", slug: "tailwindcss" },
       { name: "Framer Motion", slug: "framer" },
       { name: "Three.js", slug: "threedotjs" },
-      { name: "React Native", slug: "react" },
       { name: "Vite", slug: "vite" },
       { name: "Radix UI", slug: "radixui" },
       { name: "TanStack Query", slug: "reactquery" },
@@ -314,7 +313,7 @@ export const partner = {
     },
     {
       title: "Weekly demos, not status decks",
-      body: "You see working software every week. If a week produced nothing worth showing, we say that instead of dressing it up.",
+      body: "You see working results every week. If a week produced nothing worth showing, we say that instead of dressing it up.",
     },
     {
       title: "Judged on your metric",

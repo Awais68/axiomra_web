@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Seo from "../seo/Seo";
-import { SERVICES_BASE_PATH } from "../routes.constants";
+import { SERVICES_BASE_PATH, CONTACT_PATH } from "../routes.constants";
 
 // Same classes as the secondary pills in ServiceRow.
 const SECONDARY_LINK =
@@ -38,7 +38,7 @@ export default function NotFoundPage() {
           <Link to={SERVICES_BASE_PATH} className={SECONDARY_LINK}>
             Explore our services
           </Link>
-          <Link to="/contact" className={SECONDARY_LINK}>
+          <Link to={CONTACT_PATH} className={SECONDARY_LINK}>
             Contact us
           </Link>
         </div>

@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, Route, Star } from "lucide-react";
 import { gsap, MOTION_OK } from "../../../lib/gsap";
 import { hero } from "../../../data/transportationData";
+import { CONTACT_PATH } from "../../../routes.constants";
 
 // three.js stays behind a dynamic import so it never blocks first paint.
 const NetworkBackground = lazy(() => import("../../NetworkBackground"));
 
 /** Capability chips, not results: nothing here is a claimed client number. */
-const CAPABILITIES = ["Live tracking", "Route optimisation", "Predictive ETA", "ePOD", "Telematics", "Fleet health"];
+const CAPABILITIES = ["Live tracking", "Route optimisation", "Predictive ETA", "Demand forecasting", "Telematics", "Fleet health"];
 
 /**
  * Dark hero. Copy on the left, a glass capability pane on the right, and the
@@ -90,7 +91,7 @@ export default function TransportationHero() {
 
           <div data-hero className="mt-10 flex flex-wrap items-center gap-6">
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group inline-flex items-center gap-3 rounded-full bg-accent-vivid py-2 pl-7 pr-2 text-lg font-semibold text-inverse transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 active:scale-[0.98] focus-ring"
             >
               {hero.ctaText}
@@ -123,7 +124,7 @@ export default function TransportationHero() {
           <div className="lg-rim lg-dark clip-waybill">
             <div className="lg lg-dark lg-soft lg-sheen clip-waybill p-8">
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent-vivid">
-                What we build into the stack
+                What we add to your data
               </p>
               <ul className="mt-6 flex flex-wrap gap-2.5">
                 {CAPABILITIES.map((capability) => (

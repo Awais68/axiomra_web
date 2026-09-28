@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { challenges } from "../../data/generativeAiData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /** Problem framing: photo left, four numbered pain points right. */
 export default function GenAiChallenges() {
@@ -86,7 +87,7 @@ export default function GenAiChallenges() {
           </ol>
 
           <Link
-            to="/contact"
+            to={CONTACT_PATH}
             className="group mt-10 inline-flex items-center gap-2.5 rounded-full border border-line px-7 py-4 text-base font-semibold transition-colors hover:border-brand/50 hover:text-brand focus-ring md:text-lg"
           >
             Book a Free Consultation

@@ -21,6 +21,8 @@ import {
   FAQS_PATH,
   PORTFOLIO_PATH,
   INDUSTRIES_PATH,
+  CONTACT_PATH,
+  BOOK_CALL_PATH,
 } from "@/routes.constants";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import logoLight from "@/assets/logo-light.webp";
@@ -127,7 +129,7 @@ function useNavTone() {
 const serviceItems = [
   {
     label: "AI Development",
-    description: "Custom AI software, agents & LLM integration",
+    description: "AI models, agents & LLM integration",
     href: `${SERVICES_BASE_PATH}/${AI_DEVELOPMENT_SLUG}`,
   },
   {
@@ -167,12 +169,12 @@ const industryItems = [
   },
   {
     label: "Real Estate",
-    description: "Valuation, listings, CRM & transactions",
+    description: "Valuation, listing & transaction analytics",
     href: `${INDUSTRIES_PATH}/real-estate`,
   },
   {
     label: "Sports",
-    description: "Athlete analytics, fan & league platforms",
+    description: "Athlete analytics & fan insights",
     href: `${INDUSTRIES_PATH}/sports`,
   },
   {
@@ -197,7 +199,7 @@ const industryItems = [
   },
   {
     label: "Healthcare",
-    description: "HIPAA-safe data & diagnosis AI",
+    description: "Clinical data & diagnostic AI",
     href: `${INDUSTRIES_PATH}/healthcare`,
   },
   {
@@ -221,7 +223,7 @@ const companyItems = [
   { label: "About Us", description: "Who we are and how we work", href: ABOUT_PATH },
   { label: "Tech Stack", description: "The tools behind every system we ship", href: TECH_PATH },
   { label: "FAQs", description: "Scope, cost, timelines & ownership, answered", href: FAQS_PATH },
-  { label: "Contact", description: "Talk to an engineer, not a sales desk", href: "/contact" },
+  { label: "Contact", description: "Talk to an engineer, not a sales desk", href: CONTACT_PATH },
 ];
 
 type MegaSection = "services" | "industries" | "company";
@@ -353,7 +355,7 @@ function FullWidthDropdown({
           <h4 className="font-display text-lg font-semibold text-inverse-fg">{cfg.ctaTitle}</h4>
           <p className="text-base leading-relaxed text-inverse-fg/60">{cfg.ctaSubtitle}</p>
           <NavLink
-            href="/contact"
+            href={BOOK_CALL_PATH}
             onClick={onNavigate}
             className="mt-auto inline-flex w-fit items-center gap-1.5 rounded-full bg-accent-vivid px-5 py-2.5 text-base font-medium text-inverse transition-opacity hover:opacity-90 focus-ring"
           >
@@ -518,14 +520,14 @@ function MobileNav({ fg }: { fg: (typeof TONE)[Tone] }) {
 
             <div className="mt-2 flex flex-col gap-2 border-t border-inverse-fg/15 pt-3">
               <NavLink
-                href="/contact"
+                href={CONTACT_PATH}
                 onClick={close}
                 className="w-full rounded-full border border-inverse-fg/25 px-4 py-2.5 text-center text-base font-medium text-inverse-fg transition-colors hover:bg-inverse-fg/10 focus-ring"
               >
                 Contact us
               </NavLink>
               <NavLink
-                href="/contact"
+                href={BOOK_CALL_PATH}
                 onClick={close}
                 className="w-full rounded-full bg-accent-vivid px-5 py-2.5 text-center text-base font-medium text-inverse hover:opacity-90 focus-ring"
               >
@@ -551,7 +553,7 @@ export function Navbar({ className }: { className?: string }) {
   // On the contact page the whole bar is hidden until the cursor reaches the
   // top edge, so the glass form stays the clear focus. Everywhere else it
   // behaves as before (fixed, always visible).
-  const hoverReveal = pathname === "/contact";
+  const hoverReveal = pathname === CONTACT_PATH;
 
   useEffect(() => {
     if (!active) return;
@@ -595,7 +597,7 @@ export function Navbar({ className }: { className?: string }) {
           <div className="hidden items-center gap-3 lg:flex">
             <ThemeToggle className={cn(fg.border, fg.link)} />
             <NavLink
-              href="/contact"
+              href={CONTACT_PATH}
               className={cn(
                 "rounded-full border px-5 py-2.5 text-base font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-vivid hover:bg-accent-vivid/15 hover:text-accent-vivid focus-ring",
                 fg.borderStrong,
@@ -605,7 +607,7 @@ export function Navbar({ className }: { className?: string }) {
               Contact us
             </NavLink>
             <NavLink
-              href="/contact"
+              href={BOOK_CALL_PATH}
               className="rounded-full bg-accent-vivid px-6 py-2.5 text-base font-medium text-inverse transition-all duration-500 hover:-translate-y-0.5 hover:shadow-glow focus-ring"
             >
               Book a call

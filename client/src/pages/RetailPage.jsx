@@ -29,9 +29,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Retail Software Development Services | AI for Retail | Axiomra";
+const TITLE = "AI and Data Solutions for Retail | Axiomra";
 const DESCRIPTION =
-  "AI-powered retail software development: order management, POS, retail CRM, demand forecasting and computer vision for retailers, brands and marketplaces.";
+  "AI and data solutions for retail: demand forecasting, pricing and customer analytics, and computer vision over your existing POS, ERP and e-commerce systems.";
 
 export default function RetailPage() {
   // Lazy photos land after the triggers were measured; once the page has

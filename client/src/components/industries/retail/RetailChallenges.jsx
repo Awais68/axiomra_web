@@ -7,7 +7,7 @@ import { challenges } from "../../../data/retailData";
 const ICONS = { PackageX, Users, Tags, ShieldAlert, Clock, Network };
 
 /**
- * The six places retail loses money, each paired with what we build instead.
+ * The six places retail loses money, each paired with the AI we put in place instead.
  * Problem and solution share a card so neither can be read without the other.
  */
 export default function RetailChallenges() {

@@ -7,7 +7,7 @@ import TechStack from "../sections/TechStack";
 import WhyUs from "../sections/WhyUs";
 import FAQ from "../sections/FAQ";
 import services from "../data/servicesData";
-import { SERVICES_BASE_PATH } from "../routes.constants";
+import { BOOK_CALL_PATH, SERVICES_BASE_PATH } from "../routes.constants";
 import Seo from "../seo/Seo";
 
 const servicesFaq = [
@@ -46,7 +46,7 @@ const servicesFaq = [
 ];
 
 const META_DESCRIPTION =
-  "Explore Axiomra's full range of AI services: from generative AI and computer vision to custom software, chatbots, and process automation.";
+  "Explore Axiomra's full range of AI services: from generative AI and computer vision to data analytics, chatbots and process automation.";
 
 export default function ServicesPage() {
   return (
@@ -89,6 +89,7 @@ export default function ServicesPage() {
         title="Turn Your AI Idea Into a Clear Project Plan"
         subtitle="Tell us what you want to achieve. We will help define the scope, technical approach, and next steps for a solution that fits your business."
         buttonText="Discuss Your Project"
+        ctaTo={BOOK_CALL_PATH}
       />
     </>
   );

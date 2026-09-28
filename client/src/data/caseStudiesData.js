@@ -997,7 +997,7 @@ export const caseStudies = {
       summary: "A camera-based assistant that guides patients through home exercises and reports back to their therapist.",
       challenge: "Patients often do home exercises the wrong way, and therapists can't see what happens between visits.",
       solution: "The camera follows how the body moves, counts each repetition, corrects form on the spot and sends a summary to the care team.",
-      technologies: "AI that recognizes body positions from a camera, exercise rules your therapists set, a phone or tablet app, and secure storage for progress reports. Full details are in the technical section below.",
+      technologies: "AI that recognizes body positions from a camera, exercise rules your therapists set, the camera on a phone or tablet, and secure storage for progress reports. Full details are in the technical section below.",
     },
 
     executiveSummary: [
@@ -1087,7 +1087,7 @@ export const caseStudies = {
     stack: [
       { layer: "Seeing body movement", tool: "MediaPipe or a custom pose model, OpenCV" },
       { layer: "AI models", tool: "PyTorch, TensorFlow Lite or Core ML (running on the phone)" },
-      { layer: "The app", tool: "iOS and Android, native or cross-platform" },
+      { layer: "Where it runs", tool: "iOS and Android phones and tablets" },
       { layer: "Behind the scenes", tool: "Python APIs, secure store for patient progress data" },
       { layer: "Reports", tool: "Dashboards for adherence, range of motion, repetitions and movement quality" },
     ],

@@ -10,7 +10,7 @@ const types = [
     eyebrow: "Pre-seed to Series A",
     icon: Rocket,
     variant: "launch",
-    desc: "We help startups validate ideas and build MVPs that scale. Our team guides founders through the entire journey, enabling faster iteration and confident growth from day one.",
+    desc: "We help startups validate ideas and prove AI on real data before they scale. Our team guides founders through the entire journey, enabling faster iteration and confident growth from day one.",
     detail:
       "At this stage the expensive mistake is building the wrong thing beautifully. We work backwards from the one assumption your business depends on, put the smallest real system in front of real users, and give you an honest read on whether the model actually holds. What we ship is production code with an evaluation harness attached, not a throwaway prototype, when the answer is yes, you keep building on it instead of starting over.",
     stats: [
@@ -25,7 +25,7 @@ const types = [
       "You are unsure which of three ideas deserves the engineering budget.",
     ],
     deliverables: [
-      "A scoped MVP built on your real data, with the success metric agreed up front",
+      "A scoped AI proof of concept built on your real data, with the success metric agreed up front",
       "An evaluation suite that shows how the system performs before users see it",
       "Cloud infrastructure sized for today, structured to scale without a rewrite",
       "A technical narrative your investors and future CTO can both read",
@@ -42,7 +42,7 @@ const types = [
     eyebrow: "Series A and beyond",
     icon: TrendingUp,
     variant: "growth",
-    desc: "Growth creates new opportunities and challenges. As a hands-on AI development partner, we help scale-ups integrate AI and ML to boost efficiency, optimize operations, and expand into new markets.",
+    desc: "Growth creates new opportunities and challenges. As a hands-on Data & AI partner, we help scale-ups integrate AI and ML to boost efficiency, optimize operations, and expand into new markets.",
     detail:
       "Growth exposes everything the early build got away with: pipelines that break under real volume, models tuned on last year's traffic, manual steps that quietly became someone's full-time job. We come in alongside your team, find the constraint that is actually capping throughput, and rebuild that part properly (with monitoring, retraining, and rollback in place) so the next order of magnitude does not cost you another rewrite.",
     stats: [

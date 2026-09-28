@@ -17,10 +17,10 @@ import FAQ from "../sections/FAQ";
 import { whatWeDo, subServices, faqs } from "../data/aiDevelopmentData";
 import Seo from "../seo/Seo";
 import { serviceSchema } from "../seo/schema";
-import { SERVICES_BASE_PATH } from "../routes.constants";
+import { SERVICES_BASE_PATH, CONTACT_PATH } from "../routes.constants";
 
 const META_DESCRIPTION =
-  "Axiomra's AI development services: custom AI software, AI agents, LLM integration, " +
+  "Axiomra's AI development services: custom AI models, AI agents, LLM integration, " +
   "enterprise AI, PoC and MVP builds, AI integration, and AIOps, shipped to production.";
 
 export default function AiDevelopmentPage() {
@@ -63,7 +63,7 @@ export default function AiDevelopmentPage() {
             description={s.description}
             image={s.image}
             imageAlt={s.imageAlt}
-            ctaHref={s.ctaText ? "/contact" : undefined}
+            ctaHref={s.ctaText ? CONTACT_PATH : undefined}
             ctaText={s.ctaText}
           />
         ))}

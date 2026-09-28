@@ -29,9 +29,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Custom Transportation & Logistics Software Development | Axiomra";
+const TITLE = "Data & AI for Transportation & Logistics | Axiomra";
 const DESCRIPTION =
-  "Transportation software development: TMS platforms, fleet telematics, route optimisation, freight visibility, asset tracking, transit and mobility apps built for live operations.";
+  "Data & AI for transport and logistics: route optimisation, predictive ETAs, telematics analytics, predictive maintenance and freight visibility on your systems.";
 
 export default function TransportationPage() {
   // Lazy photos land after the triggers were measured; once the page has

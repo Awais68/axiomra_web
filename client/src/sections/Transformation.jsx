@@ -64,8 +64,8 @@ export default function Transformation() {
         </p>
         <p className="mt-5 text-justify text-base leading-relaxed text-content-dim md:text-lg">
           Axiomra is powered by a dedicated team of 25+ AI engineers, data scientists, and solution
-          architects who have been building production-grade systems since 2021. We provide an elite,
-          in-house engine that specializes in converting complex business challenges into scalable AI products.
+          architects who have been delivering production-grade AI since 2021. We provide an elite,
+          in-house engine that specializes in converting complex business challenges into scalable AI solutions.
         </p>
         <p className="mt-5 text-justify text-base leading-relaxed text-content-dim md:text-lg">
           We connect process automation and predictive insights to clear goals, such as reducing manual

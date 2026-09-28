@@ -301,7 +301,7 @@ export const caseStudies = {
   items: [
     {
       name: "StudyLab AI",
-      tagline: "Personalised Learning Platform",
+      tagline: "AI Teaching Assistant For Personalised Learning",
       problem:
         "Large class sizes and heavy teacher workloads made personalised student support impossible. Feedback was slow, grading was inconsistent, and student engagement was dropping.",
       solution:

@@ -14,7 +14,7 @@ import { faqs } from "../data/aboutData";
 import Seo from "../seo/Seo";
 
 const META_DESCRIPTION =
-  "About Axiomra: an AI development company founded in 2021, with 25+ in-house experts " +
+  "About Axiomra: a Data & AI partner founded in 2021, with 25+ in-house experts " +
   "and 300+ production AI projects delivered across 12+ industries.";
 
 export default function AboutPage() {
@@ -42,10 +42,10 @@ export default function AboutPage() {
           <>
             Partner With Our Global
             <br />
-            AI Development Company
+            Data &amp; AI Partner
           </>
         }
-        subtitle="Talk to the engineers who would actually build your system. We will tell you what AI can do for your business, what it cannot, and what the first ninety days would look like."
+        subtitle="Talk to the specialists who would actually deliver your AI solution. We will tell you what AI can do for your business, what it cannot, and what the first ninety days would look like."
         buttonText="Contact us now"
       />
     </div>

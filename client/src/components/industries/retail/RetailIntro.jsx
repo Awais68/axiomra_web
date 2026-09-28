@@ -67,7 +67,7 @@ export default function RetailIntro() {
             className="clip-tag-alt aspect-[4/3] w-full object-cover"
           />
           <figcaption className="liquid-glass absolute bottom-6 left-6 max-w-xs rounded-2xl px-5 py-4 text-sm leading-relaxed text-content">
-            One inventory truth behind e-commerce, marketplace, POS and fulfilment.
+            One inventory truth across your e-commerce, marketplace, POS and fulfilment data.
           </figcaption>
         </figure>
       </div>

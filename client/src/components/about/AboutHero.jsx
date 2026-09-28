@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import { hero } from "../../data/aboutData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 const NetworkBackground = lazy(() => import("../NetworkBackground"));
 
@@ -66,7 +67,7 @@ export default function AboutHero() {
 
           <motion.div variants={fadeUp} initial="hidden" animate="show" custom={3} className="mt-10">
             <Link
-              to="/contact"
+              to={hero.ctaTo ?? CONTACT_PATH}
               className="group inline-flex items-center gap-2 rounded-full bg-accent-vivid px-8 py-4 text-lg font-semibold text-inverse transition-transform hover:scale-[1.02] focus-ring"
             >
               {hero.ctaText}

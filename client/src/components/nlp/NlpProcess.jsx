@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import { gsap, ScrollTrigger, MOTION_OK } from "../../lib/gsap";
 import { process } from "../../data/nlpData";
+import { BOOK_CALL_PATH } from "../../routes.constants";
 
 /** The eight delivery stages, as a scroll-driven timeline. */
 export default function NlpProcess() {
@@ -130,7 +131,7 @@ export default function NlpProcess() {
             </p>
 
             <Link
-              to="/contact"
+              to={BOOK_CALL_PATH}
               className="group mt-8 inline-flex items-center gap-2 rounded-full border border-line-strong px-7 py-3.5 text-base font-medium text-content transition-colors hover:border-brand hover:text-brand focus-ring md:text-lg"
             >
               {process.ctaText}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, Check } from "lucide-react";
 import SectionHeading from "../SectionHeading";
 import { potential } from "../../data/nlpData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /** The value statement, as copy on the left and the one word-cloud image on the right. */
 export default function NlpPotential() {
@@ -58,7 +59,7 @@ export default function NlpPotential() {
             </p>
 
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group mt-9 inline-flex items-center gap-2 rounded-full border border-line-strong px-7 py-3.5 text-base font-medium text-content transition-colors hover:border-brand hover:text-brand focus-ring md:text-lg"
             >
               {potential.ctaText}

@@ -6,10 +6,11 @@ import { paths } from "../../data/aboutData";
 
 import automationImg from "../../assets/about/path-automation.webp";
 import productImg from "../../assets/about/path-product.webp";
+import { CONTACT_PATH } from "../../routes.constants";
 
 const IMAGES = [
   { src: automationImg, alt: "Operations staff moving through a warehouse that AI keeps in sync" },
-  { src: productImg, alt: "A founder working on the dashboard of an AI SaaS product" },
+  { src: productImg, alt: "A founder reviewing an AI product dashboard" },
 ];
 
 export default function AboutPaths() {
@@ -52,7 +53,7 @@ export default function AboutPaths() {
                     {p.body}
                   </p>
                   <Link
-                    to="/contact"
+                    to={p.ctaTo ?? CONTACT_PATH}
                     className="mt-8 inline-flex items-center gap-2 rounded-full bg-inverse-fg px-7 py-3.5 text-base font-medium text-inverse transition-all hover:shadow-glow focus-ring"
                   >
                     {p.ctaText}

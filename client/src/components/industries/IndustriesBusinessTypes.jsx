@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import SectionHeading from "../SectionHeading";
 import { Stagger, StaggerItem } from "../motion/Reveal";
 import { businessTypes } from "../../data/industriesData";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /** Four rows, hairline separators, nothing else. Deliberately quiet after the tech strip. */
-export default function IndustriesBusinessTypes({ data = businessTypes }) {
+export default function IndustriesBusinessTypes({ data = businessTypes, ctaTo = CONTACT_PATH }) {
   return (
     <section className="bg-surface py-24 md:py-32">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
@@ -37,7 +38,7 @@ export default function IndustriesBusinessTypes({ data = businessTypes }) {
                 {row.body}
               </p>
               <Link
-                to="/contact"
+                to={ctaTo}
                 aria-label={`Talk to us about ${row.label}`}
                 className="hidden h-10 w-10 items-center justify-center justify-self-end rounded-full border border-line text-content-faint transition-all duration-300 group-hover:border-brand group-hover:text-brand focus-ring md:col-span-1 md:flex"
               >

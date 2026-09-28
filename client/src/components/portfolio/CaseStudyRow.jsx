@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { gsap, MOTION_OK } from "../../lib/gsap";
 import BrandMark from "../case-study/BrandMark";
+import { CONTACT_PATH } from "../../routes.constants";
 
 /**
  * One case study, rendered as a full-bleed alternating row.
@@ -204,7 +205,7 @@ export default function CaseStudyRow({ study, index }) {
 
           <div data-row-reveal className="mt-9">
             <Link
-              to={study.caseStudy ?? "/contact"}
+              to={study.caseStudy ?? CONTACT_PATH}
               className={`group inline-flex items-center gap-3 rounded-full border py-2 pl-6 pr-2 text-base font-semibold transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 active:scale-[0.98] focus-ring ${
                 banded
                   ? "border-white/20 bg-white/10 text-white"

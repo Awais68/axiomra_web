@@ -95,7 +95,7 @@ export default function TransportationModes() {
 
           <ul
             ref={trackRef}
-            aria-label="Transport modes we build software for"
+            aria-label="Transport modes we work across"
             className="scrollbar-hide flex gap-5 overflow-x-auto px-4 pb-4 sm:px-6 lg:px-8"
           >
             {modes.items.map((item, i) => (

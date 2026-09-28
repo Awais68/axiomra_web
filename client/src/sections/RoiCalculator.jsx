@@ -11,6 +11,7 @@ import {
   Users,
   Wallet,
 } from "lucide-react";
+import { CONTACT_PATH } from "../routes.constants";
 
 /** Interactive savings estimator. */
 const WORKING_WEEKS = 52;
@@ -401,7 +402,7 @@ export default function RoiCalculator() {
             </div>
 
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="group mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-accent-vivid px-7 py-4 text-base font-semibold text-inverse transition-all hover:shadow-glow focus-ring"
             >
               Get a Tailored Automation Assessment

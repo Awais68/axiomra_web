@@ -55,11 +55,11 @@ export const LEGAL_SLUG = "legal";
 
 export const hero = {
   eyebrow: "AI for the legal industry",
-  titleLead: "Custom",
-  titleAccent: "AI Legal Software Development",
-  titleTail: "Services",
+  titleLead: "Legal",
+  titleAccent: "Data & AI",
+  titleTail: "Solutions",
   body:
-    "Legal work is document work, and most of it is repeatable. We build the contract, matter and client systems that read the paper, track the deadline and hold the privilege boundary, so your lawyers spend their hours on the judgement calls only they can make.",
+    "Legal work is document work, and most of it is repeatable. We build the contract analytics, document AI and research models that read the paper, flag the deadline and respect the privilege boundary, working inside the systems your firm already runs, so your lawyers spend their hours on the judgement calls only they can make.",
   ctaText: "Request a free consultation",
   image: heroImg,
   alt: "A lawyer signing a contract across a desk",
@@ -73,10 +73,10 @@ export const hero = {
 
 export const intro = {
   titleLead: "Building The Future Of Legal Workflows Through",
-  titleAccent: "Custom AI Legal Software Development",
+  titleAccent: "Legal Data & AI",
   paragraphs: [
-    "Axiomra is a custom legal software development company that turns document-heavy legal operations into governed, searchable systems. We design and build platforms for law firms, in-house legal departments, alternative legal service providers and compliance teams that need modern tooling without putting client confidentiality at risk.",
-    "Our AI legal software development services cover contract lifecycle management, matter and case tracking, document automation, eDiscovery support and predictive analytics. Every system is built around an evidence trail: who saw what, which clause the model flagged, and why, so a partner, a regulator or an opposing counsel can all be answered from the same record.",
+    "Axiomra is a Data & AI partner that turns document-heavy legal operations into governed, searchable data. We work with law firms, in-house legal departments, alternative legal service providers and compliance teams that need modern AI without putting client confidentiality at risk, working with the systems your teams already use, not replacing them.",
+    "Our work covers contract analytics, document AI, legal research NLP, eDiscovery classification models, data pipelines and predictive analytics. Every model is built around an evidence trail: who saw what, which clause the model flagged, and why, so a partner, a regulator or an opposing counsel can all be answered from the same record.",
   ],
   ctaText: "Book a Free Tech Consultation",
   image: introImg,
@@ -87,7 +87,7 @@ export const impact = {
   titleLead: "The Role Of AI In",
   titleAccent: "Modern Legal Operations",
   body:
-    "AI legal software is changing how firms and corporate legal teams handle documents, contracts and compliance. By taking the time-intensive first pass off human hands, these systems shorten turnaround, surface risk earlier and leave the lawyer with the part of the work that actually needs a lawyer.",
+    "Legal AI is changing how firms and corporate legal teams handle documents, contracts and compliance. By taking the time-intensive first pass off human hands, these models shorten turnaround, surface risk earlier and leave the lawyer with the part of the work that actually needs a lawyer.",
   stats: [
     {
       value: "79%",
@@ -109,7 +109,7 @@ export const impact = {
 
 /**
  * The challenge rail. Each entry is a barrier legal teams hit, and the
- * platform capability we build to remove it.
+ * Data & AI capability we bring to remove it.
  */
 export const challenges = {
   eyebrow: "Overcoming key barriers in the legal industry",
@@ -124,7 +124,7 @@ export const challenges = {
     {
       title: "Inefficient Case and Workflow Management",
       body:
-        "Matter progress tracked in spreadsheets means nobody can answer where a case stands without asking three people. We build matter management with stage gates, task ownership, limitation and filing deadlines, and automatic escalation when a date is at risk, so status is a dashboard rather than a round of emails.",
+        "Matter progress tracked in spreadsheets means nobody can answer where a case stands without asking three people. We connect the matter data you already hold to deadline and risk models, with task ownership, limitation and filing dates tracked and automatic alerts when a date is at risk, so status is a dashboard rather than a round of emails.",
     },
     {
       title: "Compliance and Risk Management Gaps",
@@ -144,7 +144,7 @@ export const challenges = {
     {
       title: "Disconnected Client Communication",
       body:
-        "Clients chase updates because they have no window into their own matter. We build secure client portals with matter status, document exchange, e-signature and billing visibility, which cuts the status-chasing calls and makes the fee note far less contentious.",
+        "Clients chase updates because they have no window into their own matter. We add AI-drafted matter summaries to the channels you already use, turning matter and billing data into plain-language updates a lawyer approves, which cuts the status-chasing calls and makes the fee note far less contentious.",
     },
     {
       title: "Security and Data Privacy Concerns",
@@ -160,79 +160,79 @@ export const challenges = {
 export const services = {
   eyebrow: "What solution do we offer?",
   titleLead: "Transforming Legal Operations With",
-  titleAccent: "AI-Powered Software Solutions",
+  titleAccent: "AI-Powered Data Solutions",
   body:
-    "Modern law firms and corporate legal teams are adopting AI to reduce inefficiency, strengthen compliance and take back control of daily operations. We build tailored legal solutions that automate the routine work, simplify data management and improve decision-making at every stage of legal service delivery.",
+    "Modern law firms and corporate legal teams are adopting AI to reduce inefficiency, strengthen compliance and take back control of daily operations. We build tailored AI and analytics solutions that automate the routine work, simplify data management and improve decision-making at every stage of legal service delivery.",
   items: [
     {
-      title: "Document Management & Automation Systems",
+      title: "Document AI & Automation",
       body:
-        "We build systems that help legal teams organise, store and retrieve legal papers without guesswork. Secure access, automated version control and workflow automation for drafting, reviewing and approving documents cut human error and speed up matter preparation. Templates assemble from matter data rather than from a previous client's file.",
+        "We build document AI that helps legal teams classify, extract and retrieve legal papers without guesswork. Automated classification, clause extraction and workflow automation for drafting, reviewing and approving documents cut human error and speed up matter preparation, inside the document management system you already run. Templates assemble from matter data rather than from a previous client's file.",
       image: svcDocumentsImg,
       alt: "Legal papers filed in a brown folder",
     },
     {
-      title: "Legal Practice Management Software",
+      title: "Practice & Workload Analytics",
       body:
-        "Our practice management systems centralise scheduling, matter tracking and task assignment so a team knows who owns what. Automating the administrative duties lets fee earners focus on client service instead of manual record-keeping, and gives partners transparent oversight of capacity and workload.",
+        "Our analytics draw scheduling, matter and task data from your practice management system so a team knows who owns what. Automating the administrative reporting lets fee earners focus on client service instead of manual record-keeping, and gives partners transparent oversight of capacity and workload.",
       image: svcPracticeImg,
       alt: "Colleagues working together in a law office",
     },
     {
-      title: "Legal Case Management Software",
+      title: "Case Data & Chronology AI",
       body:
-        "We develop case management platforms that track litigation from intake to closure. Case files, chronologies, evidence repositories and court deadlines consolidate into one secure hub, so counsel gets faster access to the record and nothing turns on a diary entry somebody forgot to make.",
+        "We build AI that works across litigation data from intake to closure. Case files, chronologies, evidence and court deadlines are extracted and linked from the systems you already use, so counsel gets faster access to the record and nothing turns on a diary entry somebody forgot to make.",
       image: svcCaseImg,
       alt: "A casebook and binder open on a desk",
     },
     {
-      title: "Custom Legal CRM Solutions",
+      title: "Intake & Client Data Intelligence",
       body:
-        "We create CRMs built for legal intake: lead capture, conflict pre-screening, engagement letters and matter history in one place. Automated communication and data-driven insight mean a prospective client is answered in hours, not days, and the intake record becomes the start of the matter file rather than a separate silo.",
+        "We add AI to legal intake: lead triage, conflict pre-screening, engagement-letter drafting and matter history drawn from your existing CRM. Automated routing and data-driven insight mean a prospective client is answered in hours, not days, and the intake record becomes the start of the matter file rather than a separate silo.",
       image: svcCrmImg,
       alt: "A lawyer talking a client through their options",
     },
     {
-      title: "Billing & Time Capture Systems",
+      title: "Billing & Time Capture Analytics",
       body:
-        "Our billing software automates invoice generation, passive time capture and payment management. It eliminates manual accounting errors, enforces client billing guidelines and e-billing formats such as LEDES before the invoice goes out, and shortens the cycle from work done to cash collected.",
+        "Our models suggest time entries from activity data, check narratives against client billing guidelines and e-billing formats such as LEDES before the invoice goes out, and flag anomalies in your existing billing system, and shortens the cycle from work done to cash collected.",
       image: svcBillingImg,
       alt: "An accountant working through legal invoices with a calculator",
     },
     {
-      title: "Legal Hold & eDiscovery Support",
+      title: "Legal Hold & eDiscovery Analytics",
       body:
-        "We design solutions that simplify data preservation for litigation holds. Relevant data is identified, secured and monitored throughout proceedings, with defensible custodian notifications and audit trails. Predictive coding and clustering cut the review population before it reaches an expensive review team.",
+        "We design data pipelines that simplify data preservation for litigation holds. Relevant data is identified and monitored throughout proceedings, with custodian notifications and audit trails captured in the tools you already use. Predictive coding and clustering models cut the review population before it reaches an expensive review team.",
       image: svcEdiscoveryImg,
       alt: "Network switch ports in a data centre rack",
     },
     {
-      title: "Contract Lifecycle Management",
+      title: "Contract Analytics & AI Review",
       body:
-        "From request and drafting to negotiation, signature and renewal, we build CLM that holds the whole lifecycle. Clause libraries, playbook-based review, obligation tracking and renewal alerts turn a contract archive into a live register of what your organisation has actually committed to.",
+        "From request and drafting to negotiation, signature and renewal, our contract AI works across the whole lifecycle inside the contract tools you already use. Clause extraction, playbook-based review, obligation tracking and renewal alerts turn a contract archive into a live register of what your organisation has actually committed to.",
       image: svcContractsImg,
       alt: "A person signing a contract with a fountain pen",
     },
     {
-      title: "Legal Accounting Software",
+      title: "Legal Finance Data & Reporting",
       body:
-        "We develop accounting platforms built for legal practice, including client and office account separation, trust accounting rules, disbursement tracking and financial reporting. These systems automate bookkeeping while keeping the practice compliant with the accounts rules it is audited against.",
+        "We build data pipelines and reporting over legal finance data, including client and office account separation checks, trust account reconciliation, disbursement tracking and financial reporting. Automated checks surface exceptions against the accounts rules you are audited against, for your finance team to review.",
       image: svcAccountingImg,
       alt: "Two colleagues reviewing figures on an invoice",
     },
     {
-      title: "Legal Compliance Software",
+      title: "Regulatory Monitoring Analytics",
       body:
-        "Our compliance solutions automate monitoring of regulatory updates and legal obligations for enterprises and firms. Built-in risk assessment, attestation workflows and reporting dashboards keep teams ahead of compliance deadlines and reduce the risk of penalties and governance findings.",
+        "Our NLP models monitor regulatory updates and map them to legal obligations for enterprises and firms. Risk scoring, attestation tracking and reporting dashboards help teams stay ahead of compliance deadlines and reduce the risk of penalties and governance findings.",
       image: svcComplianceImg,
       alt: "A compliance officer working through a checklist on a clipboard",
     },
     {
-      title: "Legal Analytics Software",
+      title: "Legal Analytics & Predictive Insight",
       body:
         "We design AI-powered analytics that turn matter, billing and outcome data into insight partners can act on. Predictive analytics assist with resource planning, matter pricing and settlement posture, so strategy is argued from the firm's own record rather than from instinct.",
       image: svcAnalyticsImg,
-      alt: "A analyst reviewing performance charts on a tablet",
+      alt: "An analyst reviewing performance charts on a tablet",
     },
   ],
 };
@@ -241,7 +241,7 @@ export const midCta = {
   eyebrow: "Ready to level up?",
   title: "Bring Us The Legal Workflow You Want Fixed",
   body:
-    "We help law firms and legal departments modernise their operations through custom-built, AI-powered software designed for accuracy, compliance and agility. Our team turns complex workflows into efficient, data-driven processes that drive measurable results.",
+    "We help law firms and legal departments modernise their operations with AI and analytics designed for accuracy, compliance and agility, working with the systems your teams already use. Our team turns complex workflows into efficient, data-driven processes that drive measurable results.",
   ctaText: "Get in Touch",
   background: midCtaBgImg,
 };
@@ -256,7 +256,7 @@ export const doctrine = {
   titleAccent: "Never The Judgement.",
   seal: { value: "1st pass", caption: "Machine read, human signed" },
   lead:
-    "A legal system earns its place by removing the first pass, not the lawyer. The model reads the bundle, marks the clause against your playbook and proposes the fallback. What it never does is decide.",
+    "Legal AI earns its place by removing the first pass, not the lawyer. The model reads the bundle, marks the clause against your playbook and proposes the fallback. What it never does is decide.",
   gavel: { value: "Cited", caption: "Every answer traced to source" },
   aside:
     "So we build for the record, not the demo. Every output carries the paragraph it came from, the confidence it holds and the reviewer who signed it off. That trail is what makes the automation defensible, and defensibility is what makes it usable on a live matter.",
@@ -275,43 +275,43 @@ export const doctrine = {
  */
 export const solutions = {
   eyebrow: "What types of legal solutions are we experts in?",
-  titleLead: "Legal Software Development Services",
+  titleLead: "Legal Data & AI Services",
   titleAccent: "Tailored For Modern Law Firms",
   body:
-    "We help law firms, legal departments and legal-tech enterprises build AI-driven systems that improve efficiency, ensure compliance and scale with confidence. Our legal software development services are designed to overcome integration complexity, security constraints and the barriers to AI adoption across modern legal operations.",
+    "We help law firms, legal departments and legal-tech enterprises put AI to work on their own data to improve efficiency, support compliance and scale with confidence. Our Data & AI services are designed to overcome integration complexity, security constraints and the barriers to AI adoption across modern legal operations.",
   items: [
     {
-      title: "Custom Legal Software Development",
+      title: "Custom Legal AI Models",
       body:
-        "We design and build enterprise legal software that simplifies workflows and strengthens data management. Our custom solutions help firms automate repetitive tasks, reduce document processing time and improve client service quality, with the privilege and retention model designed in from the first sprint rather than retrofitted before launch.",
+        "We design and build AI models and data pipelines that simplify workflows and strengthen data management. Our custom models help firms automate repetitive tasks, reduce document processing time and improve client service quality, with the privilege and retention model designed in from the first sprint rather than retrofitted before launch.",
       image: solDevelopmentImg,
-      alt: "Code running across a developer's screen",
+      alt: "Code running across a screen",
     },
     {
-      title: "Legal Software Consulting",
+      title: "Legal AI Consulting",
       body:
         "We provide consulting to help firms navigate digital transformation and select the right legal tech. Our consultants analyse current workflows, identify automation opportunities and recommend an AI integration strategy that fits the infrastructure you already run. We will also tell you plainly which processes are not worth automating yet.",
       image: solConsultingImg,
       alt: "Colleagues shaking hands across a table in a law office",
     },
     {
-      title: "Legal App Development",
+      title: "Legal AI Agents",
       body:
-        "We build secure, intuitive mobile and web applications that bring agility to legal operations. These apps simplify client communication, matter tracking and document sharing while keeping legal data management inside the controls your firm is accountable for, so counsel has access to the file without carrying it on a laptop.",
+        "We build secure AI agents that work over the systems your firm already uses. They answer matter questions, draft client updates and find documents on request, while keeping legal data management inside the controls your firm is accountable for, so counsel has access to the file without carrying it on a laptop.",
       image: solAppsImg,
-      alt: "A tablet showing a secure legal application",
+      alt: "A tablet showing legal matter information",
     },
     {
-      title: "Legal Software Integration",
+      title: "Legal Data Integration",
       body:
-        "Our team specialises in integrating AI with legacy legal systems to unify data and eliminate silos. We connect CRMs, document management tools such as iManage and NetDocuments, billing systems and analytics platforms into one coherent ecosystem, which minimises manual re-entry and improves firm-wide visibility.",
+        "Our team specialises in integrating AI with legacy legal systems to unify data and eliminate silos. We connect CRMs, document management tools such as iManage and NetDocuments, billing systems and analytics tools into one coherent data layer, which minimises manual re-entry and improves firm-wide visibility.",
       image: solIntegrationImg,
       alt: "A futuristic interface projected over a laptop keyboard",
     },
     {
-      title: "Legal Software Modernisation",
+      title: "Legal Data Modernisation",
       body:
-        "We modernise outdated systems into scalable, AI-ready legal platforms. Improving performance, security and automation capability lets firms overcome legacy barriers without a disruptive rip-and-replace. The migration runs in stages, with the old system authoritative until the new one has proved itself on real matters.",
+        "We modernise legacy legal data into scalable, AI-ready pipelines. Improving data quality, security and automation capability lets firms overcome legacy barriers without a disruptive rip-and-replace. The migration runs in stages, with the old system authoritative until the new data layer has proved itself on real matters.",
       image: solModerniseImg,
       alt: "A modern workstation beside data-centre server racks",
     },
@@ -319,7 +319,7 @@ export const solutions = {
 };
 
 export const stakeholders = {
-  eyebrow: "Who we build for in law",
+  eyebrow: "Who we work with in law",
   titleLead: "Every Legal",
   titleAccent: "Stakeholder We Partner With",
   items: [
@@ -356,39 +356,39 @@ export const subIndustries = {
   titleLead: "AI-Powered Legal Solutions",
   titleAccent: "For Every Legal Sector",
   body:
-    "Every part of the legal market carries its own regulator, its own file structure and its own definition of an acceptable risk. Hover any card to see what we build for it.",
+    "Every part of the legal market carries its own regulator, its own file structure and its own definition of an acceptable risk. Hover any card to see how we help.",
   items: [
     {
       label: "Law Firms & Chambers",
-      body: "Practice, matter and document systems for firms that bill by the hour and cannot afford a tool the fee earners refuse to open.",
-      points: ["Matter management", "Document automation", "Time and billing capture"],
+      body: "Matter, document and billing data put to work for firms that bill by the hour and cannot afford a tool the fee earners refuse to open.",
+      points: ["Matter analytics", "Document automation", "Time and billing capture"],
       image: subFirmsImg,
       alt: "Colleagues at a table with a gavel in a law office",
     },
     {
       label: "Corporate Legal Departments",
       body: "Contract intake, self-service playbooks and obligation registers, so the business gets an answer without a queue at the legal inbox.",
-      points: ["Contract lifecycle management", "Legal service desk", "Obligation tracking"],
+      points: ["Contract analytics", "Legal service desk", "Obligation tracking"],
       image: subCorporateImg,
       alt: "In-house counsel working in a corporate office",
     },
     {
       label: "Government & Public Sector",
-      body: "Case and records systems built to public procurement, accessibility and records-retention standards, with full disclosure trails.",
+      body: "Case and records data classified and searchable against records-retention and disclosure duties, with full audit trails.",
       points: ["Statutory case handling", "Records retention", "FOI and disclosure workflows"],
       image: subGovernmentImg,
       alt: "The facade of a historic courthouse building",
     },
     {
       label: "Courts & Judiciary",
-      body: "Docket scheduling, e-filing intake and hearing management, designed around listing realities rather than a generic workflow engine.",
-      points: ["E-filing intake", "Docket and listing", "Hearing bundles"],
+      body: "Docket data, e-filing classification and hearing bundle preparation, modelled on listing realities rather than a generic workflow engine.",
+      points: ["E-filing classification", "Docket analytics", "Hearing bundles"],
       image: subCourtsImg,
       alt: "A statue of Lady Justice at a courthouse entrance",
     },
     {
       label: "Legal Service Providers",
-      body: "Throughput tooling for ALSPs and LPOs: review orchestration, quality sampling and per-client SLA reporting that survives an audit.",
+      body: "Throughput analytics for ALSPs and LPOs: review orchestration, quality sampling and per-client SLA reporting that survives an audit.",
       points: ["Review orchestration", "Quality sampling", "SLA reporting"],
       image: subProvidersImg,
       alt: "Legal service partners meeting across a desk",
@@ -416,15 +416,15 @@ export const subIndustries = {
     },
     {
       label: "Immigration & Family Law",
-      body: "High-volume intake with document checklists, status tracking and multilingual client portals, built for caseloads measured in thousands.",
-      points: ["Guided intake", "Document checklists", "Multilingual client portals"],
+      body: "High-volume intake with document classification, status tracking and multilingual client updates, built for caseloads measured in thousands.",
+      points: ["Guided intake", "Document checklists", "Multilingual client updates"],
       image: subImmigrationImg,
       alt: "A couple consulting a lawyer across a desk",
     },
     {
       label: "LegalTech Startups",
-      body: "Product engineering on regulated ground: multi-tenant architecture, model evaluation harnesses and the security review your buyers will run.",
-      points: ["Multi-tenant architecture", "Model evaluation harness", "SOC 2 readiness"],
+      body: "AI engineering on regulated ground: retrieval pipelines, model evaluation harnesses and the security review your buyers will run.",
+      points: ["Retrieval pipelines", "Model evaluation harness", "Security review readiness"],
       image: subLegaltechImg,
       alt: "A laptop running a legal technology product",
     },
@@ -464,7 +464,7 @@ export const benefits = {
     {
       title: "Scalable Digital Growth",
       body:
-        "Modular architecture lets a firm expand easily, adding practice areas, offices or automation capability without disrupting what already runs.",
+        "Modular data pipelines and models let a firm expand easily, adding practice areas, offices or AI use cases without disrupting what already runs.",
     },
   ],
 };
@@ -472,7 +472,7 @@ export const benefits = {
 export const build = {
   title: "Rebuild Your Legal Operations",
   body:
-    "Discover how our custom legal software and automation solutions can modernise your workflows, eliminate bottlenecks and improve decision-making accuracy, so your legal team can focus on strategy rather than repetitive process.",
+    "Discover how our legal Data & AI and automation solutions can modernise your workflows, eliminate bottlenecks and improve decision-making accuracy, so your legal team can focus on strategy rather than repetitive process.",
   ctaText: "Book a Consultation",
   texture: textureBgImg,
   image: buildVisualImg,
@@ -482,9 +482,9 @@ export const build = {
 export const techStrip = {
   eyebrow: "Technologies we work with",
   titleLead: "Expertise In Advanced",
-  titleAccent: "Development Technologies",
+  titleAccent: "Data & AI Technologies",
   body:
-    "The same production-grade toolchain sits under every legal platform we ship. Pick a layer to see what it is made of.",
+    "The same production-grade toolchain sits under every legal AI solution we deliver. Pick a layer to see what it is made of.",
   ctaText: "View all tech stack",
   tabs: [
     {
@@ -509,7 +509,7 @@ export const techStrip = {
       label: "Frontend",
       items: [
         "React", "Next.js", "TypeScript", "Tailwind CSS", "Three.js", "ProseMirror", "Slate",
-        "PDF.js", "TanStack Table", "React Native", "Flutter", "Radix UI",
+        "PDF.js", "TanStack Table", "Radix UI",
       ],
     },
     {
@@ -549,15 +549,15 @@ export const businessTypes = {
   titleLead: "Explore The Range Of",
   titleAccent: "Legal Businesses We Support",
   body:
-    "We build AI-powered legal software that satisfies a partner, a client's security questionnaire and an auditor at the same time. Whether you are a boutique practice drowning in document work or a legal department modernising a decade-old case system, we turn it into a platform your team will actually open.",
+    "We build legal AI that stands up to a partner, a client's security questionnaire and an auditor at the same time. Whether you are a boutique practice drowning in document work or a legal department modernising a decade-old case system, we bring AI to the systems your team already opens.",
   rows: [
     {
       label: "Start-ups",
-      body: "We help legal-tech founders get to a defensible product: multi-tenant architecture, an evaluation harness for the model, and the security posture enterprise legal buyers will interrogate before they will pilot anything.",
+      body: "We help legal-tech founders get their AI to a defensible standard: retrieval pipelines, an evaluation harness for the model, and the security posture enterprise legal buyers will interrogate before they will pilot anything.",
     },
     {
       label: "Scale-ups",
-      body: "Growth exposes every manual control. We automate intake, conflicts and review orchestration, moving a practice from spreadsheet operations to a system that holds up at ten times the caseload.",
+      body: "Growth exposes every manual control. We automate intake, conflicts and review orchestration, moving a practice from spreadsheet operations to data-driven operations that hold up at ten times the caseload.",
     },
     {
       label: "Small and medium-sized businesses",
@@ -611,7 +611,7 @@ export const showcase = {
 export const partner = {
   eyebrow: "Why choose Axiomra?",
   titleLead: "Why Partner With Axiomra For",
-  titleAccent: "Intelligent Legal Software Development",
+  titleAccent: "Legal Data & AI",
   cards: [
     {
       icon: "ShieldCheck",
@@ -669,7 +669,7 @@ export const blogs = {
 
 export const faqs = [
   {
-    q: "How can AI legal software development services improve a law firm's operations?",
+    q: "How can legal Data & AI services improve a law firm's operations?",
     a: "By taking the first pass off human hands: document review, clause extraction, intake triage, time capture and status reporting. The gain is not only speed. When review runs continuously rather than in a pre-deadline scramble, the problem clause surfaces while there is still time to negotiate it.",
   },
   {
@@ -681,8 +681,8 @@ export const faqs = [
     a: "No, and any vendor promising that is selling you a compliance problem. What changes is the mix: the routine first pass is automated, and the fee earner's time moves to judgement, negotiation and client work. Firms that have adopted this well have generally billed more strategic hours, not fewer hours overall.",
   },
   {
-    q: "How long does it take to build custom legal software?",
-    a: "A scoped pilot on a single workflow, contract review or intake, is typically eight to twelve weeks to something real on real matters. A full practice or matter management platform is a phased programme measured in quarters, with the legacy system authoritative until each phase has proved itself.",
+    q: "How long does a legal AI project take?",
+    a: "A scoped pilot on a single workflow, contract review or intake, is typically eight to twelve weeks to something real on real matters. A firm-wide AI programme across several practice areas is phased and measured in quarters, with existing systems authoritative until each phase has proved itself.",
   },
   {
     q: "Can you integrate with iManage, NetDocuments or our existing case system?",
@@ -697,23 +697,23 @@ export const faqs = [
     a: "Clause extraction against your playbook, deviation scoring on the positions you care about, fallback language proposed for routine departures, and an escalation flag on the outliers. On high-volume standard agreements this compresses first-pass review substantially. On bespoke, heavily negotiated documents the gain is smaller and we will say so.",
   },
   {
-    q: "Can small firms afford custom legal software?",
-    a: "Often, yes, because the scope is smaller. A boutique practice usually has one or two workflows carrying most of the unbillable load. Automating those specifically costs a fraction of a firm-wide platform and pays back faster. We would rather scope that honestly than sell you a suite.",
+    q: "Can small firms afford legal AI?",
+    a: "Often, yes, because the scope is smaller. A boutique practice usually has one or two workflows carrying most of the unbillable load. Automating those specifically costs a fraction of a firm-wide programme and pays back faster. We would rather scope that honestly than sell you a suite.",
   },
   {
-    q: "How do you ensure compliance with legal accounting and retention rules?",
-    a: "Client and office account separation, trust accounting controls, disbursement tracking and reporting are built to the rules your jurisdiction audits against. Retention and disposal run on a policy clock per matter type, with legal hold overriding disposal, and every action written to an immutable audit log.",
+    q: "How do you handle legal accounting and retention rules?",
+    a: "Checks on client and office account separation, trust accounting, disbursements and reporting are modelled on the rules your jurisdiction audits against and confirmed with your finance and compliance teams. Retention and disposal run on a policy clock per matter type, with legal hold overriding disposal, and every action written to an immutable audit log.",
   },
   {
-    q: "How much does it cost to develop custom legal software?",
+    q: "How much does a legal AI project cost?",
     a: "It depends on the integration surface, the state of your document estate and how much of the compliance boundary has to be built rather than configured. A scoped pilot is the fastest route to a real number. Book a free session and we will size it honestly, including what we would not build.",
   },
 ];
 
 export const finalCta = {
-  title: "Get Your Free AI Legal Software Consultation",
+  title: "Get Your Free Legal AI Consultation",
   subtitle:
-    "Talk to our experts and discover how custom AI legal software development services can cut your document turnaround, strengthen compliance and give your fee earners their week back.",
+    "Talk to our experts and discover how legal Data & AI services can cut your document turnaround, support compliance and give your fee earners their week back.",
   buttonText: "Get your project done!",
   background: finalCtaBgImg,
 };

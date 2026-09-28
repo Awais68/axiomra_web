@@ -170,10 +170,10 @@ export const services = {
       id: "custom-vision-software",
       image: serviceCustomSoftware,
       imageAlt:
-        "Developer writing production code across two monitors in a darkened studio",
+        "Engineer writing production code across two monitors in a darkened studio",
       title: "Custom Computer Vision Development",
       body:
-        "We build the full solution: the data pipeline, the model, the inference service, and the interface your team works in. Code is versioned, tested, and containerised, and the repository is handed over with documentation for the people who will maintain it.",
+        "We build the full solution: the data pipeline, the model, the inference service, and the dashboard your team reviews results in. Code is versioned, tested, and containerised, and the repository is handed over with documentation for the people who will maintain it.",
       deliverables: ["Training pipelines", "Inference APIs", "Operator dashboards", "Edge and cloud builds"],
     },
     {
@@ -238,7 +238,7 @@ export const expertise = {
         "Identify, locate, and track objects in images and video streams, with a confidence score attached to every prediction. We build detection systems for quality control, security monitoring, inventory management, and logistics, tuned to the cameras and lighting already installed on your sites. Models are trained on your own footage rather than generic public datasets, so they learn the parts, packaging, and edge cases your operation deals with. Inference runs at the edge or in the cloud, chosen against the latency and bandwidth your environment allows.",
       bullets: [
         "Real-time object detection and classification",
-        "Bounding box annotation and labeling",
+        "Bounding box annotation and labelling",
         "Quality inspection and defect detection",
         "Security threat analysis",
         "Livestock and asset counting",
@@ -537,7 +537,7 @@ export const stack = {
       items: ["YOLOv8", "Detectron2", "ResNet-50", "EfficientNet", "InceptionV3", "Segment Anything", "U-Net", "Vision Transformers"],
     },
     {
-      name: "Serving And Optimization",
+      name: "Serving And Optimisation",
       why: "This layer determines running cost. Quantisation and graph optimisation reduce inference cost, and we measure the effect on your workload rather than assume it.",
       items: ["ONNX Runtime", "NVIDIA TensorRT", "Triton Inference Server", "TorchServe", "OpenVINO", "CoreML", "DeepStream"],
     },
@@ -650,8 +650,8 @@ export const whyUs = {
   stats: [
     {
       value: "300+",
-      label: "Business apps developed",
-      detail: "Shipped across vision, AI, web, and mobile, from first prototype to production rollout.",
+      label: "Projects delivered",
+      detail: "From first prototype to production rollout.",
     },
     {
       value: "20+",
@@ -711,7 +711,7 @@ export const faqs = [
     a: "Computer vision services cover the work needed to make software interpret images and video: identifying a suitable use case, collecting and labelling visual data, training and optimising models, integrating them with your existing systems, and running them in production. In practice it means turning camera feeds, scans, and photos into information your business can act on.",
   },
   {
-    q: "How much does computer vision software development cost?",
+    q: "How much does a computer vision solution cost?",
     a: "Cost depends on the number of cameras, the accuracy target, whether the system runs at the edge or in the cloud, and how much labelled data already exists. We provide a costed range after the data assessment rather than a figure before it, so the estimate reflects your data rather than an average.",
   },
   {

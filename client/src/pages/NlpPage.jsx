@@ -19,7 +19,7 @@ import FAQ from "../sections/FAQ";
 import { faqs } from "../data/nlpData";
 import Seo from "../seo/Seo";
 import { serviceSchema } from "../seo/schema";
-import { SERVICES_BASE_PATH } from "../routes.constants";
+import { SERVICES_BASE_PATH, BOOK_CALL_PATH } from "../routes.constants";
 
 const META_DESCRIPTION =
   "Axiomra's natural language processing services: NLP consulting, custom model " +
@@ -59,6 +59,7 @@ export default function NlpPage() {
         title="Your Language Is Not English Only?"
         subtitle="We work across a wide range of languages and will tell you during scoping which of yours are well covered by pretrained models and which need labelled data first. Code-switched text is tested explicitly, because that is how many customers write."
         buttonText="Discuss Your Use Case"
+        ctaTo={BOOK_CALL_PATH}
       />
 
       <NlpOutcomes />
