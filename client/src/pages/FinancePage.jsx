@@ -31,9 +31,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Custom AI Financial Software Development Services | Axiomra";
+const TITLE = "AI & Data Solutions for Finance, Risk & Operations | Axiomra";
 const DESCRIPTION =
-  "AI financial software development: fraud detection, risk modelling, payments, lending, wealth and reconciliation platforms built for compliance and scale.";
+  "Axiomra helps banks, fintechs and finance teams with analytics, intelligent automation, risk modelling and document intelligence, working with existing systems.";
 
 export default function FinancePage() {
   // Lazy photos land after the triggers were measured; once the page has

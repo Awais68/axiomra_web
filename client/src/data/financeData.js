@@ -54,23 +54,23 @@ export const FINANCE_SLUG = "finance";
 
 export const hero = {
   eyebrow: "AI for the finance industry",
-  titleLead: "Custom",
-  titleAccent: "AI Financial Software Development",
-  titleTail: "Services",
+  titleLead: "AI & Data Solutions for",
+  titleAccent: "Finance, Risk and Operations",
+  titleTail: "",
   body:
-    "We build secure, scalable financial systems that simplify operations and lift performance. Our AI financial software development services help banks, fintechs and financial enterprises overcome inefficiencies, compliance bottlenecks and manual risk processes through intelligent automation and predictive analytics, reducing operational risk, improving accuracy and building lasting trust across every financial transaction.",
-  ctaText: "Request a free consultation",
+    "Axiomra helps banks, fintechs and financial teams turn complex data into clearer decisions, more efficient workflows and stronger operational visibility. Our services can support financial analytics, intelligent automation, risk modelling, document intelligence and governed AI adoption, working with your existing systems and controls rather than replacing them.",
+  ctaText: "Explore Your Finance Data & AI Use Case",
   image: heroImg,
   alt: "A humanoid robot lit in blue against a digital network",
   reviews: { platform: "Clutch", rating: 5, count: 12 },
 };
 
 export const intro = {
-  titleLead: "What Financial Firms Get From Custom",
-  titleAccent: "AI Financial Software Development Services",
+  titleLead: "What Financial Firms Get From",
+  titleAccent: "Data & AI Services",
   paragraphs: [
-    "Axiomra is a custom financial software development company that helps banks, fintechs and financial enterprises transform their operations through intelligent automation and secure AI systems. As a trusted technology partner, we design and build scalable solutions that optimise decision-making, tighten risk management and ensure regulatory compliance.",
-    "Our AI financial software development services use advanced analytics, automation and predictive modelling to enhance accuracy, prevent fraud and optimise overall performance. Each solution is crafted from the ground up with a consultative approach, so it aligns with your commercial goals, your operational realities and the market conditions you actually trade in.",
+    "Axiomra is a Data & AI partner for banks, fintechs and financial teams. We help you find where analytics, intelligent automation and risk models can improve decisions, then deliver them inside the systems and controls you already run.",
+    "We use advanced analytics, automation, predictive modelling and document intelligence to improve accuracy, reduce fraud and make risk easier to see. Each engagement starts with a consultative assessment, so the work aligns with your commercial goals, your data readiness and the market conditions you actually trade in.",
   ],
   ctaText: "Book a Free Tech Consultation",
   image: introImg,
@@ -86,27 +86,27 @@ export const intro = {
  */
 export const signal = {
   eyebrow: "Signal over noise",
-  titleLead: "A Financial Platform Is Only As Good As The",
-  titleAccent: "Signal It Can Act On",
+  titleLead: "A Financial Decision Is Only As Good As The",
+  titleAccent: "Signal Behind It",
   coin: { value: "<40ms", caption: "Decision budget per transaction" },
   lead:
-    "Every payment, claim and trade arrives as a question the platform has milliseconds to answer. Score it, clear it, or hold it for a human. Get that budget wrong and you are choosing between a fraud loss and an abandoned checkout.",
+    "Every payment, claim and trade arrives as a question your systems have milliseconds to answer. Score it, clear it, or hold it for a human. Get that budget wrong and you are choosing between a fraud loss and an abandoned checkout.",
   wedge: { value: "24/7", caption: "Continuous controls" },
   aside:
-    "So we build for the answer, not the report. Models score in the request path, controls run continuously rather than at quarter end, and every decision leaves an auditable trail a regulator can follow without a data project.",
+    "So we focus on the answer, not the report. Models score within your existing transaction flow, controls run continuously rather than at quarter end, and every model decision leaves an auditable trail your risk team can follow.",
   rails: [
     { value: "Ingest", caption: "Streamed, not batched" },
     { value: "Decide", caption: "Scored in the request path" },
   ],
   manifesto:
-    "Between the data coming in and the decision going out sits the part nobody sees and everybody depends on: the ledger that balances, the model that explains itself, and the control that holds when volume triples overnight.",
+    "Between the data coming in and the decision going out sits the part nobody sees and everybody depends on: the data that reconciles, the model that explains itself, and the control that holds when volume triples overnight.",
 };
 
 export const impact = {
   titleLead: "The Role Of AI In",
   titleAccent: "Modern Financial Operations",
   body:
-    "AI financial software development services are redefining how banks, fintechs and financial institutions manage transactions, assess risk and ensure compliance. By automating high-value processes and enabling real-time data intelligence, these solutions drive smarter decisions, faster operations and stronger regulatory alignment across global financial systems.",
+    "Data & AI are changing how banks, fintechs and financial institutions manage transactions, assess risk and report to regulators. By automating high-value processes and bringing real-time data into everyday decisions, finance teams move faster with clearer visibility of risk.",
   stats: [
     {
       value: "85%",
@@ -128,7 +128,7 @@ export const impact = {
 
 /**
  * The challenge rail. Each entry is a barrier finance teams hit, and the
- * platform capability we build to remove it.
+ * Data & AI approach we use to remove it.
  */
 export const challenges = {
   eyebrow: "Overcoming key barriers in financial operations",
@@ -138,7 +138,7 @@ export const challenges = {
     {
       title: "Compliance Complexity and Regulatory Pressure",
       body:
-        "Constantly evolving regulation makes it difficult for financial teams to maintain compliance across jurisdictions. Manual checks and reporting often lead to missed updates or audit delays. We build AI-driven monitoring and automated reporting frameworks aligned to the GDPR, SOC 2, ISO 27001 and PCI DSS requirements your team confirms, reducing manual oversight and keeping the regulatory position current rather than reconstructed at quarter end.",
+        "Constantly evolving regulation makes it difficult for financial teams to maintain compliance across jurisdictions. Manual checks and reporting often lead to missed updates or audit delays. We build AI-assisted monitoring and automated reporting data into your existing workflow, reducing manual checks so your compliance team works from current evidence rather than reconstructing it at quarter end.",
     },
     {
       title: "Fraud and Transaction Risk",
@@ -148,14 +148,14 @@ export const challenges = {
     {
       title: "Inefficient Customer Onboarding",
       body:
-        "KYC and AML checks spread across disconnected vendors turn a five-minute sign-up into a five-day wait, and most of the drop-off happens before the first deposit. We build orchestrated onboarding that runs identity, sanctions and document verification in parallel, escalating only the cases that genuinely need a human.",
+        "KYC and AML checks spread across disconnected vendors turn a five-minute sign-up into a five-day wait, and most of the drop-off happens before the first deposit. We apply document intelligence and automated checks to identity, sanctions and document verification, running them in parallel and escalating only the cases that genuinely need a human.",
       // Optional: links the panel to a long-form case study on the same topic.
       caseStudy: caseStudyPath("fintech-kyc-document-processing-onboarding-automation"),
     },
     {
       title: "Legacy System Limitations",
       body:
-        "Core systems that predate the API era cannot support real-time products, and a full replacement is rarely fundable. We wrap the core in an event-driven integration layer so new services ship at product speed while the ledger of record keeps running untouched underneath.",
+        "Core systems that predate the API era lock data away from real-time analysis, and a full replacement is rarely fundable. We connect data from the core into a governed analytics layer, so models and reporting can use it in near real time while the system of record keeps running untouched.",
     },
     {
       title: "Data Quality and Fragmentation",
@@ -171,43 +171,43 @@ export const challenges = {
 };
 
 /**
- * Ten product categories. Each is a card with a photo and a description.
+ * Ten Data & AI solution areas. Each is a card with a photo and a description.
  */
 export const services = {
-  eyebrow: "What finance solutions do we offer?",
-  titleLead: "AI-Based Custom Financial Software Development Solutions",
+  eyebrow: "What Data & AI solutions do we offer?",
+  titleLead: "Data & AI Solutions",
   titleAccent: "For Modern Finance Challenges",
   body:
-    "Financial organisations now need intelligent, secure and scalable systems that do more than just manage transactions. Our custom software development for finance focuses on solving the industry's toughest challenges, from data silos to compliance, with precision-built automation and AI.",
+    "Financial organisations need more from their data than transaction records. We apply analytics, automation, risk models and document intelligence to the industry's toughest challenges, from data silos to manual reporting, working with the systems your teams already use.",
   items: [
     {
-      title: "Accounting & Financial Management Software",
+      title: "Accounting & Financial Close Automation",
       body:
-        "Manual bookkeeping, data duplication and reconciliation delays slow down financial operations. Our financial software development solutions automate data entry, reporting and expense tracking using AI-powered algorithms that ensure precision and compliance. The result is faster closing cycles, fewer human errors and more accurate financial forecasting.",
+        "Manual bookkeeping, data duplication and reconciliation delays slow down financial operations. We automate data entry, reporting and expense categorisation with AI models that work alongside your accounting system. The result is faster closing cycles, fewer human errors and more accurate financial forecasting.",
       image: svcAccountingImg,
       alt: "An accountant working through financial statements with a calculator",
     },
     {
-      title: "Wealth Management Platform Development",
+      title: "Wealth Management Analytics",
       body:
-        "Managing diverse portfolios requires continuous monitoring and smart analytics. Our AI-based financial software development solutions for wealth management help advisors deliver personalised recommendations, automate client reporting and strengthen long-term relationships through data intelligence.",
+        "Managing diverse portfolios requires continuous monitoring and smart analytics. Our AI and analytics for wealth management help advisors deliver personalised recommendations, automate client reporting and strengthen long-term relationships through data intelligence.",
       image: svcWealthImg,
       alt: "Hands stacking gold coins into rising columns",
       // Optional: links the card to a long-form case study on the same topic.
       caseStudy: caseStudyPath("fintech-autonomous-financial-advisor-ai-agent"),
     },
     {
-      title: "Risk Management Software Development",
+      title: "Risk Modelling & Monitoring",
       body:
-        "Traditional risk frameworks struggle to keep pace with complex financial data. We build AI-based risk management systems that monitor exposures in real time, flag anomalies and predict potential threats. This proactive approach strengthens fraud prevention and helps financial institutions maintain operational integrity.",
+        "Traditional risk frameworks struggle to keep pace with complex financial data. We build AI risk models that monitor exposures in real time, flag anomalies and predict potential threats. This proactive approach strengthens fraud prevention and helps financial institutions maintain operational integrity.",
       image: svcRiskImg,
       alt: "Wooden blocks spelling the word risk stacked on a desk",
       caseStudy: caseStudyPath("fintech-ai-fraud-detection-anomalous-transactions"),
     },
     {
-      title: "Tax Management Software Development",
+      title: "Tax Data & Document Intelligence",
       body:
-        "Tax computation errors and delayed submissions lead to costly penalties. We develop AI-driven tax management platforms that automate calculations, detect inconsistencies and align with evolving tax regulation. This means accuracy, faster processing and reduced compliance risk.",
+        "Tax computation errors and delayed submissions lead to costly penalties. We apply document intelligence and automated checks that extract tax data, detect inconsistencies and flag changes in tax rules for review. This means better accuracy, faster processing and fewer surprises at filing time.",
       image: svcTaxImg,
       alt: "A hand completing a tax return form beside a calculator",
       caseStudy: caseStudyPath("fintech-regulatory-document-analysis-compliance-nlp"),
@@ -215,42 +215,42 @@ export const services = {
     {
       title: "Process Automation for Financial Workflows",
       body:
-        "Manual workflows consume valuable time and increase the risk of human oversight. Through AI-based automation, we optimise processes like reconciliation, loan approvals and compliance checks. Our systems improve speed, scalability and operational resilience across financial functions.",
+        "Manual workflows consume valuable time and increase the risk of human oversight. Through AI-based automation, we optimise processes like reconciliation, loan approvals and compliance checks. The result is better speed, scalability and operational resilience across financial functions.",
       image: svcAutomationImg,
       alt: "A trading desk of monitors showing live market charts",
     },
     {
-      title: "Payment Processing System Development",
+      title: "Payment Fraud & Routing Analytics",
       body:
-        "Inconsistent payment systems often cause transaction delays and customer dissatisfaction. We create custom payment processing platforms with secure gateways and AI-based fraud prevention tools that ensure faster, safer and more reliable payment experiences.",
+        "Inconsistent payment flows often cause transaction delays and lost revenue. We add AI fraud scoring and routing analytics to your existing payment stack, helping payments clear faster, more safely and more reliably.",
       image: svcPaymentsImg,
       alt: "A contactless card payment being taken on a terminal",
     },
     {
-      title: "eMoney Solutions",
+      title: "eMoney Transaction Analytics",
       body:
-        "As digital currencies and e-payments continue to grow, institutions need secure digital money management tools. Our financial software development solutions support multi-currency transactions, compliance tracking and real-time reporting for both enterprises and fintech start-ups.",
+        "As digital currencies and e-payments continue to grow, institutions need clear visibility of digital money flows. We deliver analytics for multi-currency transactions, automated monitoring and real-time reporting for both enterprises and fintech start-ups.",
       image: svcEmoneyImg,
       alt: "A digital wallet interface open on a smartphone",
     },
     {
-      title: "Investment Software Development",
+      title: "Investment Analytics & Insights",
       body:
-        "Investment platforms often struggle to deliver real-time analytics or personalised insights. Our AI-powered investment software solutions use machine learning to surface trends, automate portfolio management and help investors make data-driven decisions with confidence.",
+        "Investment teams often struggle to get real-time analytics or personalised insights. Our machine learning models surface trends, support portfolio decisions and help investors make data-driven decisions with confidence.",
       image: svcInvestmentImg,
       alt: "An investor comparing charts across a tablet and laptop",
     },
     {
-      title: "Digital Wallet & eWallet Development",
+      title: "Digital Wallet Fraud Monitoring",
       body:
-        "Security and scalability remain critical for e-wallet systems. We design digital wallet solutions that combine multi-layer encryption, biometric authentication and AI-driven fraud monitoring, so users get a secure, uninterrupted and consistent experience across every device.",
+        "Security and trust remain critical for e-wallet providers. We add AI-driven fraud monitoring and behavioural analytics to your existing wallet, spotting account takeover and unusual activity early so users get a secure, uninterrupted experience.",
       image: svcWalletImg,
       alt: "A smartphone wallet app beside a payment card",
     },
     {
-      title: "Lending Platform Development",
+      title: "Credit Scoring & Lending Decisioning",
       body:
-        "Traditional lending systems are slow and prone to bias. We build AI-driven lending platforms that automate credit scoring, risk assessment and loan approvals using transparent algorithms. This improves decision accuracy and accelerates customer onboarding.",
+        "Traditional lending decisions are slow and prone to bias. We build AI credit scoring and risk assessment models that support loan approvals using transparent, explainable features. This improves decision accuracy and accelerates customer onboarding.",
       image: svcLendingImg,
       alt: "A lending adviser reviewing a loan application with a client",
       caseStudy: caseStudyPath("fintech-machine-learning-credit-scoring"),
@@ -260,9 +260,9 @@ export const services = {
 
 export const midCta = {
   eyebrow: "Ready to level up?",
-  title: "Rebuild Your Financial Operations With AI-Powered Precision",
+  title: "Strengthen Your Financial Operations With AI-Powered Precision",
   body:
-    "Partner with us to build secure, scalable and compliance-ready systems that drive efficiency and growth. Schedule a consultation with our experts to explore custom financial software development solutions built around your ledger, not a template.",
+    "Partner with us to put analytics, automation and risk models to work where they drive efficiency and growth. Schedule a consultation with our experts to explore Data & AI use cases built around your data, not a template.",
   ctaText: "Get in Touch",
   background: midCtaBgImg,
 };
@@ -271,11 +271,11 @@ export const midCta = {
  * The services fold: four alternating photo/copy rows.
  */
 export const solutions = {
-  eyebrow: "What types of finance apps are we experts in?",
-  titleLead: "Our Custom Financial Software Development Services",
+  eyebrow: "Where do we help finance teams with Data & AI?",
+  titleLead: "Our Data & AI Services",
   titleAccent: "Designed For Modern Finance",
   body:
-    "We provide end-to-end software development financial solutions that combine deep industry expertise with AI-driven innovation. Our approach helps financial enterprises enhance operational efficiency, reduce risk and drive smarter decision-making through scalable, secure and intelligent systems, tailored to banks, fintechs, insurers and corporate finance teams.",
+    "We combine finance domain knowledge with analytics, automation and AI to help financial organisations improve operational efficiency, reduce risk and make smarter decisions, working within the systems and controls of banks, fintechs, insurers and corporate finance teams.",
   items: [
     {
       title: "AI Consulting & Strategy for Finance",
@@ -285,16 +285,16 @@ export const solutions = {
       alt: "An adviser walking clients through a financial plan",
     },
     {
-      title: "AI Custom Financial Software Development",
+      title: "Risk Modelling & Document Intelligence",
       body:
-        "Our team builds custom financial software solutions from scratch, addressing legacy system limitations, fragmented datasets and regulatory challenges. We build secure and scalable platforms around the regulatory requirements agreed with your team, delivered in increments you can put in front of a regulator.",
+        "We build machine learning models for credit, fraud and operational risk, and apply document intelligence to statements, applications and filings, tackling fragmented datasets and manual review. Models are documented, explainable and delivered in increments your risk team can validate.",
       image: solDevelopmentImg,
-      alt: "An engineer working on platform code beside server racks",
+      alt: "An engineer working at a laptop beside server racks",
     },
     {
       title: "Data Analytics & Business Intelligence",
       body:
-        "We deliver financial software development solutions that turn complex financial data into decisions you can defend. Real-time dashboards, predictive analytics and reporting frameworks support better investment, risk and operational decisions, all reading from one governed set of figures.",
+        "We turn complex financial data into decisions you can defend. Real-time dashboards, predictive analytics and reporting frameworks support better investment, risk and operational decisions, all reading from one governed set of figures.",
       image: solAnalyticsImg,
       alt: "A laptop showing a financial analytics dashboard",
     },
@@ -309,14 +309,14 @@ export const solutions = {
 };
 
 export const stakeholders = {
-  eyebrow: "Whom do we build custom financial solutions for?",
-  titleLead: "We Build Advanced Financial Software Solutions",
+  eyebrow: "Which finance teams do we support?",
+  titleLead: "We Deliver Data & AI Solutions",
   titleAccent: "For The Following Clients",
   items: [
     {
       title: "Asset Managers and Investment Consultants",
       body:
-        "Portfolio analytics, client reporting and rebalancing signals in one platform, so advice is built on live positions rather than last month's extract.",
+        "Portfolio analytics, client reporting and rebalancing signals in one view, so advice is built on live positions rather than last month's extract.",
       image: stkAssetImg,
       alt: "An asset manager reviewing positions on a tablet",
     },
@@ -343,15 +343,15 @@ export const stakeholders = {
  */
 export const subIndustries = {
   eyebrow: "Which finance sector do we serve?",
-  titleLead: "AI Financial Software Solutions Across",
+  titleLead: "Data & AI Solutions Across",
   titleAccent: "Key Finance Sub-Industries",
   body:
-    "Every part of finance carries its own regulator, its own data model and its own definition of an acceptable failure. Hover any card to see what we build for it.",
+    "Every part of finance carries its own regulator, its own data model and its own definition of an acceptable failure. Hover any card to see where Data & AI helps.",
   items: [
     {
       label: "Banking",
-      body: "Core-adjacent platforms, real-time payments and branch-to-digital journeys, built to sit alongside a ledger you are not going to replace this year.",
-      points: ["Core integration layer", "Real-time payment rails", "Digital onboarding"],
+      body: "Customer analytics, real-time transaction monitoring and onboarding document intelligence, working alongside a core you are not going to replace this year.",
+      points: ["Core data integration", "Real-time transaction monitoring", "Onboarding document checks"],
       image: subBankingImg,
       alt: "The facade of a historic bank building",
     },
@@ -364,15 +364,15 @@ export const subIndustries = {
     },
     {
       label: "Insurance",
-      body: "Claims triage, underwriting models and fraud scoring, with the decision rationale recorded in a form a regulator will accept.",
+      body: "Claims triage, underwriting models and fraud scoring, with the decision rationale recorded so your reviewers can follow it.",
       points: ["Automated claims triage", "Underwriting models", "Explainable decisioning"],
       image: subInsuranceImg,
       alt: "An insurance adviser presenting a policy document",
     },
     {
       label: "Fintech",
-      body: "Product-speed engineering on regulated rails: embedded finance, ledgering and the compliance surface that lets you launch without a pause.",
-      points: ["Embedded finance", "Double-entry ledgering", "Regulatory reporting"],
+      body: "Fraud scoring, customer analytics and regulatory reporting data that keep pace with a fast-moving product team.",
+      points: ["Fraud scoring", "Customer analytics", "Regulatory reporting data"],
       image: subFintechImg,
       alt: "A customer completing a payment on a smartphone",
     },
@@ -385,15 +385,15 @@ export const subIndustries = {
     },
     {
       label: "Capital Markets",
-      body: "Low-latency market data, execution analytics and post-trade surveillance built for desks where a second of staleness is a loss.",
+      body: "Low-latency market data, execution analytics and post-trade surveillance for desks where a second of staleness is a loss.",
       points: ["Market data pipelines", "Execution analytics", "Trade surveillance"],
       image: subCapitalImg,
       alt: "A digital trading and analysis interface",
     },
     {
       label: "Payments",
-      body: "Gateway orchestration, routing optimisation and chargeback automation, tuned on your own authorisation data rather than a vendor benchmark.",
-      points: ["Gateway orchestration", "Smart routing", "Chargeback automation"],
+      body: "Authorisation analytics, routing optimisation and chargeback evidence automation, tuned on your own authorisation data rather than a vendor benchmark.",
+      points: ["Authorisation analytics", "Routing optimisation", "Chargeback evidence automation"],
       image: subPaymentsImg,
       alt: "A card payment being completed at a retail checkout",
     },
@@ -406,15 +406,15 @@ export const subIndustries = {
     },
     {
       label: "Lending & Credit",
-      body: "Credit decisioning with transparent features, affordability modelling and collections prioritisation that survives a fairness review.",
+      body: "Credit decisioning with transparent features, affordability modelling and collections prioritisation designed to support a fairness review.",
       points: ["Transparent credit scoring", "Affordability modelling", "Collections prioritisation"],
       image: subLendingImg,
       alt: "A calculator and keys resting on lending paperwork",
     },
     {
       label: "Digital Assets",
-      body: "Custody integrations, on-chain analytics and travel-rule compliance for institutions moving into tokenised and crypto products.",
-      points: ["Custody integrations", "On-chain analytics", "Travel-rule compliance"],
+      body: "On-chain analytics, transaction risk scoring and travel-rule data checks for institutions moving into tokenised and crypto products.",
+      points: ["On-chain analytics", "Transaction risk scoring", "Travel-rule data checks"],
       image: subCryptoImg,
       alt: "A gold bitcoin among a pile of mixed coins",
     },
@@ -422,9 +422,9 @@ export const subIndustries = {
 };
 
 export const benefits = {
-  eyebrow: "What can you optimise with our AI-powered fintech applications?",
-  titleLead: "Key Benefits Of AI-Based",
-  titleAccent: "Financial Software Development Solutions",
+  eyebrow: "What can you optimise with Data & AI?",
+  titleLead: "Key Benefits Of Data & AI",
+  titleAccent: "Solutions For Finance",
   items: [
     {
       title: "Risk Assessment",
@@ -452,9 +452,9 @@ export const benefits = {
         "AI models forecast market trends and asset performance using past and real-time data. This helps investors and institutions make informed financial decisions.",
     },
     {
-      title: "Regulatory Compliance",
+      title: "Regulatory Reporting",
       body:
-        "AI tools monitor compliance with changing financial regulation. They simplify reporting and reduce the risk of penalties due to human oversight.",
+        "AI helps track changes in financial regulation and assemble reporting data. This reduces manual effort and the risk of errors slipping into submissions.",
     },
   ],
 };
@@ -462,19 +462,19 @@ export const benefits = {
 export const build = {
   title: "Schedule a Consultation Call",
   body:
-    "Discover how AI financial software development services can rebuild your operations and speed up growth. Speak with our experts to explore what a custom build would look like for your business.",
-  ctaText: "Hire financial software developers",
+    "Discover how Data & AI can strengthen your operations and speed up growth. Speak with our experts to explore which analytics, automation or risk use cases would pay back first for your business.",
+  ctaText: "Discuss Your Finance Data & AI Priorities",
   texture: textureBgImg,
   image: buildVisualImg,
   alt: "A golden piggy bank resting on financial statements",
 };
 
 export const techStrip = {
-  eyebrow: "Technologies we work with",
-  titleLead: "Expertise In Advanced",
-  titleAccent: "Development Technologies",
+  eyebrow: "Data & AI technologies we work with",
+  titleLead: "Expertise In",
+  titleAccent: "Data & AI Technologies",
   body:
-    "The same production-grade toolchain sits under every financial platform we ship. Pick a layer to see what it is made of.",
+    "The production-grade toolchain behind our analytics, models and data pipelines for finance teams. Pick a layer to see what it is made of.",
   ctaText: "View all tech stack",
   tabs: [
     {
@@ -488,7 +488,7 @@ export const techStrip = {
     },
     {
       id: "backend",
-      label: "Backend & Databases",
+      label: "Data Engineering & Databases",
       items: [
         "Node.js", "NestJS", "FastAPI", "Django", "Go", "Java Spring", "GraphQL", "PostgreSQL",
         "MongoDB", "Redis", "Kafka", "Airflow", "dbt", "Snowflake", "ClickHouse", "TimescaleDB",
@@ -496,10 +496,10 @@ export const techStrip = {
     },
     {
       id: "frontend",
-      label: "Frontend",
+      label: "Dashboards & Visualisation",
       items: [
         "React", "Next.js", "TypeScript", "Tailwind CSS", "Three.js", "D3.js", "TradingView Charts",
-        "React Native", "Flutter", "Vite", "Radix UI",
+        "Vite", "Radix UI",
       ],
     },
     {
@@ -509,19 +509,19 @@ export const techStrip = {
     },
     {
       id: "fintech",
-      label: "Fintech & Data",
+      label: "Financial Data Sources",
       items: ["Plaid", "Stripe", "Adyen", "Marqeta", "Modulr", "Open Banking APIs", "SWIFT", "ISO 20022", "FIX Protocol", "Bloomberg API"],
     },
     {
       id: "security",
-      label: "Security & Compliance",
+      label: "Governance & Security",
       note:
-        "Standards and practices we design and build against, not certifications held by Axiomra. Which of them apply to your project, and what evidence your assessor will want, is confirmed with your compliance team before work starts.",
-      items: ["PCI DSS", "SOC 2", "ISO 27001", "GDPR", "KYC / AML orchestration", "HSM & key management", "Zero-trust networking", "Penetration testing"],
+        "Practices we build into our data and AI work. Which regulatory standards apply to your project is confirmed with your own compliance team before work starts.",
+      items: ["Data governance", "Data lineage", "Model monitoring", "Explainability reporting", "PII masking", "Role-based access", "Audit trails", "Key management"],
     },
     {
       id: "design",
-      label: "UI / UX",
+      label: "Dashboard & Report Design",
       items: ["Figma", "Design Tokens", "Prototyping", "WCAG 2.2 Audits", "Usability Testing"],
     },
   ],
@@ -532,15 +532,15 @@ export const businessTypes = {
   titleLead: "Explore The Range Of",
   titleAccent: "Finance Businesses We Support",
   body:
-    "We excel in custom AI-powered financial software development that stands up to a regulator, an auditor and a trading day. Whether you are launching a licensed product or modernising a core that predates the API era, we turn it into a platform your team can actually run.",
+    "We bring Data & AI to finance teams at every stage. Whether you are launching a licensed product or working around a core that predates the API era, we help you turn your data into analytics, automation and risk models your team can actually run.",
   rows: [
     {
       label: "Start-ups",
-      body: "We help fintech founders get a licensed product live: a ledger built to the rules your regulator applies, an onboarding flow that converts, and the reporting a regulator will ask for on day one rather than after the first inspection.",
+      body: "We help fintech founders put data to work early: fraud scoring, onboarding document checks and the reporting data a regulator will ask for, set up from day one rather than after the first inspection.",
     },
     {
       label: "Scale-ups",
-      body: "Growth exposes every manual control. We help scale-ups automate reconciliation, risk monitoring and compliance reporting, moving from spreadsheet operations to a platform that survives the next order of magnitude.",
+      body: "Growth exposes every manual control. We help scale-ups automate reconciliation, risk monitoring and compliance reporting, moving from spreadsheet operations to automated controls that hold up at the next order of magnitude.",
     },
     {
       label: "Small and medium-sized businesses",
@@ -548,7 +548,7 @@ export const businessTypes = {
     },
     {
       label: "Enterprises",
-      body: "We partner with banks, insurers and asset managers on governed data layers, core integration and AI systems that satisfy security, model risk and procurement before they ever reach production.",
+      body: "We partner with banks, insurers and asset managers on governed data layers, core data integration and AI models designed with security, model risk and procurement review in mind before they reach production.",
     },
   ],
 };
@@ -585,7 +585,7 @@ export const testimonials = {
 export const showcase = {
   eyebrow: "What innovations have we delivered to businesses?",
   titleLead: "Showcasing Our",
-  titleAccent: "AI Development Projects",
+  titleAccent: "Data & AI Projects",
   body:
     "Projects delivered for banks, fintechs and financial enterprises, and what each one changed.",
   ctaText: "Check Out Our Full Portfolio",
@@ -594,7 +594,7 @@ export const showcase = {
 export const partner = {
   eyebrow: "Why choose Axiomra?",
   titleLead: "Why Partner With Axiomra For",
-  titleAccent: "Intelligent Financial Software Development",
+  titleAccent: "Data & AI In Finance",
   cards: [
     {
       icon: "Target",
@@ -606,7 +606,7 @@ export const partner = {
       icon: "Layers",
       title: "Tailored To Your Workflows And Systems",
       body:
-        "Our software is built around your workflows, your controls and your core systems. By creating custom AI financial software development solutions, we keep integration clean and operations efficient rather than a migration nobody asked for.",
+        "Our models and data pipelines are built around your workflows, your controls and your core systems. By working with the systems you already run, we keep integration clean and operations efficient rather than forcing a migration nobody asked for.",
     },
     {
       icon: "ShieldCheck",
@@ -652,11 +652,11 @@ export const blogs = {
 
 export const faqs = [
   {
-    q: "How can AI financial software development services improve banking and fintech operations?",
+    q: "How can Data & AI improve banking and fintech operations?",
     a: "By moving the slow parts of the operation off human hands: transaction monitoring, reconciliation, document verification and regulatory reporting. The gain is not only speed. When a control runs continuously rather than at month end, the exception surfaces while it is still cheap to fix.",
   },
   {
-    q: "Can a finance software development company help reduce fraud and chargebacks?",
+    q: "Can AI help reduce fraud and chargebacks?",
     a: "Yes. Behavioural scoring on live transaction data catches patterns a static rule set misses, and feeding analyst decisions back into the model keeps the false-positive rate from swallowing the review team. On chargebacks, the win is usually evidence automation: assembling the response pack automatically rather than reconstructing it by hand.",
   },
   {
@@ -668,8 +668,8 @@ export const faqs = [
     a: "Bank feed ingestion, rules-based categorisation with a model handling the long tail, automated matching against invoices, and exception queues for what genuinely does not tie out. For most SME finance functions that removes the bulk of the manual work without replacing the accounting package.",
   },
   {
-    q: "How do AI financial software development services reduce IT failures and outages?",
-    a: "Mostly through architecture rather than AI: isolating the new services from the core, making integrations event-driven and idempotent, and instrumenting everything so a degradation is visible before it is an incident. Anomaly detection on telemetry then shortens the time to diagnose.",
+    q: "Can AI help detect IT failures and outages earlier?",
+    a: "Yes, mostly by making problems visible sooner. Anomaly detection on system and transaction telemetry flags a degradation before it becomes an incident and shortens the time to diagnose. The structural fixes stay with your engineering team; we build the monitoring models and data that support them.",
   },
   {
     q: "How can data quality issues be resolved in finance systems?",
@@ -680,23 +680,23 @@ export const faqs = [
     a: "Yes, and it is one of the highest-return automations in finance. An automated matching engine handles the clean majority, and the team works a short, evidenced exception queue instead of a spreadsheet. Daily reconciliation then becomes realistic rather than aspirational.",
   },
   {
-    q: "How do AI financial software development services strengthen cybersecurity?",
-    a: "Zero-trust networking, hardware-backed key management, least-privilege access and continuous control monitoring do the structural work. AI contributes on detection: behavioural analytics on access and transaction telemetry, flagging what does not fit the established pattern.",
+    q: "How does AI support cybersecurity in finance?",
+    a: "Zero-trust networking, hardware-backed key management and least-privilege access remain the foundation your security team owns. AI contributes on detection: behavioural analytics on access and transaction telemetry, flagging what does not fit the established pattern.",
   },
   {
-    q: "Can fintech scalability issues be resolved with custom software?",
-    a: "Usually, yes, though the fix is rarely a rewrite. Isolating the hot paths, moving to event-driven processing and putting a proper ledger under the product handles most scaling walls. We will tell you honestly when the constraint is the vendor core rather than your code.",
+    q: "Can Data & AI help a fintech scale its operations?",
+    a: "Usually, yes. Automating manual reviews, reconciliation and reporting with models and governed data pipelines lets operations grow without headcount growing at the same rate. We will tell you honestly when the constraint sits in the core platform rather than the data.",
   },
   {
-    q: "How much does it cost to develop custom financial software?",
-    a: "It depends on the regulatory surface, the state of your data and how much of the core you need to integrate with. A scoped pilot is the fastest route to a real number. Book a free session and we will size it honestly, including what we would not build.",
+    q: "How much does a finance Data & AI project cost?",
+    a: "It depends on the use case, the state of your data and how many source systems need connecting. A scoped pilot is the fastest route to a real number. Book a free session and we will size it honestly, including what we would not recommend automating yet.",
   },
 ];
 
 export const finalCta = {
-  title: "Get Your Free AI Financial Software Consultation",
+  title: "Get Your Free Finance Data & AI Consultation",
   subtitle:
-    "Talk to our experts and discover how custom AI financial software development services can simplify your operations, reduce risk and accelerate growth.",
+    "Talk to our experts and discover how analytics, automation and risk models can simplify your operations, reduce risk and accelerate growth.",
   buttonText: "Get your project done!",
   background: finalCtaBgImg,
 };
