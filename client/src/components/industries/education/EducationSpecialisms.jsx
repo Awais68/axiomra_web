@@ -7,7 +7,7 @@ import { specialisms } from "../../../data/educationData";
 const EASE = [0.16, 1, 0.3, 1];
 
 /**
- * Full-bleed photo band with the product types as pills, exactly as in the
+ * Full-bleed photo band with the AI use cases as pills, exactly as in the
  * reference. The selected pill opens its copy on a slate underneath, so the
  * band stays one screen tall however long the list grows.
  */
@@ -66,7 +66,7 @@ export default function EducationSpecialisms() {
         <Reveal>
           <div
             role="tablist"
-            aria-label="Education products we specialise in"
+            aria-label="Education AI use cases"
             onKeyDown={onKeyDown}
             className="mt-12 flex flex-wrap gap-3"
           >

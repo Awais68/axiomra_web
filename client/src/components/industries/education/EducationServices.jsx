@@ -5,7 +5,7 @@ import { gsap, MOTION_OK } from "../../../lib/gsap";
 import { services } from "../../../data/educationData";
 
 /**
- * Five product families, image and copy swapping sides, each with the modules
+ * Five Data & AI service areas, image and copy swapping sides, each with the capabilities
  * that sit inside it. Every photo is scrubbed a little against the scroll so
  * the column has depth without any pinning.
  */

@@ -29,9 +29,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Education Software Development Services | AI EdTech | Axiomra";
+const TITLE = "AI & Data Solutions for Education | Axiomra";
 const DESCRIPTION =
-  "AI-powered education software development: LMS and SIS platforms, adaptive learning, automated assessment and analytics for schools, universities and EdTech founders.";
+  "Axiomra helps schools, universities and EdTech teams use data and AI to improve engagement, reduce admin workload and make learning support more responsive.";
 
 export default function EducationPage() {
   // Lazy photos land after the triggers were measured; once the page has

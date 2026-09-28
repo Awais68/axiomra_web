@@ -31,29 +31,30 @@ import blog2Img from "../assets/industries/education/blog-2.webp";
 import blog3Img from "../assets/industries/education/blog-3.webp";
 import finalCtaBgImg from "../assets/industries/education/final-cta.webp";
 
+
 export const EDUCATION_SLUG = "education";
 
 export const hero = {
   eyebrow: "AI for the education industry",
-  titleLead: "Rebuilding EdTech With AI-Powered",
-  titleAccent: "Education Software Development",
-  titleTail: "Services",
+  titleLead: "AI & Data Solutions for",
+  titleAccent: "Better Learning",
+  titleTail: "and Smarter Education Operations",
   body:
-    "As a leading education app development company, Axiomra builds intelligent, AI-powered learning products that give educators and students better tools. Our custom education software development services deliver tools that improve learning engagement, cut administrative work and support digital transformation across K-12 schools, colleges and universities.",
-  ctaText: "Request a free consultation",
+    "Axiomra helps schools, universities, training providers and EdTech teams use data and AI to improve student engagement, reduce administrative workload and make learning support more responsive. We focus on analytics, automation, responsible AI and data integration around your existing learning ecosystem—working with the systems your teams already use, not replacing them.",
+  ctaText: "Explore Your Education AI Use Case",
   image: heroImg,
   alt: "The reading room of a historic library lined with books",
   reviews: { platform: "Clutch", rating: 5, count: 12 },
 };
 
 export const intro = {
-  titleLead: "AI-Powered Education Software Development Services",
-  titleAccent: "For Equitable Learning Outcomes",
+  titleLead: "Use Data & AI to Make Learning",
+  titleAccent: "More Accessible and Responsive",
   paragraphs: [
-    "We design and build secure, interoperable learning platforms, adaptive courseware and analytics that measurably improve student outcomes. Our AI-powered education software closes the digital divide by design, with mobile-first, low-bandwidth experiences and offline sync, while upskilling educators through embedded coaching and just-in-time training.",
-    "By unifying LMS, SIS, content and assessment data, we simplify workflows, protect privacy by design and raise engagement with personalised paths, timely feedback and gamified nudges. Delivered through agile discovery, rapid prototyping, rigorous QA and phased rollouts, our solutions stay scalable, reliable and accessible across devices and contexts.",
+    "Axiomra helps education organisations connect LMS, SIS, assessment and engagement data so they can identify learning gaps, personalise support and reduce repetitive administration.",
+    "AI can assist with feedback, content discovery and student support, while accessibility, privacy, human oversight and low-bandwidth realities remain part of the design from the start.",
   ],
-  ctaText: "Let's work together",
+  ctaText: "Discuss an Education Data & AI Pilot",
   image: introImg,
   alt: "A student taking notes from a textbook at a study desk",
 };
@@ -83,8 +84,8 @@ export const impact = {
 };
 
 /**
- * The challenge rail. Each entry is a barrier institutions hit, and the
- * capability we build to remove it.
+ * The challenge rail. Each entry is a barrier institutions hit, and how data
+ * and AI help remove it.
  */
 export const challenges = {
   eyebrow: "Overcoming key barriers in digital learning",
@@ -94,22 +95,22 @@ export const challenges = {
     {
       title: "Digital Divide & Access Barriers",
       body:
-        "Many students have limited access to devices, bandwidth and online resources, which quietly decides who keeps up and who falls behind. We build inclusive platforms that run on low-end devices and poor networks, with offline sync and mobile-first flows, so every learner can take part fully.",
+        "Many students have limited access to devices, bandwidth and online resources, which quietly decides who keeps up and who falls behind. We analyse access and participation data to show where gaps sit, and design AI use cases that still work in low-bandwidth and mobile-first contexts.",
     },
     {
       title: "Inadequate Teacher Training",
       body:
-        "New tools fail when the staff using them are handed a login and left alone. We embed guided onboarding, in-product coaching and role-based training paths into the platform itself, so teachers build confidence while they work instead of in a one-off workshop they forget by term two.",
+        "New tools fail when the staff using them are handed a login and left alone. We keep AI use cases simple to adopt, explain how each output is produced and support educators with clear guidance, so confidence grows while they work.",
     },
     {
       title: "Data Privacy & Security",
       body:
-        "Student records are among the most sensitive data any organisation holds, and the rules differ by country and by age group. We design for GDPR, FERPA and COPPA from the first architecture session: least-privilege access, encryption in transit and at rest, audit trails and clear consent and retention policies.",
+        "Student records are among the most sensitive data any organisation holds, and the rules differ by country and by age group. We scope every data and AI use case around your privacy obligations: least-privilege access, minimal data use, audit trails and clear retention rules.",
     },
     {
       title: "Student Engagement",
       body:
-        "Attendance is not attention. Courses lose learners in the middle, long before anyone sees it in the results. We build adaptive content, gamified progress, timely nudges and interactive assessment so engagement is designed in and, just as importantly, measured week by week rather than at the end.",
+        "Attendance is not attention. Courses lose learners in the middle, long before anyone sees it in the results. We use participation and learning signals to measure engagement week by week, so staff can see who may need support while there is still time to act.",
     },
     {
       title: "Limited Personalisation",
@@ -119,76 +120,76 @@ export const challenges = {
     {
       title: "Poor Platform Integration",
       body:
-        "LMS, SIS, assessment tools and content libraries rarely talk to each other, so staff re-key the same data and no one trusts the reports. We build integration layers on LTI, xAPI, OneRoster and SIS APIs that make one record the source of truth across every system.",
+        "LMS, SIS, assessment tools and content libraries rarely talk to each other, so staff re-key the same data and no one trusts the reports. We build data pipelines using LTI, xAPI, OneRoster and SIS APIs so analytics draw on one trusted record.",
     },
     {
       title: "Administrative Overload",
       body:
-        "Registration, timetabling, attendance, grading and reporting consume the hours that should go to teaching. We automate the repeatable parts and give leadership live dashboards, so the admin load drops and the decisions get faster and better evidenced.",
+        "Registration, timetabling, attendance, grading and reporting consume the hours that should go to teaching. We automate the repeatable reporting and data preparation and give leadership live dashboards, so the admin load drops and decisions are better evidenced.",
     },
   ],
 };
 
 /**
- * The five product families we build, each with the modules that sit inside
- * them. `points` renders as the arrow list from the reference.
+ * The five Data & AI service areas, each with the capabilities inside them.
+ * `points` renders as the arrow list from the reference.
  */
 export const services = {
-  eyebrow: "What types of education apps are we experts in?",
-  titleLead: "Education Software Development Services",
-  titleAccent: "For Digital Transformation",
+  eyebrow: "Where can data and AI help your institution?",
+  titleLead: "Data & AI Services",
+  titleAccent: "for Education Digital Transformation",
   body:
-    "Our team of expert education software developers builds custom software for K-12 schools and universities, ensuring each solution aligns with your institutional goals. Whether you want to enhance remote learning, improve student engagement or cut down administrative processes, our EdTech software development services deliver measurable results.",
+    "Axiomra supports institutions that want to make better use of learning, assessment, operational and engagement data. Our work can include AI strategy, data integration, education analytics, responsible generative AI, workflow automation and predictive models—aligned to institutional goals, privacy requirements and measurable outcomes.",
   items: [
     {
-      title: "Educational Operations and Analytics Tools",
+      title: "Education Operations & Analytics",
       body:
-        "Simplify administration and boost performance with advanced back-office solutions. Our e-learning software development services enable smooth operations, accurate reporting and informed decision-making across every department.",
-      points: ["Learning Management Systems (LMS)", "Student Information Systems (SIS)", "Performance Analytics"],
+        "Administrative data is often spread across systems and spreadsheets. Axiomra connects it into reliable reporting and analytics, so leaders can see performance across departments and make decisions on current evidence.",
+      points: ["LMS & SIS Data Integration", "Operational Reporting", "Performance Analytics"],
       image: svcOperationsImg,
       alt: "An analytics dashboard open on a laptop at a study desk",
     },
     {
-      title: "Collaboration and Communication Platforms",
+      title: "Learning Engagement & Communication Intelligence",
       body:
-        "Enhance connectivity with tools that support remote learning and group projects. As a trusted EdTech app development company, we deliver solutions that improve teamwork and keep parents, tutors and students in the same loop.",
-      points: ["Online Collaboration Platforms", "Discussion Forums", "Video Conferencing Tools"],
+        "Remote and blended learning can create fragmented participation data. Axiomra can help institutions analyse engagement across collaboration tools, identify participation gaps and automate selected communication workflows. Rather than replacing video or collaboration platforms, our Data & AI services make the information around them more useful for educators and administrators.",
+      points: ["Engagement Analytics", "Participation Gap Detection", "Communication Workflow Automation"],
       image: svcCollaborationImg,
       alt: "Two participants smiling during a live video lesson",
     },
     {
-      title: "Assessment and Feedback Systems",
+      title: "AI-Assisted Assessment & Feedback",
       body:
-        "Our AI-based educational app development services offer powerful tools for quizzes, automated grading and performance analytics, shortening the feedback process and giving teachers back the evenings they currently spend marking.",
-      points: ["Online Assessment Tools", "Automated Grading Systems", "Performance Analytics"],
+        "Reduce repetitive marking and help educators identify learning gaps earlier. Axiomra can support assessment analytics, rubric-assisted review, feedback drafting and performance dashboards, with educators retaining control over final academic judgement. The objective is faster, more consistent insight—not fully automated high-stakes decisions.",
+      points: ["Assessment Analytics", "Rubric-Assisted Review", "Feedback Drafting", "Performance Dashboards"],
       image: svcAssessmentImg,
       alt: "A pencil resting on a multiple-choice answer sheet",
     },
     {
-      title: "Content Creation and Accessibility Tools",
+      title: "AI for Education Content, Accessibility & Knowledge Management",
       body:
-        "Create interactive and multimedia-rich educational materials. Our EdTech app development services support inclusive learning experiences, so the same course works for a screen reader, a slow connection and a second language.",
+        "Help educators find, adapt and organise learning content more efficiently. Axiomra can apply generative AI, semantic search and content analytics to support drafting, summarisation, multilingual assistance and knowledge discovery. We build accessibility requirements, source quality checks, copyright and educator review into the workflow.",
       points: [
-        "E-Learning Authoring Tools",
-        "Digital Content Repositories",
-        "Assistive Technology",
-        "Teacher Training Platforms",
-        "Multilingual Platforms",
-        "Certification and Credentialing Systems",
+        "Generative AI Drafting Support",
+        "Semantic Search",
+        "Content Analytics",
+        "Summarisation",
+        "Multilingual Assistance",
+        "Knowledge Discovery",
       ],
       image: svcContentImg,
       alt: "A blank sketch pad surrounded by coloured pencils on a desk",
     },
     {
-      title: "Interactive Learning and Engagement Solutions",
+      title: "Personalised Learning & Student Engagement Analytics",
       body:
-        "Engage students with adaptive learning platforms, AI-powered virtual teaching and gamified experiences. Our educational app development services create personalised learning paths that improve motivation and understanding.",
+        "Use learning and engagement data to understand where students need more support and which content is working. Axiomra can help design adaptive recommendation models, learner segmentation and AI-assisted support experiences. Interactive, AR or VR environments can be integrated where they genuinely improve the learning objective rather than added for novelty.",
       points: [
-        "Adaptive Learning Platforms",
-        "Gamified Learning",
-        "Interactive Simulations",
-        "Personalised Learning Apps",
-        "Virtual Reality (VR) and Augmented Reality (AR)",
+        "Adaptive Recommendation Models",
+        "Learner Segmentation",
+        "Student Support Signals",
+        "Content Effectiveness Analysis",
+        "AI-Assisted Support Experiences",
       ],
       image: svcInteractiveImg,
       alt: "A child following an interactive lesson on a tablet",
@@ -196,75 +197,70 @@ export const services = {
   ],
 };
 
-/** The product types we specialise in, shown as a pill rail over a photo band. */
+/** Data & AI use cases across the sector, shown as a pill rail over a photo band. */
 export const specialisms = {
-  eyebrow: "What types of education apps do we specialise in?",
-  titleLead: "Using AI To Create Custom",
-  titleAccent: "Education Software Solutions That Lead The Industry",
+  eyebrow: "Where do we apply data and AI in education?",
+  titleLead: "AI & Data Use Cases",
+  titleAccent: "Across the Education Ecosystem",
   background: specBgImg,
   items: [
     {
-      label: "Mobile learning apps",
-      body:
-        "Learning that survives a commute and a weak signal. We build offline-first mobile apps with synced progress, push nudges and bite-sized lessons, so study time fits the gaps in a student's day instead of competing with them.",
+      label: "Mobile learning",
+      body: "Analyse progress and support personalised nudges across connected and low-bandwidth contexts.",
     },
     {
-      label: "School management software",
-      body:
-        "Admissions, timetabling, attendance, fees and reporting in one system rather than six spreadsheets. Role-based access keeps staff, parents and leadership on the same record without exposing anything they should not see.",
+      label: "School operations",
+      body: "Automate reporting and surface trends from administrative data.",
     },
     {
-      label: "Tutor apps",
-      body:
-        "Marketplace or in-house, the mechanics are the same: matching, scheduling, payments, live sessions and a shared progress history that makes the next session start where the last one ended.",
+      label: "Tutor support",
+      body: "Use AI to assist planning, knowledge retrieval and learner follow-up.",
     },
     {
-      label: "E-learning apps",
-      body:
-        "Course authoring, media delivery, assessment and certification, built to keep working when a cohort of ten thousand all log in on the same Monday evening.",
+      label: "E-learning",
+      body: "Personalise content discovery and monitor engagement.",
     },
     {
-      label: "LMS software",
-      body:
-        "A learning management system shaped around your curriculum, integrated with your SIS and content libraries through LTI and OneRoster, with analytics leadership will actually open.",
+      label: "LMS intelligence",
+      body: "Connect LMS data with assessment and student records for better analytics.",
     },
   ],
 };
 
-/** The four technology pillars under every EdTech build. */
+/** The four Data & AI capabilities behind our education work. */
 export const technologies = {
   eyebrow: "Which technologies do we use for education solutions?",
-  titleLead: "Modern Technologies For Reliable",
-  titleAccent: "EdTech And E-Learning Tools",
+  titleLead: "Modern Data & AI Technologies",
+  titleAccent: "for Education",
   body:
-    "As a leading e-learning development company, we specialise in EdTech software development and educational app development services to create dependable educational applications. Our approach integrates various tech solutions to enhance user experiences, simplify operations and provide real value in the education sector.",
+    "Axiomra selects technology based on the education problem, data sensitivity and operating environment. Typical capabilities may include cloud data platforms, analytics, machine learning, generative AI, semantic search, workflow automation and secure integrations. We choose technology that supports reliability, accessibility, privacy and maintainability—not technology that simply sounds advanced.",
   ctaText: "View all services",
   background: techBgImg,
   items: [
     {
       title: "Artificial Intelligence",
       body:
-        "AI drives smarter decision-making and automation in education. Machine learning algorithms analyse student data to identify gaps, predict performance and provide personalised learning paths, so institutions raise engagement, optimise resources and improve outcomes.",
+        "AI supports better decisions and automation in education. Models analyse student data to identify gaps, flag students who may need support and suggest personalised next steps, with educators reviewing the outcome.",
     },
     {
       title: "Data Analytics",
       body:
-        "Data analytics uncovers trends and insight, supporting better instructional strategies and operational decisions. Advanced reporting tools help administrators monitor performance, evaluate programmes and make decisions backed by evidence rather than instinct.",
+        "Data analytics uncovers trends and insight, supporting better instructional strategies and operational decisions. Clear reporting helps administrators monitor performance, evaluate programmes and make decisions backed by evidence rather than instinct.",
     },
     {
       title: "Generative AI",
       body:
-        "Generative AI accelerates content creation, automates curriculum design and supports personalised learning experiences. With this technology, educators focus on teaching while the software handles repetitive tasks and content adaptation.",
+        "Generative AI supports content drafting, summarisation and adaptation. Used with educator review and clear source controls, it takes repetitive preparation work off staff so they can focus on teaching.",
     },
     {
       title: "Machine Learning",
       body:
-        "Machine learning converts large datasets into insight teachers can act on. It helps tailor learning modules, improve student interactions and optimise administrative workflows, allowing schools to operate more efficiently and scale effectively.",
+        "Machine learning converts large datasets into insight teachers can act on. It helps tailor learning recommendations, forecast demand and optimise administrative workflows, so institutions can operate more efficiently.",
     },
   ],
 };
 
-/** Six outcomes AI opens up for an institution. */
+/** Six outcomes data and AI open up for an institution. */
 export const streamline = {
   eyebrow: "What can AI optimise for you?",
   titleLead: "Discover How AI Can",
@@ -272,50 +268,44 @@ export const streamline = {
   texture: textureBgImg,
   items: [
     {
-      title: "Increased Student Retention",
-      body:
-        "Low engagement and one-size-fits-all learning lead to high dropout rates. AI-powered platforms tailor learning experiences to each student's needs, improving motivation, boosting retention and lifting overall educational outcomes.",
+      title: "Improve Engagement & Retention",
+      body: "Use participation and learning signals to identify students who may need support.",
     },
     {
-      title: "Improved Student Learning",
-      body:
-        "Identifying knowledge gaps is difficult at scale. Machine learning analyses student data to provide personalised feedback and targeted learning paths, helping learners achieve better results without waiting for the end-of-term report.",
+      title: "Improve Learning Insight",
+      body: "Surface knowledge gaps and personalise recommendations where appropriate.",
     },
     {
-      title: "Enhanced Efficiency",
-      body:
-        "Administrative tasks like grading and reporting consume significant time. Automation through AI and smart analytics simplifies these processes, saving time and resources while reducing errors.",
+      title: "Reduce Administrative Load",
+      body: "Automate repetitive reporting, routing and data preparation.",
     },
     {
-      title: "Optimised Product Development",
-      body:
-        "Building effective educational tools requires insight into user behaviour and outcomes. AI-driven analytics reveal trends and preferences, guiding the development of solutions that meet real-world needs.",
+      title: "Improve Education Product Decisions",
+      body: "Use behavioural and outcome data to guide what to improve next.",
     },
     {
-      title: "Enhanced Marketing And Student Acquisition",
-      body:
-        "Understanding student and institutional needs helps EdTech providers target effectively. Data insights support tailored marketing strategies, attracting the right users and improving adoption rates.",
+      title: "Strengthen Recruitment Insight",
+      body: "Analyse funnel and engagement data to understand what attracts and converts suitable learners.",
     },
     {
-      title: "Strategic Advantage",
-      body:
-        "Staying competitive requires innovation. Integrating AI and machine learning into educational solutions provides unique capabilities, improving learning outcomes, operational efficiency and market positioning.",
+      title: "Build Responsible AI Capability",
+      body: "Create governed, measurable AI use cases that can scale across the institution.",
     },
   ],
 };
 
 export const midCta = {
-  title: "Craft Your Ideal AI-Powered EdTech Software Solution",
+  title: "Build a Responsible Data & AI Roadmap for Education",
   body:
-    "Our AI-powered platforms enhance teaching, engage students and take the weight out of administrative processes, enabling schools, universities and training centres to thrive in a digital-first world.",
-  ctaText: "Get in touch now",
+    "Start with one measurable challenge—student engagement, assessment workload, reporting, content discovery or learner support. Axiomra can assess the data available, identify the right AI approach, define governance and test value before wider adoption.",
+  ctaText: "Discuss Your Education AI Priority",
   background: midCtaBgImg,
 };
 
 export const stakeholders = {
-  eyebrow: "Who we build for",
-  titleLead: "Built For Every",
-  titleAccent: "Stakeholder In Education",
+  eyebrow: "Who we work with",
+  titleLead: "Data & AI Support",
+  titleAccent: "For Stakeholders Across Education",
   items: [
     {
       title: "School Administrators",
@@ -327,35 +317,35 @@ export const stakeholders = {
     {
       title: "Teachers & Instructors",
       body:
-        "Automated grading, lesson planning support and a clear view of which students need help this week, giving teaching hours back to teaching.",
+        "Assessment analytics, AI-assisted planning support and a clear view of which students may need help this week, giving time back to teaching.",
       image: stkTeachersImg,
       alt: "A teacher guiding a young pupil writing on a classroom blackboard",
     },
     {
       title: "Students",
       body:
-        "Adaptive paths, instant feedback and mobile access, so the course meets each learner at their own pace and on the device they actually use.",
+        "Personalised recommendations and faster feedback, drawn from learning data, so support reaches each learner at the right pace.",
       image: stkStudentsImg,
       alt: "Two university students smiling in a lecture hall",
     },
     {
       title: "Parents",
       body:
-        "Progress, attendance and communication in one portal, so families see how a child is doing without waiting for a parents' evening.",
+        "Clearer progress and attendance insight, shared through the channels schools already use, so families see how a child is doing sooner.",
       image: stkParentsImg,
       alt: "A parent reading with a child at home",
     },
     {
       title: "K-12 Institutions",
       body:
-        "Safeguarded, age-appropriate platforms that handle timetabling, assessment and reporting for a whole school without a dedicated IT department.",
+        "Reporting and analytics across attendance, assessment and timetabling data, set up so schools without a large data team can still use it.",
       image: stkK12Img,
       alt: "A young pupil with a school backpack on the first day of term",
     },
     {
       title: "Higher Education & Universities",
       body:
-        "Research-grade analytics, credentialing and SIS integration built for scale, multi-campus structures and the compliance reviews that come with them.",
+        "Institution-wide analytics that connect SIS, LMS and assessment data across faculties and campuses, with governance built in from the start.",
       image: stkHigherEdImg,
       alt: "A university campus quad on a clear day",
     },
@@ -390,11 +380,11 @@ export const blogs = {
 };
 
 export const techStrip = {
-  eyebrow: "Our tech stack",
-  titleLead: "Proven Technology",
-  titleAccent: "Solutions For Your Institution",
+  eyebrow: "Data & AI technologies",
+  titleLead: "Data & AI Technologies",
+  titleAccent: "For Your Institution",
   body:
-    "The same production-grade toolchain sits under every learning platform we ship. Pick a layer to see what it is made of.",
+    "The tools we use to connect education data, run analytics and deliver AI use cases. Pick a layer to see what it is made of.",
   ctaText: "View all tech stack",
   tabs: [
     {
@@ -407,7 +397,7 @@ export const techStrip = {
     },
     {
       id: "backend",
-      label: "Backend & Databases",
+      label: "Data & Databases",
       items: [
         "Node.js", "NestJS", "Express", "FastAPI", "Django", "GraphQL", "PostgreSQL", "MongoDB",
         "Redis", "Elasticsearch", "Qdrant", "Pinecone", "Kafka", "Airflow", "dbt", "BigQuery",
@@ -415,11 +405,8 @@ export const techStrip = {
     },
     {
       id: "frontend",
-      label: "Frontend",
-      items: [
-        "React", "Next.js", "Vue", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js",
-        "React Native", "Flutter", "Vite", "Radix UI", "D3.js",
-      ],
+      label: "Dashboards & Visualisation",
+      items: ["React", "Next.js", "Vue", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js", "Vite", "Radix UI", "D3.js"],
     },
     {
       id: "cloud",
@@ -433,12 +420,12 @@ export const techStrip = {
     },
     {
       id: "edtech",
-      label: "EdTech Standards",
+      label: "EdTech Data Standards",
       items: ["LTI 1.3", "xAPI", "SCORM", "QTI", "OneRoster", "Ed-Fi", "Open Badges", "WCAG 2.2", "Moodle", "Canvas API"],
     },
     {
       id: "design",
-      label: "UI / UX",
+      label: "Accessibility & Usability",
       items: ["Figma", "Design Tokens", "Prototyping", "Accessibility Audits", "Usability Testing With Learners"],
     },
   ],
@@ -449,23 +436,23 @@ export const businessTypes = {
   titleLead: "Explore The Range Of",
   titleAccent: "Education Organisations We Support",
   body:
-    "We build AI-powered education software for the people responsible for learning outcomes, whether that is a single campus, a multi-academy trust or an EdTech product serving thousands of institutions.",
+    "We help the people responsible for learning outcomes use data and AI well, whether that is a single campus, a multi-academy trust or an EdTech team serving thousands of institutions.",
   rows: [
     {
       label: "EdTech startups",
-      body: "We help founders get a first learning product live fast: concept validation, an MVP that proves retention, and the analytics to show it working before the next raise.",
+      body: "We help EdTech teams validate AI use cases, analyse retention and learner behaviour, and show measurable value before the next raise.",
     },
     {
       label: "K-12 schools and trusts",
-      body: "Safeguarding, timetabling, attendance and parent communication in one platform, built for schools that do not have an in-house engineering team to maintain it.",
+      body: "Attendance, safeguarding and assessment data brought together into clear reporting, for schools that do not have an in-house data team.",
     },
     {
       label: "Colleges and universities",
-      body: "Multi-campus SIS and LMS integration, credentialing, research analytics and the accessibility and procurement evidence higher education reviews demand.",
+      body: "Multi-campus SIS and LMS data integration, student success analytics and the governance evidence higher education reviews ask for.",
     },
     {
       label: "Corporate training providers",
-      body: "Workforce learning at scale: compliance tracking, skills mapping, certification and reporting that stands up to an audit as well as to a board deck.",
+      body: "Workforce learning analytics: completion tracking, skills insight and reporting that stands up to an audit as well as to a board deck.",
     },
   ],
 };
@@ -473,7 +460,7 @@ export const businessTypes = {
 export const testimonials = {
   eyebrow: "Why is it worth working with us?",
   titleLead: "What Our Clients Say About Our",
-  titleAccent: "AI Development Team",
+  titleAccent: "Data & AI Team",
   items: [
     {
       name: "Sudeep Kulkarni",
@@ -502,9 +489,9 @@ export const testimonials = {
 export const showcase = {
   eyebrow: "What innovations have we delivered to businesses?",
   titleLead: "Showcasing Our",
-  titleAccent: "AI Development Projects",
+  titleAccent: "Data & AI Projects",
   body:
-    "Explore the platforms we have shipped as an AI development company, built to solve the operational and learning problems institutions actually face.",
+    "Explore Data & AI work we have delivered to solve the operational and learning problems institutions actually face.",
   ctaText: "Check out our full portfolio",
 };
 
@@ -517,19 +504,19 @@ export const partner = {
       icon: "Target",
       title: "Enhanced Training Adaptability",
       body:
-        "Educators need effective tools to convey concepts and reinforce learning. Our educational app development services integrate cleanly with classroom and online programmes, providing interactive training modules that support teaching and assessment.",
+        "Educators need clear insight to reinforce learning. Our Data & AI services work alongside classroom and online programmes, surfacing where learners struggle and supporting teaching and assessment decisions.",
     },
     {
       icon: "Layers",
       title: "Enhanced Cost Efficiency",
       body:
-        "Investing in custom education software helps institutions maximise resources. By partnering with digital content providers and using AI solutions, schools and universities expand what they offer while reducing operational costs.",
+        "Better use of existing data helps institutions maximise resources. By automating repetitive reporting and focusing AI on measurable priorities, schools and universities reduce operational effort without replacing the systems they rely on.",
     },
     {
       icon: "ShieldCheck",
       title: "Flexibility With Modern Teaching Methods",
       body:
-        "Learning methods evolve rapidly. Our mobile EdTech apps support interactive modules, job aids and updated teaching methodologies. Scalable and adaptable, these solutions ensure learners always access effective, up-to-date educational content.",
+        "Learning methods evolve rapidly. Our analytics and AI use cases adapt as programmes change, helping educators see what is working and keep learners on effective, up-to-date content.",
     },
   ],
   stats: [
@@ -543,38 +530,38 @@ export const partner = {
 export const faqs = [
   {
     q: "How is AI and machine learning used in EdTech?",
-    a: "In three main places. Personalisation: models read performance signals and recommend the next best activity for each learner. Automation: grading, scheduling, attendance and reporting run without staff re-keying data. Early warning: engagement and assessment patterns flag students at risk while there is still time to intervene.",
+    a: "In three main places. Personalisation: models read performance signals and recommend the next best activity for each learner. Automation: grading support, scheduling, attendance and reporting run without staff re-keying data. Early warning: engagement and assessment patterns flag students who may need support while there is still time to intervene.",
   },
   {
-    q: "How can Axiomra tailor EdTech app development to an institution's needs?",
-    a: "We start with discovery on your curriculum, your existing systems and your compliance obligations, then build around them rather than around a product template. That usually means integrating your SIS and LMS instead of replacing them, and shipping the highest-value module first so staff see a result inside a term.",
+    q: "How can Axiomra tailor Data & AI services to an institution's needs?",
+    a: "We start with discovery on your goals, your existing systems, your data and your privacy obligations, then shape the work around them. That usually means connecting the SIS and LMS data you already have rather than replacing anything, and piloting the highest-value use case first so staff see a result inside a term.",
   },
   {
     q: "Can your solutions integrate with existing EdTech systems?",
-    a: "Yes. We build against the standards the sector already runs on: LTI 1.3, xAPI, SCORM, QTI, OneRoster and Ed-Fi, plus direct SIS and LMS APIs where a standard does not cover it. The goal is one source of truth per record, not another system to reconcile.",
+    a: "Yes. We work with the standards the sector already runs on: LTI 1.3, xAPI, SCORM, QTI, OneRoster and Ed-Fi, plus direct SIS and LMS APIs where a standard does not cover it. The goal is one trusted source of data per record, not another system to reconcile.",
   },
   {
-    q: "How do I hire an app developer to make an educational app?",
-    a: "Start with a scoped consultation rather than a job spec. We will size the work honestly, including what we would not build, and you get a written scope, timeline and cost before anyone writes code. From there you can engage us for a fixed-scope MVP or as a dedicated team.",
+    q: "How do I start an education Data & AI project with Axiomra?",
+    a: "Start with a scoped consultation. We will look at the data available and the challenge you want to solve, size the work honestly, including what we would not recommend, and give you a written scope, timeline and cost before work begins. From there you can start with a focused pilot.",
   },
   {
-    q: "Is custom educational software development a smarter choice than off-the-shelf?",
-    a: "It depends on where your pain is. Off-the-shelf is fine for commodity needs. Custom pays when the tools fracture: the joins between LMS, SIS and assessment, the reporting layer no vendor owns, and the workflows specific to how your institution runs. Most clients do both, and we will tell you which is which.",
+    q: "Should we use off-the-shelf AI tools or a tailored Data & AI approach?",
+    a: "It depends on where your pain is. Off-the-shelf tools are fine for commodity needs. A tailored approach pays where the data is fragmented: the joins between LMS, SIS and assessment, the reporting no vendor owns, and the workflows specific to how your institution runs. Most clients use both, and we will tell you which is which.",
   },
   {
     q: "How do you handle student data privacy and safeguarding?",
-    a: "GDPR, FERPA and COPPA requirements are designed in from the first architecture session: least-privilege role-based access, encryption in transit and at rest, audit trails, data residency, retention policies and age-appropriate consent flows. We also document all of it for the review your DPO or procurement team will run.",
+    a: "We scope every data and AI use case around your GDPR, FERPA and COPPA obligations: least-privilege role-based access, encryption in transit and at rest, audit trails, data residency, retention rules and age-appropriate consent. We also document our approach for the review your DPO or procurement team will run.",
   },
   {
-    q: "How long does an education platform build take?",
-    a: "A scoped MVP with one capability, such as an assessment engine or a parent portal, typically runs eight to twelve weeks. A full platform spanning LMS, SIS integration and analytics runs four to nine months, delivered in increments you can use from the first sprint rather than at the end.",
+    q: "How long does an education Data & AI project take?",
+    a: "A scoped pilot with one use case, such as assessment analytics or an early-warning model, typically runs eight to twelve weeks. A wider programme spanning LMS and SIS data integration and analytics runs four to nine months, delivered in increments you can use from the start rather than at the end.",
   },
 ];
 
 export const finalCta = {
   title: "Put AI To Work Across Your Institution",
   subtitle:
-    "As a premier AI service provider, we are trusted by clients worldwide to deliver tailored AI solutions that drive success. Let's discuss your project.",
-  buttonText: "Get your project done!",
+    "Tell us the education challenge you want to solve first, and we will help you find the data and AI approach that fits it.",
+  buttonText: "Start the conversation",
   background: finalCtaBgImg,
 };
