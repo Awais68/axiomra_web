@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "../../SectionHeading";
 import { Reveal } from "../../motion/Reveal";
 import { challenges } from "../../../data/sportsData";
+import { CONTACT_PATH } from "../../../routes.constants";
 
 const EASE = [0.16, 1, 0.3, 1];
 
@@ -115,7 +116,7 @@ export default function SportsChallenges() {
             </AnimatePresence>
 
             <Link
-              to="/contact"
+              to={CONTACT_PATH}
               className="relative mt-9 inline-flex items-center gap-3 rounded-full border border-inverse-fg/20 py-2 pl-6 pr-2 text-base font-medium text-inverse-fg transition-colors duration-300 hover:border-accent-vivid focus-ring"
             >
               Solve this with us

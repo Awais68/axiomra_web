@@ -61,25 +61,25 @@ export const SPORTS_SLUG = "sports";
 
 export const hero = {
   eyebrow: "AI for the sports industry",
-  titleLead: "Custom",
-  titleAccent: "Sports Software Development",
-  titleTail: "For High-Performance Teams",
+  titleLead: "AI & Data Solutions for",
+  titleAccent: "Better Performance, Smarter Operations",
+  titleTail: "and Stronger Fan Engagement",
   body:
-    "We design and build sports software that turns athlete performance, operations and fan attention into systems you can actually run. From real-time match data and injury prevention to ticketing, broadcast and fan engagement platforms, our work keeps sports organisations ahead in a season that never really stops.",
-  ctaText: "Request a free consultation",
+    "Axiomra helps sports organisations turn performance, operational and fan data into decisions teams can act on. From athlete analytics and computer vision to ticketing insights and fan intelligence, we focus on the data and AI layer that connects existing systems and improves visibility across the organisation.",
+  ctaText: "Explore Your Sports Data & AI Use Case",
   image: heroImg,
   alt: "A packed football stadium under floodlights on a match night",
   reviews: { platform: "Clutch", rating: 5, count: 12 },
 };
 
 export const intro = {
-  titleLead: "AI Sports Software Development That Elevates",
-  titleAccent: "Performance And Fan Engagement",
+  titleLead: "Turn Sports Data Into",
+  titleAccent: "Competitive and Commercial Insight",
   paragraphs: [
-    "Axiomra is a sports software development company built around data engineers and sports technologists who ship end-to-end platforms for performance, fan engagement, ticketing and live analytics. Our systems replace the data silos that leave coaching staff guessing, cut the operational friction between departments, and put every number in one secure, cloud-native place.",
-    "We work with professional clubs, colleges, academies, venues and federations. On the performance side that means fewer soft-tissue injuries, a real concussion-management trail and coaching admin that stops eating the training week. On the commercial side it means attendance you can forecast, OTT revenue you can measure and sponsorship you can price. Wearable privacy, NIL compliance and AI misuse all get guardrails from day one, not after the first incident.",
+    "Axiomra works with clubs, academies, venues, federations and sports organisations to improve how performance, medical, ticketing and fan data is used. We help teams identify high-value AI opportunities, connect fragmented data sources and build analytics that support coaching, operations and commercial decisions.",
+    "Privacy, model governance and human review are designed around the use case from the start.",
   ],
-  ctaText: "Book a Free Sports Tech Consultation",
+  ctaText: "Book a Sports Data & AI Consultation",
   image: introImg,
   alt: "An analyst reviewing match video on a bank of monitors",
 };
@@ -88,7 +88,7 @@ export const impact = {
   titleLead: "How AI Is Reshaping Performance, Revenue",
   titleAccent: "And Safety In Sports",
   body:
-    "AI sports software is redefining how teams manage training load, reduce injury risk and open new revenue by unifying wearables, video, ticketing and CRM into real-time workflows that scale from academies to professional leagues.",
+    "AI and data are changing how teams manage training load, understand injury risk and find new revenue, by bringing wearable, video, ticketing and CRM data together into analytics that work from academies to professional leagues.",
   stats: [
     {
       value: "$10.4B",
@@ -111,139 +111,139 @@ export const impact = {
 
 /**
  * The challenge rail. Each entry is a barrier sports organisations hit, and the
- * platform capability we build to remove it.
+ * data or AI work that helps remove it.
  */
 export const challenges = {
   eyebrow: "Overcoming key barriers in sport",
   titleLead: "Solving The Problems Sports Organisations Actually Have",
-  titleAccent: "With Custom Software",
+  titleAccent: "With Data & AI",
   items: [
     {
       title: "Performance Data Nobody Reads",
       body:
-        "GPS vests, force plates, wellness questionnaires and video all land in different exports, and by the time anyone has merged them the session they describe is a week old. We build the ingestion layer and the one screen that sits on top of it, so a coach sees load, readiness and risk for the whole squad before training starts rather than after it.",
+        "GPS vests, force plates, wellness questionnaires and video all land in different exports, and by the time anyone has merged them the session they describe is a week old. We build the data pipeline and the analytics view on top of it, so a coach sees load, readiness and risk for the whole squad before training starts rather than after it.",
     },
     {
       title: "Injury Risk Spotted Too Late",
       body:
-        "Soft-tissue injuries rarely arrive without warning; the warning is just spread across sources nobody correlates. We combine workload history, movement asymmetry and self-reported wellness into a risk model with an audit trail, so medical staff get a flag they can act on and a record that stands up when someone asks why a player was rested.",
+        "The warning signs are often spread across sources nobody correlates. We combine workload history, movement asymmetry and self-reported wellness into a risk model with an audit trail, so medical staff get a flag worth reviewing and a record of why it was raised. The final call stays with qualified staff.",
     },
     {
       title: "Video Reviewed Once, Then Lost",
       body:
-        "Match footage gets watched on Monday and never again, because nothing in it is searchable. Our computer-vision pipelines tag events, players and phases automatically, so a decade of footage becomes a queryable archive for coaching, scouting, broadcast highlights and sponsorship reporting.",
+        "Match footage gets watched on Monday and never again, because nothing in it is searchable. Computer-vision pipelines can tag selected events, players and phases, turning archive footage into structured data for coaching, scouting, highlights and sponsorship reporting.",
     },
     {
-      title: "Match-Day Operations That Break Under Load",
+      title: "Match-Day Data That Arrives Too Late",
       body:
-        "Ticketing, access control, retail and stewarding usually come from four vendors who have never spoken. We build the integration layer and the real-time operations view so gate throughput, capacity and incidents are visible during the match, not reconstructed from four reports the following week.",
+        "Ticketing, access control, retail and stewarding data usually sits with separate vendors. We connect those sources into shared, near-real-time reporting, so gate throughput, capacity and incidents are visible during the match, not reconstructed from four reports the following week.",
     },
     {
       title: "Fans Who Only Show Up Twice A Season",
       body:
-        "Declining attendance is a retention problem, and retention needs identity. We unify ticketing, OTT, merchandise and app behaviour into one supporter profile, then build the personalisation, live polling and second-screen features that turn an occasional attendee into a season-ticket renewal.",
+        "Declining attendance is a retention problem, and retention needs a joined-up view of the supporter. We bring ticketing, streaming, merchandise and engagement data into one analytics profile, then use segmentation and propensity models to show who is drifting and which content or offers bring them back.",
     },
     {
       title: "Sponsorship You Cannot Price",
       body:
-        "Rights holders still sell exposure on estimates. We instrument broadcast and social video with brand-detection models, so perimeter boards, shirt fronts and digital placements report measured seconds of visibility and audience reach per asset, which is what a renewal conversation needs.",
+        "Rights holders still sell exposure on estimates. Brand-detection models applied to broadcast and social video measure how long perimeter boards, shirt fronts and digital placements are visible, giving renewal conversations evidence rather than assumptions.",
     },
     {
-      title: "Compliance, NIL And Wearable Privacy",
+      title: "Athlete Data Privacy And Consent",
       body:
-        "Athlete biometrics are among the most sensitive data a club holds, and NIL, concussion protocols and image rights each carry their own obligations. We design consent capture, retention and access control into the schema, so the security review and the league audit both find what they are looking for.",
+        "Athlete biometrics are among the most sensitive data a club holds, and image rights and medical records each carry their own obligations. We design consent, retention and access control into the data model from the start, and document how each dataset is used so your legal and medical teams can review it.",
     },
   ],
 };
 
 export const services = {
-  eyebrow: "What sports solutions do we offer?",
-  titleLead: "Tailored Sports Software Solutions",
-  titleAccent: "For Every Organisation",
+  eyebrow: "Where data and AI help in sport",
+  titleLead: "Sports Data & AI Use Cases",
+  titleAccent: "Across Performance, Operations And Fans",
   body:
-    "We build custom sports software that removes the manual, repetitive work modern sports organisations still run on: in-person-only coaching, fragmented medical records, batch-processed performance data and fan engagement that stops at the final whistle.",
+    "Much of sport still runs on manual, repetitive work: movement assessed by eye, medical records in separate systems, performance data processed in batches and fan insight that stops at the final whistle. These are the areas where data and AI most often help.",
   items: [
     {
-      title: "Kinesiology & Motion Analysis Software",
+      title: "Motion & Biomechanics Analysis",
       body:
-        "Manual posture analysis and movement tracking are slow and inconsistent between assessors. Our motion analysis software uses pose estimation to break down biomechanics, quantify asymmetry and track technique changes session over session, so coaching decisions rest on measurement rather than memory.",
+        "Manual posture analysis and movement tracking are slow and inconsistent between assessors. Pose-estimation models break down biomechanics, quantify asymmetry and track technique changes session over session, so coaching decisions rest on measurement rather than memory.",
       image: svcMotionImg,
       alt: "A motion-capture session with reflective markers in a biomechanics lab",
     },
     {
-      title: "Fitness Club & Gym Management Software",
+      title: "Fitness Club & Gym Analytics",
       body:
-        "Running a club by hand produces double bookings, membership errors and hours lost to admin. We automate memberships, billing, class scheduling and trainer coordination into one platform that staff and members both actually want to use.",
+        "Membership, attendance and class data usually sits unused in the booking system. We analyse it to forecast demand, spot members at risk of leaving and show which classes and time slots are under- or over-used.",
       image: svcGymImg,
       alt: "The interior of a modern gym lined with training machines",
     },
     {
-      title: "Sports Mobile App Development",
+      title: "Wearable & Athlete Data Analytics",
       body:
-        "Fans and athletes drop off when the experience is disconnected from live data. Our sports apps deliver performance tracking, instant analytics and real-time engagement in one place, so athletes, coaches and supporters stay connected between fixtures rather than only during them.",
+        "Wearables produce more data than staff can read. We bring device data into one analytics layer with training and match records, so athletes and coaches see trends in load, readiness and recovery rather than raw exports.",
       image: svcMobileImg,
       alt: "A runner checking a smartwatch mid-session",
     },
     {
-      title: "League & Tournament Management Software",
+      title: "League & Competition Data",
       body:
-        "Running a competition manually creates fixture clashes, disputed results and a mountain of administration. We automate scheduling, bracket generation, eligibility checks and live score distribution so organisers run a professional competition without a war room.",
+        "Competitions generate fixture, result, eligibility and officiating data that is often checked by hand. We apply data validation and scheduling optimisation so organisers can spot clashes, errors and trends earlier.",
       image: svcLeagueImg,
       alt: "A referee signalling during a football match",
     },
     {
-      title: "Sports Medicine Software",
+      title: "Sports Medicine & Injury Data",
       body:
-        "Injury and medical records scattered across paper, spreadsheets and clinic systems make continuity of care impossible. Our sports medicine platforms centralise injury logs, rehab plans and medical history with the access control that health data requires, and surface the recovery signal staff need.",
+        "Injury and medical records scattered across paper, spreadsheets and clinic systems are hard to analyse. We bring injury logs, rehab progress and workload data together with appropriate access controls, and surface patterns that help medical staff decide where to look more closely.",
       image: svcMedicineImg,
       alt: "A physiotherapist treating an athlete's knee",
     },
     {
-      title: "Sports Training Software",
+      title: "Training Load & Progress Analytics",
       body:
-        "Coaching that depends on in-person sessions caps how many athletes a programme can develop well. We build personalised training plans, progress tracking and performance analytics into one system, so a coach's method scales past the number of people in the room.",
+        "Coaching that depends on in-person observation caps how many athletes a programme can develop well. Analytics on training load, progress and outcomes help coaches personalise plans and see which athletes need attention first.",
       image: svcTrainingImg,
       alt: "A youth football squad working through a cone drill",
     },
     {
-      title: "Sports Event App",
+      title: "Event-Day Demand & Crowd Analytics",
       body:
-        "Event day exposes every gap in planning, ticketing and communication at once. Our event apps handle digital ticketing, wayfinding, schedules and live updates, so attendees stay informed and your operations team stops firefighting over radio.",
+        "Event day exposes every gap in planning at once. We use ticketing, entry and historical attendance data to forecast arrival patterns and demand, so operations teams can plan staffing and flow before the gates open.",
       image: svcEventImg,
       alt: "A stadium stand packed with cheering spectators",
     },
     {
-      title: "Team Management App",
+      title: "Squad Availability & Selection Analytics",
       body:
-        "Squads run on spreadsheets and group chats until something important gets missed. We centralise availability, selection, travel, player data and communication so coaches, players and managers work from the same source through a long season.",
+        "Availability, workload and performance data often live in spreadsheets and group chats. We combine them into shared reporting so coaches and managers review selection and rotation from the same evidence through a long season.",
       image: svcTeamImg,
       alt: "A coach giving instructions to a huddled team",
     },
     {
-      title: "Streaming & Broadcasting Software",
+      title: "Broadcast & Video Analytics",
       body:
-        "Broadcast usually means high cost, latency and no analytics worth the name. We build live streaming, automated highlight generation and in-stream video analytics that cut delivery cost while opening direct-to-fan revenue you own rather than rent.",
+        "Broadcast footage holds more value than a single viewing. Computer-vision and audience analytics support automated highlight detection, content tagging and viewing insight that help media teams decide what to publish and how to monetise it.",
       image: svcStreamingImg,
       alt: "A broadcast camera operator covering a match from the touchline",
     },
     {
-      title: "Fan Engagement Software",
+      title: "Fan Intelligence & Personalisation",
       body:
-        "Generic updates and once-a-fortnight contact are why loyalty erodes. Our fan engagement platforms deliver personalised content, live polls, predictions and interactive second-screen experiences that lift retention and give you first-party data worth having.",
+        "Generic updates are one reason loyalty erodes. We analyse first-party engagement data to build fan segments and personalisation models that improve content, targeting and retention.",
       image: svcFanImg,
       alt: "Supporters holding scarves and flags in a stadium stand",
     },
     {
-      title: "Ticketing & Venue Operations",
+      title: "Ticketing & Venue Analytics",
       body:
-        "Match-day systems from four vendors become one queue at gate three. We integrate ticketing, access control, retail and stewarding into a real-time operations view, with dynamic pricing and demand forecasting that fill seats before the day rather than discount them after.",
+        "Ticketing, access and retail data from different vendors rarely gets analysed together. We connect it for demand forecasting and pricing insight, so seats are filled before the day rather than discounted after it.",
       image: svcTicketingImg,
       alt: "Spectators passing through a stadium entrance gate",
     },
     {
       title: "Scouting & Recruitment Analytics",
       body:
-        "Recruitment still turns on the games a scout could physically attend. We build data pipelines and similarity models across competitions and age groups, so a shortlist reflects the whole market and every recommendation carries the evidence behind it.",
+        "Recruitment still turns on the games a scout could physically attend. We build data pipelines and similarity models across competitions and age groups, so a shortlist reflects a wider market and every recommendation carries the evidence behind it.",
       image: svcScoutingImg,
       alt: "An analyst reviewing play from the sideline on a tablet",
     },
@@ -251,86 +251,76 @@ export const services = {
 };
 
 export const midCta = {
-  title: "Looking For Something Else?",
+  title: "Have a Sports Data Challenge We Haven't Listed?",
   body:
-    "These are the sports solutions we get asked for most. If you have a specific idea, an existing platform that needs rescuing, or a requirement nobody has built yet, that is the conversation we most want to have.",
-  ctaText: "Get in touch",
+    "Every organisation has different systems, competitions and reporting needs. If your priority is not covered here, bring us the problem, the data sources you have and the decision you need to improve. We can assess whether AI, analytics or data integration is the right approach—and where it is not.",
+  ctaText: "Discuss Your Use Case",
   background: midCtaBgImg,
 };
 
 export const solutions = {
-  eyebrow: "How we deliver",
-  titleLead: "Sports Software Development Services",
-  titleAccent: "Built Around Your Season",
+  eyebrow: "Our delivery approach",
+  titleLead: "How We Deliver Data & AI Work",
+  titleAccent: "Around Your Season",
   body:
-    "Five ways we engage, from a scoped pilot before pre-season to a long-running platform partnership across competitions and venues. Every engagement is sized to a calendar you do not control, so delivery lands between fixtures rather than across them.",
+    "Sports calendars leave little room for disruptive technology projects. Axiomra plans discovery, data integration, modelling and rollout around pre-season, competition windows and operational constraints. Start with a focused use case, validate value quickly and scale only when the data and results justify it.",
   items: [
     {
-      title: "Sports Product Engineering",
+      title: "Focused Data & AI Pilots",
       body:
-        "End-to-end delivery of the platform itself: architecture, data model, services, interfaces and the release process behind them. We start with the one workflow that costs your staff the most hours, ship it, and grow the system outward from something already in daily use.",
-      extra:
-        "You get working software in weekly increments, with the first usable capability live long before the full scope lands. Nothing is built behind a curtain for three months and revealed at the end, which is how sports projects usually miss a season.",
+        "Start with the one decision that costs your staff the most time or carries the most risk. We scope a pilot around it, use the data you already hold, and measure the result before anything is scaled.",
       points: [
-        "Discovery, architecture and a costed backlog inside the first three weeks",
-        "Weekly releases to a staging environment your staff can actually open",
-        "Handover package: documentation, tests and the runbook your team keeps",
+        "One use case, agreed success measures and a fixed scope",
+        "Timed around pre-season and competition windows",
+        "A clear go, adjust or stop recommendation at the end",
       ],
       image: solProductImg,
-      alt: "A development team working across a bank of monitors",
+      alt: "An analytics team working across a bank of monitors",
     },
     {
-      title: "AI & Data Consulting",
+      title: "AI & Data Strategy for Sports Organisations",
       body:
-        "A short, honest engagement that maps your data estate, names the models worth building, and says plainly which ideas will not pay for themselves. Most organisations already hold more signal than they use; far fewer hold enough for the model somebody sold them.",
-      extra:
-        "You leave with a costed roadmap rather than a proposal: what to build first, what it needs from your data, what it will cost to run, and the measurement that tells you whether it worked.",
+        "Start by understanding the decisions you want to improve and the data you already hold. Axiomra reviews performance, medical, ticketing, CRM and league data, identifies realistic AI opportunities and defines how success will be measured. The output is a prioritised roadmap covering data readiness, expected value, governance and implementation effort—including ideas that are not ready to proceed yet.",
       points: [
-        "Audit of the tracking, medical, ticketing and league feeds you already hold",
-        "Model shortlist with expected accuracy, effort and running cost per item",
-        "A written case against the ideas that do not clear the bar",
+        "Review of performance, medical, ticketing, CRM and league data",
+        "Realistic AI opportunities with success measures defined",
+        "Prioritised roadmap: data readiness, value, governance and effort",
       ],
       image: solConsultingImg,
       alt: "A strategy workshop around a whiteboard",
     },
     {
-      title: "Video & Computer Vision Pipelines",
+      title: "Computer Vision for Match, Player and Sponsorship Intelligence",
       body:
-        "Automated event tagging, player tracking, pose estimation and brand detection, running on live feeds or a decade of archive. The output is structured data your other systems can query, not another video player nobody logs into.",
-      extra:
-        "We train on your competition rather than a public dataset, because camera angles, kit colours and pitch markings are exactly what breaks a generic model. Accuracy is reported per event type, so you know which outputs to trust and which still need a human.",
+        "Use video data to automate selected analysis tasks such as event tagging, player tracking, pose estimation and sponsorship visibility. Axiomra designs computer-vision pipelines around your footage, camera setup and competition context, with clear accuracy measurement and human review where needed. Outputs can feed existing analytics and reporting systems rather than becoming another isolated tool.",
       points: [
-        "Live and archive pipelines sharing one model and one schema",
-        "Tagging, tracking, pose estimation and sponsorship exposure in a single pass",
-        "Per-event accuracy reporting, with human review only where it is needed",
+        "Pipelines designed around your footage and camera setup",
+        "Accuracy measured per task, with human review where needed",
+        "Outputs feed the analytics and reporting you already use",
       ],
       image: solVisionImg,
       alt: "An analysis console tracking motion data from a live video feed",
     },
     {
-      title: "Platform Integration & Modernisation",
+      title: "Connect the Sports Data You Already Have",
       body:
-        "Most organisations do not start from nothing; they start from six systems that do not talk. We build the integration layer, migrate what deserves to survive, and retire the rest without taking match day offline.",
-      extra:
-        "The work is staged so every step is independently useful and independently reversible. If we stop halfway, you are still better off than when we started, which is the only honest way to modernise a system a season depends on.",
+        "Performance, CRM, ticketing and league data often sit in separate systems. Axiomra can build the data integration layer that makes these sources usable together for analytics and AI. We favour phased integration, clear data ownership and reversible change so critical match-day and operational systems remain stable while your data foundation improves.",
       points: [
-        "One integration layer across GPS, optical tracking, ticketing, CRM and league feeds",
-        "Staged migration with rollback at every step, never a big-bang cutover",
-        "Legacy systems retired only once their replacement has run a full cycle",
+        "One data layer across performance, CRM, ticketing and league sources",
+        "Phased, reversible integration with clear data ownership",
+        "Match-day and operational systems kept stable throughout",
       ],
       image: solIntegrationImg,
       alt: "Racks of servers in a data centre aisle",
     },
     {
-      title: "Cloud & Real-Time Infrastructure",
+      title: "Reliable Data Infrastructure for Peak Match-Day Demand",
       body:
-        "Match day is a traffic spike with a fixed start time. We build the streaming, caching and autoscaling layer that survives it, plus the observability to prove it held and the cost controls to keep the quiet weeks cheap.",
-      extra:
-        "Capacity is load-tested against your own peak, not a vendor benchmark, and the same architecture scales down between fixtures so you are not paying stadium-day rates on a Tuesday in February.",
+        "When data volumes or digital traffic spike around fixtures, analytics and AI services need dependable infrastructure. Axiomra helps design scalable data pipelines, real-time processing and monitoring that can handle peak demand without paying peak costs all season. We test capacity, observability and cost controls against your actual usage patterns.",
       points: [
-        "Load tested against your real peak concurrency before the first fixture",
-        "Autoscaling and caching tuned for a spike with a known start time",
-        "Cost guardrails and alerting so quiet weeks cost what quiet weeks should",
+        "Scalable data pipelines and real-time processing",
+        "Monitoring and observability for match-day peaks",
+        "Capacity and cost controls tested against your real usage",
       ],
       image: solInfraImg,
       alt: "Rows of servers in a data centre lit by blue neon",
@@ -339,35 +329,37 @@ export const solutions = {
 };
 
 export const stakeholders = {
-  eyebrow: "Whom do we build custom sports solutions for?",
-  titleLead: "We Build Advanced Sports Software",
-  titleAccent: "For The Following Clients",
+  eyebrow: "Sports stakeholders",
+  titleLead: "Who We Support",
+  titleAccent: "Across the Sports Ecosystem",
+  body:
+    "Axiomra provides Data & AI services for organisations that need better performance insight, operational visibility or fan intelligence. This can include professional clubs, academies, federations, leagues, venues, sports media, rights holders and performance programmes—subject to the data, governance and business problem involved.",
   items: [
     {
       title: "Coaches & Analysts",
       body:
-        "Load management, opposition analysis and selection evidence in one place, so the week's plan is built on the squad's actual state rather than last week's impression of it.",
+        "Load, opposition and selection data brought together, so the week's plan is built on the squad's actual state rather than last week's impression of it.",
       image: stkCoachesImg,
       alt: "A coach working through a tactics board with the team",
     },
     {
       title: "Athletes",
       body:
-        "Personal dashboards covering training load, recovery, nutrition and rehab progress, with clear control over who sees which part of their own data.",
+        "Clear analysis of training load, recovery and rehab progress, with defined control over who sees which part of their own data.",
       image: stkAthletesImg,
       alt: "An athlete on the podium after a medal ceremony",
     },
     {
       title: "Teams & Clubs",
       body:
-        "One operating system for the organisation: squad administration, medical, performance, ticketing and commercial, reporting into the same numbers the board reviews.",
+        "Performance, medical, ticketing and commercial data connected, so departments and the board report from the same numbers.",
       image: stkClubsImg,
       alt: "A team lined up on the pitch before kick-off",
     },
     {
       title: "Broadcasters & Journalists",
       body:
-        "Automated highlight generation, searchable archives and live statistical feeds, so a package ships during the match instead of the morning after it.",
+        "Computer vision and match data that support highlight detection, searchable archives and live statistics during the match rather than the morning after it.",
       image: stkBroadcastersImg,
       alt: "A reporter interviewing an athlete with a microphone",
     },
@@ -381,7 +373,7 @@ export const stakeholders = {
     {
       title: "Trainers & Physiotherapists",
       body:
-        "Rehab protocols, return-to-play criteria and objective movement assessment in a shared record, so handovers between medical and coaching staff stop losing detail.",
+        "Objective movement and workload data alongside rehab records, so handovers between medical and coaching staff stop losing detail.",
       image: stkPhysioImg,
       alt: "A therapist working on an athlete's leg",
     },
@@ -389,73 +381,74 @@ export const stakeholders = {
 };
 
 /**
- * The sports we build for. Rendered as a clipped, angled card rail, so keep the
- * labels to one or two words.
+ * The sport rail. Rendered as a clipped, angled card rail, so keep the labels
+ * to one or two words. Each card describes the data that sport produces, not a
+ * claim of delivery in it.
  */
 export const sportsWeServe = {
-  eyebrow: "Which sports do we serve?",
-  titleLead: "We Build Custom Sports Software",
-  titleAccent: "For Every Game You Play",
+  eyebrow: "Sport-specific data",
+  titleLead: "Data & AI That Adapts to the Sport,",
+  titleAccent: "Not the Other Way Around",
   body:
-    "The performance, operations and fan problems rhyme across codes; the data model and the rules do not. These are the sports we have shipped against.",
+    "Performance indicators, match structures and commercial models vary by sport. Axiomra starts with the specific competition, workflows and data available, then adapts analytics and AI accordingly.",
   items: [
-    { label: "Football", body: "Match analysis, academy pathways and matchday operations.", image: sportSoccerImg, alt: "A football resting in the back of a goal net" },
-    { label: "Cricket", body: "Ball-by-ball data, workload tracking and multi-format scheduling.", image: sportCricketImg, alt: "A batsman playing a shot during a cricket match" },
-    { label: "Basketball", body: "Possession analytics, rotation planning and arena engagement.", image: sportBasketballImg, alt: "A basketball player rising to the hoop" },
-    { label: "Tennis", body: "Shot and rally analysis, tour scheduling and coaching review.", image: sportTennisImg, alt: "A tennis player serving on a hard court" },
-    { label: "Baseball", body: "Pitch tracking, biomechanics and minor-league player development.", image: sportBaseballImg, alt: "A pitcher mid-delivery on the mound" },
-    { label: "Golf", body: "Swing analysis, course management data and club operations.", image: sportGolfImg, alt: "A golfer following through on a fairway shot" },
-    { label: "Badminton", body: "Rally analytics, court scheduling and federation administration.", image: sportBadmintonImg, alt: "A badminton player striking a shuttlecock" },
-    { label: "Athletics", body: "Split timing, sprint mechanics and meet management.", image: sportAthleticsImg, alt: "A sprinter set in the starting blocks" },
-    { label: "Swimming", body: "Stroke rate analysis, session planning and gala administration.", image: sportSwimmingImg, alt: "A swimmer mid-stroke in a competition lane" },
-    { label: "Cycling", body: "Power data, route telemetry and race logistics.", image: sportCyclingImg, alt: "A cyclist racing on an open road" },
-    { label: "American Football", body: "Play tagging, snap counts and collision-load monitoring.", image: sportFootballImg, alt: "An American football player in helmet and pads" },
-    { label: "Hockey", body: "Shift tracking, puck and ball possession data, rink operations.", image: sportHockeyImg, alt: "A hockey player driving forward with the puck" },
+    { label: "Football", body: "Event and tracking data, academy development and match-day attendance.", image: sportSoccerImg, alt: "A football resting in the back of a goal net" },
+    { label: "Cricket", body: "Ball-by-ball data, bowling workload and multi-format selection.", image: sportCricketImg, alt: "A batsman playing a shot during a cricket match" },
+    { label: "Basketball", body: "Possession data, rotation load and arena engagement.", image: sportBasketballImg, alt: "A basketball player rising to the hoop" },
+    { label: "Tennis", body: "Shot and rally data, match load and coaching review.", image: sportTennisImg, alt: "A tennis player serving on a hard court" },
+    { label: "Baseball", body: "Pitch tracking, biomechanics and player development data.", image: sportBaseballImg, alt: "A pitcher mid-delivery on the mound" },
+    { label: "Golf", body: "Swing analysis, shot data and course usage patterns.", image: sportGolfImg, alt: "A golfer following through on a fairway shot" },
+    { label: "Badminton", body: "Rally data, movement patterns and court utilisation.", image: sportBadmintonImg, alt: "A badminton player striking a shuttlecock" },
+    { label: "Athletics", body: "Split timing, sprint mechanics and results data.", image: sportAthleticsImg, alt: "A sprinter set in the starting blocks" },
+    { label: "Swimming", body: "Stroke rate, split and session load data.", image: sportSwimmingImg, alt: "A swimmer mid-stroke in a competition lane" },
+    { label: "Cycling", body: "Power data, route telemetry and training load.", image: sportCyclingImg, alt: "A cyclist racing on an open road" },
+    { label: "American Football", body: "Play tagging, snap counts and collision-load data.", image: sportFootballImg, alt: "An American football player in helmet and pads" },
+    { label: "Hockey", body: "Shift data, puck and ball possession, and workload.", image: sportHockeyImg, alt: "A hockey player driving forward with the puck" },
   ],
 };
 
 export const benefits = {
-  eyebrow: "What you can optimise with AI-powered sports applications",
-  titleLead: "Benefits Of Custom AI-Powered",
-  titleAccent: "Sports Software Solutions",
+  eyebrow: "What you can improve with sports data and AI",
+  titleLead: "Benefits Of AI & Data",
+  titleAccent: "For Sports Organisations",
   items: [
     {
-      title: "Elevate Athlete Performance",
+      title: "Improve Performance Insight",
       body:
-        "Athletes get training prescribed against their own measured state: load history, movement quality and recovery, rather than a squad-wide plan that fits the average and nobody in particular.",
+        "Combine load, movement, recovery and match data to support more individualised analysis.",
     },
     {
-      title: "Integrate With The Tools You Already Run",
+      title: "Connect Existing Data Sources",
       body:
-        "Wearables, optical tracking, AR and VR training environments and league data feeds all land in one model, so a new sensor becomes an input rather than another platform to log into.",
+        "Bring wearable, tracking, league and operational data into a usable analytics layer.",
     },
     {
-      title: "Optimise Club Operations",
+      title: "Improve Operational Visibility",
       body:
-        "Scheduling, squad administration, medical records and facility management run off shared data with real-time reporting, which removes most of the manual coordination a season currently demands.",
+        "Use shared data and reporting to reduce manual coordination across scheduling, facilities, squads and administration.",
     },
     {
-      title: "Deepen Fan Engagement",
+      title: "Understand and Engage Fans",
       body:
-        "Personalised content, live interaction and second-screen features keep supporters engaged between fixtures, and give you the first-party data that makes the next campaign cheaper.",
+        "Analyse first-party engagement data to improve content, segmentation and retention.",
     },
     {
-      title: "Grow Revenue",
+      title: "Strengthen Commercial Decisions",
       body:
-        "Automated billing, subscriptions, dynamic ticket pricing and measured sponsorship exposure turn commercial guesswork into forecastable, defensible numbers.",
+        "Use ticketing, subscription and sponsorship data to improve forecasting and measurement.",
     },
     {
-      title: "Protect Health And Availability",
+      title: "Support Player Availability",
       body:
-        "Monitoring physical and mental load reduces avoidable injury and keeps more of the squad available, which is the single cheapest performance gain most organisations have left.",
+        "Combine workload and medical signals to help staff identify patterns that may warrant closer review. Our models support, rather than replace, qualified clinical and performance judgement.",
     },
   ],
 };
 
 export const build = {
-  title: "Craft Your Ideal Sports Software Solution",
+  title: "Start With The Sports Decision You Want To Improve",
   body:
-    "Bring us the bottleneck, whether that is performance analysis, match-day operations or a fan platform that has stopped scaling. We will scope it honestly, build it in increments you can use, and tell you which parts are not worth building at all.",
+    "Bring us the bottleneck, whether that is performance analysis, match-day reporting or fan insight that has stopped keeping up. We will scope it honestly, deliver it in stages you can use, and tell you which ideas are not worth pursuing yet.",
   ctaText: "Get in touch now",
   texture: textureBgImg,
   image: buildVisualImg,
@@ -464,10 +457,10 @@ export const build = {
 
 export const techStrip = {
   eyebrow: "Technologies we work with",
-  titleLead: "Expertise In Advanced",
-  titleAccent: "Development Technologies",
+  titleLead: "Data & AI Technologies",
+  titleAccent: "Behind Our Sports Work",
   body:
-    "The same production-grade toolchain sits under every sports platform we ship. Pick a layer to see what it is made of.",
+    "The tools behind our sports data pipelines, models and analytics. Pick a layer to see what it is made of.",
   ctaText: "View all tech stack",
   tabs: [
     {
@@ -481,7 +474,7 @@ export const techStrip = {
     },
     {
       id: "backend",
-      label: "Backend & Databases",
+      label: "Data Platforms & APIs",
       items: [
         "Node.js", "NestJS", "FastAPI", "Django", "Go", "GraphQL", "PostgreSQL", "TimescaleDB",
         "MongoDB", "Redis", "ClickHouse", "Elasticsearch", "Kafka", "Airflow", "dbt", "Snowflake",
@@ -489,10 +482,10 @@ export const techStrip = {
     },
     {
       id: "frontend",
-      label: "Frontend",
+      label: "Dashboards & Visualisation",
       items: [
         "React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Three.js", "GSAP",
-        "React Native", "Flutter", "Vite", "D3.js", "Deck.gl",
+        "Vite", "D3.js", "Deck.gl",
       ],
     },
     {
@@ -507,12 +500,12 @@ export const techStrip = {
     },
     {
       id: "devops",
-      label: "DevOps",
+      label: "MLOps & Monitoring",
       items: ["Docker", "Kubernetes", "Terraform", "GitHub Actions", "GitLab CI", "Nginx", "Prometheus", "Grafana", "Sentry"],
     },
     {
       id: "design",
-      label: "UI / UX",
+      label: "Reporting UX",
       items: ["Figma", "Design Tokens", "Prototyping", "WCAG 2.2 Audits", "Usability Testing"],
     },
   ],
@@ -523,23 +516,23 @@ export const businessTypes = {
   titleLead: "Explore The Range Of",
   titleAccent: "Sports Organisations We Support",
   body:
-    "From a single academy digitising its first season to a federation running a national competition, the engagement shape changes but the standard does not.",
+    "From an academy making sense of its first season of data to a federation analysing a national competition, the engagement shape changes but the standard does not.",
   rows: [
     {
       label: "Academies and grassroots clubs",
-      body: "Registration, subscriptions, scheduling and parent communication in one place, so volunteers stop running a club out of a shared inbox and a spreadsheet.",
+      body: "Registration, attendance and player-development data brought together, so volunteers can see participation and progress without rebuilding a spreadsheet every week.",
     },
     {
       label: "Professional clubs",
-      body: "Performance, medical, recruitment and commercial systems on shared data, with the access control and audit trail a first-team environment needs before anyone will use it.",
+      body: "Performance, medical, recruitment and commercial data connected for analytics and AI, with the access control and audit trail a first-team environment needs before anyone will trust it.",
     },
     {
       label: "Leagues and federations",
-      body: "Competition management, eligibility and disciplinary workflows, official data feeds and the distribution layer broadcasters and betting partners consume.",
+      body: "Competition, eligibility and officiating data validated and analysed, plus the official data feeds broadcasters and partners rely on.",
     },
     {
       label: "Venues, brands and sports-tech startups",
-      body: "Venue operations, fan platforms and white-label products, including the MVP work that has to prove a market before the next funding round.",
+      body: "Attendance, fan and commercial data turned into forecasting and segmentation, and AI proofs of concept that test an idea against real data before it is scaled.",
     },
   ],
 };
@@ -547,7 +540,7 @@ export const businessTypes = {
 export const testimonials = {
   eyebrow: "Why is it worth working with us?",
   titleLead: "What Clubs And Leagues Say",
-  titleAccent: "About Building With Us",
+  titleAccent: "About Working With Us",
   items: [
     {
       name: "Abdullah",
@@ -578,32 +571,32 @@ export const showcase = {
   titleLead: "Proven Results Across",
   titleAccent: "The Sports Industry",
   body:
-    "A selection of the platforms and models we have shipped, including the video analytics and real-time data work that sports organisations come to us for.",
+    "A selection of the models and analytics work we have delivered, including the video analytics and real-time data work that sports organisations come to us for.",
   ctaText: "Check Out Our Full Portfolio",
 };
 
 export const partner = {
   eyebrow: "Why is it worth working with us?",
   titleLead: "Why Partner With Axiomra For",
-  titleAccent: "Intelligent Sports Software Development",
+  titleAccent: "Sports Data & AI",
   cards: [
     {
       icon: "Target",
-      title: "We Speak Sport, Not Just Software",
+      title: "We Speak Sport, Not Just Data",
       body:
-        "Our engineers have shipped against training weeks, transfer windows and match-day constraints. Every system we design fits how a season actually runs, which is why staff use it past the first month.",
+        "Our data and AI team plans around training weeks, transfer windows and match-day constraints. Every model and report we deliver fits how a season actually runs, which is why staff keep using it past the first month.",
     },
     {
       icon: "Layers",
       title: "Integrates With What You Already Run",
       body:
-        "GPS vendors, optical tracking, ticketing platforms, CRM and league feeds each have their own idea of a schema. We build the layer that reconciles them, modular enough to survive the next vendor change.",
+        "GPS vendors, optical tracking, ticketing platforms, CRM and league feeds each have their own idea of a schema. We build the data layer that reconciles them, modular enough to survive the next vendor change.",
     },
     {
       icon: "ShieldCheck",
-      title: "Athlete Data Handled Properly",
+      title: "Athlete Data Handled Carefully",
       body:
-        "Biometrics, medical records and minors' data carry real obligations. Consent, retention, residency and access control are designed in from the first architecture session, with post-launch support for up to 60 days within the agreed scope.",
+        "Biometrics, medical records and minors' data carry real obligations. Consent, retention, residency and access control are designed in from the first data session, with post-launch support for up to 60 days within the agreed scope.",
     },
   ],
   stats: [
@@ -643,43 +636,43 @@ export const blogs = {
 
 export const faqs = [
   {
-    q: "What types of sports software development do you offer?",
-    a: "Performance and motion analysis, sports medicine and injury tracking, team and league management, ticketing and venue operations, streaming and broadcast tooling, fan engagement platforms, and the mobile apps that sit on top of all of it. Most engagements start with one of those and grow into the data layer underneath.",
+    q: "What sports data and AI services do you offer?",
+    a: "Performance and motion analytics, injury and workload modelling, computer vision for match and sponsorship video, ticketing and demand forecasting, fan intelligence, and the data integration underneath them. Most engagements start with one focused use case and grow from there.",
   },
   {
-    q: "How does AI actually enhance sports software?",
-    a: "In three places that pay for themselves: computer vision that turns video into structured, searchable events; predictive models that flag injury risk and demand before they arrive; and personalisation that lifts fan retention on an audience you already have. Everything else we will tell you is optional.",
+    q: "How does AI actually help sports organisations?",
+    a: "In three places that pay for themselves: computer vision that turns video into structured, searchable events; predictive models that flag injury risk and demand earlier; and personalisation that lifts fan retention on an audience you already have. Everything else we will tell you is optional.",
   },
   {
-    q: "How does sports motion analysis software benefit athletes?",
-    a: "It replaces subjective assessment with measurement. Pose estimation quantifies joint angles, asymmetry and technique changes frame by frame, so a coach can see whether a cue actually changed the movement, and medical staff can set objective return-to-play criteria instead of a feel-based judgement.",
+    q: "How does motion analysis benefit athletes?",
+    a: "It replaces subjective assessment with measurement. Pose estimation quantifies joint angles, asymmetry and technique changes frame by frame, so a coach can see whether a cue actually changed the movement, and medical staff can support return-to-play decisions with objective measures alongside their own judgement.",
   },
   {
     q: "Can you work with our existing GPS, optical tracking and ticketing vendors?",
-    a: "Yes, and that is usually most of the job. We build the integration and reconciliation layer across whatever you already run, so you keep your vendor relationships and stop paying for four systems that each hold a partial version of the truth.",
+    a: "Yes, and that is usually most of the job. We build the data integration and reconciliation layer across whatever you already run, so you keep your vendor relationships and stop working from four systems that each hold a partial version of the truth.",
   },
   {
-    q: "How do you handle athlete data privacy and compliance?",
-    a: "Consent capture, data residency, retention and role-based access are designed into the schema from the first session, covering GDPR, HIPAA-adjacent medical handling, league regulations and NIL where it applies. Athletes get visibility over their own records, which is also what gets them to use the system.",
+    q: "How do you handle athlete data privacy?",
+    a: "Consent, data residency, retention and role-based access are designed around the use case from the first session. We work with your legal, medical and league contacts on the rules that apply to your data, and athletes get visibility over how their own records are used.",
   },
   {
-    q: "How much does custom sports software cost?",
-    a: "It depends on the data you already hold, the number of integrations and how much AI capability is genuinely in scope. A scoped pilot is the fastest route to a real number. Book a free session and we will size it honestly, including the parts we would advise against building.",
+    q: "How much does a sports data and AI project cost?",
+    a: "It depends on the data you already hold, the number of sources to connect and how much AI capability is genuinely in scope. A scoped pilot is the fastest route to a real number. Book a free session and we will size it honestly, including the parts we would advise against pursuing.",
   },
   {
-    q: "How long does a sports platform build take?",
-    a: "A scoped MVP with one capability, such as a performance dashboard or a league management module, typically runs eight to twelve weeks. A full platform spanning performance, operations and fan engagement runs four to nine months, delivered in weekly increments you can use from the first sprint.",
+    q: "How long does a sports data and AI project take?",
+    a: "A focused use case, such as a performance dashboard or a workload model, typically runs eight to twelve weeks. A broader programme spanning performance, operations and fan data runs four to nine months, delivered in stages you can use early.",
   },
   {
-    q: "Can you develop mobile apps for sports teams?",
-    a: "Yes. Athlete apps, coaching apps and supporter apps, native or cross-platform depending on what the feature set needs. We build offline-first where venue connectivity cannot be assumed, and instrument everything so product decisions rest on behaviour rather than opinion.",
+    q: "Can you work with the athlete and fan apps we already use?",
+    a: "Yes. We connect to the data those apps and devices generate, and feed analytics and model outputs back into the systems your teams already use. Our focus is the data and AI layer behind them, not replacing the apps themselves.",
   },
 ];
 
 export const finalCta = {
   title: "Start With One Question About Your Season",
   subtitle:
-    "Ready to raise performance, tighten operations and turn attention into revenue? Talk to our sports software engineers.",
+    "Ready to raise performance, tighten operations and turn attention into revenue? Talk to our sports data and AI team.",
   buttonText: "Get your project done!",
   background: finalCtaBgImg,
 };

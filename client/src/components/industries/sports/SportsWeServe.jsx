@@ -5,7 +5,7 @@ import { gsap, ScrollTrigger, MOTION_OK } from "../../../lib/gsap";
 import { sportsWeServe } from "../../../data/sportsData";
 
 /**
- * The sports rail. Twelve sheared cards on a track that drifts sideways as the
+ * The sport rail. Twelve sheared cards on a track that drifts sideways as the
  * section passes through the viewport; the reference scrolls this rail rather
  * than looping it, so the motion is scrubbed to scroll position instead of a
  * timer.
@@ -96,7 +96,7 @@ export default function SportsWeServe() {
 
           <ul
             ref={trackRef}
-            aria-label="Sports we build software for"
+            aria-label="Sports and the data each one produces"
             className="scrollbar-hide flex gap-5 overflow-x-auto px-4 pb-4 sm:px-6 lg:px-8"
           >
             {sportsWeServe.items.map((item, i) => (

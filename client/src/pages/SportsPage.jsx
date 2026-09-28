@@ -30,9 +30,9 @@ import {
 import Seo from "../seo/Seo";
 import { INDUSTRIES_PATH } from "../routes.constants";
 
-const TITLE = "Custom AI Sports Software Development Services | Axiomra";
+const TITLE = "AI & Data Solutions for Sports | Axiomra";
 const DESCRIPTION =
-  "AI sports software development: athlete performance analytics, injury prevention, video and computer vision, league management, ticketing and fan engagement platforms.";
+  "AI & data solutions for sports: athlete analytics, computer vision, ticketing insight and fan intelligence built on the systems your teams already use.";
 
 export default function SportsPage() {
   // Lazy photos land after the triggers were measured; once the page has
