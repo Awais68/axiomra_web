@@ -11,3 +11,22 @@
 
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Empty SPA shells: no content in the HTML, and the home page's meta until JS
+# runs. Real pages are prerendered; these must not be indexed as duplicates.
+/spa
+  X-Robots-Tag: noindex
+/spa.html
+  X-Robots-Tag: noindex
+/404
+  X-Robots-Tag: noindex
+/404.html
+  X-Robots-Tag: noindex
+/blogs
+  X-Robots-Tag: noindex
+/blogs/*
+  X-Robots-Tag: noindex
+/admin
+  X-Robots-Tag: noindex
+/admin/*
+  X-Robots-Tag: noindex

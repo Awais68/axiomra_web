@@ -42,10 +42,11 @@ const paths = [
 ].map((m) => m[1] || "/");
 
 // The crawler defaults in index.html carry data-rh, i.e. they are Helmet's to
-// replace. On a prerendered page Helmet's own tags take their place.
+// replace. On a prerendered page Helmet's own tags take their place. `\s+`, not
+// a space: Prettier wraps the longer tags, putting data-rh on its own line.
 const baseHead = template
   .replace(/\s*<title>[\s\S]*?<\/title>/, "")
-  .replace(/\s*<meta data-rh="true"[^>]*>/g, "");
+  .replace(/\s*<meta\s+data-rh="true"[^>]*>/g, "");
 
 const gate = gateCss();
 
@@ -85,7 +86,9 @@ for (const url of paths) {
   if (tone) ({ html, helmet, pages } = await render(url, tone === "light" ? "light" : "dark"));
   if (!pages.length) problems.push(`${url}: no lazy page recorded for modulepreload`);
   const preloads = preloadsFor(pages);
-  const head = [helmet.title, helmet.meta, helmet.link, helmet.script]
+  // Seo.jsx uses prioritizeSeoTags, which moves canonical, og:*, twitter:* and
+  // JSON-LD out of meta/link/script into `priority`. Leaving it out drops them.
+  const head = [helmet.title, helmet.priority, helmet.meta, helmet.link, helmet.script]
     .map((t) => t.toString())
     .concat(preloads)
     .filter(Boolean)
