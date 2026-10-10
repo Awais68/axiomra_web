@@ -1,7 +1,7 @@
 import { companyStats } from "../data/companyStats.js";
 import { useEffect, useState } from "react";
 import { useReducedMotion } from "framer-motion";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { BOOKING_URL } from "../lib/booking";
 
 /*
@@ -290,20 +290,6 @@ export default function Hero() {
                 className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
               />
             </a>
-          </div>
-
-          <div
-            data-fade="4"
-            className={`mt-8 flex flex-wrap items-center justify-center gap-2.5 text-lg ${c.faint} ${fade}`}
-          >
-            <span>Reviewed on</span>
-            <span className={`text-xl font-semibold ${c.heading} ${fade}`}>Clutch</span>
-            <span className="flex text-gold">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={18} fill="currentColor" strokeWidth={0} />
-              ))}
-            </span>
-            <span>12 reviews</span>
           </div>
         </div>
 

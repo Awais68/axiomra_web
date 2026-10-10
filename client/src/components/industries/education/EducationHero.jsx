@@ -1,6 +1,6 @@
 import { Suspense, lazy, useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Star } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { gsap, MOTION_OK } from "../../../lib/gsap";
 import { hero } from "../../../data/educationData";
 
@@ -102,22 +102,6 @@ export default function EducationHero() {
                 <ArrowUpRight size={20} strokeWidth={1.75} aria-hidden="true" />
               </span>
             </Link>
-
-            <div className="flex items-center gap-3 text-inverse-fg/80">
-              <span
-                className="flex text-gold"
-                role="img"
-                aria-label={`${hero.reviews.rating} out of 5 stars on ${hero.reviews.platform}`}
-              >
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} strokeWidth={0} fill="currentColor" />
-                ))}
-              </span>
-              <span className="text-sm">
-                <span className="font-semibold text-inverse-fg">{hero.reviews.rating}.0</span> on{" "}
-                {hero.reviews.platform} · {hero.reviews.count} reviews
-              </span>
-            </div>
           </div>
         </div>
       </div>

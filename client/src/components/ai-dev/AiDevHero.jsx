@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Star } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { hero } from "../../data/aiDevelopmentData";
 
 const fadeUp = {
@@ -71,20 +71,6 @@ export default function AiDevHero() {
                 className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
               />
             </Link>
-
-            <div className="flex flex-col gap-1">
-              <span className="font-mono text-xs uppercase tracking-[0.18em] text-content-faint">
-                {hero.proof.source}
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="flex" role="img" aria-label={`${hero.proof.rating} out of 5`}>
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={15} className="fill-gold text-gold" aria-hidden="true" />
-                  ))}
-                </span>
-                <span className="text-base text-content-dim">{hero.proof.reviews}</span>
-              </span>
-            </div>
           </motion.div>
         </div>
 

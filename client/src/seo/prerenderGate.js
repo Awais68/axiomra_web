@@ -33,7 +33,6 @@ export const GATED_SELECTORS = [
   "[data-hero-chip]",
   "[data-hero-body]",
   "[data-hero-badge]",
-  "[data-intro-proof]",
   "[data-intro-heading]",
   "[data-intro-cta]",
   "[data-intro-body]",

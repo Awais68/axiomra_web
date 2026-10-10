@@ -18,7 +18,6 @@ export const hero = {
   titleAccent: "Services for Your Business",
   body: "Axiomra designs, builds, and integrates AI systems around your goals, workflows, and data. We help you automate routine operations, uncover useful insights, and develop AI capabilities your team can use and manage. From discovery to deployment, we focus on practical adoption and measurable outcomes.",
   ctaText: "Request A Free Consultation",
-  proof: { rating: "5.0", reviews: "11 reviews", source: "Reviewed on Clutch" },
   image: heroAiTeam,
   imageAlt:
     "Team reviewing generative AI, automation and analytics dashboards above a connected city skyline",

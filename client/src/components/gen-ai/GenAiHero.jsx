@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Star } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import GenAiCanvas from "./GenAiCanvas";
 import { hero } from "../../data/generativeAiData";
 import { BOOKING_URL } from "../../lib/booking";
@@ -107,22 +107,6 @@ export default function GenAiHero() {
             custom={4}
             className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-6"
           >
-            <div className="flex flex-col gap-1">
-              <span className="font-mono text-xs uppercase tracking-[0.18em] text-white/50">
-                {hero.proof.source}
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="flex" role="img" aria-label={`${hero.proof.rating} out of 5`}>
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={15} className="fill-gold text-gold" aria-hidden="true" />
-                  ))}
-                </span>
-                <span className="text-sm text-white/70 md:text-base">
-                  {hero.proof.rating} from {hero.proof.reviews}
-                </span>
-              </span>
-            </div>
-
             <dl className="flex flex-wrap gap-x-10 gap-y-4">
               {hero.stats.map((s) => (
                 <div key={s.label}>

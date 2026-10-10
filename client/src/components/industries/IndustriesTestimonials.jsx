@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import SectionHeading from "../SectionHeading";
 import ClientLogoStrip from "../ai-dev/ClientLogoStrip";
 import { testimonials } from "../../data/industriesData";
@@ -96,22 +96,6 @@ export default function IndustriesTestimonials({ data = testimonials }) {
                       className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-grad-sky to-grad-blue font-display text-xl font-semibold text-inverse"
                     >
                       {initials(current.name)}
-                    </span>
-
-                    <span
-                      className="mt-6 flex justify-center text-gold"
-                      role="img"
-                      aria-label={`${current.rating} out of 5 stars`}
-                    >
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          size={18}
-                          strokeWidth={0}
-                          fill="currentColor"
-                          className={i < current.rating ? "" : "opacity-25"}
-                        />
-                      ))}
                     </span>
 
                     <blockquote className="mx-auto mt-6 max-w-[60ch] text-lg leading-relaxed text-content-dim md:text-xl">

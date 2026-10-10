@@ -37,7 +37,6 @@ const cases = [
     stats: [
       ["47%", "Productivity lift"],
       ["50%", "Lead conversion"],
-      ["5.0", "Quality rating"],
     ],
   },
   {
@@ -133,7 +132,10 @@ export default function Portfolio({ showHeading = true, compact = false }) {
                 {c.name}
               </h3>
               <p className="mb-7 mt-1 text-base text-content-dim">{c.tag}</p>
-              <div className="mb-7 grid grid-cols-3 gap-3">
+              <div
+                className="mb-7 grid gap-3"
+                style={{ gridTemplateColumns: `repeat(${c.stats.length}, minmax(0, 1fr))` }}
+              >
                 {c.stats.map(([num, label]) => (
                   <div
                     key={label}

@@ -157,7 +157,6 @@ export const milestones = {
           "Added a dedicated delivery lead role",
         ],
         [
-          "Reached a 4.9/5 average client rating",
           "Completed our first fashion-industry vision deployment",
           "Extended support into rolling monthly agreements",
         ],

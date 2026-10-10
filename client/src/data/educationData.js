@@ -43,7 +43,6 @@ export const hero = {
   ctaText: "Request a free consultation",
   image: heroImg,
   alt: "The reading room of a historic library lined with books",
-  reviews: { platform: "Clutch", rating: 5, count: 12 },
 };
 
 export const intro = {
@@ -501,21 +500,18 @@ export const testimonials = {
       role: "CEO & Founder, NitCode",
       quote:
         "The team were very co-operative and helpful throughout the project. They understood what we needed early, kept us updated weekly and delivered without the back and forth we expected. Highly recommended for AI projects.",
-      rating: 5,
     },
     {
       name: "David",
       role: "CEO, Alisia",
       quote:
         "They never miss deadlines and always delivered the agreed scope on time. They collaborated with us at different stages of product development and were ready to accept the changes we required in our application.",
-      rating: 5,
     },
     {
       name: "James",
       role: "CEO & Founder, FluentTalkAI",
       quote:
         "I'm very grateful for their services. They helped us build a great AI product that is actually usable by thousands of people. They are the best in building AI-powered software, very professional and easy to work with.",
-      rating: 5,
     },
   ],
 };

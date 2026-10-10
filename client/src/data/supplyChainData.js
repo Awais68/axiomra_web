@@ -65,7 +65,6 @@ export const hero = {
   ctaText: "Request a free consultation",
   image: heroImg,
   alt: "A planner tracing a live logistics network above a lit warehouse floor",
-  reviews: { platform: "Clutch", rating: 5, count: 12 },
 };
 
 export const intro = {
@@ -614,21 +613,18 @@ export const testimonials = {
       role: "CEO, FormOle",
       quote:
         "Axiomra has strong software development skills and knowledge of industry tools and AI videos. Their willingness to take any problem, break it down and get through it is impressive.",
-      rating: 5,
     },
     {
       name: "Alan",
       role: "Chairman & CEO, Peersana",
       quote:
         "I am most impressed with Axiomra's deep team, discipline, culture, project management skills and extensive pool of resources.",
-      rating: 5,
     },
     {
       name: "Pablo Sanchez",
       role: "CEO, Notebook",
       quote:
         "Excellent service. The team planned the project really well, keeping me in the loop. Throughout the project they maintained a fluid and professional conversation.",
-      rating: 5,
     },
   ],
 };
