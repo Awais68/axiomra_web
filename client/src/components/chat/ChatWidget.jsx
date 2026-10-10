@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUp, RotateCcw, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { streamChat } from "../../lib/chatApi";
+import { streamChat, warmUpChat } from "../../lib/chatApi";
 import RichText from "./richText";
 import mascotHead from "../../assets/chat-mascot-head.webp";
 import { mountMascot } from "./mascot";
@@ -79,16 +79,19 @@ function BotHead({ className = "" }) {
   );
 }
 
-function TypingDots() {
+function TypingDots({ note }) {
   return (
-    <span className="flex items-center gap-1 py-1" aria-label={`${NAME} is typing`}>
-      {[0, 1, 2].map((i) => (
-        <span
-          key={i}
-          className="chat-typing-dot h-2 w-2 rounded-full bg-[#93C5FD]"
-          style={{ animationDelay: `${i * 0.15}s` }}
-        />
-      ))}
+    <span className="flex flex-col gap-1">
+      <span className="flex items-center gap-1 py-1" aria-label={`${NAME} is typing`}>
+        {[0, 1, 2].map((i) => (
+          <span
+            key={i}
+            className="chat-typing-dot h-2 w-2 rounded-full bg-[#93C5FD]"
+            style={{ animationDelay: `${i * 0.15}s` }}
+          />
+        ))}
+      </span>
+      {note && <span className="text-xs text-[#1E3A8A]/70">{note}</span>}
     </span>
   );
 }
@@ -113,6 +116,8 @@ export default function ChatWidget() {
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  // Shown under the typing dots while a request is being retried.
+  const [waitNote, setWaitNote] = useState("");
   const [unread, setUnread] = useState(() => loadHistory().length === 0);
 
   const listRef = useRef(null);
@@ -185,6 +190,11 @@ export default function ChatWidget() {
 
   useEffect(() => () => abortRef.current?.abort(), []);
 
+  // Wake the API (asleep on Render's free tier) while the visitor types.
+  useEffect(() => {
+    if (open) warmUpChat();
+  }, [open]);
+
   const toggle = () => {
     setUnread(false);
     // Clicking the mascot already hops it; greet when the chat opens.
@@ -222,6 +232,7 @@ export default function ChatWidget() {
           signal: controller.signal,
           onText: (chunk) => setReply((prev) => prev + chunk),
           onReplace: (full) => setReply(() => full),
+          onRetry: () => setWaitNote("The assistant is waking up, one moment..."),
         }
       );
     } catch (err) {
@@ -232,6 +243,7 @@ export default function ChatWidget() {
       setInput(content);
     } finally {
       setBusy(false);
+      setWaitNote("");
       abortRef.current = null;
     }
   };
@@ -241,6 +253,7 @@ export default function ChatWidget() {
     storage.remove(CONVERSATION_KEY);
     setMessages([]);
     setError("");
+    setWaitNote("");
     setBusy(false);
   };
 
@@ -331,7 +344,7 @@ export default function ChatWidget() {
                       {m.content ? (
                         <RichText text={m.content} onNavigate={closeAfterNavigate} />
                       ) : (
-                        <TypingDots />
+                        <TypingDots note={waitNote} />
                       )}
                     </div>
                   </div>

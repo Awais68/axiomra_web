@@ -14,7 +14,7 @@ describe("companyStats", () => {
   it("feeds the chat prompt", () => {
     expect(CHAT_SYSTEM_PROMPT).toContain(`${companyStats.experts}+ in-house engineers`);
     expect(CHAT_SYSTEM_PROMPT).toContain(
-      `$${companyStats.pocRange.min}k–$${companyStats.pocRange.max}k`
+      `$${companyStats.pocRange.min}k to $${companyStats.pocRange.max}k`
     );
   });
 });

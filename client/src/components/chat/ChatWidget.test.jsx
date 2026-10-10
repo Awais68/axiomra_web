@@ -3,6 +3,7 @@ import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { renderPage } from "../../test/render";
 import ChatWidget from "./ChatWidget";
+import { warmUpChat } from "../../lib/chatApi";
 import RichText from "./richText";
 
 /** A fetch Response whose body streams the given server-sent events. */
@@ -19,6 +20,13 @@ function sseResponse(events, headers = {}) {
     headers: { "Content-Type": "text/event-stream", ...headers },
   });
 }
+
+// The wake-up ping is covered in chatApi.test.js; here it would take the
+// first mocked fetch response.
+vi.mock("../../lib/chatApi", async (importOriginal) => ({
+  ...(await importOriginal()),
+  warmUpChat: vi.fn(),
+}));
 
 afterEach(() => {
   vi.restoreAllMocks();
@@ -47,6 +55,8 @@ describe("ChatWidget", () => {
 
     await user.click(screen.getByRole("button", { name: "Chat with Axiomra Assistant" }));
     expect(screen.getByRole("dialog", { name: "Axiomra Assistant" })).toBeInTheDocument();
+    // Opening the chat wakes the API while the visitor types.
+    expect(warmUpChat).toHaveBeenCalled();
 
     await user.type(
       screen.getByLabelText("Message Axiomra Assistant"),
@@ -67,9 +77,13 @@ describe("ChatWidget", () => {
 
   it("shows the server's error and restores the draft", async () => {
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
-      new Response(JSON.stringify({ error: "The assistant is not available right now." }), {
-        status: 503,
-      })
+      new Response(
+        JSON.stringify({
+          error: "You're sending messages quickly. Please wait a few minutes and try again.",
+          code: "rate_limited",
+        }),
+        { status: 429 }
+      )
     );
     const user = userEvent.setup();
     renderPage(<ChatWidget />);
@@ -78,7 +92,7 @@ describe("ChatWidget", () => {
     const input = screen.getByLabelText("Message Axiomra Assistant");
     await user.type(input, "Hello{Enter}");
 
-    expect(await screen.findByRole("alert")).toHaveTextContent("not available right now");
+    expect(await screen.findByRole("alert")).toHaveTextContent("sending messages quickly");
     await waitFor(() => expect(input).toHaveValue("Hello"));
   });
 });

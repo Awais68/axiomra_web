@@ -12,6 +12,7 @@ import { rateLimit, ipKeyGenerator } from "express-rate-limit";
 import { RedisStore } from "rate-limit-redis";
 import { Redis } from "ioredis";
 import { env } from "./env.js";
+import { logChatFailure } from "./chatLog.js";
 
 const MINUTE = 60 * 1000;
 const HOUR = 60 * MINUTE;
@@ -49,7 +50,10 @@ const byIp = (req) => ipKeyGenerator(req.ip);
 
 const STORE_DOWN = { error: "Service temporarily unavailable. Please try again shortly." };
 
-function limiter(name, { windowMs, limit, message, failOpen, ...rest }) {
+// `code` lets a client tell this refusal apart from others with the same
+// status; `onReject(reason)` is called for every refused request.
+function limiter(name, { windowMs, limit, message, code, failOpen, onReject, ...rest }) {
+  const body = code ? { error: message, code } : { error: message };
   const middleware = rateLimit({
     windowMs,
     limit,
@@ -57,7 +61,11 @@ function limiter(name, { windowMs, limit, message, failOpen, ...rest }) {
     legacyHeaders: false,
     keyGenerator: byIp,
     store: store(name),
-    message: { error: message },
+    message: body,
+    handler: (req, res, next, options) => {
+      onReject?.("rate_limited");
+      res.status(options.statusCode).json(body);
+    },
     // Store outage: the general API and contact form stay up, while
     // credential endpoints and the paid chat refuse rather than go unlimited.
     passOnStoreError: failOpen,
@@ -71,7 +79,8 @@ function limiter(name, { windowMs, limit, message, failOpen, ...rest }) {
     middleware(req, res, (err) => {
       if (!err) return next();
       console.error(`Rate limit store unavailable (${name}):`, err.message);
-      return res.status(503).json(STORE_DOWN);
+      onReject?.("rate_limit_store_unavailable");
+      return res.status(503).json(code ? { ...STORE_DOWN, code: "unavailable" } : STORE_DOWN);
     });
 }
 
@@ -142,5 +151,7 @@ export const chatLimiter = limiter("chat", {
   windowMs: 15 * MINUTE,
   limit: 30,
   message: "You're sending messages quickly. Please wait a few minutes and try again.",
+  code: "rate_limited",
   failOpen: false,
+  onReject: (reason) => logChatFailure(reason),
 });

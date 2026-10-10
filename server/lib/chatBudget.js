@@ -78,3 +78,11 @@ export async function settle(reservation, usage) {
   await store.incrby(reservation.tokens, inputTokens + outputTokens);
   await store.expire(reservation.tokens, 2 * DAY_SECONDS);
 }
+
+/**
+ * Give a reservation back in full. Only for a turn that never reached the
+ * model (the visitor left first), so nothing can have been billed.
+ */
+export async function release(reservation) {
+  await store.incrby(reservation.key, -reservation.amount);
+}

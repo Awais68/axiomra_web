@@ -88,6 +88,7 @@ describe("chat daily spend cap", () => {
     const res = await chat();
     expect(res.status).toBe(429);
     expect(res.body.error).toMatch(/limit for today/i);
+    expect(res.body.code).toBe("daily_cap");
     expect(sdk.runs).toBe(0);
     expect(fake.data.get(spend)).toBe(1_000_000);
   });
