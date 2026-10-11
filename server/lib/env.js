@@ -61,7 +61,12 @@ const baseSchema = z.object({
     (v) => v === undefined || v.length >= 32,
     "JWT_SECRET must be at least 32 characters when set"
   ),
-  ADMIN_PANEL_URL: url("ADMIN_PANEL_URL"),
+  // One origin, not a list: it is pasted verbatim into the reset email, and a
+  // comma-joined value produces a link that opens nowhere.
+  ADMIN_PANEL_URL: url("ADMIN_PANEL_URL").refine(
+    (v) => v === undefined || !v.includes(","),
+    "ADMIN_PANEL_URL must be a single URL (e.g. https://axiomra.co), not a list"
+  ),
   RESEND_API_KEY: optional,
   MAIL_FROM: optional,
   CONTACT_NOTIFY_TO: optional,
@@ -131,6 +136,12 @@ function load() {
   }
   if (!parsed.data.RESEND_API_KEY) {
     console.warn("RESEND_API_KEY is not set: contact and password-reset email are disabled.");
+  } else if (/@resend\.dev>?$/i.test(parsed.data.MAIL_FROM?.trim() || "@resend.dev")) {
+    // Resend's shared test sender only delivers to the Resend account owner, so
+    // the admin's reset email is rejected (403) unless a verified domain is used.
+    console.warn(
+      "MAIL_FROM is not set to a verified domain: Resend will only deliver to the account owner's address, so password-reset email to the admin will fail."
+    );
   }
   return { ...parsed.data, allowedOrigins: origins.data };
 }

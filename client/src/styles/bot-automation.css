@@ -1,0 +1,253 @@
+/* ── Bot automation page ───────────────────────────────────────────────────
+   Flat colour only: no gradient fills on text or backgrounds. Depth comes
+   from glass (a solid tint plus backdrop blur), clip-path cuts, and copy
+   wrapping around CSS shapes (shape-outside). */
+
+/* Glass: one flat tint, a hairline rim, and a blur of whatever sits behind. */
+.ba-glass {
+  background-color: rgb(var(--surface-card) / 0.6);
+  border: 1px solid rgb(255 255 255 / 0.55);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.5),
+    0 18px 48px -22px rgb(10 20 40 / 0.35);
+}
+.dark .ba-glass {
+  border-color: rgb(255 255 255 / 0.1);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.08),
+    0 18px 48px -22px rgb(0 0 0 / 0.6);
+}
+/* Over always-dark grounds (hero, testimonials, closing call to action). */
+.ba-glass-dark {
+  background-color: rgb(10 22 44 / 0.5);
+  border: 1px solid rgb(255 255 255 / 0.14);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.12),
+    0 24px 60px -24px rgb(0 0 0 / 0.65);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .ba-glass {
+    background-color: rgb(var(--surface-card) / 0.95);
+  }
+  .ba-glass-dark {
+    background-color: rgb(10 22 44 / 0.92);
+  }
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────── */
+
+/* A stepped bottom edge: the right side drops lower, the nav bar spans the step. */
+.ba-hero-clip {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    62% 100%,
+    58% calc(100% - 3.5rem),
+    0 calc(100% - 3.5rem)
+  );
+}
+@media (max-width: 767px) {
+  .ba-hero-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 1.75rem));
+  }
+}
+
+/* On desktop the photo is cut on a slant, so its left edge reads as a
+   deliberate panel rather than a crop line through the robot's shoulder. */
+@media (min-width: 1024px) {
+  .ba-hero-photo {
+    clip-path: polygon(26% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* A faint blueprint grid, drawn as an SVG tile rather than a gradient. */
+.ba-grid {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M56 0H0v56' fill='none' stroke='%2314D8C4' stroke-opacity='.12'/%3E%3C/svg%3E");
+}
+
+/* The one hero photo: a slow push-in and drift, reversed each loop so the
+   frame never jumps. Pure CSS, so it starts with the first paint. */
+.ba-kenburns {
+  animation: ba-kenburns 28s ease-in-out infinite alternate;
+  transform-origin: 72% 45%;
+  will-change: transform;
+}
+@keyframes ba-kenburns {
+  from {
+    transform: scale(1.05) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.18) translate3d(-3%, 1%, 0);
+  }
+}
+
+/* ── Shape 1: copy wrapping a floated circle ───────────────────────────── */
+.ba-shape-circle {
+  float: right;
+  width: 200px;
+  height: 200px;
+  margin-left: 1rem;
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  shape-margin: 10px;
+}
+
+/* ── Shape 2: a coloured polygon; clip-path and shape-outside share values ──
+   A gear-tooth hexagon, the "process block" of a flowchart. */
+.ba-shape-poly {
+  --ba-poly: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  float: left;
+  width: 200px;
+  height: 176px;
+  margin-right: 0.75rem;
+  clip-path: var(--ba-poly);
+  shape-outside: var(--ba-poly);
+  shape-margin: 14px;
+}
+
+@media (max-width: 639px) {
+  .ba-shape-circle {
+    width: 120px;
+    height: 120px;
+    margin-left: 0.5rem;
+  }
+  .ba-shape-poly {
+    width: 120px;
+    height: 106px;
+    margin-right: 0.25rem;
+  }
+}
+
+/* ── Shape 3: copy inside the cut-out of an inverted polygon ───────────────
+   The float is the wedge P on the right, so lines end along its slanted edge.
+   The glass behind the copy is the card minus P, so the photo shows through
+   P and the copy sits inside what is left. In card space P is
+   (54% 0, 100% 0, 100% 100%, 81.6% 100%): the float starts at 54% and its
+   shape's slant runs from its own 0% to 60% (54% + 0.6 × 46% = 81.6%). */
+.ba-inverted {
+  position: relative;
+  height: 27rem;
+}
+.ba-inverted-wedge {
+  float: right;
+  width: 46%;
+  height: 100%;
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
+  shape-margin: 22px;
+}
+.ba-inverted-panel {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0 0, 54% 0, 81.6% 100%, 0 100%);
+}
+@media (max-width: 1023px) {
+  .ba-inverted {
+    height: auto;
+  }
+  .ba-inverted-wedge {
+    float: none;
+    width: 100%;
+    height: 13rem;
+    shape-outside: none;
+  }
+  .ba-inverted-panel {
+    /* Narrow screens: the cut moves to the top, a slanted window onto the photo. */
+    clip-path: polygon(0 10rem, 100% 13rem, 100% 100%, 0 100%);
+  }
+}
+
+/* ── Shape 4: copy wrapping an external SVG, inverted inline clipPath ──────
+   The float sits at the card's padding corner (2rem, 2rem); the clipPath's
+   blob is drawn at the same offset, so the window and the wrap line up. */
+.ba-organic {
+  position: relative;
+  padding: 2rem;
+}
+.ba-organic-float {
+  float: left;
+  width: 260px;
+  height: 260px;
+  shape-outside: url("/bot-automation/blob.svg");
+  shape-image-threshold: 0.5;
+  shape-margin: 14px;
+}
+.ba-organic-panel {
+  position: absolute;
+  inset: 0;
+  clip-path: url(#ba-blob-inverse);
+}
+@media (max-width: 639px) {
+  .ba-organic-float {
+    float: none;
+    width: 100%;
+    height: 13rem;
+    shape-outside: none;
+  }
+  .ba-organic-panel {
+    clip-path: none;
+    top: calc(13rem + 2rem);
+  }
+}
+
+/* ── Photo shapes for the plain rows and small tiles ───────────────────── */
+.ba-clip-chevron {
+  clip-path: polygon(0 0, 88% 0, 100% 50%, 88% 100%, 0 100%, 12% 50%);
+}
+.ba-clip-tab {
+  clip-path: polygon(0 2.5rem, 34% 2.5rem, 40% 0, 100% 0, 100% 100%, 0 100%);
+}
+.ba-clip-hex {
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+}
+.ba-clip-notch {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 2.5rem) 0,
+    100% 2.5rem,
+    100% 100%,
+    2.5rem 100%,
+    0 calc(100% - 2.5rem)
+  );
+}
+.ba-clip-notch-sm {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 0.9rem) 0,
+    100% 0.9rem,
+    100% 100%,
+    0.9rem 100%,
+    0 calc(100% - 0.9rem)
+  );
+}
+@media (max-width: 639px) {
+  .ba-clip-chevron {
+    clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%, 8% 50%);
+  }
+}
+
+/* Mid-page and closing bands: a raised centre on the top edge. */
+.ba-band-clip {
+  clip-path: polygon(0 0, 40% 0, 44% 2.5rem, 56% 2.5rem, 60% 0, 100% 0, 100% 100%, 0 100%);
+}
+.ba-cta-clip {
+  clip-path: polygon(0 3rem, 50% 0, 100% 3rem, 100% 100%, 0 100%);
+}
+@media (max-width: 767px) {
+  .ba-band-clip {
+    clip-path: polygon(0 0, 35% 0, 40% 1.25rem, 60% 1.25rem, 65% 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .ba-cta-clip {
+    clip-path: polygon(0 1.5rem, 50% 0, 100% 1.5rem, 100% 100%, 0 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ba-kenburns {
+    animation: none !important;
+  }
+}

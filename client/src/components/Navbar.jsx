@@ -179,6 +179,13 @@ import {
   AI_DEVELOPMENT_SLUG,
   GENERATIVE_AI_SLUG,
   COMPUTER_VISION_SLUG,
+  BUSINESS_INTELLIGENCE_SLUG,
+  LLM_INFRA_SLUG,
+  CHATBOT_SLUG,
+  DATA_SCIENCE_SLUG,
+  ENTERPRISE_AI_SLUG,
+  BOT_AUTOMATION_SLUG,
+  PROCESS_AUTOMATION_SLUG,
   industryPath,
 } from "../routes.constants";
 
@@ -193,12 +200,40 @@ const links = [
         href: `${SERVICES_BASE_PATH}/${AI_DEVELOPMENT_SLUG}`,
       },
       {
+        label: "Enterprise AI",
+        href: `${SERVICES_BASE_PATH}/${ENTERPRISE_AI_SLUG}`,
+      },
+      {
         label: "Generative AI",
         href: `${SERVICES_BASE_PATH}/${GENERATIVE_AI_SLUG}`,
       },
       {
         label: "Computer Vision",
         href: `${SERVICES_BASE_PATH}/${COMPUTER_VISION_SLUG}`,
+      },
+      {
+        label: "Business Intelligence",
+        href: `${SERVICES_BASE_PATH}/${BUSINESS_INTELLIGENCE_SLUG}`,
+      },
+      {
+        label: "Enterprise LLM Infrastructure",
+        href: `${SERVICES_BASE_PATH}/${LLM_INFRA_SLUG}`,
+      },
+      {
+        label: "Chatbot Development",
+        href: `${SERVICES_BASE_PATH}/${CHATBOT_SLUG}`,
+      },
+      {
+        label: "Bot Automation",
+        href: `${SERVICES_BASE_PATH}/${BOT_AUTOMATION_SLUG}`,
+      },
+      {
+        label: "Process Automation",
+        href: `${SERVICES_BASE_PATH}/${PROCESS_AUTOMATION_SLUG}`,
+      },
+      {
+        label: "Data Science & Analytics",
+        href: `${SERVICES_BASE_PATH}/${DATA_SCIENCE_SLUG}`,
       },
       { label: "View all services", href: SERVICES_BASE_PATH },
     ],

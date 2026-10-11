@@ -5,15 +5,19 @@ import { clientLogos } from "../../data/aiDevelopmentData";
  * Wordmark strip under the hero, running as a continuous marquee. The list is
  * rendered twice so the -50% loop lands on an identical frame; under
  * prefers-reduced-motion it collapses to a single static, wrapping row.
+ * `flat` drops the gradient edge fades.
  */
-export default function ClientLogoStrip() {
+export default function ClientLogoStrip({ flat = false }) {
   const reduced = useReducedMotion();
   const names = reduced ? clientLogos : [...clientLogos, ...clientLogos];
 
   return (
-    <section className="border-y border-line bg-surface-subtle py-10" aria-label="Clients we have built for">
+    <section
+      className="border-y border-line bg-surface-subtle py-10"
+      aria-label="Clients we have built for"
+    >
       <div className={`relative ${reduced ? "" : "overflow-hidden"}`}>
-        {!reduced && (
+        {!reduced && !flat && (
           <>
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-surface-subtle to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-surface-subtle to-transparent" />

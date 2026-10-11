@@ -37,6 +37,7 @@ const cases = [
     stats: [
       ["47%", "Productivity lift"],
       ["50%", "Lead conversion"],
+      ["5.0", "Quality rating"],
     ],
   },
   {
@@ -50,7 +51,7 @@ const cases = [
   },
 ];
 
-export default function Portfolio({ showHeading = true, compact = false }) {
+export default function Portfolio({ showHeading = true, compact = false, flat = false }) {
   const ref = useRef(null);
   const scroll = (dir) => ref.current?.scrollBy({ left: dir * 380, behavior: "smooth" });
 
@@ -122,20 +123,19 @@ export default function Portfolio({ showHeading = true, compact = false }) {
             whileHover={{ y: -10 }}
             className="group relative flex min-w-[380px] snap-start flex-col justify-between overflow-hidden rounded-xl2 border border-line bg-surface-card p-8 shadow-card transition-[border-color,box-shadow] duration-300 hover:border-brand/50 hover:shadow-glow"
           >
-            {/* Light sweep that crosses the card on hover. */}
-            <span
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-grad-blue/10 to-transparent transition-transform duration-[900ms] ease-out group-hover:translate-x-full"
-            />
+            {/* Light sweep that crosses the card on hover; `flat` pages skip it. */}
+            {!flat && (
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-grad-blue/10 to-transparent transition-transform duration-[900ms] ease-out group-hover:translate-x-full"
+              />
+            )}
             <div className="relative">
               <h3 className="font-display text-2xl font-semibold text-content transition-colors duration-300 group-hover:text-brand">
                 {c.name}
               </h3>
               <p className="mb-7 mt-1 text-base text-content-dim">{c.tag}</p>
-              <div
-                className="mb-7 grid gap-3"
-                style={{ gridTemplateColumns: `repeat(${c.stats.length}, minmax(0, 1fr))` }}
-              >
+              <div className="mb-7 grid grid-cols-3 gap-3">
                 {c.stats.map(([num, label]) => (
                   <div
                     key={label}

@@ -1,0 +1,248 @@
+/* ── Chatbot development page ──────────────────────────────────────────────
+   Flat colour only on this page: no gradient fills on text or backgrounds.
+   Depth comes from glass (a solid tint plus backdrop blur), clip-path cuts,
+   and text wrapping around CSS shapes (shape-outside). */
+
+/* Glass: one flat tint, a hairline rim, and a blur of whatever sits behind. */
+.cb-glass {
+  background-color: rgb(var(--surface-card) / 0.62);
+  border: 1px solid rgb(255 255 255 / 0.55);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.5),
+    0 18px 48px -22px rgb(10 20 40 / 0.35);
+}
+.dark .cb-glass {
+  border-color: rgb(255 255 255 / 0.1);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.08),
+    0 18px 48px -22px rgb(0 0 0 / 0.6);
+}
+/* Over always-dark grounds (hero, testimonials). */
+.cb-glass-dark {
+  background-color: rgb(14 26 52 / 0.55);
+  border: 1px solid rgb(255 255 255 / 0.14);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.12),
+    0 24px 60px -24px rgb(0 0 0 / 0.65);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .cb-glass {
+    background-color: rgb(var(--surface-card) / 0.95);
+  }
+  .cb-glass-dark {
+    background-color: rgb(14 26 52 / 0.92);
+  }
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────── */
+
+/* A shallow slant along the bottom edge, the nav bar overlaps it. */
+.cb-hero-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3.5rem));
+}
+@media (max-width: 767px) {
+  .cb-hero-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 1.75rem));
+  }
+}
+
+/* The single hero photo: a slow push-in and drift, reversed on each loop,
+   so the frame never jumps. Pure CSS, so it starts with the first paint. */
+.cb-kenburns {
+  animation: cb-kenburns 26s ease-in-out infinite alternate;
+  transform-origin: 70% 40%;
+  will-change: transform;
+}
+@keyframes cb-kenburns {
+  from {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.16) translate3d(-2.5%, 1.5%, 0);
+  }
+}
+
+/* A scan line sweeping down the photo, like a model reading the frame. */
+.cb-scan {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 2px;
+  background-color: rgb(var(--accent-vivid) / 0.55);
+  box-shadow: 0 0 18px 4px rgb(var(--accent-vivid) / 0.35);
+  animation: cb-scan 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@keyframes cb-scan {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* ── Shape 1: text wrapping a floated circle ───────────────────────────── */
+.cb-shape-circle {
+  float: right;
+  width: 200px;
+  height: 200px;
+  margin-left: 1rem;
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  shape-margin: 10px;
+}
+
+/* ── Shape 2: a coloured polygon; clip-path and shape-outside share values ── */
+.cb-shape-poly {
+  --cb-poly: polygon(0 0, 62% 0, 100% 50%, 62% 100%, 0 100%, 22% 50%);
+  float: left;
+  width: 190px;
+  height: 210px;
+  margin-right: 0.75rem;
+  clip-path: var(--cb-poly);
+  shape-outside: var(--cb-poly);
+  shape-margin: 12px;
+}
+
+/* Narrow cards: the same shapes, smaller, so a line of copy still fits beside them. */
+@media (max-width: 639px) {
+  .cb-shape-circle {
+    width: 120px;
+    height: 120px;
+    margin-left: 0.5rem;
+  }
+  .cb-shape-poly {
+    width: 112px;
+    height: 128px;
+    margin-right: 0.25rem;
+  }
+}
+
+/* ── Shape 3: copy inside the cut-out of an inverted polygon ───────────────
+   The float is the wedge P (left), so lines start along its slanted edge.
+   The panel behind the copy is the rectangle minus P, so the photo under the
+   card shows through P and the copy sits on glass inside the cut-out. Both
+   use the same points in the card's coordinate space: the card has a fixed
+   height and no padding, so the float spans it exactly. */
+.cb-inverted {
+  position: relative;
+  height: 26rem;
+}
+.cb-inverted-wedge {
+  float: left;
+  width: 46%;
+  height: 100%;
+  shape-outside: polygon(0 0, 100% 0, 40% 100%, 0 100%);
+  shape-margin: 22px;
+}
+.cb-inverted-panel {
+  position: absolute;
+  inset: 0;
+  /* The wedge above, (0 0, 46% 0, 18.4% 100%, 0 100%), cut out of the card. */
+  clip-path: polygon(46% 0, 100% 0, 100% 100%, 18.4% 100%);
+}
+@media (max-width: 1023px) {
+  .cb-inverted {
+    height: auto;
+  }
+  .cb-inverted-wedge {
+    float: none;
+    width: 100%;
+    height: 13rem;
+    shape-outside: none;
+  }
+  .cb-inverted-panel {
+    /* On narrow screens the cut moves to the top: a slanted window onto the photo. */
+    clip-path: polygon(0 13rem, 100% 10rem, 100% 100%, 0 100%);
+  }
+}
+
+/* ── Shape 4: copy wrapping an external SVG, inverted inline clipPath ──────
+   The float sits at the card's padding corner (2rem, 2rem); the clipPath's
+   blob is drawn at the same offset, so the window and the wrap line up. */
+.cb-organic {
+  position: relative;
+  padding: 2rem;
+}
+.cb-organic-float {
+  float: left;
+  width: 260px;
+  height: 260px;
+  shape-outside: url("/chatbot/blob.svg");
+  shape-image-threshold: 0.5;
+  shape-margin: 14px;
+}
+.cb-organic-panel {
+  position: absolute;
+  inset: 0;
+  clip-path: url(#cb-blob-inverse);
+}
+@media (max-width: 639px) {
+  .cb-organic-float {
+    float: none;
+    width: 100%;
+    height: 13rem;
+    shape-outside: none;
+  }
+  .cb-organic-panel {
+    clip-path: none;
+    top: calc(13rem + 2rem);
+  }
+}
+
+/* ── Image shapes for the plain rows ─────────────────────────────────────── */
+.cb-clip-hex {
+  clip-path: polygon(8% 0, 92% 0, 100% 14%, 100% 86%, 92% 100%, 8% 100%, 0 86%, 0 14%);
+}
+.cb-clip-notch {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 3rem) 0,
+    100% 3rem,
+    100% 100%,
+    3rem 100%,
+    0 calc(100% - 3rem)
+  );
+}
+
+/* The closing call to action: a raised centre on the top edge. */
+.cb-cta-clip {
+  clip-path: polygon(0 3rem, 50% 0, 100% 3rem, 100% 100%, 0 100%);
+}
+@media (max-width: 767px) {
+  .cb-cta-clip {
+    clip-path: polygon(0 1.5rem, 50% 0, 100% 1.5rem, 100% 100%, 0 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cb-kenburns,
+  .cb-scan {
+    animation: none !important;
+  }
+  .cb-scan {
+    display: none;
+  }
+}
+
+/* Small notched tile for the impact numbers. */
+.cb-clip-notch-sm {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 0.9rem) 0,
+    100% 0.9rem,
+    100% 100%,
+    0.9rem 100%,
+    0 calc(100% - 0.9rem)
+  );
+}

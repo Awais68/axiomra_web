@@ -37,6 +37,13 @@ const GenerativeAiPage = page("GenerativeAiPage");
 const AgenticAiPage = page("AgenticAiPage");
 const ComputerVisionPage = page("ComputerVisionPage");
 const NlpPage = page("NlpPage");
+const BusinessIntelligencePage = page("BusinessIntelligencePage");
+const EnterpriseAiPage = page("EnterpriseAiPage");
+const ProcessAutomationPage = page("ProcessAutomationPage");
+const DataSciencePage = page("DataSciencePage");
+const ChatbotDevelopmentPage = page("ChatbotDevelopmentPage");
+const LlmInfrastructurePage = page("LlmInfrastructurePage");
+const BotAutomationPage = page("BotAutomationPage");
 const ContactPage = page("ContactPage");
 const AboutPage = page("AboutPage");
 const TechStackPage = page("TechStackPage");
@@ -87,6 +94,13 @@ import {
   AGENTIC_AI_SLUG,
   COMPUTER_VISION_SLUG,
   NLP_SLUG,
+  BUSINESS_INTELLIGENCE_SLUG,
+  DATA_SCIENCE_SLUG,
+  CHATBOT_SLUG,
+  ENTERPRISE_AI_SLUG,
+  LLM_INFRA_SLUG,
+  BOT_AUTOMATION_SLUG,
+  PROCESS_AUTOMATION_SLUG,
 } from "./routes.constants";
 
 /** Scrolls to a hash target on route change, or to the top of a fresh page. */
@@ -204,6 +218,34 @@ function SiteRoutes() {
                 element={<ComputerVisionPage />}
               />
               <Route path={`${SERVICES_BASE_PATH}/${NLP_SLUG}`} element={<NlpPage />} />
+              <Route
+                path={`${SERVICES_BASE_PATH}/${BUSINESS_INTELLIGENCE_SLUG}`}
+                element={<BusinessIntelligencePage />}
+              />
+              <Route
+                path={`${SERVICES_BASE_PATH}/${LLM_INFRA_SLUG}`}
+                element={<LlmInfrastructurePage />}
+              />
+              <Route
+                path={`${SERVICES_BASE_PATH}/${ENTERPRISE_AI_SLUG}`}
+                element={<EnterpriseAiPage />}
+              />
+              <Route
+                path={`${SERVICES_BASE_PATH}/${PROCESS_AUTOMATION_SLUG}`}
+                element={<ProcessAutomationPage />}
+              />
+              <Route
+                path={`${SERVICES_BASE_PATH}/${DATA_SCIENCE_SLUG}`}
+                element={<DataSciencePage />}
+              />
+              <Route
+                path={`${SERVICES_BASE_PATH}/${CHATBOT_SLUG}`}
+                element={<ChatbotDevelopmentPage />}
+              />
+              <Route
+                path={`${SERVICES_BASE_PATH}/${BOT_AUTOMATION_SLUG}`}
+                element={<BotAutomationPage />}
+              />
               <Route
                 path="/service/nlp"
                 element={<Navigate to={`${SERVICES_BASE_PATH}/${NLP_SLUG}`} replace />}

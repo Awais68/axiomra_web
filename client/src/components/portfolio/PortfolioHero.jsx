@@ -143,7 +143,7 @@ export default function PortfolioHero() {
           </a>
         </div>
 
-        <dl className="mx-auto mt-20 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-xl2 border border-white/10 bg-white/10 backdrop-blur-sm md:grid-cols-4">
+        <dl className="mx-auto mt-20 grid max-w-3xl grid-cols-1 gap-px overflow-hidden rounded-xl2 border border-white/10 bg-white/10 backdrop-blur-sm sm:grid-cols-3">
           {hero.stats.map((s) => (
             <div key={s.label} data-hero-stat className="bg-inverse/70 px-5 py-7">
               <dt className="font-display text-3xl font-semibold text-inverse-fg md:text-4xl">

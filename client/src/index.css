@@ -2580,3 +2580,931 @@
     animation-duration: 32s;
   }
 }
+
+/* Business Intelligence page palette. Light mode uses deeper tones so accent
+   text keeps its contrast on white; dark mode and inverse bands get the
+   luminous ones. */
+:root {
+  --bi-a: #0d9488;
+  --bi-b: #2563eb;
+  --bi-c: #7c3aed;
+}
+.dark,
+.bg-inverse {
+  --bi-a: #14d8c4;
+  --bi-b: #3b82f6;
+  --bi-c: #a78bfa;
+}
+/* The BI page bans gradients: every "spectrum" accent is one solid blue. */
+.bi-spectrum-text {
+  color: var(--bi-b);
+}
+.bi-spectrum-bg,
+.bi-spectrum-bg-y {
+  background-color: var(--bi-b);
+}
+
+/* Trust strip wordmarks; same keyframes as the certificates marquee. */
+.bi-marquee {
+  animation: cert-marquee 38s linear infinite;
+  will-change: transform;
+}
+.bi-marquee-host:hover .bi-marquee {
+  animation-play-state: paused;
+}
+
+/* Data packets riding the pipeline track. */
+@keyframes bi-packet-x {
+  from {
+    transform: translate3d(0, -50%, 0);
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(var(--bi-run, 100cqw), -50%, 0);
+    opacity: 0;
+  }
+}
+@keyframes bi-packet-y {
+  from {
+    transform: translate3d(-50%, 0, 0);
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(-50%, var(--bi-run, 100cqh), 0);
+    opacity: 0;
+  }
+}
+.bi-packet-x {
+  animation: bi-packet-x 3.6s linear infinite;
+}
+.bi-packet-y {
+  animation: bi-packet-y 4.2s linear infinite;
+}
+
+/* The ring's core: a slow breathing glow. */
+@keyframes bi-core {
+  50% {
+    transform: scale(1.08);
+    opacity: 0.75;
+  }
+}
+.bi-core-glow {
+  animation: bi-core 5s ease-in-out infinite;
+}
+.bi-paused .bi-core-glow,
+.bi-paused .bi-packet-x,
+.bi-paused .bi-packet-y {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bi-marquee,
+  .bi-packet-x,
+  .bi-packet-y,
+  .bi-core-glow {
+    animation: none !important;
+  }
+  .bi-packet-x,
+  .bi-packet-y {
+    display: none;
+  }
+}
+
+/* Enterprise AI page. Solid colours only (no gradient text or backgrounds,
+   by request). --ent-accent is the teal used for title accents; it switches
+   to the luminous teal on dark bands so it keeps its contrast. */
+:root {
+  --ent-accent: 15 118 110;
+}
+.dark,
+.bg-inverse,
+.ent-dark {
+  --ent-accent: 45 232 213;
+}
+.text-ent-accent {
+  color: rgb(var(--ent-accent));
+}
+.bg-ent-accent {
+  background-color: rgb(var(--ent-accent));
+}
+
+/* Frosted glass panes for dark bands. */
+.ent-glass {
+  background-color: rgb(255 255 255 / 0.06);
+  border: 1px solid rgb(255 255 255 / 0.14);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.12),
+    0 24px 60px -30px rgb(0 0 0 / 0.6);
+}
+/* The light-surface version: a white pane over tinted photos or shapes. */
+.ent-glass-light {
+  background-color: rgb(255 255 255 / 0.62);
+  border: 1px solid rgb(255 255 255 / 0.7);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  box-shadow: 0 20px 50px -28px rgb(10 20 40 / 0.35);
+}
+.dark .ent-glass-light {
+  background-color: rgb(255 255 255 / 0.06);
+  border-color: rgb(255 255 255 / 0.14);
+}
+
+/* Hero photo: a slow drift that never stops, unlike Home's one-shot push-in. */
+@keyframes ent-drift {
+  0% {
+    transform: scale(1.06) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.14) translate3d(-2%, -1.5%, 0);
+  }
+  100% {
+    transform: scale(1.06) translate3d(0, 0, 0);
+  }
+}
+.ent-drift {
+  animation: ent-drift 22s ease-in-out infinite;
+  will-change: transform;
+}
+/* A single bright scan line sweeping the photo, solid with a glow. */
+@keyframes ent-scan {
+  0% {
+    transform: translate3d(0, -10%, 0);
+    opacity: 0;
+  }
+  10%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 1100%, 0);
+    opacity: 0;
+  }
+}
+.ent-scan {
+  height: 2px;
+  background-color: rgb(45 232 213 / 0.9);
+  box-shadow:
+    0 0 12px 2px rgb(45 232 213 / 0.55),
+    0 0 40px 6px rgb(45 232 213 / 0.25);
+  animation: ent-scan 5.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@keyframes ent-ping {
+  75%,
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+.ent-ping {
+  animation: ent-ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* 1. Circle wrap: text flows around a 200px round float. */
+.ent-circle-float {
+  float: right;
+  width: 200px;
+  height: 200px;
+  margin: 0 0 0 1rem;
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  shape-margin: 10px;
+  overflow: hidden;
+}
+@media (max-width: 479px) {
+  .ent-circle-float {
+    width: 132px;
+    height: 132px;
+    margin-left: 0.5rem;
+  }
+}
+
+/* 2. Polygon wrap: the same hexagon for the float area and the painted shape,
+   so the text hugs exactly what you see. */
+.ent-hex-float {
+  --ent-hex: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  float: left;
+  width: 180px;
+  height: 156px;
+  margin-right: 0.75rem;
+  shape-outside: var(--ent-hex);
+  clip-path: var(--ent-hex);
+  shape-margin: 14px;
+}
+@media (max-width: 479px) {
+  .ent-hex-float {
+    width: 120px;
+    height: 104px;
+    shape-margin: 8px;
+  }
+}
+
+/* 3. Inverted polygon: a solid frame with an elongated-hexagon hole cut out
+   of it (evenodd), so the quote reads as sitting inside the cut-out. */
+.ent-cutout-frame {
+  clip-path: polygon(
+    evenodd,
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% 0%,
+    10% 16%,
+    90% 16%,
+    96% 50%,
+    90% 84%,
+    10% 84%,
+    4% 50%,
+    10% 16%
+  );
+}
+
+/* 4. Organic wrap: the float area comes from an external SVG, the visible
+   shape from an inline <clipPath> drawn with the same path. */
+.ent-organic-float {
+  float: left;
+  width: 300px;
+  height: 300px;
+  margin-right: 1.25rem;
+  shape-outside: url("/enterprise-ai/organic-blob.svg");
+  shape-image-threshold: 0.5;
+  shape-margin: 14px;
+}
+@media (max-width: 639px) {
+  .ent-organic-float {
+    float: none;
+    width: min(100%, 280px);
+    height: 280px;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ent-drift,
+  .ent-scan,
+  .ent-ping {
+    animation: none !important;
+  }
+  .ent-scan {
+    display: none;
+  }
+}
+
+/* Enterprise hero photo: unfolds from a diagonal sliver into its chamfered
+   frame. CSS, not framer-motion, so it runs on first paint of the
+   prerendered HTML. Both polygons have six points so they interpolate. */
+@keyframes ent-unfold {
+  from {
+    clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(10% 0%, 100% 0%, 100% 86%, 90% 100%, 0% 100%, 0% 14%);
+  }
+}
+.ent-hero-frame {
+  clip-path: polygon(10% 0%, 100% 0%, 100% 86%, 90% 100%, 0% 100%, 0% 14%);
+  animation: ent-unfold 1.3s cubic-bezier(0.65, 0, 0.35, 1) 0.15s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ent-hero-frame {
+    animation: none;
+  }
+}
+
+/* Tinted panel behind the shape-wrapped service rows. The organic row's
+   inverted mask is painted in this same colour, so it must stay solid. */
+:root {
+  --ent-panel: 232 246 244;
+}
+.dark {
+  --ent-panel: 24 26 56;
+}
+.bg-ent-panel {
+  background-color: rgb(var(--ent-panel));
+}
+.fill-ent-panel {
+  fill: rgb(var(--ent-panel));
+}
+
+/* Data Science page. Solid colours only: no gradient text or backgrounds. */
+:root {
+  --ds-accent: 13 148 136;
+  --ds-accent-2: 37 99 235;
+  --ds-amber: 217 119 6;
+}
+.dark,
+.bg-inverse {
+  --ds-accent: 45 212 191;
+  --ds-accent-2: 96 165 250;
+  --ds-amber: 251 191 36;
+}
+.ds-accent {
+  color: rgb(var(--ds-accent));
+}
+
+/* Glassmorphism: translucent fill, hairline border, background blur. */
+.ds-glass {
+  background-color: rgb(255 255 255 / 0.07);
+  border: 1px solid rgb(255 255 255 / 0.16);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+}
+.ds-glass-light {
+  background-color: rgb(255 255 255 / 0.62);
+  border: 1px solid rgb(15 23 42 / 0.08);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+}
+.dark .ds-glass-light {
+  background-color: rgb(255 255 255 / 0.05);
+  border-color: rgb(255 255 255 / 0.1);
+}
+
+/* Hero photo: chamfered frame revealed by clip-path, then a slow push-in.
+   Pure CSS so it starts with the prerendered paint, before hydration. */
+.ds-hero-frame {
+  clip-path: polygon(8% 0, 100% 0, 100% 88%, 92% 100%, 0 100%, 0 12%);
+  animation: ds-frame-in 1.1s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+@keyframes ds-frame-in {
+  from {
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%, 50% 100%, 50% 0);
+  }
+}
+.ds-kenburns {
+  animation: ds-kenburns 18s ease-in-out infinite alternate;
+}
+@keyframes ds-kenburns {
+  from {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.16) translate3d(-2%, -1.5%, 0);
+  }
+}
+/* Scan line sweeping the photo, like a model reading the frame. */
+.ds-scan {
+  animation: ds-scan 4.8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@keyframes ds-scan {
+  0% {
+    transform: translate3d(0, -10%, 0);
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 1000%, 0);
+    opacity: 0;
+  }
+}
+
+/* Fallback field (phones, no WebGL): CSS-animated data points. */
+.ds-dot {
+  animation: ds-drift var(--d, 7s) ease-in-out var(--delay, 0s) infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes ds-drift {
+  to {
+    transform: translate3d(var(--dx, 6px), var(--dy, -8px), 0);
+  }
+}
+
+/* 1. Circle float: paragraph text wraps around a round photo. */
+.ds-circle-float {
+  float: right;
+  width: 150px;
+  height: 150px;
+  margin: 0 0 0.5rem 0.75rem;
+  shape-outside: circle(50%);
+  shape-margin: 10px;
+  clip-path: circle(50%);
+}
+@media (min-width: 480px) {
+  .ds-circle-float {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* 2 + 3. Polygon float with a matching clip-path, beside a text panel whose
+   background is the inverted polygon (the rectangle minus the cut, plus a
+   gutter), so the copy reads as sitting inside the cut-out. lg+ only: the
+   float needs the panel's fixed height to span it. */
+@media (min-width: 1024px) {
+  .ds-poly-wrap {
+    --ds-poly-w: 44%;
+    --ds-poly-foot: 26%;
+    --ds-poly-gap: 1.5rem;
+    position: relative;
+    height: 34rem;
+  }
+  .ds-poly-float {
+    float: left;
+    width: var(--ds-poly-w);
+    height: 100%;
+    --ds-poly: polygon(0 0, 100% 0, 59% 100%, 0 100%);
+    shape-outside: var(--ds-poly);
+    clip-path: var(--ds-poly);
+    shape-margin: 2.5rem;
+  }
+  .ds-poly-inverse {
+    position: absolute;
+    inset: 0;
+    clip-path: polygon(
+      calc(var(--ds-poly-w) + var(--ds-poly-gap)) 0,
+      100% 0,
+      100% 100%,
+      calc(var(--ds-poly-foot) + var(--ds-poly-gap)) 100%
+    );
+  }
+}
+
+/* 4. Organic SVG shape: shape-outside reads the external SVG's alpha; the
+   panel behind the text is clipped by the inline SVG's inverted path. */
+@media (min-width: 1024px) {
+  .ds-blob-wrap {
+    position: relative;
+    height: 36rem;
+  }
+  .ds-blob-float {
+    float: left;
+    width: 40%;
+    height: 100%;
+    shape-outside: url("/shapes/ds-blob.svg");
+    shape-image-threshold: 0.5;
+    shape-margin: 1.75rem;
+  }
+  .ds-blob-inverse {
+    position: absolute;
+    inset: 0;
+    clip-path: url(#ds-blob-inverse);
+  }
+}
+.ds-blob-clip {
+  clip-path: url(#ds-blob);
+}
+
+/* Clip-path hexagons floating in the CTA band. */
+.ds-hex {
+  clip-path: polygon(25% 4%, 75% 4%, 100% 50%, 75% 96%, 25% 96%, 0 50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-hero-frame,
+  .ds-kenburns,
+  .ds-scan,
+  .ds-dot {
+    animation: none !important;
+  }
+  .ds-scan {
+    display: none;
+  }
+}
+
+/* ── Enterprise LLM Infrastructure page ──────────────────────────────────────
+   No gradients anywhere on this page, by brief: every fill is a solid colour
+   or a solid colour at an alpha. Depth comes from frosted glass, blur and the
+   photography instead. */
+
+/* Frosted panel for dark bands and over photos. */
+.llm-glass {
+  background: rgb(255 255 255 / 0.07);
+  border: 1px solid rgb(255 255 255 / 0.16);
+  box-shadow:
+    0 24px 60px -28px rgb(0 0 0 / 0.6),
+    inset 0 1px 0 rgb(255 255 255 / 0.18);
+}
+/* The same panel on a light page. */
+.llm-glass-light {
+  background: rgb(255 255 255 / 0.6);
+  border: 1px solid rgb(255 255 255 / 0.8);
+  box-shadow:
+    0 20px 50px -30px rgb(10 20 40 / 0.35),
+    inset 0 1px 0 rgb(255 255 255 / 0.9);
+}
+.dark .llm-glass-light {
+  background: rgb(255 255 255 / 0.05);
+  border-color: rgb(255 255 255 / 0.12);
+  box-shadow:
+    0 20px 50px -30px rgb(0 0 0 / 0.6),
+    inset 0 1px 0 rgb(255 255 255 / 0.1);
+}
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .llm-glass,
+  .llm-glass-light {
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    backdrop-filter: blur(18px) saturate(160%);
+  }
+}
+
+/* Hero photo: opens through an aperture on first paint, then a slow push-in
+   that alternates forever (one image, so it never cuts). Pure CSS, so it runs
+   from the prerendered HTML before any JS. */
+@keyframes llm-aperture {
+  from {
+    clip-path: polygon(30% 18%, 70% 18%, 82% 50%, 70% 82%, 30% 82%, 18% 50%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%);
+  }
+}
+@keyframes llm-drift {
+  from {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.14) translate3d(-2%, -1.5%, 0);
+  }
+}
+.llm-hero-photo {
+  animation: llm-aperture 1.4s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+.llm-hero-photo img {
+  animation: llm-drift 22s ease-in-out 0.4s infinite alternate both;
+  will-change: transform;
+}
+
+/* Hex scanline sweeping the hero once in a while. */
+@keyframes llm-scan {
+  0% {
+    transform: translate3d(0, -10vh, 0);
+    opacity: 0;
+  }
+  10%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 110vh, 0);
+    opacity: 0;
+  }
+}
+.llm-scan {
+  animation: llm-scan 7s linear 1.5s infinite;
+}
+
+/* 1. Circle float: the paragraph wraps the chip photo along a circle. */
+.llm-float-circle {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 0.25rem 1rem 0.5rem 0;
+  shape-outside: circle(50%);
+  shape-margin: 10px;
+  clip-path: circle(50%);
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media (min-width: 640px) {
+  .llm-float-circle {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* 2. Polygon float: shape-outside and clip-path share one polygon, so the
+   coloured badge and the text wrap follow the exact same chamfered edge. */
+.llm-float-poly {
+  --llm-poly: polygon(0 0, 100% 0, 100% 58%, 58% 100%, 0 100%);
+  float: left;
+  width: 5.5rem;
+  height: 6.25rem;
+  margin-right: 0.25rem;
+  shape-outside: var(--llm-poly);
+  clip-path: var(--llm-poly);
+  shape-margin: 12px;
+}
+
+/* 3. Inverted polygon. The float's shape-outside is the notch (left), its
+   clip-path is the leftover of the rectangle once the notch is cut out, so
+   the coloured fill sits exactly where the text flows. The notch itself is
+   transparent and shows the photo behind. Desktop only: on a phone the copy
+   would outgrow any fixed float height. */
+.llm-inverted {
+  --llm-notch: polygon(0 0, 46% 0, 34% 50%, 46% 100%, 0 100%);
+  --llm-notch-inverse: polygon(46% 0, 100% 0, 100% 100%, 46% 100%, 34% 50%);
+}
+@media (min-width: 1024px) {
+  .llm-inverted-float {
+    float: left;
+    width: 100%;
+    height: var(--llm-float-h, 30rem);
+    shape-outside: var(--llm-notch);
+    shape-margin: 2.5rem;
+    clip-path: var(--llm-notch-inverse);
+  }
+}
+
+/* 4. SVG organic shape. shape-outside reads the alpha of an external SVG; the
+   inline <clipPath id="llm-blob-inverse"> is the rectangle minus that same
+   blob, so the fill wraps the organic edge the text follows. */
+@media (min-width: 1024px) {
+  .llm-blob-float {
+    float: left;
+    width: 100%;
+    height: var(--llm-float-h, 26rem);
+    shape-outside: url("/shapes/llm-blob.svg");
+    shape-image-threshold: 0.5;
+    shape-margin: 2rem;
+    clip-path: url(#llm-blob-inverse);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .llm-hero-photo,
+  .llm-hero-photo img,
+  .llm-scan {
+    animation: none !important;
+  }
+  .llm-scan {
+    display: none;
+  }
+}
+
+/* Process Automation page. Solid colours only (no gradient text or
+   backgrounds, by request). --pa-accent is a burnt orange on light surfaces
+   and switches to the bright orange on dark bands to keep its contrast. */
+:root {
+  --pa-accent: 194 65 12;
+  --pa-panel: 255 243 234;
+}
+.dark {
+  --pa-panel: 30 24 40;
+}
+.dark,
+.bg-inverse,
+.pa-dark {
+  --pa-accent: 251 146 60;
+}
+.text-pa-accent {
+  color: rgb(var(--pa-accent));
+}
+.bg-pa-accent {
+  background-color: rgb(var(--pa-accent));
+}
+/* Tinted panel; the organic row's inverted mask is painted in this colour,
+   so it must stay solid. */
+.bg-pa-panel {
+  background-color: rgb(var(--pa-panel));
+}
+
+/* Frosted glass panes for dark bands. */
+.pa-glass {
+  background-color: rgb(255 255 255 / 0.07);
+  border: 1px solid rgb(255 255 255 / 0.16);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.14),
+    0 24px 60px -30px rgb(0 0 0 / 0.6);
+}
+/* Light-surface version: a white pane over tinted panels. */
+.pa-glass-light {
+  background-color: rgb(255 255 255 / 0.66);
+  border: 1px solid rgb(255 255 255 / 0.75);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  box-shadow: 0 18px 44px -28px rgb(60 30 10 / 0.35);
+}
+.dark .pa-glass-light {
+  background-color: rgb(255 255 255 / 0.06);
+  border-color: rgb(255 255 255 / 0.14);
+}
+
+/* Blueprint grid: solid 1px lines from an SVG tile, no gradient. */
+.pa-grid {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M48 0H0V48' fill='none' stroke='%23FFFFFF' stroke-opacity='0.06'/%3E%3C/svg%3E");
+}
+.pa-grid-light {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M48 0H0V48' fill='none' stroke='%23C2410C' stroke-opacity='0.07'/%3E%3C/svg%3E");
+}
+
+/* Hero photo: opens like a roller shutter on first paint (CSS, so it runs on
+   the prerendered HTML), then keeps a slow pan alive, unlike Home's one-shot
+   push-in. */
+@keyframes pa-shutter {
+  from {
+    clip-path: inset(48% 0% 48% 0%);
+  }
+  to {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+.pa-hero-shutter {
+  animation: pa-shutter 1.2s cubic-bezier(0.65, 0, 0.35, 1) 0.1s both;
+}
+@keyframes pa-kenburns {
+  0% {
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.18) translate3d(2.5%, -1.5%, 0);
+  }
+}
+.pa-kenburns {
+  animation: pa-kenburns 20s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes pa-drift {
+  0%,
+  100% {
+    transform: scale(1.06) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.14) translate3d(-2%, 1.5%, 0);
+  }
+}
+.pa-drift {
+  animation: pa-drift 24s ease-in-out infinite;
+}
+
+/* SVG fallback for the three.js pipeline: dashes march along the lanes. */
+@keyframes pa-march {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+.pa-lane {
+  fill: none;
+  stroke-width: 1.5;
+  stroke-dasharray: 4 16;
+  stroke-linecap: round;
+  animation: pa-march 1.6s linear infinite;
+}
+.pa-lane-in {
+  stroke: #fb923c;
+}
+.pa-lane-out {
+  stroke: #2de8d5;
+}
+@keyframes pa-hub {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.6;
+  }
+}
+.pa-hub {
+  fill: rgb(45 232 213 / 0.12);
+  stroke: #2de8d5;
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pa-hub 2.8s ease-in-out infinite;
+}
+
+/* Intro photo orbit. */
+.pa-orbit {
+  animation: orbit-spin 18s linear infinite;
+}
+
+/* 1. Circle wrap: text flows around a 200px round float. */
+.pa-circle-float {
+  float: right;
+  width: 200px;
+  height: 200px;
+  margin: 0 0 0.5rem 1rem;
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  shape-margin: 10px;
+}
+@media (max-width: 479px) {
+  .pa-circle-float {
+    width: 136px;
+    height: 136px;
+    margin-left: 0.5rem;
+  }
+}
+
+/* 2. Polygon wrap: one chevron for the float area and the painted shape,
+   so the text hugs exactly what you see. Fixed colour so the white label
+   keeps its contrast in both themes. */
+.pa-poly-float {
+  --pa-chevron: polygon(0% 0%, 76% 0%, 100% 50%, 76% 100%, 0% 100%, 0% 0%);
+  float: left;
+  width: 220px;
+  height: 128px;
+  margin-right: 0.5rem;
+  background-color: #c2410c;
+  border-radius: 0;
+  shape-outside: var(--pa-chevron);
+  clip-path: var(--pa-chevron);
+  shape-margin: 16px;
+}
+@media (max-width: 479px) {
+  .pa-poly-float {
+    width: 160px;
+    height: 104px;
+    shape-margin: 10px;
+  }
+}
+
+/* 3. Inverted polygon: a solid frame with an octagon hole cut out of it
+   (evenodd), so the quote reads as sitting inside the cut-out. */
+.pa-cutout-frame {
+  clip-path: polygon(
+    evenodd,
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0% 0%,
+    20% 14%,
+    80% 14%,
+    92% 32%,
+    92% 68%,
+    80% 86%,
+    20% 86%,
+    8% 68%,
+    8% 32%,
+    20% 14%
+  );
+}
+
+/* 4. Organic wrap: the float area comes from an external SVG, the visible
+   shape from an inline <clipPath> drawn with the same path. */
+.pa-organic-float {
+  float: left;
+  width: 320px;
+  height: 320px;
+  margin-right: 1.25rem;
+  shape-outside: url("/process-automation/organic-blob.svg");
+  shape-image-threshold: 0.5;
+  shape-margin: 14px;
+}
+@media (max-width: 639px) {
+  .pa-organic-float {
+    float: none;
+    width: min(100%, 280px);
+    height: 280px;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+/* Industries: tall columns that widen on hover/focus on desktop; a snap
+   scroller with every caption visible on smaller screens. */
+.pa-ind-strip {
+  scrollbar-width: none;
+}
+.pa-ind-strip::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .pa-ind-col {
+    flex: 1 1 0;
+    min-width: 0;
+    transition: flex-grow 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .pa-ind-col[data-open] {
+    flex-grow: 3.4;
+  }
+  .pa-ind-col .pa-ind-plate {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+    transition:
+      opacity 0.35s ease,
+      transform 0.45s ease;
+  }
+  .pa-ind-col[data-open] .pa-ind-plate {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.2s;
+  }
+  .pa-ind-col:not([data-open]) .pa-ind-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    top: auto;
+    bottom: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pa-hero-shutter,
+  .pa-kenburns,
+  .pa-drift,
+  .pa-lane,
+  .pa-hub,
+  .pa-orbit {
+    animation: none !important;
+  }
+  .pa-ind-col,
+  .pa-ind-col .pa-ind-plate {
+    transition: none !important;
+  }
+}

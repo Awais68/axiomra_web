@@ -16,13 +16,19 @@ import {
   AGENTIC_AI_SLUG,
   COMPUTER_VISION_SLUG,
   NLP_SLUG,
+  BUSINESS_INTELLIGENCE_SLUG,
+  LLM_INFRA_SLUG,
+  CHATBOT_SLUG,
+  ENTERPRISE_AI_SLUG,
+  PROCESS_AUTOMATION_SLUG,
+  BOT_AUTOMATION_SLUG,
   ABOUT_PATH,
   TECH_PATH,
   FAQS_PATH,
   PORTFOLIO_PATH,
   INDUSTRIES_PATH,
 } from "@/routes.constants";
-import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import logoLight from "@/assets/logo-light.webp";
 import logoDark from "@/assets/logo-dark.webp";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -159,6 +165,36 @@ const serviceItems = [
     description: "Search, chatbots & document understanding",
     href: `${SERVICES_BASE_PATH}/${NLP_SLUG}`,
   },
+  {
+    label: "Enterprise AI",
+    description: "Production AI, governed & integrated",
+    href: `${SERVICES_BASE_PATH}/${ENTERPRISE_AI_SLUG}`,
+  },
+  {
+    label: "Enterprise LLM Infrastructure",
+    description: "Private, on-prem & VPC LLM deployment",
+    href: `${SERVICES_BASE_PATH}/${LLM_INFRA_SLUG}`,
+  },
+  {
+    label: "Business Intelligence",
+    description: "Dashboards, KPIs & trusted reporting",
+    href: `${SERVICES_BASE_PATH}/${BUSINESS_INTELLIGENCE_SLUG}`,
+  },
+  {
+    label: "Chatbot Development",
+    description: "LLM assistants, RAG bots & support automation",
+    href: `${SERVICES_BASE_PATH}/${CHATBOT_SLUG}`,
+  },
+  {
+    label: "Bot Automation",
+    description: "RPA, data & workflow bots",
+    href: `${SERVICES_BASE_PATH}/${BOT_AUTOMATION_SLUG}`,
+  },
+  {
+    label: "Process Automation",
+    description: "AI, RPA & workflow automation",
+    href: `${SERVICES_BASE_PATH}/${PROCESS_AUTOMATION_SLUG}`,
+  },
 ];
 
 // Verticals with a built page link straight to it; the rest deep-link into the
@@ -236,43 +272,13 @@ const companyItems = [
 type MegaSection = "services" | "industries" | "company";
 
 interface MegaConfig {
-  title: string;
-  subtitle: string;
-  eyebrow: string;
-  viewAll: string;
-  ctaTitle: string;
-  ctaSubtitle: string;
   items: typeof serviceItems;
 }
 
 const megaConfigs: Record<MegaSection, MegaConfig> = {
-  services: {
-    title: "Our Services",
-    subtitle: "End-to-end AI engineering, from strategy to production.",
-    eyebrow: "What we do",
-    viewAll: SERVICES_BASE_PATH,
-    ctaTitle: "Need a custom solution?",
-    ctaSubtitle: "Talk to our AI team and get a tailored roadmap.",
-    items: serviceItems,
-  },
-  industries: {
-    title: "Industries We Serve",
-    subtitle: "Proven AI deployments across every major sector.",
-    eyebrow: "Where we work",
-    viewAll: INDUSTRIES_PATH,
-    ctaTitle: "Already in tech?",
-    ctaSubtitle: "See how we ship results across verticals.",
-    items: industryItems,
-  },
-  company: {
-    title: "The Company",
-    subtitle: "How Axiomra works, what we build with, and what to expect.",
-    eyebrow: "Who we are",
-    viewAll: ABOUT_PATH,
-    ctaTitle: "Want the short version?",
-    ctaSubtitle: "Book a call and we will walk you through it.",
-    items: companyItems,
-  },
+  services: { items: serviceItems },
+  industries: { items: industryItems },
+  company: { items: companyItems },
 };
 
 const NAV_LINKS = [
@@ -321,57 +327,23 @@ function FullWidthDropdown({
   return (
     <div
       id={`mega-${section}`}
-      className="absolute left-0 right-0 top-full min-h-[280px] border-t border-line bg-surface shadow-card"
+      className="absolute left-0 right-0 top-full border-t border-line bg-surface shadow-card"
     >
-      <div className="mx-auto grid w-full max-w-8xl grid-cols-1 gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_1.6fr_1fr] lg:px-8">
-        <div className="flex flex-col justify-between gap-6">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-brand">
-              {cfg.eyebrow}
-            </p>
-            <h3 className="mt-2 font-display text-2xl font-semibold text-content">{cfg.title}</h3>
-            <p className="mt-2 text-base leading-relaxed text-content-dim">{cfg.subtitle}</p>
-          </div>
+      {/* Links only, three to a row, so new pages just add rows. */}
+      <div className="mx-auto grid w-full max-w-8xl grid-cols-3 gap-x-4 gap-y-1 px-4 py-8 sm:px-6 lg:px-8">
+        {cfg.items.map((item) => (
           <NavLink
-            href={cfg.viewAll}
+            key={item.label}
+            href={item.href}
             onClick={onNavigate}
-            className="group inline-flex items-center gap-1.5 text-base font-medium text-brand hover:text-brand-strong focus-ring"
+            className="group flex flex-col gap-1 rounded-xl px-4 py-3 transition-colors hover:bg-surface-subtle focus-ring"
           >
-            View all
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            <span className="text-base font-semibold text-content transition-colors group-hover:text-accent">
+              {item.label}
+            </span>
+            <span className="text-sm leading-snug text-content-faint">{item.description}</span>
           </NavLink>
-        </div>
-
-        <div className="grid grid-cols-1 gap-1 sm:grid-cols-2">
-          {cfg.items.map((item) => (
-            <NavLink
-              key={item.label}
-              href={item.href}
-              onClick={onNavigate}
-              className="group flex flex-col gap-1 rounded-xl px-4 py-3 transition-colors hover:bg-surface-subtle focus-ring"
-            >
-              <span className="text-base font-semibold text-content transition-colors group-hover:text-accent">
-                {item.label}
-              </span>
-              <span className="text-sm leading-snug text-content-faint">{item.description}</span>
-            </NavLink>
-          ))}
-        </div>
-
-        <div className="flex flex-col gap-3 rounded-2xl bg-gradient-to-br from-inverse to-inverse-soft p-6">
-          <h4 className="font-display text-lg font-semibold text-inverse-fg">{cfg.ctaTitle}</h4>
-          <p className="text-base leading-relaxed text-inverse-fg/60">{cfg.ctaSubtitle}</p>
-          <NavLink
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noreferrer"
-            onClick={onNavigate}
-            className="mt-auto inline-flex w-fit items-center gap-1.5 rounded-full bg-[#2563EB] px-5 py-2.5 text-base font-semibold text-white transition-colors hover:bg-[#1D4ED8] focus-ring"
-          >
-            Book a call
-            <ArrowRight className="h-4 w-4" />
-          </NavLink>
-        </div>
+        ))}
       </div>
     </div>
   );
