@@ -74,6 +74,22 @@ Severity: Critical (broken / security / money leak), High, Medium, Low. "Not mea
 
 ---
 
+## Fix batches
+
+### Batch 1b: per-route CSS split (added 2026-10-11)
+
+**Why:** the seven new service pages ship their styles in the global stylesheet. Render-blocking CSS grew from 31.1 KB to 39.1 KB gzipped (+8 KB, measured at `299b4832` vs `e8334bf1`). Home LCP is 91% render delay and now measures 5314–5317 ms against the 5300 ms pre-push budget. `e8334bf1` went out with `--no-verify` for that reason, as recorded in PR #2.
+
+**Scope:**
+- Move `client/src/styles/chatbot.css` (`.cb-*`, used only by `ChatbotDevelopmentPage` and `components/chatbot/*`) out of `main.jsx` and into that page's chunk.
+- Move `client/src/styles/bot-automation.css` (`.ba-*`, used only by `BotAutomationPage` and `components/bot-automation/*`) out of `main.jsx` the same way.
+- Move the new-page blocks out of `client/src/index.css` into per-page files, each imported by its page: Business Intelligence (`bi-*`), Enterprise AI (`ent-*`), Data Science (`ds-*`), LLM Infrastructure (`llm-*`), and Process Automation (`pa-*`).
+- Change the prerender CSS check (`client/scripts/prerender.mjs`, which today requires every CSS file to be linked from `index.html`). The new rule allows a CSS file that belongs only to one route's lazy chunk, as long as the prerender links it in that route's HTML, so prerendered pages still paint styled.
+
+**Target:** home LCP back under 5300 ms with the budget unchanged, and the pre-push hook passing without `--no-verify`.
+
+---
+
 ## 0. Map (Phase 0)
 - Client: Vite 5 + React 18 + react-router 6.30 + react-helmet-async, Tailwind, framer-motion, GSAP, three/r3f. Build: `vite build && generate-sitemap && prerender && check-csp`.
 - Hosting: Cloudflare Pages (only `_headers` and `_redirects` in repo; build env in the dashboard). Backend: Render (no `render.yaml`). The old Vercel backend is still live.
