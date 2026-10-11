@@ -24,6 +24,7 @@ import {
   loginLimiter,
   resetPasswordLimiter,
 } from "./lib/rateLimit.js";
+import { TRUSTED_PROXIES } from "./lib/trustedProxies.js";
 import { renderStatusPage, statusPayload } from "./status.js";
 
 const app = express();
@@ -98,14 +99,9 @@ app.use(cookieParser());
 // Runs after the body is parsed and before any route reads it.
 app.use(mongoSanitize);
 
-// The client IP only survives in x-forwarded-for. On Render a request crosses
-// Cloudflare and then more than one private (10.x) proxy, so trusting a fixed
-// single hop made req.ip a Render proxy address: every visitor, and Render's
-// health checker, shared a handful of rate-limit buckets. Trusting the private
-// ranges walks back past all internal hops to the first public address, the
-// real client. Entries a client forges sit left of that address and are never
-// reached, so the IP cannot be spoofed.
-app.set("trust proxy", ["loopback", "linklocal", "uniquelocal"]);
+// The client IP only survives in x-forwarded-for, behind Cloudflare and
+// Render's private proxies. lib/trustedProxies.js lists both and explains why.
+app.set("trust proxy", TRUSTED_PROXIES);
 
 // Health and status routes are mounted ahead of CSRF, every rate limiter and
 // every budget. Render's health checker polls /api/health from a handful of

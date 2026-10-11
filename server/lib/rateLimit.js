@@ -50,13 +50,18 @@ function store(name) {
 
 // Log how the first few rate-limited requests after boot were keyed, so the
 // proxy chain in production can be read from the logs instead of guessed.
+// The client-IP headers are logged for comparison only; the key never reads
+// them.
 let keyLogsLeft = 5;
 const byIp = (req) => {
   const key = ipKeyGenerator(req.ip);
   if (keyLogsLeft > 0) {
     keyLogsLeft -= 1;
     console.log(
-      `[ip] key=${key} socket=${req.socket?.remoteAddress} xff="${req.get("x-forwarded-for") ?? ""}"`
+      `[ip] key=${key} socket=${req.socket?.remoteAddress} xff="${req.get("x-forwarded-for") ?? ""}"` +
+        ` cf-connecting-ip="${req.get("cf-connecting-ip") ?? ""}"` +
+        ` true-client-ip="${req.get("true-client-ip") ?? ""}"` +
+        ` x-real-ip="${req.get("x-real-ip") ?? ""}"`
     );
   }
   return key;
