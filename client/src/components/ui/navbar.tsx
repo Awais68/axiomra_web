@@ -17,6 +17,7 @@ import {
   COMPUTER_VISION_SLUG,
   NLP_SLUG,
   BUSINESS_INTELLIGENCE_SLUG,
+  DATA_SCIENCE_SLUG,
   LLM_INFRA_SLUG,
   CHATBOT_SLUG,
   ENTERPRISE_AI_SLUG,
@@ -179,6 +180,11 @@ const serviceItems = [
     label: "Business Intelligence",
     description: "Dashboards, KPIs & trusted reporting",
     href: `${SERVICES_BASE_PATH}/${BUSINESS_INTELLIGENCE_SLUG}`,
+  },
+  {
+    label: "Data Science",
+    description: "Predictive models, analytics & forecasting",
+    href: `${SERVICES_BASE_PATH}/${DATA_SCIENCE_SLUG}`,
   },
   {
     label: "Chatbot Development",

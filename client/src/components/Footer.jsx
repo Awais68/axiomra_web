@@ -47,6 +47,7 @@ const LINK_ROUTES = {
   "Bot Automation": `${SERVICES_BASE_PATH}/${BOT_AUTOMATION_SLUG}`,
   "Process Automation": `${SERVICES_BASE_PATH}/${PROCESS_AUTOMATION_SLUG}`,
   "Software Development": SERVICES_BASE_PATH,
+  "All Services": SERVICES_BASE_PATH,
   Fashion: industryPath("fashion"),
   Sports: industryPath("sports"),
   Education: industryPath("education"),
@@ -71,6 +72,7 @@ const cols = [
       "LLM Infrastructure",
       "Computer Vision",
       "Software Development",
+      "All Services",
     ],
   },
   {
@@ -267,6 +269,7 @@ export default function Footer() {
                         className={UNDERLINE_LINK}
                       >
                         {l}
+                        {l === "All Services" && <span aria-hidden="true"> →</span>}
                       </Link>
                     ) : (
                       <span className="text-base sm:text-lg text-inverse-fg/40">{l}</span>
