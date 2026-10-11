@@ -1,6 +1,7 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowUpRight, Check } from "lucide-react";
-import { Reveal, Stagger, StaggerItem } from "../motion/Reveal";
+import { Reveal, REVEAL_EASE } from "../motion/Reveal";
+import ClipReveal from "../motion/ClipReveal";
 import EntTitle from "./EntTitle";
 import { stall } from "../../data/enterpriseAiData";
 import { BOOKING_URL } from "../../lib/booking";
@@ -12,8 +13,6 @@ import strategy720 from "../../assets/enterprise-ai/strategy-720.webp";
  * pane over a photo that wipes open with a clip-path on scroll.
  */
 export default function EntStall() {
-  const reduced = useReducedMotion();
-
   return (
     <section className="bg-surface py-20 md:py-28">
       <div className="mx-auto grid max-w-8xl grid-cols-1 items-start gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
@@ -68,57 +67,56 @@ export default function EntStall() {
           </Reveal>
         </div>
 
-        {/* Observed wrapper stays unclipped so the reveal reliably fires. */}
-        <motion.div
-          initial={reduced ? false : "hidden"}
-          whileInView="shown"
-          viewport={{ once: true, margin: "-80px" }}
-          className="relative lg:sticky lg:top-28"
+        {/* The checklist follows the wipe's own open/closed variants: an
+            observer of its own inside the clipped frame only fired if the
+            frame had opened while the list was still on screen. */}
+        <ClipReveal
+          wrapperClassName="relative lg:sticky lg:top-28"
+          className="relative aspect-[4/5] overflow-hidden rounded-[28px] sm:aspect-[4/3] lg:aspect-[4/5]"
+          closed="inset(0% 0% 96% 0% round 28px)"
+          open="inset(0% 0% 0% 0% round 28px)"
+          transition={{ duration: 1.1, ease: [0.65, 0, 0.35, 1] }}
         >
-          <motion.div
-            variants={{
-              hidden: { clipPath: "inset(0% 0% 96% 0% round 28px)" },
-              shown: { clipPath: "inset(0% 0% 0% 0% round 28px)" },
-            }}
-            transition={{ duration: 1.1, ease: [0.65, 0, 0.35, 1] }}
-            className="relative aspect-[4/5] overflow-hidden rounded-[28px] sm:aspect-[4/3] lg:aspect-[4/5]"
-          >
-            <img
-              src={stall.image.src}
-              srcSet={stall.image.srcSet}
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              alt={stall.image.alt}
-              width={1200}
-              height={800}
-              loading="lazy"
-              decoding="async"
-              className="h-full w-full object-cover"
-            />
-            <div aria-hidden="true" className="absolute inset-0 bg-[#0A1428]/45" />
+          <img
+            src={stall.image.src}
+            srcSet={stall.image.srcSet}
+            sizes="(min-width: 1024px) 45vw, 100vw"
+            alt={stall.image.alt}
+            width={1200}
+            height={800}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-[#0A1428]/45" />
 
-            <div className="ent-glass absolute inset-x-3 bottom-3 rounded-2xl p-5 sm:inset-x-6 sm:bottom-6 sm:p-7">
-              <h3 className="font-display text-xl font-semibold text-white md:text-2xl">
-                {stall.readyTitle}
-              </h3>
-              <p className="mt-2 text-sm text-white/75 md:text-base">{stall.readyIntro}</p>
-              <Stagger as="ul" className="mt-4 space-y-2.5" step={0.09} delay={0.6}>
-                {stall.readyList.map((item) => (
-                  <StaggerItem
-                    as="li"
-                    key={item}
-                    from="left"
-                    className="flex gap-3 text-sm text-white md:text-base"
-                  >
-                    <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#2DE8D5] text-[#0A1428]">
-                      <Check size={13} strokeWidth={3} aria-hidden="true" />
-                    </span>
-                    {item}
-                  </StaggerItem>
-                ))}
-              </Stagger>
-            </div>
-          </motion.div>
-        </motion.div>
+          <div className="ent-glass absolute inset-x-3 bottom-3 rounded-2xl p-5 sm:inset-x-6 sm:bottom-6 sm:p-7">
+            <h3 className="font-display text-xl font-semibold text-white md:text-2xl">
+              {stall.readyTitle}
+            </h3>
+            <p className="mt-2 text-sm text-white/75 md:text-base">{stall.readyIntro}</p>
+            <motion.ul
+              className="mt-4 space-y-2.5"
+              variants={{ open: { transition: { staggerChildren: 0.09, delayChildren: 0.6 } } }}
+            >
+              {stall.readyList.map((item) => (
+                <motion.li
+                  key={item}
+                  variants={{
+                    closed: { opacity: 0, x: 28 },
+                    open: { opacity: 1, x: 0, transition: { duration: 0.5, ease: REVEAL_EASE } },
+                  }}
+                  className="flex gap-3 text-sm text-white md:text-base"
+                >
+                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#2DE8D5] text-[#0A1428]">
+                    <Check size={13} strokeWidth={3} aria-hidden="true" />
+                  </span>
+                  {item}
+                </motion.li>
+              ))}
+            </motion.ul>
+          </div>
+        </ClipReveal>
       </div>
     </section>
   );

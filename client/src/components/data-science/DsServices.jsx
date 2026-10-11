@@ -1,6 +1,6 @@
-import { motion, useReducedMotion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Reveal } from "../motion/Reveal";
+import ClipReveal from "../motion/ClipReveal";
 import DsTitle from "./DsTitle";
 import { services } from "../../data/dataScienceData";
 
@@ -8,39 +8,31 @@ const EASE = [0.22, 0.61, 0.36, 1];
 
 /** Photo that wipes open with clip-path as it scrolls in, from the side it sits on. */
 function ServicePhoto({ image, flip, index }) {
-  const reduced = useReducedMotion();
   const closed = flip ? "inset(0% 0% 0% 100% round 1.75rem)" : "inset(0% 100% 0% 0% round 1.75rem)";
   const open = "inset(0% 0% 0% 0% round 1.75rem)";
 
-  // The observer sits on an unclipped wrapper: a fully clipped target can
-  // report zero intersection in Chromium and never open.
   return (
-    <motion.div
-      initial={reduced ? false : "closed"}
-      whileInView="open"
-      viewport={{ once: true, margin: "-80px" }}
+    <ClipReveal
+      closed={closed}
+      open={open}
+      transition={{ duration: 1, ease: EASE }}
+      className="group relative aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-surface-inset"
     >
-      <motion.div
-        variants={{ closed: { clipPath: closed }, open: { clipPath: open } }}
-        transition={{ duration: 1, ease: EASE }}
-        className="group relative aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-surface-inset"
-      >
-        <img
-          src={image.src}
-          srcSet={image.srcSet}
-          sizes="(min-width: 1024px) 44vw, 92vw"
-          alt={image.alt}
-          width={1200}
-          height={900}
-          loading="lazy"
-          decoding="async"
-          className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
-        />
-        <span className="ds-glass absolute left-5 top-5 rounded-full px-4 py-1.5 font-mono text-sm text-white">
-          {String(index + 1).padStart(2, "0")}
-        </span>
-      </motion.div>
-    </motion.div>
+      <img
+        src={image.src}
+        srcSet={image.srcSet}
+        sizes="(min-width: 1024px) 44vw, 92vw"
+        alt={image.alt}
+        width={1200}
+        height={900}
+        loading="lazy"
+        decoding="async"
+        className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+      />
+      <span className="ds-glass absolute left-5 top-5 rounded-full px-4 py-1.5 font-mono text-sm text-white">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+    </ClipReveal>
   );
 }
 
