@@ -88,6 +88,14 @@ Severity: Critical (broken / security / money leak), High, Medium, Low. "Not mea
 
 **Target:** home LCP back under 5300 ms with the budget unchanged, and the pre-push hook passing without `--no-verify`.
 
+### Backlog: dependency advisories (added 2026-10-11)
+
+The two production server advisories (`proxy-addr`, `@modelcontextprotocol/client`) are fixed in PR #3 (`chore/server-audit-fix`) with a lockfile-only change. These are still open:
+
+- **Client `react-router` v7 upgrade:** 2 moderate advisories, GHSA-wrjc-x8rr-h8h6 (open redirect via backslash in `<Link>`/`useNavigate`) and GHSA-337j-9hxr-rhxg (SSR `deserializeErrors`). The fix is only in `react-router-dom@7`, a major bump from `^6.30.6`. Neither is reachable today. The app is a SPA with no SSR hydration, and the only dynamic navigate (`AdminLoginPage.jsx`, `location.state?.from`) reads router state, not the URL.
+- **Server dev-only advisories:** `vitest` → `tinypool` (critical) and `@vitest/mocker` (moderate) need `vitest@5`. `nodemon` → `chokidar` → `braces` (high) has no non-major fix. Both are major bumps and neither ships to production, so upgrade them on their own branch and run the full test suite.
+- **`trust proxy` watch:** `server/app.js` sets `trust proxy` to `1`, a hop count, which keeps the `proxy-addr` subnet-matching path (GHSA-jqcg-44mw-7w3h) out of use. If this ever changes to an IP or CIDR list, re-check `proxy-addr`. The rate limiter keys on `req.ip`.
+
 ---
 
 ## 0. Map (Phase 0)
