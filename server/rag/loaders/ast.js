@@ -21,9 +21,9 @@ export function parseModule(code) {
 
 // Keys whose values are never visitor-facing copy.
 const SKIP_KEY =
-  /^(id|key|slug|type|icon|image|img|images|src|srcset|sources|href|url|path|to|link|className|class|color|colour|accent|tone|variant|theme|ogImage|logo|video|poster|width|height|anchor|target|photo|avatar|credit|imageCredit|labels|layout|align|size|gradient|bg|background|pattern|shape|position|delay|duration|order|logoBaked|seoTitle|canvas)$/i;
+  /^(id|key|slug|type|icon|image|img|images|src|srcset|sources|href|url|path|to|link|className|class|color|colour|accent|tone|variant|theme|ogImage|logo|video|poster|width|height|anchor|target|photo|avatar|credit|imageCredit|labels|layout|align|size|gradient|bg|background|pattern|shape|position|delay|duration|order|logoBaked|seoTitle|canvas|tones|clip|clipPath|mask|style|transform|transition|ease|easing|offset)$/i;
 const SKIP_KEY_SUFFIX =
-  /(Image|Img|Alt|Href|Url|Path|Icon|Class|ClassName|Color|Colour|Src|Slug|Id|Logo|Video|Poster|Gradient|Tone|Variant|Canvas)$/;
+  /(Image|Img|Alt|Href|Url|Path|Icon|Class|ClassName|Color|Colour|Src|Slug|Id|Logo|Video|Poster|Gradient|Tone|Tones|Variant|Canvas|Clip|Style|Transform)$/;
 const SKIP_KEY_PREFIX = /^(cta|button|btn|aria|data|og)/i;
 
 // Fields that name the object they sit in; they become its heading.
@@ -49,6 +49,16 @@ const URL_OR_PATH =
   /^(https?:|mailto:|tel:|www\.|\/|\.{1,2}\/|#\/)|^[\w.-]+\.(webp|png|jpe?g|svg|gif|mp4|webm|avif)$/i;
 const HEX = /^#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/i;
 const CLASS_LIKE = /^[a-z0-9:/[\]().#%!_-]+$/;
+// Tailwind arbitrary values, e.g. bg-[#14D8C4], md:text-[#1E2A44]/70: the
+// utility prefix is lower-case, the bracketed value can be anything.
+const TW_ARBITRARY = /^(?:[a-z0-9-]+:)*!?-?[a-z][a-z0-9-]*-\[[^\]\s]+\](?:\/\d+)?$/;
+// CSS functions used as inline style values (clip-path shapes, transforms, ...).
+const CSS_FUNCTION =
+  /^(polygon|inset|circle|ellipse|path|url|var|calc|clamp|cubic-bezier|steps|translate(?:[xyz]|3d)?|rotate[xyz]?|scale[xyz]?|skew[xy]?|matrix(?:3d)?|blur|drop-shadow|brightness|saturate)\(/i;
+// Positions and lengths only: framer-motion scroll offsets ("start end"),
+// background positions ("50% 0%"), sizes ("120px").
+const POSITION_ONLY =
+  /^(?:(?:start|end|center|top|bottom|left|right|auto|-?\d+(?:\.\d+)?(?:%|px|rem|em|vh|vw)?)[\s,;]*)+$/i;
 
 /** Values that are never copy, whatever their length. */
 export function isNoise(value) {
@@ -57,11 +67,12 @@ export function isNoise(value) {
   if (URL_OR_PATH.test(v) || HEX.test(v)) return true;
   if (/^(rgb|hsl)a?\(/i.test(v)) return true;
   if (/^(linear|radial|conic)-gradient\(/i.test(v)) return true;
+  if (CSS_FUNCTION.test(v) || POSITION_ONLY.test(v)) return true;
   const tokens = v.split(/\s+/);
-  // Tailwind-ish class lists: every token lower-case with no prose punctuation,
-  // and most of them hyphenated or variant-prefixed.
+  // Tailwind-ish class lists: every token lower-case (or an arbitrary value)
+  // with no prose punctuation, and most of them hyphenated or variant-prefixed.
   if (
-    tokens.every((t) => CLASS_LIKE.test(t)) &&
+    tokens.every((t) => CLASS_LIKE.test(t) || TW_ARBITRARY.test(t)) &&
     tokens.filter((t) => /[-:[]/.test(t)).length >= Math.ceil(tokens.length / 2)
   ) {
     return true;
