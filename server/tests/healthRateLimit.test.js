@@ -90,22 +90,37 @@ describe("health and status routes are never rate limited", () => {
   });
 });
 
-describe("rate-limit key behind Render's proxies", () => {
-  // As on Render: client, then private proxy hops appended to x-forwarded-for.
-  const viaRender = (client) => `${client}, 10.29.158.153, 10.26.119.178`;
+describe("rate-limit key behind Cloudflare and Render's proxies", () => {
+  // The chain production logged: client, Cloudflare egress, Render hop.
+  const CF_EGRESS = "172.70.35.207";
+  const viaRender = (client) => `${client}, ${CF_EGRESS}, 10.29.158.153`;
   const apiKeys = () => [...fake.data.keys()].filter((k) => k.startsWith("rl:api:"));
+  const get = () => request(app).get("/api/no-such-route");
 
-  it("gives two clients behind the same proxies separate buckets", async () => {
+  it("keys on the client, not the Cloudflare egress", async () => {
+    await get().set("X-Forwarded-For", viaRender("153.117.38.117"));
+    expect(apiKeys()).toEqual(["rl:api:153.117.38.117"]);
+  });
+
+  it("gives two clients behind the same Cloudflare PoP separate buckets", async () => {
     for (const client of ["203.0.113.7", "198.51.100.9"]) {
-      await request(app).get("/api/no-such-route").set("X-Forwarded-For", viaRender(client));
+      await get().set("X-Forwarded-For", viaRender(client));
     }
     expect(apiKeys().sort()).toEqual(["rl:api:198.51.100.9", "rl:api:203.0.113.7"]);
   });
 
-  it("ignores an address the client forges in x-forwarded-for", async () => {
-    await request(app)
-      .get("/api/no-such-route")
-      .set("X-Forwarded-For", `6.6.6.6, ${viaRender("203.0.113.7")}`);
+  it("ignores addresses the client forges in x-forwarded-for", async () => {
+    // Cloudflare appends the real client after whatever the client sent.
+    await get().set("X-Forwarded-For", `6.6.6.6, 104.16.0.1, ${viaRender("203.0.113.7")}`);
+    expect(apiKeys()).toEqual(["rl:api:203.0.113.7"]);
+  });
+
+  it("ignores forged cf-connecting-ip, true-client-ip and x-real-ip", async () => {
+    await get()
+      .set("X-Forwarded-For", viaRender("203.0.113.7"))
+      .set("CF-Connecting-IP", "6.6.6.6")
+      .set("True-Client-IP", "6.6.6.7")
+      .set("X-Real-IP", "6.6.6.8");
     expect(apiKeys()).toEqual(["rl:api:203.0.113.7"]);
   });
 });
