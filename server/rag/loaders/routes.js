@@ -25,6 +25,13 @@ export const PAGE_TITLES = {
   [`${SERVICES}/agentic-ai-services`]: "Agentic AI Services",
   [`${SERVICES}/computer-vision-services`]: "Computer Vision Services",
   [`${SERVICES}/natural-language-processing-services`]: "Natural Language Processing Services",
+  [`${SERVICES}/business-intelligence-services`]: "Business Intelligence Services",
+  [`${SERVICES}/data-science-analytics-services`]: "Data Science and Analytics Services",
+  [`${SERVICES}/chatbot-development-services`]: "AI Chatbot Development Services",
+  [`${SERVICES}/bot-automation-services`]: "Bot Automation Services",
+  [`${SERVICES}/process-automation-services`]: "Business Process Automation Services",
+  [`${SERVICES}/enterprise-ai-development-services`]: "Enterprise AI Development Services",
+  [`${SERVICES}/enterprise-llm-infrastructure-services`]: "Enterprise LLM Infrastructure Services",
 };
 
 const INDUSTRIES = {
@@ -64,6 +71,13 @@ export const DATA_FILE_ROUTES = {
   "agenticAiData.js": `${SERVICES}/agentic-ai-services`,
   "computerVisionData.js": `${SERVICES}/computer-vision-services`,
   "nlpData.js": `${SERVICES}/natural-language-processing-services`,
+  "businessIntelligenceData.js": `${SERVICES}/business-intelligence-services`,
+  "dataScienceData.js": `${SERVICES}/data-science-analytics-services`,
+  "chatbotData.js": `${SERVICES}/chatbot-development-services`,
+  "botAutomationData.js": `${SERVICES}/bot-automation-services`,
+  "processAutomationData.js": `${SERVICES}/process-automation-services`,
+  "enterpriseAiData.js": `${SERVICES}/enterprise-ai-development-services`,
+  "llmInfrastructureData.js": `${SERVICES}/enterprise-llm-infrastructure-services`,
   ...Object.fromEntries(Object.keys(INDUSTRIES).map((k) => [`${k}Data.js`, industryPath(k)])),
 };
 
@@ -82,6 +96,13 @@ export const PAGE_ROUTES = {
   "AgenticAiPage.jsx": `${SERVICES}/agentic-ai-services`,
   "ComputerVisionPage.jsx": `${SERVICES}/computer-vision-services`,
   "NlpPage.jsx": `${SERVICES}/natural-language-processing-services`,
+  "BusinessIntelligencePage.jsx": `${SERVICES}/business-intelligence-services`,
+  "DataSciencePage.jsx": `${SERVICES}/data-science-analytics-services`,
+  "ChatbotDevelopmentPage.jsx": `${SERVICES}/chatbot-development-services`,
+  "BotAutomationPage.jsx": `${SERVICES}/bot-automation-services`,
+  "ProcessAutomationPage.jsx": `${SERVICES}/process-automation-services`,
+  "EnterpriseAiPage.jsx": `${SERVICES}/enterprise-ai-development-services`,
+  "LlmInfrastructurePage.jsx": `${SERVICES}/enterprise-llm-infrastructure-services`,
   ...Object.fromEntries(
     Object.keys(INDUSTRIES).map((k) => [
       `${k.charAt(0).toUpperCase()}${k.slice(1)}Page.jsx`,
@@ -98,6 +119,13 @@ export const COMPONENT_DIR_ROUTES = {
   "computer-vision": `${SERVICES}/computer-vision-services`,
   "gen-ai": `${SERVICES}/generative-ai-services`,
   nlp: `${SERVICES}/natural-language-processing-services`,
+  "business-intelligence": `${SERVICES}/business-intelligence-services`,
+  "data-science": `${SERVICES}/data-science-analytics-services`,
+  chatbot: `${SERVICES}/chatbot-development-services`,
+  "bot-automation": `${SERVICES}/bot-automation-services`,
+  "process-automation": `${SERVICES}/process-automation-services`,
+  "enterprise-ai": `${SERVICES}/enterprise-ai-development-services`,
+  "llm-infra": `${SERVICES}/enterprise-llm-infrastructure-services`,
   faqs: "/faqs",
   industries: "/industries",
   portfolio: "/portfolio",
