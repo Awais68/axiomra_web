@@ -1,6 +1,31 @@
-# Lighthouse budgets (client/lighthouserc.cjs), only when client/ changed since
-# the last push. Takes a few minutes; `git push --no-verify` skips it.
-if git rev-parse -q --verify '@{push}' >/dev/null && git diff --quiet '@{push}' HEAD -- client; then
+# Lighthouse budgets (client/lighthouserc.cjs), only when the pushed commits
+# change client/ relative to the PR base branch. Takes a few minutes;
+# `git push --no-verify` skips it.
+#
+# The base is $PREPUSH_BASE, else `git config prepush.base`, else the deploy
+# branch, looked up on the remote being pushed to ($1). Diffing from the
+# merge-base means a new branch is judged by its own commits, not by whether
+# it has been pushed before. When the base cannot be resolved, Lighthouse runs.
+remote="$1"
+base="${PREPUSH_BASE:-$(git config --get prepush.base || echo chore/migrate-cloudflare-render)}"
+base_ref="$remote/$base"
+git fetch -q "$remote" "$base" 2>/dev/null || true
+
+zero=0000000000000000000000000000000000000000
+client_changed=0
+# stdin: one "<local ref> <local sha> <remote ref> <remote sha>" line per pushed ref.
+while read -r _local_ref local_sha _remote_ref _remote_sha; do
+  [ "$local_sha" = "$zero" ] && continue # branch deletion
+  if ! fork=$(git merge-base "$base_ref" "$local_sha" 2>/dev/null); then
+    echo "pre-push: cannot resolve $base_ref, running Lighthouse"
+    client_changed=1
+  elif ! git diff --quiet "$fork" "$local_sha" -- client; then
+    client_changed=1
+  fi
+done
+
+if [ "$client_changed" = 0 ]; then
+  echo "pre-push: no client/ changes against $base_ref, skipping Lighthouse"
   exit 0
 fi
 # The build refuses to run without an API origin; the value only matters for
