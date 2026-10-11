@@ -11,7 +11,7 @@
  * an open tap on the OpenAI bill.
  */
 import { env } from "./env.js";
-import { redis } from "./rateLimit.js";
+import { redis, redisKey } from "./rateLimit.js";
 import { priceFor } from "./chatConfig.js";
 
 const DAY_SECONDS = 24 * 60 * 60;
@@ -29,8 +29,8 @@ export function costMicros(model, inputTokens, outputTokens) {
 const capMicros = () => Math.round((env.CHAT_DAILY_USD_CAP ?? 0) * 1e6);
 
 const dayKey = (date = new Date()) => date.toISOString().slice(0, 10);
-export const spendKey = (day = dayKey()) => `chat:spend:${day}`;
-export const tokensKey = (day = dayKey()) => `chat:tokens:${day}`;
+export const spendKey = (day = dayKey()) => redisKey(`chat:spend:${day}`);
+export const tokensKey = (day = dayKey()) => redisKey(`chat:tokens:${day}`);
 
 // Local development without REDIS_URL only; lib/env.js makes Redis mandatory
 // when deployed.
@@ -51,7 +51,8 @@ const store = redis ?? {
  * null when it would take today's spend past the cap.
  */
 export async function reserve({ model, inputChars, maxOutputTokens }) {
-  const key = spendKey();
+  const day = dayKey();
+  const key = spendKey(day);
   const inputTokens = Math.ceil(inputChars / CHARS_PER_TOKEN_ESTIMATE);
   const amount = costMicros(model, inputTokens, maxOutputTokens);
 
@@ -61,7 +62,7 @@ export async function reserve({ model, inputChars, maxOutputTokens }) {
     await store.incrby(key, -amount);
     return null;
   }
-  return { key, tokens: tokensKey(key.slice("chat:spend:".length)), amount, model };
+  return { key, tokens: tokensKey(day), amount, model };
 }
 
 /**

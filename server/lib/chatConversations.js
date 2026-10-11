@@ -11,7 +11,7 @@
  * last MAX_TURNS entries and expiring 24 hours after the last reply.
  */
 import { randomUUID } from "node:crypto";
-import { redis } from "./rateLimit.js";
+import { redis, redisKey } from "./rateLimit.js";
 
 // Stored messages, not exchanges: 40 is the last 20 question/answer pairs.
 export const MAX_TURNS = 40;
@@ -20,7 +20,7 @@ export const CONVERSATION_TTL_SECONDS = 24 * 60 * 60;
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const ROLES = new Set(["user", "assistant"]);
 
-export const conversationKey = (id) => `chat:conv:${id}`;
+export const conversationKey = (id) => redisKey(`chat:conv:${id}`);
 
 // Local development without REDIS_URL only; lib/env.js makes Redis mandatory
 // when deployed. No expiry here: a dev process does not live 24 hours.

@@ -78,6 +78,15 @@ const baseSchema = z.object({
       (v) => v === undefined || (Number.isFinite(v) && v > 0),
       "CHAT_DAILY_USD_CAP must be a positive number of US dollars"
     ),
+  // Prefix for every Redis key this server writes. Defaults to "" when
+  // deployed (so production keys stay where they are) and "dev:" otherwise, so
+  // a laptop pointed at the production Redis cannot spend its rate limits or
+  // chat budget. Set it explicitly to give another deployment its own space.
+  REDIS_NAMESPACE: z
+    .string()
+    .trim()
+    .regex(/^[\w-]*:?$/, "REDIS_NAMESPACE may only use letters, digits, _ and -, plus a trailing :")
+    .optional(),
   NODE_ENV: optional,
   VERCEL: optional,
 });
@@ -167,10 +176,12 @@ function load() {
       "MAIL_FROM is not set to a verified domain: Resend will only deliver to the account owner's address, so password-reset email to the admin will fail."
     );
   }
+  const redisNamespace = parsed.data.REDIS_NAMESPACE ?? (isDeployed(parsed.data) ? "" : "dev:");
   return {
     ...parsed.data,
     ADMIN_PANEL_URL: adminPanelUrl(parsed.data.ADMIN_PANEL_URL, isDeployed(parsed.data)),
     allowedOrigins: origins.data,
+    redisNamespace,
   };
 }
 
