@@ -182,6 +182,34 @@ describe("JSX page loader", () => {
     expect(rows.text).toContain("- GDPR: Data Compliance");
     expect(rows.text).not.toContain("linear-gradient");
   });
+
+  it("drops Tailwind arbitrary values, clip-path shapes and scroll offsets", () => {
+    const styled = jsxDocument(
+      { source: "/", title: "Home", component: "Styled.jsx" },
+      parseModule(`
+        const TONES = { teal: "bg-[#14D8C4]", violet: "md:bg-[#8B5CF6]/70" };
+        const tone = { heading: "text-[#0A1428]", body: "text-[#1E2A44]", faint: "text-[#1E2A44]/70" };
+        const SHARDS = [{ clip: "polygon(35% 0%, 65% 0%, 100% 50%, 65% 100%)", turn: 20 }];
+        const masks = [{ name: "Gear tooth", shape: "inset(10% 20% 30% 40%)", note: "circle(50% at 50% 50%)" }];
+        export default function Styled() {
+          const { scrollYProgress } = useScroll({ offset: ["start end", "end start"] });
+          return (
+            <section>
+              <h2>Automation that runs inside your stack</h2>
+              <p>Bots work through your existing ERP and CRM, with every run logged for audit.</p>
+              {["start end", "end start"].map((o) => <span key={o} />)}
+            </section>
+          );
+        }
+      `),
+      noDupes
+    );
+    expect(styled.text).toContain("Automation that runs inside your stack");
+    expect(styled.text).toContain("Bots work through your existing ERP and CRM");
+    expect(styled.text).not.toMatch(
+      /bg-\[|text-\[|polygon|inset\(|circle\(|start end|Tones|Shards/
+    );
+  });
 });
 
 describe("jsxFiles scope", () => {
