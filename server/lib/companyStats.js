@@ -9,5 +9,6 @@ export const companyStats = {
   countries: 30,
   partnerships: 170,
   industries: 12,
+  supportDays: 60,
   pocRange: { min: 11, max: 21 },
 };

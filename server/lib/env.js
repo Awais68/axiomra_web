@@ -12,15 +12,13 @@
 // module's body, so this file would otherwise see an empty process.env.
 import "dotenv/config";
 import { z } from "zod";
+import { RESEND_KEY_RE } from "../mailer.js";
 
 const optional = z
   .string()
   .trim()
   .transform((v) => v || undefined)
   .optional();
-
-const url = (name) =>
-  optional.refine((v) => v === undefined || URL.canParse(v), `${name} must be an absolute URL`);
 
 // An origin is scheme://host[:port] with no path, and no wildcards at all:
 // app.js matches exactly, and any `*.vercel.app` pattern could be satisfied by
@@ -48,7 +46,8 @@ const originList = z
     }
   });
 
-// Vercel sets NODE_ENV=production for preview and production deployments alike.
+// Deployed means NODE_ENV=production (set it on Render); VERCEL is still read
+// while the old Vercel backend is being retired.
 const isDeployed = (e) => e.NODE_ENV === "production" || Boolean(e.VERCEL);
 
 const baseSchema = z.object({
@@ -61,7 +60,9 @@ const baseSchema = z.object({
     (v) => v === undefined || v.length >= 32,
     "JWT_SECRET must be at least 32 characters when set"
   ),
-  ADMIN_PANEL_URL: url("ADMIN_PANEL_URL"),
+  // Read raw here and normalised by adminPanelUrl() below: a bad value only
+  // breaks the reset link, so it warns instead of refusing to start.
+  ADMIN_PANEL_URL: optional,
   RESEND_API_KEY: optional,
   MAIL_FROM: optional,
   CONTACT_NOTIFY_TO: optional,
@@ -101,15 +102,6 @@ const schema = baseSchema.superRefine((e, ctx) => {
       message: "REDIS_URL is required in production (rate limits need a shared store)",
     });
   }
-  // Deployed, a silent no-op mailer loses lead notifications and makes password
-  // reset impossible, so a missing key fails startup instead.
-  if (isDeployed(e) && !e.RESEND_API_KEY) {
-    ctx.addIssue({
-      code: "custom",
-      path: ["RESEND_API_KEY"],
-      message: "RESEND_API_KEY is required in production (lead and password-reset email)",
-    });
-  }
   // A paid model with no spend ceiling is not a configuration to start with.
   if (e.OPENAI_API_KEY && e.CHAT_DAILY_USD_CAP === undefined) {
     ctx.addIssue({
@@ -119,6 +111,36 @@ const schema = baseSchema.superRefine((e, ctx) => {
     });
   }
 });
+
+/**
+ * ADMIN_PANEL_URL is pasted into the reset email, so it must be one absolute
+ * http(s) URL. A list or a typo should never take the whole API down, so this
+ * warns and keeps the first usable entry; with none, auth.js falls back to the
+ * first allowed origin.
+ */
+function adminPanelUrl(raw, deployed) {
+  if (raw === undefined) return undefined;
+  const parts = raw
+    .split(",")
+    .map((p) => p.trim().replace(/\/+$/, ""))
+    .filter(Boolean);
+  const valid = parts.find((p) => URL.canParse(p) && /^https?:$/.test(new URL(p).protocol));
+  if (!valid) {
+    console.warn(
+      `ADMIN_PANEL_URL "${raw}" has no valid http(s) URL: reset links will use the first allowed origin.`
+    );
+    return undefined;
+  }
+  if (parts.length > 1 || parts[0] !== valid) {
+    console.warn(
+      `ADMIN_PANEL_URL should be a single URL (e.g. https://axiomra.co), not "${raw}": using "${valid}".`
+    );
+  }
+  if (deployed && /^https?:\/\/(localhost|127\.0\.0\.1)(:|\/|$)/i.test(valid)) {
+    console.warn(`ADMIN_PANEL_URL is "${valid}" in production: emailed reset links will not open.`);
+  }
+  return valid;
+}
 
 function load() {
   const parsed = schema.safeParse(process.env);
@@ -138,11 +160,29 @@ function load() {
   if (issues.length) {
     throw new Error(`Invalid environment configuration:\n  - ${issues.join("\n  - ")}`);
   }
-  if (!parsed.data.RESEND_API_KEY) {
+  // Email is not worth taking the API down for: without a usable key, leads
+  // are still stored and forgot-password answers 503 (see mailer.js).
+  const resendKey = parsed.data.RESEND_API_KEY;
+  if (!resendKey) {
     console.warn("RESEND_API_KEY is not set: contact and password-reset email are disabled.");
+  } else if (!RESEND_KEY_RE.test(resendKey)) {
+    console.warn(
+      'RESEND_API_KEY does not look like a Resend key (expected "re_..."): contact and password-reset email are disabled.'
+    );
+  } else if (/@resend\.dev>?$/i.test(parsed.data.MAIL_FROM?.trim() || "@resend.dev")) {
+    // Resend's shared test sender only delivers to the Resend account owner, so
+    // the admin's reset email is rejected (403) unless a verified domain is used.
+    console.warn(
+      "MAIL_FROM is not set to a verified domain: Resend will only deliver to the account owner's address, so password-reset email to the admin will fail."
+    );
   }
   const redisNamespace = parsed.data.REDIS_NAMESPACE ?? (isDeployed(parsed.data) ? "" : "dev:");
-  return { ...parsed.data, allowedOrigins: origins.data, redisNamespace };
+  return {
+    ...parsed.data,
+    ADMIN_PANEL_URL: adminPanelUrl(parsed.data.ADMIN_PANEL_URL, isDeployed(parsed.data)),
+    allowedOrigins: origins.data,
+    redisNamespace,
+  };
 }
 
 export const env = load();

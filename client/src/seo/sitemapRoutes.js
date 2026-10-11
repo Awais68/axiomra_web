@@ -20,6 +20,13 @@ import {
   AGENTIC_AI_SLUG,
   COMPUTER_VISION_SLUG,
   NLP_SLUG,
+  BUSINESS_INTELLIGENCE_SLUG,
+  CHATBOT_SLUG,
+  DATA_SCIENCE_SLUG,
+  ENTERPRISE_AI_SLUG,
+  LLM_INFRA_SLUG,
+  BOT_AUTOMATION_SLUG,
+  PROCESS_AUTOMATION_SLUG,
 } from "../routes.constants";
 import { caseStudies } from "../data/caseStudiesData";
 import { industries } from "../data/industriesData";
@@ -30,13 +37,18 @@ const BUILT_SERVICE_PAGES = {
   [AGENTIC_AI_SLUG]: "src/pages/AgenticAiPage.jsx",
   [COMPUTER_VISION_SLUG]: "src/pages/ComputerVisionPage.jsx",
   [NLP_SLUG]: "src/pages/NlpPage.jsx",
+  [BUSINESS_INTELLIGENCE_SLUG]: "src/pages/BusinessIntelligencePage.jsx",
+  [CHATBOT_SLUG]: "src/pages/ChatbotDevelopmentPage.jsx",
+  [DATA_SCIENCE_SLUG]: "src/pages/DataSciencePage.jsx",
+  [ENTERPRISE_AI_SLUG]: "src/pages/EnterpriseAiPage.jsx",
+  [LLM_INFRA_SLUG]: "src/pages/LlmInfrastructurePage.jsx",
+  [BOT_AUTOMATION_SLUG]: "src/pages/BotAutomationPage.jsx",
+  [PROCESS_AUTOMATION_SLUG]: "src/pages/ProcessAutomationPage.jsx",
 };
 
 // "real-estate" -> "RealEstatePage.jsx", matching the page file names.
 const industryPageFile = (slug) =>
-  "src/pages/" +
-  slug.replace(/(^|-)([a-z])/g, (_, __, c) => c.toUpperCase()) +
-  "Page.jsx";
+  "src/pages/" + slug.replace(/(^|-)([a-z])/g, (_, __, c) => c.toUpperCase()) + "Page.jsx";
 
 export default function sitemapRoutes() {
   return [
@@ -46,12 +58,18 @@ export default function sitemapRoutes() {
     { path: FAQS_PATH, sources: ["src/pages/FaqsPage.jsx", "src/data/faqsData.js"] },
     { path: "/contact", sources: ["src/pages/ContactPage.jsx"] },
     { path: PORTFOLIO_PATH, sources: ["src/pages/PortfolioPage.jsx", "src/data/portfolioData.js"] },
-    { path: SERVICES_BASE_PATH, sources: ["src/pages/ServicesPage.jsx", "src/data/servicesData.js"] },
+    {
+      path: SERVICES_BASE_PATH,
+      sources: ["src/pages/ServicesPage.jsx", "src/data/servicesData.js"],
+    },
     ...Object.entries(BUILT_SERVICE_PAGES).map(([slug, file]) => ({
       path: `${SERVICES_BASE_PATH}/${slug}`,
       sources: [file],
     })),
-    { path: INDUSTRIES_PATH, sources: ["src/pages/IndustriesPage.jsx", "src/data/industriesData.js"] },
+    {
+      path: INDUSTRIES_PATH,
+      sources: ["src/pages/IndustriesPage.jsx", "src/data/industriesData.js"],
+    },
     ...industries.map(({ slug }) => ({
       path: `${INDUSTRIES_PATH}/${slug}`,
       sources: [industryPageFile(slug)],

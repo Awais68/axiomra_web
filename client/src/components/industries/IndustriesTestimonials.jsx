@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import SectionHeading from "../SectionHeading";
 import ClientLogoStrip from "../ai-dev/ClientLogoStrip";
 import { testimonials } from "../../data/industriesData";
@@ -16,7 +16,8 @@ const initials = (name) =>
     .join("");
 
 /** One quote at a time, with the client logo strip underneath as the proof. */
-export default function IndustriesTestimonials({ data = testimonials }) {
+/** `flat` drops the gradient title accent and avatar for solid colours. */
+export default function IndustriesTestimonials({ data = testimonials, flat = false }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const [paused, setPaused] = useState(false);
@@ -54,7 +55,8 @@ export default function IndustriesTestimonials({ data = testimonials }) {
             eyebrow={data.eyebrow}
             title={
               <>
-                {data.titleLead} <span className="text-gradient">{data.titleAccent}</span>
+                {data.titleLead}{" "}
+                <span className={flat ? "text-brand" : "text-gradient"}>{data.titleAccent}</span>
               </>
             }
           />
@@ -93,25 +95,11 @@ export default function IndustriesTestimonials({ data = testimonials }) {
                   >
                     <span
                       aria-hidden="true"
-                      className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-grad-sky to-grad-blue font-display text-xl font-semibold text-inverse"
+                      className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full font-display text-xl font-semibold text-inverse ${
+                        flat ? "bg-grad-sky" : "bg-gradient-to-br from-grad-sky to-grad-blue"
+                      }`}
                     >
                       {initials(current.name)}
-                    </span>
-
-                    <span
-                      className="mt-6 flex justify-center text-gold"
-                      role="img"
-                      aria-label={`${current.rating} out of 5 stars`}
-                    >
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          size={18}
-                          strokeWidth={0}
-                          fill="currentColor"
-                          className={i < current.rating ? "" : "opacity-25"}
-                        />
-                      ))}
                     </span>
 
                     <blockquote className="mx-auto mt-6 max-w-[60ch] text-lg leading-relaxed text-content-dim md:text-xl">
@@ -176,7 +164,7 @@ export default function IndustriesTestimonials({ data = testimonials }) {
         </div>
       </section>
 
-      <ClientLogoStrip />
+      <ClientLogoStrip flat={flat} />
     </>
   );
 }

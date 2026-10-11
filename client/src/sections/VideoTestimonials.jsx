@@ -1,6 +1,5 @@
-import { companyStats } from "../data/companyStats.js";
 import { motion } from "framer-motion";
-import { Play, Star } from "lucide-react";
+import { Play } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 
 import avt1 from "../assets/review-1.webp";
@@ -54,11 +53,6 @@ function ReviewCard({ card }) {
   return (
     <div className="flex h-full min-h-[220px] flex-col justify-between rounded-xl2 border border-line bg-surface-subtle p-6">
       <div>
-        <div className="mb-3 flex text-gold" role="img" aria-label="5 out of 5 stars">
-          {[...Array(5)].map((_, idx) => (
-            <Star key={idx} size={14} strokeWidth={0} fill="currentColor" />
-          ))}
-        </div>
         <p className="text-base leading-relaxed text-content-dim">&ldquo;{card.quote}&rdquo;</p>
       </div>
       <div className="mt-4 flex items-center gap-3">
@@ -90,20 +84,7 @@ export default function VideoTestimonials() {
             To Say
           </>
         }
-      >
-        <div className="mt-7 inline-flex items-center gap-3 rounded-full border border-line-strong bg-surface-subtle px-6 py-3">
-          <span className="flex text-gold" role="img" aria-label="4.8 out of 5 stars">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} size={20} strokeWidth={0} fill="currentColor" />
-            ))}
-          </span>
-          <span className="font-display text-xl font-semibold text-content">4.9/5</span>
-          <span className="h-5 w-px bg-line-strong" aria-hidden="true" />
-          <span className="text-base text-content-dim">
-            across {companyStats.projects}+ projects
-          </span>
-        </div>
-      </SectionHeading>
+      ></SectionHeading>
 
       <div className="mt-12 grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {cards.map((c, i) => (

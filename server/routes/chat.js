@@ -2,9 +2,11 @@ import { Router } from "express";
 import { Agent, run, user, assistant, setTracingDisabled } from "@openai/agents";
 import { z } from "zod";
 import { CHAT_SYSTEM_PROMPT } from "../lib/chatKnowledge.js";
-import { reserve, settle } from "../lib/chatBudget.js";
+import { release, reserve, settle } from "../lib/chatBudget.js";
 import { CHAT_MODEL } from "../lib/chatConfig.js";
 import { appendTurns, loadConversation } from "../lib/chatConversations.js";
+import { logChatFailure } from "../lib/chatLog.js";
+import { createReplyFilter } from "../lib/chatText.js";
 import { referenceContext } from "../rag/context.js";
 
 const router = Router();
@@ -79,15 +81,38 @@ const agentFor = (instructions) =>
  *   data: {"type":"text","text":"..."}   one per chunk
  *   data: {"type":"done"}
  *   data: {"type":"error","error":"..."}  after headers were already sent
+ *
+ * Refusals before the stream are JSON { error, code }, where code is one of
+ * invalid_request, unavailable, daily_cap (rate_limited comes from the limiter).
+ * Every failure is logged once through logChatFailure.
  */
+const UNAVAILABLE = { error: "The assistant is not available right now.", code: "unavailable" };
+
 router.post("/", async (req, res) => {
+  const started = Date.now();
+  const fail = (reason, details) =>
+    logChatFailure(reason, { ms: Date.now() - started, ...details });
+
+  // Watched from the start: a visitor who gives up during retrieval (a cold
+  // start, a slow network) must not leave a reservation or a model run behind,
+  // because the widget retries that same message.
+  const controller = new AbortController();
+  let clientGone = false;
+  res.on("close", () => {
+    if (res.writableFinished) return;
+    clientGone = true;
+    controller.abort();
+  });
+
   const parsed = bodySchema.safeParse(req.body);
   if (!parsed.success) {
-    return res.status(400).json({ error: "Invalid chat request." });
+    fail("invalid_request");
+    return res.status(400).json({ error: "Invalid chat request.", code: "invalid_request" });
   }
 
   if (!process.env.OPENAI_API_KEY) {
-    return res.status(503).json({ error: "The assistant is not available right now." });
+    fail("no_api_key");
+    return res.status(503).json(UNAVAILABLE);
   }
 
   const { data } = parsed;
@@ -99,8 +124,8 @@ router.post("/", async (req, res) => {
   try {
     conversation = await loadConversation(data.conversationId);
   } catch (err) {
-    console.error("Chat: store unavailable:", err.message);
-    return res.status(503).json({ error: "The assistant is not available right now." });
+    fail("history_store_unavailable", { error: err.message });
+    return res.status(503).json(UNAVAILABLE);
   }
 
   // Never throws: on any retrieval failure the turn uses the static prompt.
@@ -109,6 +134,11 @@ router.post("/", async (req, res) => {
     history: conversation.history,
     text,
   });
+
+  if (clientGone) {
+    fail("client_gone_before_model", { stage: "retrieval" });
+    return;
+  }
 
   let reservation;
   try {
@@ -121,11 +151,20 @@ router.post("/", async (req, res) => {
       maxOutputTokens: MAX_OUTPUT_TOKENS,
     });
   } catch (err) {
-    console.error("Chat: store unavailable:", err.message);
-    return res.status(503).json({ error: "The assistant is not available right now." });
+    fail("budget_store_unavailable", { error: err.message });
+    return res.status(503).json(UNAVAILABLE);
   }
   if (!reservation) {
-    return res.status(429).json({ error: DAILY_CAP_REACHED });
+    fail("daily_cap");
+    return res.status(429).json({ error: DAILY_CAP_REACHED, code: "daily_cap" });
+  }
+  if (clientGone) {
+    // The model was never called, so the whole reservation goes back.
+    await release(reservation).catch((err) =>
+      console.error("Chat: could not release reservation:", err.message)
+    );
+    fail("client_gone_before_model", { stage: "reserve" });
+    return;
   }
 
   res.status(200).set({
@@ -139,13 +178,6 @@ router.post("/", async (req, res) => {
   res.flushHeaders();
   const send = (event) => res.write(`data: ${JSON.stringify(event)}\n\n`);
 
-  // The visitor closed the widget or navigated away: stop paying for tokens.
-  const controller = new AbortController();
-  let finished = false;
-  res.on("close", () => {
-    if (!finished) controller.abort();
-  });
-
   const input = [
     ...conversation.history.map((t) =>
       t.role === "user" ? user(t.content) : assistant(t.content)
@@ -155,6 +187,14 @@ router.post("/", async (req, res) => {
 
   let usage;
   let reply = "";
+  // Dashes and heading marks are rewritten before the visitor or the stored
+  // history sees them; see lib/chatText.js.
+  const filter = createReplyFilter();
+  const forward = (chunk) => {
+    if (!chunk) return;
+    reply += chunk;
+    send({ type: "text", text: chunk });
+  };
   try {
     const result = await run(agentFor(instructions), input, {
       stream: true,
@@ -162,11 +202,9 @@ router.post("/", async (req, res) => {
       signal: controller.signal,
     });
     for await (const chunk of result.toTextStream()) {
-      if (chunk) {
-        reply += chunk;
-        send({ type: "text", text: chunk });
-      }
+      if (chunk) forward(filter.push(chunk));
     }
+    forward(filter.flush());
     await result.completed;
     usage = result.state?.usage;
     if (result.error) throw result.error;
@@ -179,11 +217,17 @@ router.post("/", async (req, res) => {
     ]).catch((err) => console.error("Chat: could not save conversation:", err.message));
     send({ type: "done" });
   } catch (err) {
-    if (controller.signal.aborted) return;
-    console.error(`Chat: OpenAI run failed${err.status ? ` (${err.status})` : ""}:`, err.message);
-    send({ type: "error", error: "The assistant ran into a problem. Please try again." });
+    if (controller.signal.aborted) {
+      fail("client_aborted", { chars: reply.length });
+      return;
+    }
+    fail("model_error", { status: err.status, chars: reply.length, error: err.message });
+    send({
+      type: "error",
+      error: "The assistant ran into a problem. Please try again.",
+      code: "model_error",
+    });
   } finally {
-    finished = true;
     // Before res.end(): a serverless instance may be frozen once the
     // response is finished, and the write would never land.
     await settle(reservation, usage).catch((err) =>

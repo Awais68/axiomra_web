@@ -5,7 +5,7 @@ import { fake } from "./fakeRedis.js";
 
 // Server-side conversation history, as deployed: production mode, shared
 // Redis (faked). The model echoes a numbered reply and records its input.
-const sdk = vi.hoisted(() => ({ inputs: [], fail: false }));
+const sdk = vi.hoisted(() => ({ inputs: [], fail: false, prefix: "" }));
 
 vi.mock("ioredis", async () => ({ Redis: (await import("./fakeRedis.js")).FakeRedis }));
 vi.mock("rate-limit-redis", async () => ({
@@ -21,7 +21,7 @@ vi.mock("@openai/agents", () => ({
     const n = sdk.inputs.length;
     return {
       async *toTextStream() {
-        yield `reply-${n}`;
+        yield `${sdk.prefix}reply-${n}`;
         if (sdk.fail) throw new Error("boom");
       },
       completed: Promise.resolve(),
@@ -51,6 +51,7 @@ beforeEach(() => {
   fake.reset();
   sdk.inputs = [];
   sdk.fail = false;
+  sdk.prefix = "";
 });
 
 const post = (body) =>
@@ -71,6 +72,15 @@ describe("chat conversation history", () => {
       { role: "assistant", content: "reply-1" },
     ]);
     expect(fake.ttl.get(`chat:conv:${id}`)).toBe(24 * 60 * 60);
+  });
+
+  it("stores the filtered reply, never the raw dashes", async () => {
+    sdk.prefix = "Agents — and apps, $11k–$21k: ";
+    const res = await post({ message: "What do you build?" });
+    expect(stored(res.headers["x-conversation-id"]).at(-1)).toEqual({
+      role: "assistant",
+      content: "Agents, and apps, $11k-$21k: reply-1",
+    });
   });
 
   it("gives a follow-up the prior context, rebuilt from the server's store", async () => {

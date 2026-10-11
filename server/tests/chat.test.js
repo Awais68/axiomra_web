@@ -64,11 +64,29 @@ describe("POST /api/chat", () => {
     expect(sdk.lastInput).toEqual([{ role: "user", content: "Hi" }]);
   });
 
+  it("rewrites dashes and headings before the visitor sees them", async () => {
+    sdk.script = ["## Hi\nWe build agents ", "— and apps", ", $11k–$21k."];
+    const res = await chat({ message: "What do you build?" });
+    const text = events(res.text)
+      .filter((e) => e.type === "text")
+      .map((e) => e.text)
+      .join("");
+    expect(text).toBe("Hi\nWe build agents, and apps, $11k-$21k.");
+    expect(text).not.toMatch(/[\u2013\u2014#]/);
+  });
+
+  it("labels refusals with a code", async () => {
+    const res = await chat({ message: "" });
+    expect(res.status).toBe(400);
+    expect(res.body.code).toBe("invalid_request");
+  });
+
   it("reports a failed run as an error event", async () => {
     sdk.script = ["Partial"];
     sdk.fail = true;
     const res = await chat({ messages: [{ role: "user", content: "Hi" }] });
     expect(events(res.text).map((e) => e.type)).toEqual(["text", "error"]);
+    expect(events(res.text).at(-1).code).toBe("model_error");
   });
 
   it("uses only the last turn of a legacy messages array, never client history", async () => {

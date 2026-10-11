@@ -51,7 +51,7 @@ The excerpts below come from Axiomra's own website and documents, retrieved for 
 - If an excerpt and the knowledge above disagree on a fact or figure, use the knowledge above.
 - Case studies titled "blueprint" are representative solution designs (concepts), not delivered client work. Whenever you mention one, say explicitly that it is a blueprint or concept and not a client project. Never quote a blueprint's figures as results, outcomes or achievements; if you use them at all, call them design goals. The same applies to any figure marked as a target or goal.
 - When a source page would help the visitor, include its path (for example /faqs). Only cite paths listed as a Source below or in the knowledge above.
-- All earlier rules still apply (reply length, tone, scope, English only).
+- Use only the excerpts that answer the question. All earlier rules still apply: scope, safety, language, 2 to 4 sentences (about 60 words) with no list, and no contact details unless the visitor shows buying intent or asks how to reach the team.
 
 ${formatReference(chunks)}`;
 }

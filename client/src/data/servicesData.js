@@ -21,7 +21,18 @@ import webAppDevelopment from "../assets/services/web-app-development-services.w
 import recommendationSystems from "../assets/services/recommendation-systems-services.jpg";
 import webScraping from "../assets/services/web-scraping-services.jpg";
 import botAutomation from "../assets/services/bot-automation-services.jpg";
-import { AGENTIC_AI_SLUG, COMPUTER_VISION_SLUG } from "../routes.constants";
+// Same photo as the LLM infrastructure hero.
+import llmInfraListingImage from "../assets/llm-infra/hero-960.webp";
+import {
+  AGENTIC_AI_SLUG,
+  BOT_AUTOMATION_SLUG,
+  BUSINESS_INTELLIGENCE_SLUG,
+  CHATBOT_SLUG,
+  COMPUTER_VISION_SLUG,
+  DATA_SCIENCE_SLUG,
+  LLM_INFRA_SLUG,
+  PROCESS_AUTOMATION_SLUG,
+} from "../routes.constants";
 
 const services = [
   {
@@ -77,7 +88,7 @@ const services = [
     ],
   },
   {
-    slug: "business-intelligence-services",
+    slug: BUSINESS_INTELLIGENCE_SLUG,
     title: "Business Intelligence",
     image: businessIntelligence,
     imageAlt: "Team reviewing printed dashboards and a market chart on a laptop with a magnifier",
@@ -86,7 +97,16 @@ const services = [
     links: ["BI Consulting", "Enterprise Business Intelligence", "BI Support & Maintenance"],
   },
   {
-    slug: "process-automation-services",
+    slug: LLM_INFRA_SLUG,
+    title: "Enterprise LLM Infrastructure",
+    image: llmInfraListingImage,
+    imageAlt: "Rows of server racks with cabling glowing in a dark data centre",
+    description:
+      "Axiomra designs, deploys and runs large language models on your own servers, inside your own cloud account or fully air-gapped. Private LLM deployment, open-source model hosting, RAG pipelines and LLMOps, so your data, your model and your costs stay under your control.",
+    links: ["Private LLM Deployment", "On-Premise & VPC Hosting", "RAG & LLMOps"],
+  },
+  {
+    slug: PROCESS_AUTOMATION_SLUG,
     title: "Process Automation",
     image: processAutomation,
     imageAlt:
@@ -197,7 +217,7 @@ const services = [
     ],
   },
   {
-    slug: "data-science-analytics-services",
+    slug: DATA_SCIENCE_SLUG,
     title: "Data Science & Analytics",
     image: dataScience,
     imageAlt:
@@ -212,7 +232,7 @@ const services = [
     ],
   },
   {
-    slug: "chatbot-development-services",
+    slug: CHATBOT_SLUG,
     title: "Chatbot Development",
     image: chatbotDevelopment,
     imageAlt:
@@ -335,7 +355,7 @@ const services = [
     ],
   },
   {
-    slug: "bot-automation-services",
+    slug: BOT_AUTOMATION_SLUG,
     title: "Bot Automation",
     image: botAutomation,
     imageAlt: "Humanoid robot seated at a workstation, working through tasks on a monitor",

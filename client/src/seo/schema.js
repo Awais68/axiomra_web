@@ -93,6 +93,18 @@ export function contactPageSchema({ name, description, path }) {
   };
 }
 
+/** FAQPage from the same [{ q, a }] items the on-page accordion renders. */
+export function faqPageSchema(items) {
+  return {
+    "@type": "FAQPage",
+    mainEntity: items.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
 /**
  * BreadcrumbList for `crumbs` ([{ name, path }]), with Home prepended. The
  * last crumb may omit `path`; it is the current page.

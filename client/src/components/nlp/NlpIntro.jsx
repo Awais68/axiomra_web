@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Star } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { gsap, MOTION_OK } from "../../lib/gsap";
 import { hero } from "../../data/nlpData";
@@ -32,7 +32,6 @@ export default function NlpIntro() {
           .from("[data-intro-heading]", { autoAlpha: 0, y: 18, duration: 0.6 })
           .from("[data-intro-body]", { autoAlpha: 0, y: 22, duration: 0.7 }, "-=0.35")
           .from("[data-intro-cta]", { autoAlpha: 0, y: 20, duration: 0.6, stagger: 0.1 }, "-=0.45")
-          .from("[data-intro-proof]", { autoAlpha: 0, duration: 0.6 }, "-=0.35")
           .from("[data-hero-panel]", { autoAlpha: 0, y: 40, scale: 0.96, duration: 0.9 }, "-=0.8");
 
         /* The loop: one sentence going through the model, forever */
@@ -181,22 +180,6 @@ export default function NlpIntro() {
               >
                 {hero.secondaryCtaText}
               </Link>
-            </div>
-
-            <div data-intro-proof className="mt-9 flex flex-col gap-2">
-              <span className="flex items-center gap-2">
-                <span className="flex" aria-label={`${hero.proof.rating} out of 5`}>
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={15} className="fill-gold text-gold" aria-hidden="true" />
-                  ))}
-                </span>
-                <span className="text-sm text-content-dim md:text-base">
-                  {hero.proof.rating} from {hero.proof.reviews}
-                </span>
-              </span>
-              <span className="font-mono text-xs uppercase tracking-[0.18em] text-content-faint">
-                {hero.proof.source}
-              </span>
             </div>
           </div>
 

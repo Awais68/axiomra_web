@@ -35,7 +35,6 @@ export const hero = {
   ctaText: "Request a free consultation",
   image: heroImg,
   alt: "A rail of brightly coloured jackets hanging in a boutique window",
-  reviews: { platform: "Clutch", rating: 5, count: 12 },
 };
 
 export const intro = {
@@ -501,21 +500,18 @@ export const testimonials = {
       role: "CEO, Navex",
       quote:
         "Commendable work by the team. They collaborated and communicated in a highly professional manner and delivered exactly what was asked in the desired time frame. Their project management and communication skills are highly appreciable.",
-      rating: 5,
     },
     {
       name: "Charles Glah",
       role: "Owner, FrontOffice",
       quote:
         "Abdul Hannan and his team have been a trusted development partner for several months with their fully developed team and focus on AI. They helped us move forward and achieve our goal.",
-      rating: 5,
     },
     {
       name: "Jawad Bhati",
       role: "CEO, Voltox",
       quote:
         "Great work was done within the required time frame and communication was really good as well. I had to follow up on questions after the project was done. These were satisfactory and in a timely manner. Highly recommend them.",
-      rating: 5,
     },
   ],
 };

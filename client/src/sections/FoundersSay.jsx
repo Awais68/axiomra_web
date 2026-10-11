@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, ArrowUpRight, Quote } from "lucide-react";
+import { ArrowUpRight, Quote } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 
 import img1 from "../assets/founder-1.webp";
@@ -10,7 +10,6 @@ const items = [
   {
     name: "Randel Griff",
     role: "CEO & Founder, Doozoo",
-    stars: 4.5,
     img: img1,
     quote:
       "Their advanced understanding and experience in AI and Machine Learning technology and understanding current trends and capabilities. All deliveries were on time and accurate.",
@@ -18,7 +17,6 @@ const items = [
   {
     name: "Suleman Niazi",
     role: "CEO & Founder, Konnect",
-    stars: 5,
     img: img2,
     quote:
       "We've been impressed with the team. Working with them does not feel like we're dealing with a business; it feels like we're dealing with a group of people who want us to be successful.",
@@ -26,7 +24,6 @@ const items = [
   {
     name: "David Milward",
     role: "Chairman of Metadataworks",
-    stars: 5,
     img: img3,
     quote:
       "Very knowledgeable, and the team did what they promised, no bullshit, just good solid working through the requirements and suggesting good solutions.",
@@ -89,17 +86,6 @@ export default function FoundersSay() {
                 className="h-16 w-16 rounded-full object-cover ring-2 ring-brand/30 transition-transform duration-500 group-hover:scale-105 group-hover:ring-brand"
                 loading="lazy"
               />
-              <div className="flex text-gold" role="img" aria-label={`${t.stars} out of 5 stars`}>
-                {[...Array(5)].map((_, idx) => (
-                  <Star
-                    key={idx}
-                    size={18}
-                    strokeWidth={0}
-                    fill="currentColor"
-                    opacity={idx < Math.floor(t.stars) ? 1 : 0.25}
-                  />
-                ))}
-              </div>
             </div>
 
             <blockquote className="relative mb-8 flex-1 text-lg leading-relaxed text-content-dim">

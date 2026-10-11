@@ -451,28 +451,24 @@ export const testimonials = {
       role: "Founder, Upstar",
       quote:
         "They communicated with me and we developed trust over the years. Project management is great: the willingness to take any problem and get through it is impressive.",
-      rating: 5,
     },
     {
       name: "Abdullah",
       role: "CEO & Founder, Navex",
       quote:
         "Commendable work. They collaborated and communicated in a highly professional manner and delivered exactly what was asked in the desired time frame.",
-      rating: 5,
     },
     {
       name: "Susana Raj",
       role: "CEO & Founder, Minmini",
       quote:
         "Impressed with their dedication, exceeding expectations on scope. They prioritised quality, delivered on time and communicated professionally throughout.",
-      rating: 5,
     },
     {
       name: "Andreas Remy",
       role: "CEO & Founder, NEONMONKI",
       quote:
         "Extremely impressed with the AI and automation expertise in automating our tagging system. Efficient communication made the experience exceptional.",
-      rating: 5,
     },
   ],
 };

@@ -6,4 +6,4 @@ fi
 # The build refuses to run without an API origin; the value only matters for
 # what gets inlined, not for the measurements. VITE_LIGHTHOUSE keeps the
 # preview from calling that API (it rejects localhost via CORS).
-VITE_LIGHTHOUSE=1 VITE_API_URL="${VITE_API_URL:-https://axiomra-server.vercel.app}" npm --prefix client run perf
+VITE_LIGHTHOUSE=1 VITE_API_URL="${VITE_API_URL:-https://axiomra-backend-server.onrender.com}" npm --prefix client run perf

@@ -2,12 +2,17 @@
  * Post-build step (runs after `vite build`):
  *
  *  1. Writes dist/sitemap.xml from src/seo/sitemapRoutes.js.
- *  2. Copies dist/index.html to dist/404.html. Vercel serves that file, with a
- *     real 404 status, for any path no rewrite in vercel.json matches, so the
- *     SPA boots and shows the NotFound page instead of Vercel's default.
- *  3. Fails the build if a sitemap URL would not match a vercel.json rewrite.
- *     Such a page would still render (404.html is the app), but with a 404
- *     status, and Google would drop it from the index without any warning.
+ *  2. Copies dist/index.html to dist/404.html. Cloudflare Pages serves that
+ *     file, with a real 404 status, for any path that is neither a file nor a
+ *     public/_redirects rule, so the SPA boots and shows the NotFound page.
+ *     Without a 404.html, Pages would instead serve index.html with a 200 for
+ *     every unknown URL.
+ *  3. Fails the build if a sitemap URL matches a public/_redirects rule.
+ *     Pages applies those rules even when a static file exists, so the
+ *     prerendered page would be swapped for the empty shell (a 200 rewrite) or
+ *     sent elsewhere (a 3xx), and Google would index the wrong thing without
+ *     any warning. Every sitemap URL is prerendered by prerender.mjs, which is
+ *     what gives it a 200.
  */
 import { execFileSync } from "node:child_process";
 import { copyFileSync, readFileSync, writeFileSync } from "node:fs";
@@ -58,25 +63,28 @@ function lastmod(sources) {
   return git(["log", "-1", "--format=%cs", "--", ...sources]) || null;
 }
 
-// Mirrors how Vercel matches "source" patterns: ":name" is one segment,
-// ":name*" is zero or more.
+// Mirrors how Cloudflare Pages matches _redirects sources: ":name" is one
+// segment, "*" is anything (slashes included).
 function sourceToRegExp(source) {
   const pattern = source
     .replace(/[.+?^${}()|[\]\\]/g, "\\$&")
-    .replace(/\/:\w+\*/g, "(?:/.*)?")
+    .replace(/\*/g, ".*")
     .replace(/:\w+/g, "[^/]+");
   return new RegExp(`^${pattern}$`);
 }
 
-const { rewrites = [] } = JSON.parse(readFileSync(path.join(root, "vercel.json"), "utf8"));
-const matchers = rewrites.map((r) => sourceToRegExp(r.source));
-const unrouted = routes
+const redirects = readFileSync(path.join(root, "public", "_redirects"), "utf8")
+  .split("\n")
+  .map((line) => line.trim())
+  .filter((line) => line && !line.startsWith("#"))
+  .map((line) => line.split(/\s+/)[0]);
+const shadowed = routes
   .map((r) => r.path)
-  .filter((p) => p !== "/" && !matchers.some((re) => re.test(p)));
-if (unrouted.length) {
+  .filter((p) => redirects.some((source) => sourceToRegExp(source).test(p)));
+if (shadowed.length) {
   console.error(
-    "sitemap: these pages match no rewrite in vercel.json and would be served with a 404 status:\n  " +
-      unrouted.join("\n  "),
+    "sitemap: these pages match a rule in public/_redirects, which would replace their prerendered HTML:\n  " +
+      shadowed.join("\n  "),
   );
   process.exit(1);
 }

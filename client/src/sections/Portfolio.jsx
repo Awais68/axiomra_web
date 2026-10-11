@@ -51,7 +51,7 @@ const cases = [
   },
 ];
 
-export default function Portfolio({ showHeading = true, compact = false }) {
+export default function Portfolio({ showHeading = true, compact = false, flat = false }) {
   const ref = useRef(null);
   const scroll = (dir) => ref.current?.scrollBy({ left: dir * 380, behavior: "smooth" });
 
@@ -123,11 +123,13 @@ export default function Portfolio({ showHeading = true, compact = false }) {
             whileHover={{ y: -10 }}
             className="group relative flex min-w-[380px] snap-start flex-col justify-between overflow-hidden rounded-xl2 border border-line bg-surface-card p-8 shadow-card transition-[border-color,box-shadow] duration-300 hover:border-brand/50 hover:shadow-glow"
           >
-            {/* Light sweep that crosses the card on hover. */}
-            <span
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-grad-blue/10 to-transparent transition-transform duration-[900ms] ease-out group-hover:translate-x-full"
-            />
+            {/* Light sweep that crosses the card on hover; `flat` pages skip it. */}
+            {!flat && (
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-grad-blue/10 to-transparent transition-transform duration-[900ms] ease-out group-hover:translate-x-full"
+              />
+            )}
             <div className="relative">
               <h3 className="font-display text-2xl font-semibold text-content transition-colors duration-300 group-hover:text-brand">
                 {c.name}

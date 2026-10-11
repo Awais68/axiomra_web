@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { waitFor } from "@testing-library/react";
 import Seo from "./Seo";
 import { SITE_URL } from "./seo.config";
@@ -41,5 +41,27 @@ describe("Seo", () => {
     const nodes = data["@graph"] ?? [data];
     const crumbs = nodes.find((n) => n["@type"] === "BreadcrumbList");
     expect(crumbs.itemListElement.map((i) => i.name)).toEqual(["Home", "FAQs"]);
+  });
+
+  describe("GA4 page_view", () => {
+    afterEach(() => {
+      delete window.gtag;
+    });
+
+    it("sends one page_view with the page's own title", () => {
+      window.gtag = vi.fn();
+      renderPage(<Seo title="FAQs | Axiomra" />, { path: "/faqs" });
+      expect(window.gtag).toHaveBeenCalledTimes(1);
+      expect(window.gtag).toHaveBeenCalledWith("event", "page_view", {
+        page_location: window.location.href,
+        page_title: "FAQs | Axiomra",
+      });
+    });
+
+    it("skips the admin panel", () => {
+      window.gtag = vi.fn();
+      renderPage(<Seo title="Admin" noindex />, { path: "/admin/login" });
+      expect(window.gtag).not.toHaveBeenCalled();
+    });
   });
 });

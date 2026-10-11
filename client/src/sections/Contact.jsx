@@ -54,7 +54,7 @@ const reveal = (i) => ({
 
 const EMPTY_FORM = { name: "", email: "", phone: "", subject: "", service: "", message: "" };
 
-function IntroVideo() {
+function IntroVideo({ flat }) {
   const [playing, setPlaying] = useState(false);
 
   if (playing) {
@@ -85,7 +85,11 @@ function IntroVideo() {
         loading="lazy"
         className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-700 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-inverse via-inverse/40 to-transparent" />
+      <div
+        className={`absolute inset-0 ${
+          flat ? "bg-inverse/45" : "bg-gradient-to-t from-inverse via-inverse/40 to-transparent"
+        }`}
+      />
       <span className="relative flex h-20 w-20 items-center justify-center rounded-full bg-inverse-fg/95 shadow-glow transition-transform duration-300 group-hover:scale-110">
         <Play size={28} className="ml-1 text-inverse" fill="currentColor" />
       </span>
@@ -105,7 +109,8 @@ const VALIDATORS = {
   message: (form) => validateMessage(form.message),
 };
 
-export default function Contact() {
+/** `flat` swaps every gradient for a solid fill, for pages that ban gradients. */
+export default function Contact({ flat = false }) {
   const [form, setForm] = useState(EMPTY_FORM);
   const [country, setCountry] = useState(DEFAULT_COUNTRY);
   const [errors, setErrors] = useState({});
@@ -233,7 +238,7 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="flex flex-col"
           >
-            <IntroVideo />
+            <IntroVideo flat={flat} />
             <div className="mt-7 grid gap-4 sm:grid-cols-2">
               <div className="flex items-center gap-3 rounded-xl border border-line bg-surface-subtle p-4">
                 <Clock size={20} className="shrink-0 text-brand" aria-hidden="true" />
@@ -254,7 +259,9 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="form-blue relative rounded-[1.75rem] border border-accent-vivid/30 bg-gradient-to-br from-[#0C1E4E] to-[#1E3A8A] p-7 shadow-[0_40px_90px_-35px_rgba(77,148,255,0.55)] md:p-10"
+            className={`form-blue relative rounded-[1.75rem] border border-accent-vivid/30 p-7 shadow-[0_40px_90px_-35px_rgba(77,148,255,0.55)] md:p-10 ${
+              flat ? "bg-[#12285F]" : "bg-gradient-to-br from-[#0C1E4E] to-[#1E3A8A]"
+            }`}
           >
             {/* Decoration lives in its own clipped layer: the form itself must not
               clip, or the country / category dropdowns get cut off at the edge. */}
@@ -264,13 +271,16 @@ export default function Contact() {
             >
               {/* Solid teal cap and a faint dotted field keep the card from reading flat. */}
               <span className="absolute inset-x-0 top-0 h-1 bg-accent-vivid" />
-              <span
-                className="absolute inset-0 opacity-[0.07]"
-                style={{
-                  backgroundImage: "radial-gradient(rgb(var(--accent-vivid)) 1px, transparent 1px)",
-                  backgroundSize: "22px 22px",
-                }}
-              />
+              {!flat && (
+                <span
+                  className="absolute inset-0 opacity-[0.07]"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(rgb(var(--accent-vivid)) 1px, transparent 1px)",
+                    backgroundSize: "22px 22px",
+                  }}
+                />
+              )}
             </span>
             <HoneypotField inputRef={honeypotRef} />
 

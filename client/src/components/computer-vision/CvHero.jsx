@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Star } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import VisionCanvas from "./VisionCanvas";
 import { hero } from "../../data/computerVisionData";
 import { BOOKING_URL } from "../../lib/booking";
@@ -107,28 +107,6 @@ export default function CvHero() {
               >
                 {hero.secondaryCtaText}
               </Link>
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={4}
-              className="mt-9 flex flex-col gap-2"
-            >
-              <span className="flex items-center gap-2">
-                <span className="flex" role="img" aria-label={`${hero.proof.rating} out of 5`}>
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={15} className="fill-gold text-gold" aria-hidden="true" />
-                  ))}
-                </span>
-                <span className="text-sm text-white/70 md:text-base">
-                  {hero.proof.rating} from {hero.proof.reviews}
-                </span>
-              </span>
-              <span className="font-mono text-xs uppercase tracking-[0.18em] text-white/45">
-                {hero.proof.source}
-              </span>
             </motion.div>
           </div>
 

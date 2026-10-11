@@ -43,7 +43,6 @@ export const hero = {
   ctaText: "Book a proposal",
   image: heroImg,
   alt: "Blue glass towers rising above a city street, seen from below",
-  reviews: { platform: "Clutch", rating: 5, count: 12 },
 };
 
 export const intro = {
@@ -472,21 +471,18 @@ export const testimonials = {
       role: "CEO, Navex",
       quote:
         "They understood the property side of the problem before writing a line of code. The valuation model went live tuned on our own transactions, and our agents stopped arguing with it in the first month.",
-      rating: 5,
     },
     {
       name: "Charles Glah",
       role: "Owner, FrontOffice",
       quote:
         "Communication was the difference. Working demos every sprint, direct access to the engineers, and no surprises at the end. The platform does what we scoped and it shipped on the date we agreed.",
-      rating: 5,
     },
     {
       name: "Jawad Bhati",
       role: "CEO, Voltox",
       quote:
         "We came with a portfolio spread across four systems and left with one. Reporting that used to take a week of exports is now a page our board reads on a Monday morning.",
-      rating: 5,
     },
   ],
 };

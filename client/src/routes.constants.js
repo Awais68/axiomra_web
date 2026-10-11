@@ -27,6 +27,13 @@ export const GENERATIVE_AI_SLUG = "generative-ai-services";
 export const AGENTIC_AI_SLUG = "agentic-ai-services";
 export const COMPUTER_VISION_SLUG = "computer-vision-services";
 export const NLP_SLUG = "natural-language-processing-services";
+export const BUSINESS_INTELLIGENCE_SLUG = "business-intelligence-services";
+export const LLM_INFRA_SLUG = "enterprise-llm-infrastructure-services";
+export const DATA_SCIENCE_SLUG = "data-science-analytics-services";
+export const CHATBOT_SLUG = "chatbot-development-services";
+export const ENTERPRISE_AI_SLUG = "enterprise-ai-development-services";
+export const PROCESS_AUTOMATION_SLUG = "process-automation-services";
+export const BOT_AUTOMATION_SLUG = "bot-automation-services";
 
 export const BLOG_PATH = "/blogs";
 export const blogPostPath = (slug) => `${BLOG_PATH}/${slug}`;

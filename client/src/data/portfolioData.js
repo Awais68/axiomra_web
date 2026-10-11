@@ -44,7 +44,6 @@ export const hero = {
     { value: String(Object.keys(caseStudyPages).length), label: "Detailed case studies" },
     { value: "12+", label: "Industries served" },
     { value: `${companyStats.projects}+`, label: "AI projects delivered" },
-    { value: "4.9/5", label: "Average client rating" },
   ],
 };
 

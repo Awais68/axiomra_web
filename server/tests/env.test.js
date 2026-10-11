@@ -94,13 +94,19 @@ describe("RESEND_API_KEY", () => {
     REDIS_URL: "rediss://default:x@example.upstash.io:6379",
   };
 
-  it.each([
-    ["NODE_ENV=production", { NODE_ENV: "production" }],
-    ["on Vercel", { VERCEL: "1" }],
-  ])("refuses to start without it (%s)", async (_label, vars) => {
-    await expect(loadEnv({ ...PROD, ...vars })).rejects.toThrow(
-      /RESEND_API_KEY is required in production/
-    );
+  it("only warns when it is missing in production", async () => {
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+    const env = await loadEnv({ ...PROD, NODE_ENV: "production" });
+    expect(env.RESEND_API_KEY).toBeUndefined();
+    expect(warn).toHaveBeenCalledWith(expect.stringMatching(/RESEND_API_KEY is not set/));
+    warn.mockRestore();
+  });
+
+  it("only warns when it is not a Resend key", async () => {
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+    await loadEnv({ ...PROD, NODE_ENV: "production", RESEND_API_KEY: "changeme" });
+    expect(warn).toHaveBeenCalledWith(expect.stringMatching(/does not look like a Resend key/));
+    warn.mockRestore();
   });
 
   it("starts in production when it is set", async () => {
@@ -145,5 +151,36 @@ describe("chat configuration", () => {
       CHAT_DAILY_USD_CAP: "2.5",
     });
     expect(env.CHAT_DAILY_USD_CAP).toBe(2.5);
+  });
+});
+
+describe("ADMIN_PANEL_URL", () => {
+  const load = (v, extra = {}) =>
+    loadEnv({ ALLOWED_ORIGINS: "https://a.example", ADMIN_PANEL_URL: v, ...extra });
+
+  it("warns and keeps the first valid URL of a list instead of refusing to start", async () => {
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+    const env = await load("https://axiomra.co/, https://www.axiomra.co");
+    expect(env.ADMIN_PANEL_URL).toBe("https://axiomra.co");
+    expect(warn).toHaveBeenCalledWith(expect.stringMatching(/should be a single URL/));
+    warn.mockRestore();
+  });
+
+  it("drops a value with no valid URL so the first allowed origin is used", async () => {
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+    const env = await load("not a url");
+    expect(env.ADMIN_PANEL_URL).toBeUndefined();
+    expect(warn).toHaveBeenCalledWith(expect.stringMatching(/has no valid http\(s\) URL/));
+    warn.mockRestore();
+  });
+
+  it("warns about a localhost URL in production", async () => {
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+    await load("http://localhost:5173", {
+      NODE_ENV: "production",
+      REDIS_URL: "rediss://default:x@example.upstash.io:6379",
+    });
+    expect(warn).toHaveBeenCalledWith(expect.stringMatching(/reset links will not open/));
+    warn.mockRestore();
   });
 });

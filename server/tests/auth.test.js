@@ -1,6 +1,13 @@
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
 import request from "supertest";
 import { ORIGIN, nextIp, startApp } from "./helpers.js";
+
+// A configured mailer that never touches the network.
+vi.mock("resend", () => ({
+  Resend: class {
+    emails = { send: async () => ({ data: { id: "test" }, error: null }) };
+  },
+}));
 
 let app;
 let stop;
@@ -8,7 +15,7 @@ let stop;
 const ADMIN = { email: "admin@example.com", password: "correct horse battery staple" };
 
 beforeAll(async () => {
-  ({ app, stop } = await startApp());
+  ({ app, stop } = await startApp({ RESEND_API_KEY: "re_test" }));
   const { default: User } = await import("../models/User.js");
   const user = new User({ email: ADMIN.email, name: "Admin", role: "admin" });
   await user.setPassword(ADMIN.password);
@@ -98,5 +105,25 @@ describe("rate limits", () => {
     }
     expect(codes.slice(0, 10).every((c) => c === 200)).toBe(true);
     expect(codes[10]).toBe(429);
+  });
+});
+
+describe("forgot-password without a mailer", () => {
+  it.each([
+    ["missing", ""],
+    ["not a Resend key", "changeme"],
+  ])("answers 503 with a clear error when RESEND_API_KEY is %s", async (_label, key) => {
+    const saved = process.env.RESEND_API_KEY;
+    process.env.RESEND_API_KEY = key;
+    try {
+      const res = await request(app)
+        .post("/api/auth/forgot-password")
+        .set("X-Forwarded-For", nextIp())
+        .send({ email: ADMIN.email });
+      expect(res.status).toBe(503);
+      expect(res.body.error).toMatch(/Password reset email is unavailable/);
+    } finally {
+      process.env.RESEND_API_KEY = saved;
+    }
   });
 });

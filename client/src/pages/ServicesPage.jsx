@@ -14,6 +14,8 @@ import {
   AGENTIC_AI_SLUG,
   COMPUTER_VISION_SLUG,
   NLP_SLUG,
+  DATA_SCIENCE_SLUG,
+  BOT_AUTOMATION_SLUG,
 } from "../routes.constants";
 import Seo from "../seo/Seo";
 
@@ -63,6 +65,8 @@ const DETAIL_SLUGS = new Set([
   AGENTIC_AI_SLUG,
   COMPUTER_VISION_SLUG,
   NLP_SLUG,
+  DATA_SCIENCE_SLUG,
+  BOT_AUTOMATION_SLUG,
 ]);
 
 export default function ServicesPage() {

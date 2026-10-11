@@ -18,6 +18,13 @@ import {
   COMPUTER_VISION_SLUG,
   GENERATIVE_AI_SLUG,
   AGENTIC_AI_SLUG,
+  BUSINESS_INTELLIGENCE_SLUG,
+  LLM_INFRA_SLUG,
+  CHATBOT_SLUG,
+  DATA_SCIENCE_SLUG,
+  ENTERPRISE_AI_SLUG,
+  BOT_AUTOMATION_SLUG,
+  PROCESS_AUTOMATION_SLUG,
 } from "../routes.constants";
 
 /**
@@ -32,7 +39,15 @@ const LINK_ROUTES = {
   "Computer Vision": `${SERVICES_BASE_PATH}/${COMPUTER_VISION_SLUG}`,
   "Generative AI": `${SERVICES_BASE_PATH}/${GENERATIVE_AI_SLUG}`,
   "Agentic AI Development": `${SERVICES_BASE_PATH}/${AGENTIC_AI_SLUG}`,
+  "Business Intelligence": `${SERVICES_BASE_PATH}/${BUSINESS_INTELLIGENCE_SLUG}`,
+  "Enterprise AI": `${SERVICES_BASE_PATH}/${ENTERPRISE_AI_SLUG}`,
+  "LLM Infrastructure": `${SERVICES_BASE_PATH}/${LLM_INFRA_SLUG}`,
+  "Chatbot Development": `${SERVICES_BASE_PATH}/${CHATBOT_SLUG}`,
+  "Data Science": `${SERVICES_BASE_PATH}/${DATA_SCIENCE_SLUG}`,
+  "Bot Automation": `${SERVICES_BASE_PATH}/${BOT_AUTOMATION_SLUG}`,
+  "Process Automation": `${SERVICES_BASE_PATH}/${PROCESS_AUTOMATION_SLUG}`,
   "Software Development": SERVICES_BASE_PATH,
+  "All Services": SERVICES_BASE_PATH,
   Fashion: industryPath("fashion"),
   Sports: industryPath("sports"),
   Education: industryPath("education"),
@@ -53,15 +68,16 @@ const cols = [
     title: "Services",
     links: [
       "Artificial Intelligence",
+      "Enterprise AI",
+      "LLM Infrastructure",
       "Computer Vision",
       "Software Development",
-      "Generative AI",
-      "Agentic AI Development",
+      "All Services",
     ],
   },
   {
     title: "Industries",
-    links: ["Fashion", "Sports", "Transportation", "Retail", "Healthcare", "Finance"],
+    links: ["Fashion", "Sports", "Transportation", "Retail", "Healthcare"],
   },
   {
     title: "Quick Links",
@@ -130,7 +146,7 @@ const socials = [
 ];
 
 const UNDERLINE_LINK =
-  "relative inline-block text-lg text-inverse-fg/70 transition-colors duration-300 hover:text-inverse-fg focus-ring " +
+  "relative inline-block text-base sm:text-lg text-inverse-fg/70 transition-colors duration-300 hover:text-inverse-fg focus-ring " +
   "after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 " +
   "after:bg-gradient-to-r after:from-grad-sky after:to-grad-blue after:transition-transform after:duration-300 " +
   "hover:after:scale-x-100 focus-visible:after:scale-x-100";
@@ -210,8 +226,9 @@ export default function Footer() {
         {/* Light scrim only, enough to hold text contrast without erasing the animation underneath it. */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-inverse/85 via-inverse/45 to-inverse/80" />
 
-        <div className="relative z-10 mx-auto grid max-w-6xl gap-x-8 gap-y-12 px-4 sm:px-6 md:grid-cols-4">
-          <div>
+        <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-12 px-4 sm:px-6 md:grid-cols-4 md:gap-x-8">
+          {/* Brand block spans the row on phones; link columns pair up two per row. */}
+          <div className="col-span-2 md:col-span-1">
             <img
               src={logoLight}
               alt="Axiomra"
@@ -252,9 +269,10 @@ export default function Footer() {
                         className={UNDERLINE_LINK}
                       >
                         {l}
+                        {l === "All Services" && <span aria-hidden="true"> →</span>}
                       </Link>
                     ) : (
-                      <span className="text-lg text-inverse-fg/40">{l}</span>
+                      <span className="text-base sm:text-lg text-inverse-fg/40">{l}</span>
                     )}
                   </li>
                 ))}

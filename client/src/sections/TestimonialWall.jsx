@@ -1,6 +1,5 @@
-import { companyStats } from "../data/companyStats.js";
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 import SectionHeading from "../components/SectionHeading";
 
 const wall = [
@@ -52,36 +51,8 @@ export default function TestimonialWall({ showHeading = true }) {
               In Weeks
             </>
           }
-        >
-          <div className="mt-7 inline-flex items-center gap-3 rounded-full border border-line-strong bg-surface-subtle px-6 py-3">
-            <span className="flex text-gold" role="img" aria-label="4.8 out of 5 stars">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={20} strokeWidth={0} fill="currentColor" />
-              ))}
-            </span>
-            <span className="font-display text-xl font-semibold text-content">4.9/5</span>
-            <span className="h-5 w-px bg-line-strong" aria-hidden="true" />
-            <span className="text-base text-content-dim">
-              across {companyStats.projects}+ projects
-            </span>
-          </div>
-        </SectionHeading>
-      ) : (
-        <div className="mb-16 flex justify-center">
-          <div className="inline-flex items-center gap-3 rounded-full border border-line-strong bg-surface-subtle px-6 py-3">
-            <span className="flex text-gold" role="img" aria-label="4.8 out of 5 stars">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={20} strokeWidth={0} fill="currentColor" />
-              ))}
-            </span>
-            <span className="font-display text-xl font-semibold text-content">4.9/5</span>
-            <span className="h-5 w-px bg-line-strong" aria-hidden="true" />
-            <span className="text-base text-content-dim">
-              across {companyStats.projects}+ projects
-            </span>
-          </div>
-        </div>
-      )}
+        ></SectionHeading>
+      ) : null}
 
       <div className="grid gap-6 sm:grid-cols-2">
         {wall.map((t, i) => {
@@ -109,16 +80,6 @@ export default function TestimonialWall({ showHeading = true }) {
                   inverted ? "text-[#60A5FA]/20" : "text-[#2563EB]/15"
                 }`}
               />
-
-              <div
-                className="relative mb-5 flex text-gold"
-                role="img"
-                aria-label="5 out of 5 stars"
-              >
-                {[...Array(5)].map((_, idx) => (
-                  <Star key={idx} size={18} strokeWidth={0} fill="currentColor" />
-                ))}
-              </div>
 
               <blockquote
                 className={`relative mb-8 text-lg leading-relaxed ${inverted ? "text-inverse-fg/85" : "text-content-dim"}`}

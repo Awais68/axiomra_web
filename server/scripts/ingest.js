@@ -6,6 +6,7 @@
  *   npm run ingest -- --dry-run            # chunk and diff only; no OpenAI calls, no writes
  *   npm run ingest -- --sources blog       # re-ingest published blog posts only
  *   npm run ingest -- --dry-run --samples 2  # also print 2 chunks per source type
+ *   npm run ingest -- --prod               # required to write to the production db ("axiomra")
  *
  * Idempotent: a chunk's _id is sha256(source, chunkIndex, text), so unchanged
  * chunks are skipped and never re-embedded. Chunks of the selected source
@@ -17,6 +18,7 @@
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { connectDB } from "../db.js";
+import { guardWriteTarget } from "./dbGuard.js";
 import BlogPost from "../models/BlogPost.js";
 import {
   COLLECTION,
@@ -42,6 +44,7 @@ function parseArgs(argv) {
   for (let i = 0; i < argv.length; i += 1) {
     const a = argv[i];
     if (a === "--dry-run") args.dryRun = true;
+    else if (a === "--prod") args.prod = true;
     else if (a === "--sources")
       args.sources = argv[(i += 1)]
         ?.split(",")
@@ -191,7 +194,10 @@ async function main() {
   // A dry run only reads Mongo (blog posts, the diff) and can run without it
   // unless the blog is selected.
   const hasDb = !args.dryRun || args.sources.includes("blog") || Boolean(process.env.MONGO_URI);
-  if (hasDb) await connectDB();
+  if (hasDb) {
+    await connectDB();
+    guardWriteTarget({ dryRun: args.dryRun });
+  }
 
   const docs = await loadDocuments({ sources: args.sources, BlogPost });
   const chunks = buildChunks(docs);
