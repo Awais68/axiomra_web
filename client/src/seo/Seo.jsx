@@ -12,6 +12,7 @@ import {
 } from "./seo.config";
 import { breadcrumbSchema, toJsonLd } from "./schema";
 import { PrerenderContext } from "./prerender-context";
+import { trackPageView } from "../lib/analytics";
 
 /**
  * Head tags for one page: title, description, canonical, Open Graph and
@@ -33,7 +34,7 @@ export default function Seo({
   jsonLd = [],
   children,
 }) {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   // react-helmet-async registers an instance during render, so a render React
   // discards (Suspense, concurrent rendering) leaves an instance that is never
   // removed, and its JSON-LD outlives the page. Mounting Helmet only after
@@ -45,6 +46,13 @@ export default function Seo({
   const [mounted, setMounted] = useState(false);
   // eslint-disable-next-line react-hooks/set-state-in-effect -- the point is one render after commit
   useEffect(() => setMounted(true), []);
+  // GA4 page_view, one per route. Sent from here because every page renders
+  // exactly one Seo and its title is known now, while document.title only
+  // follows once Helmet flushes, which can be after any fixed wait. The admin
+  // panel is internal and not tracked.
+  useEffect(() => {
+    if (!pathname.startsWith("/admin")) trackPageView(title);
+  }, [pathname, search, title]);
   // Trailing slashes are dropped so /about and /about/ share one canonical;
   // the root keeps its slash.
   const canonicalPath = (path ?? pathname).replace(/\/+$/, "") || "/";
