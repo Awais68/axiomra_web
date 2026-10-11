@@ -21,6 +21,21 @@ afterEach(() => {
 });
 
 describe("environment validation", () => {
+  it("keeps production Redis keys unprefixed and namespaces everything else", async () => {
+    expect(
+      (await loadEnv({ NODE_ENV: "production", REDIS_URL: "redis://x", RESEND_API_KEY: "re_x" }))
+        .redisNamespace
+    ).toBe("");
+    expect((await loadEnv({ NODE_ENV: "development" })).redisNamespace).toBe("dev:");
+    expect(
+      (await loadEnv({ NODE_ENV: "development", REDIS_NAMESPACE: "staging:" })).redisNamespace
+    ).toBe("staging:");
+  });
+
+  it("rejects a REDIS_NAMESPACE that could collide with key structure", async () => {
+    await expect(loadEnv({ REDIS_NAMESPACE: "a:b:" })).rejects.toThrow(/REDIS_NAMESPACE/);
+  });
+
   it("parses a comma-separated origin list and strips trailing slashes", async () => {
     const env = await loadEnv({ ALLOWED_ORIGINS: "https://a.example/, http://localhost:5173" });
     expect(env.allowedOrigins).toEqual(["https://a.example", "http://localhost:5173"]);

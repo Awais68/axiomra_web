@@ -36,11 +36,14 @@ function redisClient() {
 
 export const redis = redisClient();
 
+/** Every Redis key goes through this, so environments sharing a Redis never collide. */
+export const redisKey = (key) => `${env.redisNamespace}${key}`;
+
 // Each limiter needs its own store instance and key prefix.
 function store(name) {
   if (!redis) return undefined; // express-rate-limit's MemoryStore
   return new RedisStore({
-    prefix: `rl:${name}:`,
+    prefix: redisKey(`rl:${name}:`),
     sendCommand: (command, ...args) => redis.call(command, ...args),
   });
 }

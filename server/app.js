@@ -103,6 +103,26 @@ app.use(mongoSanitize);
 // under the same proxy address.
 app.set("trust proxy", 1);
 
+// Health and status routes are mounted ahead of CSRF, every rate limiter and
+// every budget. Render's health checker polls /api/health from a handful of
+// IPs; when it sat under the API limiter it was answered 429 and Render
+// restarted a healthy instance every 8-20 minutes. These handlers must stay
+// cheap: no Mongo, no Redis write, no OpenAI call.
+//
+// Landing page for anyone who opens the API host in a browser: a live status
+// dashboard instead of a bare 404. `/status.json` is what the page polls.
+app.get("/", (req, res) => {
+  res.type("html").send(renderStatusPage(req.app));
+});
+
+app.get("/status.json", (req, res) => res.json(statusPayload(req.app)));
+
+// `mailer` makes a missing RESEND_API_KEY visible without submitting a
+// real lead and waiting to see whether an email lands.
+app.get("/api/health", (req, res) =>
+  res.json({ status: "ok", mailer: mailerConfigured() ? "configured" : "disabled" })
+);
+
 // CSRF. The client and API live on different registrable domains (vercel.app
 // is on the Public Suffix List), so the admin cookie has to be SameSite=None
 // and the browser attaches it to cross-site requests too. CORS only stops the
@@ -133,21 +153,6 @@ app.use("/api/auth/forgot-password", forgotPasswordIpLimiter, forgotPasswordEmai
 app.use("/api/auth/reset-password", resetPasswordLimiter);
 app.post("/api/contact", contactLimiter);
 app.post("/api/chat", chatLimiter);
-
-// Landing page for anyone who opens the API host in a browser: a live status
-// dashboard instead of a bare 404. `/status.json` deliberately sits outside
-// `/api` so the page's polling is not charged against the API rate limit.
-app.get("/", (req, res) => {
-  res.type("html").send(renderStatusPage(req.app));
-});
-
-app.get("/status.json", (req, res) => res.json(statusPayload(req.app)));
-
-// `mailer` makes a missing RESEND_API_KEY visible without submitting a
-// real lead and waiting to see whether an email lands.
-app.get("/api/health", (req, res) =>
-  res.json({ status: "ok", mailer: mailerConfigured() ? "configured" : "disabled" })
-);
 
 // Connect lazily: a cold start should not pay for Mongo on /api/health.
 async function withDb(req, res, next) {
