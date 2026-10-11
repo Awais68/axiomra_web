@@ -75,7 +75,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Public API origin, inlined into the bundle and checked against the CSP.
-      VITE_API_URL: ${{ vars.VITE_API_URL || 'https://axiomra-server.vercel.app' }}
+      VITE_API_URL: ${{ vars.VITE_API_URL || 'https://axiomra-backend-server.onrender.com' }}
     steps:
       - uses: actions/checkout@v4
         with:

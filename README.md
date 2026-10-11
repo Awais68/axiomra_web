@@ -3,12 +3,12 @@
 Marketing site and lead inbox for Axiomra.
 
 - **`client/`**: React 18 single-page app built with Vite. Uses Tailwind, framer-motion, GSAP and
-  three.js (via @react-three/fiber). Deployed to Vercel as a static site.
+  three.js (via @react-three/fiber). Deployed to Cloudflare Pages as a static site.
 - **`server/`**: Express + Mongoose API. Deployed to Render as a long-running Node web service
   (`npm start`, i.e. `server/index.js`). It stores contact-form leads in MongoDB, emails a notification, and
   serves the admin panel's API.
 
-The site (Vercel) and the API (Render, `https://axiomra-backend-server.onrender.com`) are on
+The site (Cloudflare Pages) and the API (Render, `https://axiomra-backend-server.onrender.com`) are on
 different origins. The API allows the site through CORS
 and an Origin check (see [Security](#security)).
 
@@ -55,13 +55,29 @@ build without it would ship a contact form that posts nowhere.
 VITE_API_URL=https://axiomra-backend-server.onrender.com npm run build
 ```
 
-The build runs three steps:
+The build runs these steps:
 
 1. `vite build`
 2. `scripts/generate-sitemap.mjs`: writes `dist/sitemap.xml` from `src/seo/sitemapRoutes.js`
-   and creates `dist/404.html`.
-3. `scripts/check-csp.mjs`: fails if an inline script or the API origin is missing from the
-   Content-Security-Policy in `client/vercel.json`.
+   and creates `dist/404.html`. Fails if a sitemap URL matches a rule in
+   `client/public/_redirects`, which would replace its prerendered page.
+3. `scripts/prerender.mjs`: renders every sitemap URL to static HTML.
+4. `scripts/check-seo.mjs`: checks the head tags of each prerendered page.
+5. `scripts/check-csp.mjs`: fails if an inline script or the API origin is missing from the
+   Content-Security-Policy in `client/public/_headers`.
+
+## Deployment
+
+| Piece | Service | Notes |
+|---|---|---|
+| Site | Cloudflare Pages | Root `client/`, build command `npm run build`, output `dist`. Set `VITE_API_URL` in the Pages build environment. Headers come from `client/public/_headers`, SPA rewrites and redirects from `client/public/_redirects`. |
+| API | Render | Node web service, root `server/`, start command `npm start`. Health check: `GET /api/health`. Environment variables in the service settings (see below). |
+| Database | MongoDB Atlas | `MONGO_URI`. Production database `axiomra`. |
+| Shared store | Upstash Redis | `REDIS_URL` (`rediss://`), for rate limits and the chat spend counter. |
+| Email | Resend | `RESEND_API_KEY`, `MAIL_FROM`, `CONTACT_NOTIFY_TO`. |
+
+Render's free tier sleeps when idle, so the first request after a pause can take up to a
+minute.
 
 ## Environment variables
 
@@ -133,7 +149,7 @@ In `.env`, quote `PASS_KEY` with backticks if it contains `"` or `'`.
   If the store fails, the credential endpoints fail closed and the rest fail open.
 - **Contact form spam:** submissions with a filled honeypot field, or sent faster than a person
   could type, get a success response but are neither stored nor emailed.
-- **Client headers:** `client/vercel.json` sets a strict CSP, HSTS, `X-Frame-Options`,
+- **Client headers:** `client/public/_headers` sets a strict CSP, HSTS, `X-Frame-Options`,
   `nosniff`, `Referrer-Policy` and `Permissions-Policy`. Adding a third-party script, image
   host or API means updating the CSP there. The build check catches inline scripts and the API
   origin.
@@ -163,8 +179,9 @@ client/
   src/routes.constants.js   route paths and slugs (kept out of the data files so the
                             entry chunk does not pull in page content)
   src/seo/            <Seo> head tags, JSON-LD builders, sitemap route list
-  scripts/            build-time sitemap and CSP checks
-  vercel.json         SPA rewrites and security headers
+  scripts/            build-time sitemap, prerender, SEO and CSP checks
+  public/_headers     security and cache headers (Cloudflare Pages)
+  public/_redirects   SPA rewrites and redirects (Cloudflare Pages)
 server/
   app.js              Express app: CORS, CSRF check, rate limits, routes
   index.js            server entry (Render runs `npm start`; also used for local dev)

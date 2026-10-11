@@ -251,8 +251,8 @@ function SiteRoutes() {
                 element={<Navigate to={`${SERVICES_BASE_PATH}/${NLP_SLUG}`} replace />}
               />
               <Route path={`${SERVICES_BASE_PATH}/:slug`} element={<ServiceDetailPlaceholder />} />
-              {/* Unknown URLs. Vercel serves these with a real 404 status via
-                dist/404.html; see scripts/generate-sitemap.mjs. */}
+              {/* Unknown URLs. Cloudflare Pages serves these with a real 404
+                status via dist/404.html; see scripts/generate-sitemap.mjs. */}
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
             <HydratedMark />

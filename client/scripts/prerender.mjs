@@ -9,10 +9,11 @@
  *
  * Output, next to the untouched assets:
  *   dist/index.html            the home page
- *   dist/<path>.html           every other page (served at /<path> via
- *                              "cleanUrls" in vercel.json)
+ *   dist/<path>.html           every other page (Cloudflare Pages serves it
+ *                              at /<path>)
  *   dist/spa.html              the empty shell, for URLs that are not
- *                              prerendered (vercel.json rewrites land there)
+ *                              prerendered (public/_redirects rewrites land
+ *                              there)
  *
  * Runs after generate-sitemap.mjs, which reads the route list and copies the
  * empty shell to 404.html before this overwrites index.html.
