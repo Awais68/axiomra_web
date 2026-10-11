@@ -71,6 +71,33 @@ describe("data file loader", () => {
     expect(out.text).toContain("Card one heading here");
     expect(out.text).not.toContain("Book a free consultation");
   });
+
+  it("drops demo exports and demo properties listed in DEMO_CONTENT", () => {
+    const bi = dataFileDocument(
+      "businessIntelligenceData.js",
+      parseModule(`
+        export const hero = { title: "Turn raw data into decisions you can defend" };
+        export const sampleKpis = [{ label: "Monthly revenue", value: "$1.42M" }];
+        export const dashboard = { kpis: [{ label: "Gross margin", value: "38.6%" }] };
+      `),
+      noDupes
+    );
+    expect(bi.text).toContain("Turn raw data into decisions");
+    expect(bi.text).not.toMatch(/1\.42M|38\.6%|Monthly revenue|Gross margin/);
+
+    const ds = dataFileDocument(
+      "dataScienceData.js",
+      parseModule(`
+        export const hero = {
+          title: "Data science that turns raw data into clear decisions",
+          chips: [{ label: "Forecast accuracy", value: "94.2%" }],
+        };
+      `),
+      noDupes
+    );
+    expect(ds.text).toContain("Data science that turns raw data");
+    expect(ds.text).not.toMatch(/94\.2%|Forecast accuracy/);
+  });
 });
 
 describe("JSX page loader", () => {

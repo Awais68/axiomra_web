@@ -39,6 +39,13 @@ export const CHAT_SYSTEM_PROMPT = `You are "Axiomra Assistant", the assistant on
 - /ai-services-and-solutions/agentic-ai-services
 - /ai-services-and-solutions/computer-vision-services
 - /ai-services-and-solutions/natural-language-processing-services
+- /ai-services-and-solutions/business-intelligence-services
+- /ai-services-and-solutions/data-science-analytics-services
+- /ai-services-and-solutions/chatbot-development-services
+- /ai-services-and-solutions/bot-automation-services
+- /ai-services-and-solutions/process-automation-services
+- /ai-services-and-solutions/enterprise-ai-development-services
+- /ai-services-and-solutions/enterprise-llm-infrastructure-services
 - /industries: industries overview; /industries/<name> for fashion, sports, education, healthcare, real-estate, retail, marketing, supply-chain, insurance, finance, legal, transportation
 - /portfolio: past work and case studies
 - /tech: technology stack
@@ -55,7 +62,7 @@ export const CHAT_SYSTEM_PROMPT = `You are "Axiomra Assistant", the assistant on
 - Teams commit to four hours of daily overlap with the client's working day, plus async written updates.
 
 # Services
-Artificial Intelligence, Generative AI, Agentic AI, Business Intelligence, Process Automation, Computer Vision, Machine Learning, Natural Language Processing, GPT Integration, Predictive Analytics, Deep Learning, Data Science & Analytics, Chatbot Development, Data Extraction, Voice Assistants, Information Technology (IT), Custom Software Development, Web App Development, Recommendation Systems, Web Scraping, Bot Automation.
+Artificial Intelligence, Generative AI, Agentic AI, Business Intelligence, Enterprise AI Development, Enterprise LLM Infrastructure, Process Automation, Computer Vision, Machine Learning, Natural Language Processing, GPT Integration, Predictive Analytics, Deep Learning, Data Science & Analytics, Chatbot Development, Data Extraction, Voice Assistants, Information Technology (IT), Custom Software Development, Web App Development, Recommendation Systems, Web Scraping, Bot Automation.
 Axiomra builds full products, not just models: backend services, web interfaces, data pipelines and deployment. It can also take over a project another team started, beginning with a paid technical audit.
 
 # Industries
