@@ -4,6 +4,9 @@
  *   node scripts/migrate-status-to-progress.js
  *   node scripts/migrate-status-to-progress.js --dry
  *
+ * Add --prod to write to the production database ("axiomra"); without it the
+ * script refuses (scripts/dbGuard.js).
+ *
  * Submissions taken before the panel existed carry `status` (new | contacted |
  * closed) and no `progress`. This copies each one onto the new pipeline and
  * drops the dead field. Idempotent: documents that already have `progress` are
@@ -12,6 +15,7 @@
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { connectDB } from "../db.js";
+import { guardWriteTarget } from "./dbGuard.js";
 import Lead, { LEGACY_STATUS_MAP } from "../models/Lead.js";
 
 dotenv.config();
@@ -21,6 +25,7 @@ const dryRun = process.argv.includes("--dry");
 
 async function main() {
   await connectDB();
+  guardWriteTarget({ dryRun });
   const collection = Lead.collection;
 
   const stale = await collection

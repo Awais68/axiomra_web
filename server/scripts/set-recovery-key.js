@@ -6,6 +6,9 @@
  *   node scripts/set-recovery-key.js                       (paste your own)
  *   node scripts/set-recovery-key.js --clear
  *
+ * Add --prod to any of these to write to the production database ("axiomra");
+ * without it the script refuses (scripts/dbGuard.js).
+ *
  * Replacing or clearing a key that is already set asks for the current one
  * first; otherwise this script would be a way around the rule that every
  * password change needs the key.
@@ -24,6 +27,7 @@ import mongoose from "mongoose";
 import readline from "readline";
 import { randomInt } from "crypto";
 import { connectDB } from "../db.js";
+import { guardWriteTarget } from "./dbGuard.js";
 import User, { adminEmail, recoveryKeyProblem } from "../models/User.js";
 
 dotenv.config();
@@ -97,6 +101,7 @@ async function main() {
   }
 
   await connectDB();
+  guardWriteTarget();
 
   const user = await User.findOne({ email }).select(
     "+recoveryKeyHash +keyAttempts +keyLockedUntil"

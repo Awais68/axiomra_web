@@ -4,6 +4,9 @@
  *   node scripts/seed-admin.js
  *   node scripts/seed-admin.js --name "Michael"
  *
+ * Add --prod to write to the production database ("axiomra"); without it the
+ * script refuses (scripts/dbGuard.js).
+ *
  * There is exactly one admin (models/User.js#adminEmail); this script cannot
  * create a second one. Resetting the existing account's password asks for the
  * recovery key (PASS_KEY) first, the same as every other password change.
@@ -20,6 +23,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import readline from "readline";
 import { connectDB } from "../db.js";
+import { guardWriteTarget } from "./dbGuard.js";
 import User, { adminEmail } from "../models/User.js";
 
 dotenv.config();
@@ -87,6 +91,7 @@ async function main() {
   }
 
   await connectDB();
+  guardWriteTarget();
 
   const existing = await User.findOne({ email }).select(
     "+recoveryKeyHash +keyAttempts +keyLockedUntil"

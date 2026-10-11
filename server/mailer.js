@@ -1,16 +1,21 @@
 import { Resend } from "resend";
 
 // Resend's HTTP API rather than SMTP: hosts like Render block outbound SMTP
-// ports, and an HTTPS call needs no connection pool. With no RESEND_API_KEY we
-// degrade to a no-op rather than breaking the submission (lib/env.js makes the
-// key mandatory once deployed).
+// ports, and an HTTPS call needs no connection pool. With no usable
+// RESEND_API_KEY we degrade rather than break: leads are still stored, and
+// forgot-password answers 503 (lib/env.js only warns at startup).
 // Read lazily, never at module scope: ESM evaluates this file before app.js
 // reaches its dotenv.config() call, so top-level process.env reads would be
 // undefined in local development.
 const DEFAULT_FROM = "Axiomra <onboarding@resend.dev>";
 
+// Resend keys look like re_xxxxxxxx. Anything else (a placeholder, a pasted
+// quote) would only fail at send time, so it counts as not configured.
+export const RESEND_KEY_RE = /^re_[A-Za-z0-9_-]+$/;
+
 function apiKey() {
-  return process.env.RESEND_API_KEY?.trim() || undefined;
+  const key = process.env.RESEND_API_KEY?.trim();
+  return key && RESEND_KEY_RE.test(key) ? key : undefined;
 }
 
 function sender() {
@@ -67,7 +72,10 @@ function row(label, value) {
  */
 export async function sendContactNotification(contact) {
   const client = getClient();
-  if (!client) return false;
+  if (!client) {
+    console.error("Contact notification email skipped: RESEND_API_KEY is missing or invalid.");
+    return false;
+  }
 
   // There is no sending mailbox to fall back to any more, so without an
   // explicit inbox there is nobody to notify.

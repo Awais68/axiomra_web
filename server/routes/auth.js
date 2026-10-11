@@ -8,7 +8,7 @@ import User, {
   RESET_TOKEN_TTL_MINUTES,
 } from "../models/User.js";
 import { issueSession, clearSession, requireAuth } from "../lib/auth.js";
-import { sendPasswordResetEmail } from "../mailer.js";
+import { mailerConfigured, sendPasswordResetEmail } from "../mailer.js";
 import { cleanString } from "../lib/sanitize.js";
 import { env } from "../lib/env.js";
 
@@ -140,6 +140,15 @@ router.post("/forgot-password", async (req, res) => {
     success: true,
     message: "If that address has an account, a reset link is on its way.",
   };
+
+  // Same answer for every address, so this reveals nothing about accounts, and
+  // the admin learns the link is not coming instead of waiting for it.
+  if (!mailerConfigured()) {
+    return res.status(503).json({
+      error:
+        "Password reset email is unavailable right now. Please contact the site administrator.",
+    });
+  }
 
   try {
     if (!email || !EMAIL_RE.test(email)) return res.json(generic);

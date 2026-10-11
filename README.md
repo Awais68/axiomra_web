@@ -4,11 +4,12 @@ Marketing site and lead inbox for Axiomra.
 
 - **`client/`**: React 18 single-page app built with Vite. Uses Tailwind, framer-motion, GSAP and
   three.js (via @react-three/fiber). Deployed to Vercel as a static site.
-- **`server/`**: Express + Mongoose API. Deployed to Vercel as a serverless function
-  (`server/api/index.js`). It stores contact-form leads in MongoDB, emails a notification, and
+- **`server/`**: Express + Mongoose API. Deployed to Render as a long-running Node web service
+  (`npm start`, i.e. `server/index.js`). It stores contact-form leads in MongoDB, emails a notification, and
   serves the admin panel's API.
 
-The two are separate Vercel projects on different origins. The API allows the site through CORS
+The site (Vercel) and the API (Render, `https://axiomra-backend-server.onrender.com`) are on
+different origins. The API allows the site through CORS
 and an Origin check (see [Security](#security)).
 
 ## Requirements
@@ -51,7 +52,7 @@ Inside `client/`, `ANALYZE=1 npm run build` also writes a bundle treemap to `cli
 build without it would ship a contact form that posts nowhere.
 
 ```bash
-VITE_API_URL=https://axiomra-server.vercel.app npm run build
+VITE_API_URL=https://axiomra-backend-server.onrender.com npm run build
 ```
 
 The build runs three steps:
@@ -66,21 +67,23 @@ The build runs three steps:
 
 ### Server
 
-`server/.env` locally; Vercel project settings in production. `server/.env.example` documents
+`server/.env` locally; the Render service's Environment settings in production. `server/.env.example` documents
 each variable.
 
 The server validates these at startup (`server/lib/env.js`). A bad value stops the API with a
-message that names the variable.
+message that names the variable (fail closed for `ALLOWED_ORIGINS` and `REDIS_URL`). Email
+settings (`RESEND_API_KEY`, `ADMIN_PANEL_URL`) only warn, so a mail misconfiguration can never
+take the API down.
 
 | Variable | Required | Notes |
 |---|---|---|
 | `MONGO_URI` | yes | Must be a hosted URI in production |
 | `ALLOWED_ORIGINS` | yes in production | Comma-separated origins. `*` may stand for part of one hostname label; a bare `*` is refused. `CLIENT_ORIGIN` is the older name and is still read. |
 | `JWT_SECRET` | for the admin panel | At least 32 characters. If unset, admin sign-in answers 503 and the rest of the API keeps working. |
-| `ADMIN_PANEL_URL` | no | Base of the password-reset link. Defaults to the first non-wildcard allowed origin. |
-| `RESEND_API_KEY` | yes in production | Resend key for lead and password-reset email. Required in production; locally, leave unset to disable email. |
+| `ADMIN_PANEL_URL` | no | Base of the password-reset link; one URL, e.g. `https://axiomra.co`. A list or invalid value logs a warning and the first valid entry is used. Defaults to the first allowed origin. |
+| `RESEND_API_KEY` | for email | Resend key (`re_...`) for lead and password-reset email. Missing or malformed only warns: leads are still stored and forgot-password answers 503. |
 | `MAIL_FROM`, `CONTACT_NOTIFY_TO` | no | Sender (default `Axiomra <onboarding@resend.dev>`) and the inbox for lead notifications. |
-| `REDIS_URL` | recommended in production | Shared store for rate limits. Without it, each serverless instance counts on its own. |
+| `REDIS_URL` | yes in production | Shared store for rate limits and the chat spend counter. |
 
 ### Client
 
@@ -100,6 +103,10 @@ node scripts/seed-admin.js                    # creates the admin, or resets its
 node scripts/set-recovery-key.js --from-env   # stores PASS_KEY from server/.env as the key
 ```
 
+Every script that writes to MongoDB (`seed-admin`, `set-recovery-key`, `ingest`,
+`migrate-status-to-progress`) prints the target database first and refuses the production
+database `axiomra` unless `--prod` is passed. Local development uses `axiomra_dev`.
+
 The recovery key (`PASS_KEY`) is required for every password change: the emailed reset, the
 signed-in change (`POST /api/auth/change-password` takes `recoveryKey`) and `seed-admin.js`.
 Without it the password cannot be changed. Only its hash is stored. Replacing or clearing it
@@ -108,8 +115,8 @@ In `.env`, quote `PASS_KEY` with backticks if it contains `"` or `'`.
 
 ## Security
 
-- **Sessions:** the admin session is an httpOnly cookie. The site and the API are on different
-  `vercel.app` subdomains, which count as different sites, so the cookie must be
+- **Sessions:** the admin session is an httpOnly cookie. The site (`axiomra.co`) and the API
+  (`onrender.com`) are different sites, so the cookie must be
   `SameSite=None; Secure`.
 - **CSRF:** unsafe requests (POST, PUT, PATCH, DELETE) that carry an unlisted `Origin` are
   refused.
@@ -160,7 +167,8 @@ client/
   vercel.json         SPA rewrites and security headers
 server/
   app.js              Express app: CORS, CSRF check, rate limits, routes
-  api/index.js        Vercel function entry; index.js is the local dev entry
+  index.js            server entry (Render runs `npm start`; also used for local dev)
+  api/index.js        legacy Vercel function entry, unused since the move to Render
   lib/                env validation, auth, rate limiting, input sanitising
   routes/  models/    API routes and Mongoose models
   scripts/            admin account and recovery-key tools
