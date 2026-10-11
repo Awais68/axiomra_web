@@ -1,8 +1,9 @@
-// Local development entrypoint. On Vercel the app is served by api/index.js
-// as a serverless function instead, so nothing here runs in production.
+// Long-running entrypoint: `npm start` on Render and `npm run dev` locally.
+// The old Vercel deployment serves the app from api/index.js instead.
 import app from "./app.js";
 import { connectDB } from "./db.js";
 import { mailerConfigured } from "./mailer.js";
+import { installProcessDiagnostics } from "./lib/processDiagnostics.js";
 
 const PORT = process.env.PORT || 5000;
 
@@ -22,7 +23,7 @@ function line(label, value) {
   console.log(`  ${dim(label.padEnd(11))} ${value}`);
 }
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   const url = `http://localhost:${PORT}`;
   console.log("");
   console.log(`  ${bold(teal("AXIOMRA"))} ${bold(indigo("API"))}   ${dim("express - esm")}`);
@@ -33,6 +34,8 @@ app.listen(PORT, () => {
   line("Env", process.env.NODE_ENV || "development");
   line("Mailer", mailerConfigured() ? teal("configured") : amber("disabled - set RESEND_API_KEY"));
 });
+
+installProcessDiagnostics(server);
 
 connectDB()
   .then(() => {
