@@ -273,10 +273,12 @@ type MegaSection = "services" | "industries" | "company";
 
 interface MegaConfig {
   items: typeof serviceItems;
+  /** Tailwind grid-cols class; defaults to three per row. */
+  cols?: string;
 }
 
 const megaConfigs: Record<MegaSection, MegaConfig> = {
-  services: { items: serviceItems },
+  services: { items: serviceItems, cols: "grid-cols-4" },
   industries: { items: industryItems },
   company: { items: companyItems },
 };
@@ -329,8 +331,10 @@ function FullWidthDropdown({
       id={`mega-${section}`}
       className="absolute left-0 right-0 top-full border-t border-line bg-surface shadow-card"
     >
-      {/* Links only, three to a row, so new pages just add rows. */}
-      <div className="mx-auto grid w-full max-w-8xl grid-cols-3 gap-x-4 gap-y-1 px-4 py-8 sm:px-6 lg:px-8">
+      {/* Links only, a fixed count per row, so new pages just add rows. */}
+      <div
+        className={`mx-auto grid w-full max-w-8xl ${cfg.cols ?? "grid-cols-3"} gap-x-4 gap-y-1 px-4 py-8 sm:px-6 lg:px-8`}
+      >
         {cfg.items.map((item) => (
           <NavLink
             key={item.label}
