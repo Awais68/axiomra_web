@@ -6,6 +6,7 @@ import { streamChat, warmUpChat } from "../../lib/chatApi";
 import RichText from "./richText";
 import mascotHead from "../../assets/chat-mascot-head.webp";
 import { mountMascot } from "./mascot";
+import { useFloatingButtons, STEP_ASIDE } from "../../hooks/useFloatingButtons";
 
 const NAME = "Axiomra Assistant";
 
@@ -137,6 +138,7 @@ function Avatar() {
  */
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
+  const { scrollingDown } = useFloatingButtons();
   const [messages, setMessages] = useState(loadHistory);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
@@ -157,7 +159,8 @@ export default function ChatWidget() {
   const firstPathRef = useRef(pathname);
 
   useEffect(() => {
-    const mascot = mountMascot(mascotSlotRef.current, { width: 80 });
+    // Sized by the launcher's --mascot-w: smaller on phones, where it sits over the copy.
+    const mascot = mountMascot(mascotSlotRef.current, { width: "var(--mascot-w, 80px)" });
     mascotRef.current = mascot;
     const greet = setTimeout(() => mascot.wave(), 600);
     return () => {
@@ -450,7 +453,9 @@ export default function ChatWidget() {
         onClick={toggle}
         aria-expanded={open}
         aria-label={open ? "Close chat" : `Chat with ${NAME}`}
-        className="fixed bottom-6 right-6 z-50 rounded-2xl focus-ring"
+        className={`fixed bottom-4 right-4 z-50 rounded-2xl transition-[transform,opacity] duration-300 focus-ring [--mascot-w:56px] sm:bottom-6 sm:right-6 sm:[--mascot-w:80px] ${
+          scrollingDown && !open ? STEP_ASIDE : ""
+        }`}
       >
         <span ref={mascotSlotRef} className="block" />
         {unread && !open && (

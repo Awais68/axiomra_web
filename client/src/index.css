@@ -3186,6 +3186,17 @@
   clip-path: var(--llm-poly);
   shape-margin: 12px;
 }
+/* Phones: a two-word-wide column beside the badge clips long titles, so the
+   badge sits on its own row above the heading. */
+@media (max-width: 767px) {
+  .llm-float-poly {
+    float: none;
+    width: 4.5rem;
+    height: 5rem;
+    margin: 0 0 1rem;
+    shape-outside: none;
+  }
+}
 
 /* 3. Inverted polygon. The float's shape-outside is the notch (left), its
    clip-path is the leftover of the rectangle once the notch is cut out, so

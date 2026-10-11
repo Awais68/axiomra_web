@@ -1,7 +1,8 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Target } from "lucide-react";
 import SectionHeading from "../SectionHeading";
 import { Reveal } from "../motion/Reveal";
+import ClipReveal from "../motion/ClipReveal";
 import LlmTitle from "./LlmTitle";
 import { services } from "../../data/llmInfrastructureData";
 
@@ -12,14 +13,11 @@ const OPEN_L = "polygon(0% 0%, 100% 0%, 100% 88%, 92% 100%, 0% 100%)";
 const OPEN_R = OPEN_L;
 
 function ServicePhoto({ image, flip }) {
-  const reduced = useReducedMotion();
   return (
-    <motion.div
+    <ClipReveal
       className="relative aspect-[4/3] overflow-hidden bg-inverse"
-      style={{ clipPath: OPEN_L }}
-      initial={reduced ? false : { clipPath: flip ? CLOSED_R : CLOSED_L }}
-      whileInView={{ clipPath: flip ? OPEN_R : OPEN_L }}
-      viewport={{ once: true, margin: "-80px" }}
+      closed={flip ? CLOSED_R : CLOSED_L}
+      open={flip ? OPEN_R : OPEN_L}
       transition={{ duration: 1.1, ease: [0.65, 0, 0.35, 1] }}
     >
       <motion.img
@@ -30,12 +28,10 @@ function ServicePhoto({ image, flip }) {
         loading="lazy"
         decoding="async"
         className="h-full w-full object-cover"
-        initial={reduced ? false : { scale: 1.18 }}
-        whileInView={{ scale: 1 }}
-        viewport={{ once: true, margin: "-80px" }}
+        variants={{ closed: { scale: 1.18 }, open: { scale: 1 } }}
         transition={{ duration: 1.6, ease: [0.22, 0.61, 0.36, 1] }}
       />
-    </motion.div>
+    </ClipReveal>
   );
 }
 

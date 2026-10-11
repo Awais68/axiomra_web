@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { afterLoadIdle } from "../lib/idle";
 import { hasPublishedPosts } from "../lib/blogApi";
+import { useFloatingButtons, STEP_ASIDE } from "../hooks/useFloatingButtons";
 import {
   ABOUT_PATH,
   TECH_PATH,
@@ -168,49 +169,6 @@ function useHasBlogPosts() {
   return has;
 }
 
-/**
- * Visibility of the floating buttons. Back to top appears once the visitor is
- * a screen down. On phones the floating buttons also step aside while the
- * visitor scrolls down, so they never sit on the content being read, and come
- * back as soon as they scroll up or reach the end of the page.
- */
-function useFloatingButtons() {
-  const [state, setState] = useState({ pastFold: false, scrollingDown: false });
-  useEffect(() => {
-    let lastY = window.scrollY;
-    let raf = 0;
-    const update = () => {
-      raf = 0;
-      const y = window.scrollY;
-      const delta = y - lastY;
-      // Ignore small jitters (momentum scrolling, address-bar resizes).
-      if (Math.abs(delta) > 8) lastY = y;
-      const nearBottom = window.innerHeight + y >= document.documentElement.scrollHeight - 80;
-      setState((s) => {
-        const pastFold = y > window.innerHeight;
-        let scrollingDown = Math.abs(delta) > 8 ? delta > 0 : s.scrollingDown;
-        if (y < 80 || nearBottom) scrollingDown = false;
-        return s.pastFold === pastFold && s.scrollingDown === scrollingDown
-          ? s
-          : { pastFold, scrollingDown };
-      });
-    };
-    const onScroll = () => {
-      if (!raf) raf = requestAnimationFrame(update);
-    };
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      cancelAnimationFrame(raf);
-    };
-  }, []);
-  return state;
-}
-
-// Phones only: slide a floating button out of the way while scrolling down.
-const STEP_ASIDE = "max-sm:pointer-events-none max-sm:translate-y-24 max-sm:opacity-0";
-
 export default function Footer() {
   const showBlogs = useHasBlogPosts();
   const { pastFold, scrollingDown } = useFloatingButtons();
@@ -284,8 +242,9 @@ export default function Footer() {
         <div className="relative z-10 mx-auto mt-14 flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-inverse-fg/10 px-4 pt-6 sm:flex-row sm:px-6">
           <span className="text-base text-inverse-fg/60">© 2026 Axiomra. All Rights Reserved.</span>
           {/* Kept clear of the fixed chat launcher (components/chat/ChatWidget.jsx):
-              room on the right from sm up, and below the row on phones. */}
-          <div className="flex gap-3 pb-20 sm:pb-0 sm:pr-24">
+              room on the right from sm up, and below the row on phones, clear of the
+              back-to-top button that stacks above the launcher there. */}
+          <div className="flex gap-3 pb-[10.5rem] sm:pb-0 sm:pr-24">
             {socials.map(({ Icon, label, href, fill, glow }) => (
               <a
                 key={label}
@@ -322,14 +281,14 @@ export default function Footer() {
       </a>
 
       {/* Stacked above the chat mascot (components/chat/ChatWidget.jsx: 80x120 at
-          right 24px, bottom 24px), centred on it. Hidden until there is
-          somewhere to go back to. */}
+          right 24px, bottom 24px; 56x84 at right 16px, bottom 16px on phones),
+          centred on it. Hidden until there is somewhere to go back to. */}
       <button
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-hidden={!pastFold}
         tabIndex={pastFold ? undefined : -1}
-        className={`fixed bottom-[9.75rem] right-[2.625rem] z-40 flex h-11 w-11 items-center justify-center rounded-full border border-line bg-surface-card text-content shadow-card backdrop-blur transition-[transform,opacity,background-color] duration-300 hover:bg-surface-subtle focus-ring ${
+        className={`fixed bottom-[7rem] right-[1.375rem] z-40 sm:bottom-[9.75rem] sm:right-[2.625rem] flex h-11 w-11 items-center justify-center rounded-full border border-line bg-surface-card text-content shadow-card backdrop-blur transition-[transform,opacity,background-color] duration-300 hover:bg-surface-subtle focus-ring ${
           !pastFold
             ? "pointer-events-none translate-y-2 opacity-0"
             : scrollingDown

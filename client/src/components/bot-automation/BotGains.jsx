@@ -1,6 +1,6 @@
-import { motion, useReducedMotion } from "framer-motion";
 import SectionHeading from "../SectionHeading";
 import { Stagger, StaggerItem } from "../motion/Reveal";
+import ClipReveal from "../motion/ClipReveal";
 import { gains } from "../../data/botAutomationData";
 
 /**
@@ -8,8 +8,6 @@ import { gains } from "../../data/botAutomationData";
  * the right. The photo is cut with a tab shape and opens like a shutter.
  */
 export default function BotGains() {
-  const reduced = useReducedMotion();
-
   return (
     <section className="py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-8">
@@ -24,12 +22,11 @@ export default function BotGains() {
             }
             subtitle={gains.subtitle}
           />
-          <motion.div
-            initial={reduced ? false : { clipPath: "inset(100% 0 0 0)" }}
-            whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-            viewport={{ once: true, margin: "-80px" }}
+          <ClipReveal
+            closed="inset(100% 0 0 0)"
+            open="inset(0% 0 0 0)"
             transition={{ duration: 1.1, ease: [0.22, 0.61, 0.36, 1] }}
-            className="mt-10"
+            wrapperClassName="mt-10"
           >
             <img
               src={gains.image.src}
@@ -42,7 +39,7 @@ export default function BotGains() {
               height="933"
               className="ba-clip-tab aspect-[3/2] w-full object-cover"
             />
-          </motion.div>
+          </ClipReveal>
         </div>
 
         <Stagger as="ol" className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
