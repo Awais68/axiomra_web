@@ -89,3 +89,23 @@ describe("health and status routes are never rate limited", () => {
     expect(codes[30]).toBe(429);
   });
 });
+
+describe("rate-limit key behind Render's proxies", () => {
+  // As on Render: client, then private proxy hops appended to x-forwarded-for.
+  const viaRender = (client) => `${client}, 10.29.158.153, 10.26.119.178`;
+  const apiKeys = () => [...fake.data.keys()].filter((k) => k.startsWith("rl:api:"));
+
+  it("gives two clients behind the same proxies separate buckets", async () => {
+    for (const client of ["203.0.113.7", "198.51.100.9"]) {
+      await request(app).get("/api/no-such-route").set("X-Forwarded-For", viaRender(client));
+    }
+    expect(apiKeys().sort()).toEqual(["rl:api:198.51.100.9", "rl:api:203.0.113.7"]);
+  });
+
+  it("ignores an address the client forges in x-forwarded-for", async () => {
+    await request(app)
+      .get("/api/no-such-route")
+      .set("X-Forwarded-For", `6.6.6.6, ${viaRender("203.0.113.7")}`);
+    expect(apiKeys()).toEqual(["rl:api:203.0.113.7"]);
+  });
+});

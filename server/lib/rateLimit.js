@@ -48,7 +48,19 @@ function store(name) {
   });
 }
 
-const byIp = (req) => ipKeyGenerator(req.ip);
+// Log how the first few rate-limited requests after boot were keyed, so the
+// proxy chain in production can be read from the logs instead of guessed.
+let keyLogsLeft = 5;
+const byIp = (req) => {
+  const key = ipKeyGenerator(req.ip);
+  if (keyLogsLeft > 0) {
+    keyLogsLeft -= 1;
+    console.log(
+      `[ip] key=${key} socket=${req.socket?.remoteAddress} xff="${req.get("x-forwarded-for") ?? ""}"`
+    );
+  }
+  return key;
+};
 
 const STORE_DOWN = { error: "Service temporarily unavailable. Please try again shortly." };
 
