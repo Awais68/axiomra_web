@@ -2,7 +2,7 @@ const API_URL = import.meta.env.VITE_API_URL.replace(/\/+$/, "");
 
 // Messages the visitor sees, one per cause the widget can tell apart.
 export const CHAT_ERRORS = {
-  waking: "The assistant is waking up or busy right now. Please try again in a few seconds.",
+  unavailable: "Chat is unavailable right now.",
   offline: "You seem to be offline. Check your connection and try again.",
   dailyLimit:
     "The assistant has reached its daily limit. Please use the contact form and the team will get back to you.",
@@ -22,16 +22,27 @@ export class ChatError extends Error {
 }
 
 // A free Render instance takes ~30-60s to wake. Render holds the request
-// while it boots, so one attempt waits that long before it is given up on.
+// while it boots, so one attempt may wait that long; the whole send gives up
+// after WAKE_BUDGET_MS.
 const RESPONSE_TIMEOUT_MS = 35_000;
+const WAKE_BUDGET_MS = 60_000;
+// With no answer by then, the server is almost certainly cold-starting.
+const SLOW_NOTICE_MS = 10_000;
 // Once the reply has started, a gap this long between pieces means it stalled.
 const STREAM_IDLE_MS = 45_000;
-// Waits before the 2nd and 3rd attempt.
-const RETRY_DELAYS_MS = [1500, 4000];
-// Answers that mean "not up yet / overloaded". A 502/503 from Render's own
-// edge carries no CORS headers, so the browser usually reports it as a
-// network error instead; both cases are retried.
-const RETRY_STATUSES = new Set([502, 503, 504]);
+// Waits between attempts; the last one repeats until the budget runs out.
+const RETRY_DELAYS_MS = [1500, 3000, 5000];
+// Answers that mean "not up yet". A 502/503 from Render's own edge carries no
+// CORS headers, so the browser usually reports it as a network error instead;
+// both are retried. A 504 is not: the server may have taken the request and
+// be working on it, and sending it again could produce a second reply.
+const RETRY_STATUSES = new Set([502, 503]);
+
+// The visitor sees a friendly message; in development the console gets the
+// real cause, so a CORS or config mistake is not mistaken for a cold start.
+function devLog(...args) {
+  if (import.meta.env.DEV) console.error("[chat]", ...args);
+}
 
 const isOffline = () => typeof navigator !== "undefined" && navigator.onLine === false;
 
@@ -72,6 +83,12 @@ async function attempt(init, signal, timeoutMs) {
   } catch (err) {
     signal?.removeEventListener("abort", onAbort);
     if (signal?.aborted) throw err;
+    // A CORS refusal also lands here as "Failed to fetch": check the Network
+    // tab for the request's status and the server's ALLOWED_ORIGINS.
+    devLog(
+      timedOut ? `no response within ${timeoutMs}ms` : "network error (offline, CORS or DNS):",
+      timedOut ? "" : err
+    );
     return { retry: timedOut ? "timeout" : "network" };
   } finally {
     clearTimeout(timer);
@@ -84,8 +101,9 @@ async function refusal(res) {
     if (data?.code === "daily_cap") return new ChatError("dailyLimit");
     return new ChatError("rateLimited", data?.error || CHAT_ERRORS.rateLimited);
   }
+  devLog(`refused with HTTP ${res.status}:`, data?.error ?? "(no JSON body)");
   if (data?.error) return new ChatError("server", data.error);
-  if (RETRY_STATUSES.has(res.status)) return new ChatError("waking");
+  if (RETRY_STATUSES.has(res.status)) return new ChatError("unavailable");
   return new ChatError("server", `The assistant is unavailable (${res.status}).`);
 }
 
@@ -97,17 +115,18 @@ async function refusal(res) {
  * `onConversation(id)` receives the id to send with the next turn, which is a
  * new one when the old conversation has expired. `onText(chunk)` is called
  * for every streamed piece; `onReplace(text)` when the server swaps the reply
- * for a canned one (a declined request). `onRetry(n)` fires before attempt n.
+ * for a canned one (a declined request). `onRetry(n)` fires before attempt n;
+ * `onSlow()` fires once if no answer has arrived after SLOW_NOTICE_MS.
  *
- * A network error, a timeout or a 502/503/504 is retried up to twice, and
- * only while no response has arrived. The server reserves budget just before
+ * A network error, a timeout or a 502/503 is retried for up to WAKE_BUDGET_MS,
+ * and only while no response has arrived; a 504 is never retried. The server reserves budget just before
  * it answers 200, so a retry never doubles a reservation, and a reply that has
  * started is never sent twice.
  * Throws a ChatError whose message is safe to show the visitor.
  */
 export async function streamChat(
   { message, conversationId },
-  { onConversation, onText, onReplace, onRetry, signal }
+  { onConversation, onText, onReplace, onRetry, onSlow, signal }
 ) {
   const init = {
     method: "POST",
@@ -115,21 +134,31 @@ export async function streamChat(
     body: JSON.stringify(conversationId ? { message, conversationId } : { message }),
   };
 
+  const deadline = Date.now() + WAKE_BUDGET_MS;
+  const slow = setTimeout(() => onSlow?.(), SLOW_NOTICE_MS);
   let res;
   let controller;
-  for (let n = 0; ; n += 1) {
-    const out = await attempt(init, signal, RESPONSE_TIMEOUT_MS);
-    if (out.res && !RETRY_STATUSES.has(out.res.status)) {
-      ({ res, controller } = out);
-      break;
+  try {
+    for (let n = 0; ; n += 1) {
+      const timeout = Math.max(1, Math.min(RESPONSE_TIMEOUT_MS, deadline - Date.now()));
+      const out = await attempt(init, signal, timeout);
+      if (out.res && !RETRY_STATUSES.has(out.res.status)) {
+        ({ res, controller } = out);
+        break;
+      }
+      if (out.res) devLog(`attempt ${n + 1}: HTTP ${out.res.status}, retrying`);
+      if (isOffline()) throw new ChatError("offline");
+      const wait = RETRY_DELAYS_MS[Math.min(n, RETRY_DELAYS_MS.length - 1)];
+      if (Date.now() + wait >= deadline) {
+        if (out.res) throw await refusal(out.res);
+        devLog(`gave up after ${n + 1} attempts in ${WAKE_BUDGET_MS / 1000}s`);
+        throw new ChatError("unavailable");
+      }
+      await sleep(wait, signal);
+      onRetry?.(n + 2);
     }
-    if (n >= RETRY_DELAYS_MS.length) {
-      if (out.res) throw await refusal(out.res);
-      throw new ChatError(isOffline() ? "offline" : "waking");
-    }
-    if (isOffline()) throw new ChatError("offline");
-    await sleep(RETRY_DELAYS_MS[n], signal);
-    onRetry?.(n + 2);
+  } finally {
+    clearTimeout(slow);
   }
 
   if (!res.ok || !res.body) throw await refusal(res);

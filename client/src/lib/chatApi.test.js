@@ -50,17 +50,30 @@ describe("streamChat", () => {
     expect(onRetry).toHaveBeenCalledWith(2);
   });
 
-  it("gives up after three 503s with the waking-up message", async () => {
+  it("keeps retrying 502s for 60s, then reports chat as unavailable", async () => {
     const fetchMock = vi
       .spyOn(globalThis, "fetch")
       .mockImplementation(async () => new Response("<html>", { status: 502 }));
-    const out = await send();
-    expect(fetchMock).toHaveBeenCalledTimes(3);
+    const onSlow = vi.fn();
+    const started = Date.now();
+    const out = await send({ onSlow });
+    expect(fetchMock.mock.calls.length).toBeGreaterThan(3);
+    expect(Date.now() - started).toBeLessThanOrEqual(60_000);
+    expect(onSlow).toHaveBeenCalledTimes(1);
     expect(out.error).toBeInstanceOf(ChatError);
-    expect(out.error.kind).toBe("waking");
+    expect(out.error.kind).toBe("unavailable");
   });
 
-  it("retries a request that never answers", async () => {
+  it("never retries a 504", async () => {
+    const fetchMock = vi
+      .spyOn(globalThis, "fetch")
+      .mockResolvedValue(new Response("<html>", { status: 504 }));
+    const out = await send();
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(out.error.message).toMatch(/504/);
+  });
+
+  it("retries a request that never answers, within the 60s budget", async () => {
     const fetchMock = vi
       .spyOn(globalThis, "fetch")
       .mockImplementation(
@@ -69,9 +82,24 @@ describe("streamChat", () => {
             signal.addEventListener("abort", () => reject(new DOMException("x", "AbortError")))
           )
       );
+    const started = Date.now();
     const out = await send();
-    expect(fetchMock).toHaveBeenCalledTimes(3);
-    expect(out.error.kind).toBe("waking");
+    expect(fetchMock.mock.calls.length).toBeGreaterThan(1);
+    expect(Date.now() - started).toBeLessThanOrEqual(60_000);
+    expect(out.error.kind).toBe("unavailable");
+  });
+
+  it("logs the real cause in development", async () => {
+    const log = vi.spyOn(console, "error").mockImplementation(() => {});
+    vi.spyOn(globalThis, "fetch")
+      .mockRejectedValueOnce(new TypeError("Failed to fetch"))
+      .mockResolvedValueOnce(sse([{ type: "done" }]));
+    await send();
+    expect(log).toHaveBeenCalledWith(
+      "[chat]",
+      expect.stringMatching(/CORS/),
+      expect.any(TypeError)
+    );
   });
 
   it("shows the daily-limit message without retrying", async () => {

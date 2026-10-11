@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary.jsx";
 import { RELOAD_PARAM } from "./components/RouteErrorBoundary.jsx";
 import ThemeProvider from "./theme/ThemeProvider.jsx";
 import { loadAnalytics } from "./lib/analytics.js";
+import { wakeServerWhenIdle } from "./lib/wakeServer.js";
 import "./index.css";
 // Loaded up front rather than with the lazy CaseStudyPage chunk: prerendered
 // case studies paint before that chunk arrives, and need their styles then.
@@ -55,3 +56,4 @@ if (root.hasChildNodes()) ReactDOM.hydrateRoot(root, app);
 else ReactDOM.createRoot(root).render(app);
 
 loadAnalytics();
+wakeServerWhenIdle();

@@ -1,9 +1,9 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { screen, waitFor } from "@testing-library/react";
+import { act, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { renderPage } from "../../test/render";
 import ChatWidget from "./ChatWidget";
-import { warmUpChat } from "../../lib/chatApi";
+import { ChatError, streamChat, warmUpChat } from "../../lib/chatApi";
 import RichText from "./richText";
 
 /** A fetch Response whose body streams the given server-sent events. */
@@ -23,10 +23,10 @@ function sseResponse(events, headers = {}) {
 
 // The wake-up ping is covered in chatApi.test.js; here it would take the
 // first mocked fetch response.
-vi.mock("../../lib/chatApi", async (importOriginal) => ({
-  ...(await importOriginal()),
-  warmUpChat: vi.fn(),
-}));
+vi.mock("../../lib/chatApi", async (importOriginal) => {
+  const actual = await importOriginal();
+  return { ...actual, warmUpChat: vi.fn(), streamChat: vi.fn(actual.streamChat) };
+});
 
 afterEach(() => {
   vi.restoreAllMocks();
@@ -94,6 +94,41 @@ describe("ChatWidget", () => {
 
     expect(await screen.findByRole("alert")).toHaveTextContent("sending messages quickly");
     await waitFor(() => expect(input).toHaveValue("Hello"));
+  });
+});
+
+describe("ChatWidget while the server wakes", () => {
+  it("shows Connecting, then the slow-start notice, then unavailable with contacts", async () => {
+    let release;
+    let handlers;
+    streamChat.mockImplementationOnce((_body, h) => {
+      handlers = h;
+      return new Promise((_, reject) => (release = reject));
+    });
+    const user = userEvent.setup();
+    renderPage(<ChatWidget />);
+    await user.click(screen.getByRole("button", { name: "Chat with Axiomra Assistant" }));
+    await user.type(screen.getByLabelText("Message Axiomra Assistant"), "Hello{Enter}");
+
+    act(() => handlers.onRetry(2));
+    expect(await screen.findByText("Connecting...")).toBeInTheDocument();
+
+    act(() => handlers.onSlow());
+    expect(
+      await screen.findByText(/Server is starting, this can take up to 30 seconds/)
+    ).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "info@axiomra.co" })).toHaveAttribute(
+      "href",
+      "mailto:info@axiomra.co"
+    );
+
+    act(() => release(new ChatError("unavailable")));
+    const alert = await screen.findByRole("alert");
+    expect(alert).toHaveTextContent("Chat is unavailable right now.");
+    expect(within(alert).getByRole("link", { name: /WhatsApp/ })).toHaveAttribute(
+      "href",
+      "https://wa.me/16575203444"
+    );
   });
 });
 

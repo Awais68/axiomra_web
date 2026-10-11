@@ -17,6 +17,10 @@ const IDLE_ROUTINE = ["wave", "spin", "blink", "walk"];
 const FIRST_IDLE_MS = 12000;
 const IDLE_GAP_MS = 10000;
 
+// Offered whenever the assistant cannot answer, so a visitor is never stuck.
+const CONTACT_EMAIL = "info@axiomra.co";
+const WHATSAPP_URL = "https://wa.me/16575203444";
+
 const STORAGE_KEY = "axiomra-chat";
 // The server-side conversation the transcript above belongs to. Kept for the
 // same browser session as the transcript, so the two never drift apart.
@@ -96,6 +100,27 @@ function TypingDots({ note }) {
   );
 }
 
+function ContactLinks() {
+  return (
+    <>
+      Email{" "}
+      <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold underline">
+        {CONTACT_EMAIL}
+      </a>{" "}
+      or{" "}
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-semibold underline"
+      >
+        message us on WhatsApp
+      </a>
+      .
+    </>
+  );
+}
+
 function Avatar() {
   return (
     <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#DBEAFE] ring-1 ring-[#93C5FD]">
@@ -115,9 +140,11 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState(loadHistory);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
-  const [error, setError] = useState("");
-  // Shown under the typing dots while a request is being retried.
-  const [waitNote, setWaitNote] = useState("");
+  // { message, kind } from a ChatError, or null.
+  const [error, setError] = useState(null);
+  // Shown under the typing dots while the server is being reached: null,
+  // "connecting" (retrying) or "starting" (no answer after 10s).
+  const [waitState, setWaitState] = useState(null);
   const [unread, setUnread] = useState(() => loadHistory().length === 0);
 
   const listRef = useRef(null);
@@ -209,7 +236,7 @@ export default function ChatWidget() {
     const history = [...messages, { role: "user", content }];
     setMessages([...history, { role: "assistant", content: "" }]);
     setInput("");
-    setError("");
+    setError(null);
     setBusy(true);
 
     const controller = new AbortController();
@@ -232,18 +259,19 @@ export default function ChatWidget() {
           signal: controller.signal,
           onText: (chunk) => setReply((prev) => prev + chunk),
           onReplace: (full) => setReply(() => full),
-          onRetry: () => setWaitNote("The assistant is waking up, one moment..."),
+          onRetry: () => setWaitState((w) => w ?? "connecting"),
+          onSlow: () => setWaitState("starting"),
         }
       );
     } catch (err) {
       if (err.name === "AbortError") return;
-      setError(err.message);
+      setError({ message: err.message, kind: err.kind });
       // Drop the unanswered turn so a retry does not send it twice.
       setMessages(messages);
       setInput(content);
     } finally {
       setBusy(false);
-      setWaitNote("");
+      setWaitState(null);
       abortRef.current = null;
     }
   };
@@ -252,8 +280,8 @@ export default function ChatWidget() {
     abortRef.current?.abort();
     storage.remove(CONVERSATION_KEY);
     setMessages([]);
-    setError("");
-    setWaitNote("");
+    setError(null);
+    setWaitState(null);
     setBusy(false);
   };
 
@@ -344,7 +372,17 @@ export default function ChatWidget() {
                       {m.content ? (
                         <RichText text={m.content} onNavigate={closeAfterNavigate} />
                       ) : (
-                        <TypingDots note={waitNote} />
+                        <TypingDots
+                          note={
+                            waitState === "starting" ? (
+                              <>
+                                Server is starting, this can take up to 30 seconds. <ContactLinks />
+                              </>
+                            ) : waitState === "connecting" ? (
+                              "Connecting..."
+                            ) : null
+                          }
+                        />
                       )}
                     </div>
                   </div>
@@ -356,16 +394,20 @@ export default function ChatWidget() {
                   role="alert"
                   className="rounded-xl border border-danger/30 bg-danger/5 px-3.5 py-2.5 text-xs text-danger"
                 >
-                  {error}{" "}
-                  <Link
-                    to="/contact"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={closeAfterNavigate}
-                    className="font-semibold underline"
-                  >
-                    Contact the team
-                  </Link>
+                  {error.message}{" "}
+                  {error.kind === "unavailable" ? (
+                    <ContactLinks />
+                  ) : (
+                    <Link
+                      to="/contact"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={closeAfterNavigate}
+                      className="font-semibold underline"
+                    >
+                      Contact the team
+                    </Link>
+                  )}
                 </div>
               )}
             </div>
