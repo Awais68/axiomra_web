@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { MessagesSquare, Workflow } from "lucide-react";
+import { TbMessages, TbRoute } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import { Reveal } from "../motion/Reveal";
 import { services } from "../../data/chatbotData";
@@ -107,7 +107,7 @@ function PolygonRow({ item }) {
           className="cb-shape-poly grid place-items-center bg-inverse pr-6 text-accent-vivid"
           aria-hidden="true"
         >
-          <MessagesSquare strokeWidth={1.5} className="h-9 w-9 sm:h-[52px] sm:w-[52px]" />
+          <TbMessages strokeWidth={1.5} className="h-9 w-9 sm:h-[52px] sm:w-[52px]" />
         </div>
         <h3 className="font-display text-2xl font-semibold text-content md:text-3xl">
           {item.title}
@@ -190,7 +190,7 @@ function OrganicRow({ item }) {
       <div className="relative">
         <div aria-hidden="true" className="cb-organic-float" />
         <p className="mb-3 mt-2 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-accent-vivid sm:mt-6">
-          <Workflow size={16} aria-hidden="true" /> Connected, not bolted on
+          <TbRoute size={16} aria-hidden="true" /> Connected, not bolted on
         </p>
         <h3 className="font-display text-2xl font-semibold text-white md:text-3xl">{item.title}</h3>
         <p className="mt-4 text-base leading-relaxed text-white/80 md:text-lg">{item.body}</p>

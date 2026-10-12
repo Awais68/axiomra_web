@@ -176,7 +176,7 @@ export const services = {
   items: [
     {
       id: "strategy",
-      icon: "Compass",
+      icon: "TbCompass",
       title: "Enterprise AI Strategy & Consulting",
       body: [
         "Before any build, we work with your leadership team to find where AI will return the " +
@@ -190,7 +190,7 @@ export const services = {
     },
     {
       id: "custom",
-      icon: "Cpu",
+      icon: "TbCpu",
       title: "Custom Enterprise AI Development",
       body: [
         "AI systems designed for your processes, data environment and technology stack. Not " +
@@ -202,7 +202,7 @@ export const services = {
     },
     {
       id: "genai",
-      icon: "Sparkles",
+      icon: "TbFileTextAi",
       title: "Generative AI For Enterprise",
       body: [
         "Large language model solutions for knowledge management, document processing, internal " +
@@ -214,7 +214,7 @@ export const services = {
     },
     {
       id: "agentic",
-      icon: "Bot",
+      icon: "TbSettingsAutomation",
       title: "Agentic AI & Workflow Automation",
       body: [
         "Autonomous agents that plan, decide and carry out multi-step tasks across your systems: " +
@@ -226,7 +226,7 @@ export const services = {
     },
     {
       id: "ml",
-      icon: "TrendingUp",
+      icon: "TbTrendingUp",
       title: "Enterprise Machine Learning & Predictive Analytics",
       body: [
         "Supervised, unsupervised and reinforcement learning models that turn historical and " +
@@ -240,7 +240,7 @@ export const services = {
     },
     {
       id: "integration",
-      icon: "Workflow",
+      icon: "TbRoute",
       title: "Enterprise AI Integration Services",
       body: [
         "Many enterprise AI projects break at the integration, not the model. We connect AI " +
@@ -252,7 +252,7 @@ export const services = {
     },
     {
       id: "governance",
-      icon: "ShieldCheck",
+      icon: "TbShieldLock",
       title: "AI Governance, Security & Compliance",
       body: [
         "Governance is a foundation, not an afterthought. Role-based access, audit trails, data " +
@@ -265,7 +265,7 @@ export const services = {
     },
     {
       id: "mlops",
-      icon: "Activity",
+      icon: "TbActivityHeartbeat",
       title: "MLOps & LLMOps",
       body: [
         "Launch is not the finish line. Without monitoring, model quality degrades as your data " +
@@ -473,12 +473,12 @@ export const stack = {
     {
       name: "LLMs & Foundation Models",
       tools: [
-        { name: "GPT-4o", icon: "Sparkles" },
+        { name: "GPT-4o", icon: "TbFileTextAi" },
         { name: "Claude", slug: "anthropic" },
         { name: "Gemini", slug: "googlegemini" },
         { name: "Llama", slug: "meta" },
         { name: "Mistral", slug: "mistralai" },
-        { name: "Whisper", icon: "AudioLines" },
+        { name: "Whisper", icon: "TbWaveSine" },
       ],
     },
     {
@@ -558,42 +558,42 @@ export const whyUs = {
     "infrastructure and deliver outcomes your leadership can measure.",
   cards: [
     {
-      icon: "Rocket",
+      icon: "TbRocket",
       title: "Production-first engineering",
       body:
         "A demo and a production system are different things. Every build goes through " +
         "structured QA, performance benchmarks and deployment validation before go-live.",
     },
     {
-      icon: "ShieldCheck",
+      icon: "TbShieldLock",
       title: "Governance from day one",
       body:
         "If you operate under ISO 27001, SOC 2, HIPAA, GDPR or financial regulation, those " +
         "requirements shape the design before a line of code is written.",
     },
     {
-      icon: "Workflow",
+      icon: "TbRoute",
       title: "Cross-enterprise integration",
       body:
         "Enterprise AI does not live in isolation. We design integration from the start so the " +
         "system fits how your organisation already works.",
     },
     {
-      icon: "Target",
+      icon: "TbTargetArrow",
       title: "Outcome-tied delivery",
       body:
         "We scope around business outcomes, not feature lists, and agree what success looks " +
         "like in your performance reports before we write a proposal.",
     },
     {
-      icon: "LifeBuoy",
+      icon: "TbLifebuoy",
       title: `${companyStats.supportDays}-day post-launch support`,
       body:
         `${companyStats.supportDays} days of dedicated support after go-live at no extra cost: ` +
         "bug fixes, performance tuning and integration issues in real operating conditions.",
     },
     {
-      icon: "RefreshCw",
+      icon: "TbRefresh",
       title: "Long-term lifecycle partner",
       body:
         "Models drift and regulations change. We build documented, modular systems your team " +

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import useMounted from "../../lib/useMounted";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, Check, FileText, Loader2 } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { TbCircleCheck, TbFileText, TbLoader2 } from "react-icons/tb";
 import FlowCanvas from "./FlowCanvas";
 import { hero } from "../../data/processAutomationData";
 import { BOOKING_URL } from "../../lib/booking";
@@ -33,7 +34,7 @@ function RunTicker() {
     <div className="pa-glass w-full max-w-sm rounded-2xl p-5 text-white">
       <div className="flex items-center justify-between gap-3">
         <span className="flex items-center gap-2 font-display text-base font-semibold">
-          <FileText size={17} className="text-[#13D4D4]" aria-hidden="true" />
+          <TbFileText size={17} className="text-[#13D4D4]" aria-hidden="true" />
           {title}
         </span>
         <span
@@ -59,9 +60,9 @@ function RunTicker() {
                 }`}
               >
                 {state === "done" ? (
-                  <Check size={13} strokeWidth={3} aria-hidden="true" />
+                  <TbCircleCheck size={13} strokeWidth={3} aria-hidden="true" />
                 ) : state === "active" ? (
-                  <Loader2 size={13} className="animate-spin" aria-hidden="true" />
+                  <TbLoader2 size={13} className="animate-spin" aria-hidden="true" />
                 ) : (
                   <span className="h-1.5 w-1.5 rounded-full bg-current" />
                 )}

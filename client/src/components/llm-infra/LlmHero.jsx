@@ -1,10 +1,11 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, Cloud, Lock, Server, Split } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { TbArrowsShuffle, TbCloudLock, TbPlugConnectedX, TbServer2 } from "react-icons/tb";
 import CoreCanvas from "./CoreCanvas";
 import { BOOKING_URL } from "../../lib/booking";
 import { hero } from "../../data/llmInfrastructureData";
 
-const CHIP_ICONS = [Server, Cloud, Lock, Split];
+const CHIP_ICONS = [TbServer2, TbCloudLock, TbPlugConnectedX, TbArrowsShuffle];
 // Where each chip floats around the core on desktop (percent of the stage).
 const CHIP_SPOTS = [
   "left-0 top-[12%]",

@@ -1,46 +1,46 @@
 /**
  * Icons named in enterpriseAiData, imported one by one so the bundle only
- * carries these (a namespace import would pull in all of lucide).
+ * carries the Tabler icons this page actually renders.
  */
 import { createElement } from "react";
 import {
-  Activity,
-  AudioLines,
-  Bot,
-  Circle,
-  Cloud,
-  Compass,
-  Cpu,
-  Database,
-  LifeBuoy,
-  RefreshCw,
-  Rocket,
-  ShieldCheck,
-  Sparkles,
-  Target,
-  TrendingUp,
-  Workflow,
-} from "lucide-react";
+  TbActivityHeartbeat,
+  TbCircle,
+  TbCloud,
+  TbCompass,
+  TbCpu,
+  TbDatabase,
+  TbFileTextAi,
+  TbLifebuoy,
+  TbRefresh,
+  TbRocket,
+  TbRoute,
+  TbSettingsAutomation,
+  TbShieldLock,
+  TbTargetArrow,
+  TbTrendingUp,
+  TbWaveSine,
+} from "react-icons/tb";
 
 const ICONS = {
-  Activity,
-  AudioLines,
-  Bot,
-  Cloud,
-  Compass,
-  Cpu,
-  Database,
-  LifeBuoy,
-  RefreshCw,
-  Rocket,
-  ShieldCheck,
-  Sparkles,
-  Target,
-  TrendingUp,
-  Workflow,
+  TbActivityHeartbeat,
+  TbWaveSine,
+  TbSettingsAutomation,
+  TbCloud,
+  TbCompass,
+  TbCpu,
+  TbDatabase,
+  TbLifebuoy,
+  TbRefresh,
+  TbRocket,
+  TbShieldLock,
+  TbFileTextAi,
+  TbTargetArrow,
+  TbTrendingUp,
+  TbRoute,
 };
 
 /** <EntIcon name="Cpu" size={20} />: a data-driven icon by name. */
 export default function EntIcon({ name, ...props }) {
-  return createElement(ICONS[name] ?? Circle, props);
+  return createElement(ICONS[name] ?? TbCircle, props);
 }

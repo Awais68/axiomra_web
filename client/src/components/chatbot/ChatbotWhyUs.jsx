@@ -1,10 +1,10 @@
-import { Layers, Scale, ShieldCheck } from "lucide-react";
+import { TbScale, TbShieldLock, TbStack2 } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import StatCounter from "../StatCounter";
 import { Stagger, StaggerItem } from "../motion/Reveal";
 import { whyUs } from "../../data/chatbotData";
 
-const ICONS = { shield: ShieldCheck, layers: Layers, scale: Scale };
+const ICONS = { shield: TbShieldLock, layers: TbStack2, scale: TbScale };
 
 export default function ChatbotWhyUs() {
   return (

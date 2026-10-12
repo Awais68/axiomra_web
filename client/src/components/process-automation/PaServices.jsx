@@ -1,6 +1,6 @@
 import { useId } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { Check } from "lucide-react";
+import { TbCircleCheck } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import { Reveal } from "../motion/Reveal";
 import PaIcon from "./PaIcon";
@@ -48,7 +48,7 @@ function Points({ points }) {
           key={p}
           className="pa-glass-light inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm text-content"
         >
-          <Check size={14} strokeWidth={3} aria-hidden="true" className="text-pa-accent" />
+          <TbCircleCheck size={14} strokeWidth={3} aria-hidden="true" className="text-pa-accent" />
           {p}
         </li>
       ))}

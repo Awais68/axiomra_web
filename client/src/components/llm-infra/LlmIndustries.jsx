@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { TbCircleCheck } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import LlmTitle from "./LlmTitle";
 import { industries } from "../../data/llmInfrastructureData";
@@ -111,7 +112,7 @@ export default function LlmIndustries() {
                 <ul className="mt-6 space-y-3">
                   {item.useCases.map((u) => (
                     <li key={u} className="flex gap-3 text-base text-white/85">
-                      <Check
+                      <TbCircleCheck
                         size={20}
                         className="mt-0.5 shrink-0 text-accent-vivid"
                         aria-hidden="true"

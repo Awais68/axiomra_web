@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Cog, Globe } from "lucide-react";
+import { TbSettingsAutomation, TbWorldSearch } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import { Reveal } from "../motion/Reveal";
 import { services } from "../../data/botAutomationData";
@@ -120,7 +120,7 @@ function PolygonRow({ item, n }) {
           className="ba-shape-poly grid place-items-center bg-inverse text-accent-vivid"
           aria-hidden="true"
         >
-          <Cog
+          <TbSettingsAutomation
             strokeWidth={1.5}
             className="h-10 w-10 animate-[spin_12s_linear_infinite] motion-reduce:animate-none sm:h-14 sm:w-14"
           />
@@ -212,7 +212,8 @@ function OrganicRow({ item, n }) {
       <div className="relative">
         <div aria-hidden="true" className="ba-organic-float" />
         <p className="mb-3 mt-2 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-accent-vivid sm:mt-6">
-          <Globe size={16} aria-hidden="true" /> Bot {String(n).padStart(2, "0")} · on a schedule
+          <TbWorldSearch size={16} aria-hidden="true" /> Bot {String(n).padStart(2, "0")} · on a
+          schedule
         </p>
         <h3 className="font-display text-2xl font-semibold text-white md:text-3xl">{item.title}</h3>
         <p className="mt-4 text-base leading-relaxed text-white/80 md:text-lg">{item.body}</p>

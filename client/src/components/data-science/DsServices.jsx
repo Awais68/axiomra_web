@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { TbCircleCheck } from "react-icons/tb";
 import { Reveal } from "../motion/Reveal";
 import ClipReveal from "../motion/ClipReveal";
 import DsTitle from "./DsTitle";
@@ -78,7 +78,7 @@ export default function DsServices() {
                     {s.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2.5 text-base text-content">
                         <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--ds-accent))] text-white">
-                          <Check size={13} strokeWidth={3} aria-hidden="true" />
+                          <TbCircleCheck size={13} strokeWidth={3} aria-hidden="true" />
                         </span>
                         {b}
                       </li>

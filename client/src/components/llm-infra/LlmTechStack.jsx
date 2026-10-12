@@ -1,11 +1,29 @@
 import { useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { SiClaude, SiGooglegemini, SiMeta, SiMistralai } from "react-icons/si";
 import SectionHeading from "../SectionHeading";
 import BrandIcon from "../tech/BrandIcon";
 import LlmTitle from "./LlmTitle";
 import { stack } from "../../data/llmInfrastructureData";
 
 const GROUPS = stack.groups;
+const MODEL_ICONS = {
+  Llama: SiMeta,
+  Mistral: SiMistralai,
+  Gemma: SiGooglegemini,
+  Claude: SiClaude,
+};
+
+function StackIcon({ tool }) {
+  const Icon = MODEL_ICONS[tool.name];
+  if (!Icon) return <BrandIcon name={tool.name} slug={tool.slug} size={36} tile />;
+
+  return (
+    <span className="grid shrink-0 place-items-center rounded-lg bg-white p-1.5 text-inverse shadow-[0_1px_2px_rgba(15,23,41,0.12)] ring-1 ring-black/5">
+      <Icon size={36} aria-hidden="true" />
+    </span>
+  );
+}
 
 /** Tool groups as tabs; each panel is a grid of logo tiles. */
 export default function LlmTechStack() {
@@ -89,7 +107,7 @@ export default function LlmTechStack() {
                     variants={{ hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0 } }}
                     className="llm-glass-light flex items-center gap-3 rounded-2xl p-4 md:p-5"
                   >
-                    <BrandIcon name={t.name} slug={t.slug} size={36} tile />
+                    <StackIcon tool={t} />
                     <span className="text-sm font-medium text-content md:text-base">{t.name}</span>
                   </motion.li>
                 ))}

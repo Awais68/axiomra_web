@@ -1,13 +1,13 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Building2, Rocket, Store, TrendingUp } from "lucide-react";
+import { TbBuildingSkyscraper, TbBuildingStore, TbRocket, TbTrendingUp } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import { Stagger, StaggerItem } from "../motion/Reveal";
 import { stages } from "../../data/chatbotData";
 import stages700 from "../../assets/chatbot/stages-700.webp";
 import stages1200 from "../../assets/chatbot/stages-1200.webp";
 
-const ICONS = [Rocket, TrendingUp, Store, Building2];
+const ICONS = [TbRocket, TbTrendingUp, TbBuildingStore, TbBuildingSkyscraper];
 
 export default function ChatbotStages() {
   const ref = useRef(null);

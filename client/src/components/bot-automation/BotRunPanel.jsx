@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Bot, CheckCircle2, Loader2 } from "lucide-react";
+import { CheckCircle2, Loader2 } from "lucide-react";
+import { TbSettingsAutomation } from "react-icons/tb";
 
 const STEP_MS = 2200;
 const VISIBLE = 4;
@@ -40,7 +41,7 @@ export default function BotRunPanel({ runs, className = "" }) {
       <div className="flex items-center justify-between gap-3 border-b border-white/10 px-5 py-4">
         <div className="flex items-center gap-3">
           <span className="ba-clip-hex grid h-10 w-10 place-items-center bg-accent-vivid text-on-accent">
-            <Bot size={20} aria-hidden="true" />
+            <TbSettingsAutomation size={20} aria-hidden="true" />
           </span>
           <div className="leading-tight">
             <p className="text-sm font-semibold text-white">Ops Bot · live runs</p>

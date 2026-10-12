@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Target } from "lucide-react";
+import { TbTarget } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import { Reveal } from "../motion/Reveal";
 import ClipReveal from "../motion/ClipReveal";
@@ -77,7 +77,7 @@ export default function LlmServices() {
                     {s.body}
                   </p>
                   <p className="llm-glass-light mt-6 flex gap-3 rounded-xl p-4 text-base text-content-dim">
-                    <Target size={20} className="mt-0.5 shrink-0 text-brand" aria-hidden="true" />
+                    <TbTarget size={20} className="mt-0.5 shrink-0 text-brand" aria-hidden="true" />
                     <span>
                       <strong className="font-semibold text-content">Best for: </strong>
                       {s.bestFor}

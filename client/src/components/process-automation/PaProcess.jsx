@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
-import { ArrowUpRight, ShieldCheck } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { TbShieldCheck } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import { Reveal } from "../motion/Reveal";
 import PaTitle from "./PaTitle";
@@ -73,7 +74,7 @@ export default function PaProcess() {
                 key={g}
                 className="pa-glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm text-white/90"
               >
-                <ShieldCheck size={16} aria-hidden="true" className="text-[#2DE8D5]" />
+                <TbShieldCheck size={16} aria-hidden="true" className="text-[#2DE8D5]" />
                 {g}
               </li>
             ))}
