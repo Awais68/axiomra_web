@@ -12,13 +12,14 @@ export default function LlmOutgrown() {
     <section className="bg-surface py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          align="left"
+          align="center"
           eyebrow={outgrown.eyebrow}
           title={<LlmTitle lead={outgrown.titleLead} accent={outgrown.titleAccent} />}
         />
 
         {/* shape-outside: circle(50%) makes the paragraphs follow the photo's round edge. */}
-        <Reveal className="mt-10 max-w-4xl text-lg leading-relaxed text-content-dim md:text-xl">
+        {/* <Reveal className="mt-10 max-w-4xl text-lg leading-relaxed text-content-dim md:text-xl"> */}
+        <Reveal className="mt-10 text-justify max-w-6xl flow-root text-lg leading-relaxed text-content-dim md:text-xl">
           <img
             src={outgrown.introImage.src}
             alt={outgrown.introImage.alt}

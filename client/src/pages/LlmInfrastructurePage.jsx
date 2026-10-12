@@ -11,7 +11,6 @@ import IndustriesTestimonials from "../components/industries/IndustriesTestimoni
 
 import Awards from "../sections/Awards";
 import FAQ from "../sections/FAQ";
-import Contact from "../sections/Contact";
 
 import Seo from "../seo/Seo";
 import { faqPageSchema, serviceSchema } from "../seo/schema";
@@ -66,7 +65,6 @@ export default function LlmInfrastructurePage() {
       <IndustriesTestimonials data={llmTestimonials} />
       <LlmClosing />
       <FAQ id="llm-faq" eyebrow="Private LLMs, answered" items={faqs} />
-      <Contact />
     </div>
   );
 }

@@ -12,7 +12,6 @@ import IndustriesTestimonials from "../components/industries/IndustriesTestimoni
 
 import Portfolio from "../sections/Portfolio";
 import FAQ from "../sections/FAQ";
-import Contact from "../sections/Contact";
 
 import Seo from "../seo/Seo";
 import { faqPageSchema, serviceSchema } from "../seo/schema";
@@ -69,7 +68,6 @@ export default function ProcessAutomationPage() {
       <PaWhyUs />
       <FAQ id="pa-faq" eyebrow="Process automation, answered" items={faqs} />
       <PaCtaBand {...finalCta} />
-      <Contact flat />
     </div>
   );
 }

@@ -13,7 +13,6 @@ import BotCta from "../components/bot-automation/BotCta";
 import Awards from "../sections/Awards";
 import Portfolio from "../sections/Portfolio";
 import FAQ from "../sections/FAQ";
-import Contact from "../sections/Contact";
 
 import Seo from "../seo/Seo";
 import { faqPageSchema, serviceSchema } from "../seo/schema";
@@ -58,7 +57,6 @@ export default function BotAutomationPage() {
       <Awards />
       <BotCta />
       <FAQ id="ba-faq" eyebrow="Bot automation, answered" items={faqs} />
-      <Contact />
     </div>
   );
 }

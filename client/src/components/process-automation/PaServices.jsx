@@ -30,7 +30,7 @@ const BLOB_100 =
 function RowHeader({ item, index }) {
   return (
     <div className="flex items-center gap-4">
-      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-inverse text-[#FB923C]">
+      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-inverse text-[#13D4D4]">
         <PaIcon name={item.icon} size={22} aria-hidden="true" />
       </span>
       <span className="font-mono text-sm tracking-[0.2em] text-content-faint">

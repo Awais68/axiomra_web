@@ -33,7 +33,7 @@ function RunTicker() {
     <div className="pa-glass w-full max-w-sm rounded-2xl p-5 text-white">
       <div className="flex items-center justify-between gap-3">
         <span className="flex items-center gap-2 font-display text-base font-semibold">
-          <FileText size={17} className="text-[#FB923C]" aria-hidden="true" />
+          <FileText size={17} className="text-[#13D4D4]" aria-hidden="true" />
           {title}
         </span>
         <span
@@ -52,9 +52,9 @@ function RunTicker() {
               <span
                 className={`grid h-6 w-6 shrink-0 place-items-center rounded-full border transition-colors duration-300 ${
                   state === "done"
-                    ? "border-[#2DE8D5] bg-[#2DE8D5] text-[#04121A]"
+                    ? "border-[#2DE8D5] bg-[#13D4D4] text-[#04121A]"
                     : state === "active"
-                      ? "border-[#FB923C] text-[#FB923C]"
+                      ? "border-[#13D4D4] text-[#13D4D4]"
                       : "border-white/20 text-white/30"
                 }`}
               >
@@ -125,7 +125,7 @@ export default function PaHero() {
             data-fade="0"
             className="pa-glass mb-7 inline-flex items-center gap-2.5 rounded-full px-5 py-2 font-mono text-xs uppercase tracking-[0.16em] text-white/85 sm:text-sm"
           >
-            <span className="h-2 w-2 rounded-full bg-[#FB923C]" />
+            <span className="h-2 w-2 rounded-full bg-[#13D4D4]" />
             {hero.eyebrow}
           </p>
           <h1
@@ -145,7 +145,7 @@ export default function PaHero() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#FB923C] px-8 py-4 text-base font-semibold text-[#1A0D02] transition-transform duration-300 hover:-translate-y-0.5 focus-ring md:text-lg"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#069494] px-8 py-4 text-base font-semibold text-[#1A0D02] transition-transform duration-300 hover:-translate-y-0.5 focus-ring md:text-lg"
             >
               {hero.ctaText}
               <ArrowUpRight

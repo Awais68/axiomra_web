@@ -3158,19 +3158,21 @@
 /* 1. Circle float: the paragraph wraps the chip photo along a circle. */
 .llm-float-circle {
   float: left;
-  width: 150px;
-  height: 150px;
-  margin: 0.25rem 1rem 0.5rem 0;
-  shape-outside: circle(50%);
-  shape-margin: 10px;
-  clip-path: circle(50%);
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 32px 16px 0; /* right gap 32px, bottom gap 16px */
   border-radius: 50%;
   object-fit: cover;
+  shape-outside: circle(50%);
+  shape-margin: 32px; /* curve ke saath text ka gap */
 }
-@media (min-width: 640px) {
+
+@media (max-width: 639px) {
   .llm-float-circle {
-    width: 200px;
-    height: 200px;
+    float: none;
+    margin: 0 auto 1.5rem;
+    shape-outside: none;
   }
 }
 
@@ -3248,7 +3250,7 @@
    backgrounds, by request). --pa-accent is a burnt orange on light surfaces
    and switches to the bright orange on dark bands to keep its contrast. */
 :root {
-  --pa-accent: 194 65 12;
+  --pa-accent: 0 209 209; /* teal #00D1D1 */
   --pa-panel: 255 243 234;
 }
 .dark {
@@ -3257,7 +3259,7 @@
 .dark,
 .bg-inverse,
 .pa-dark {
-  --pa-accent: 251 146 60;
+  --pa-accent: 0 209 209; /* teal #00D1D1 */
 }
 .text-pa-accent {
   color: rgb(var(--pa-accent));
@@ -3355,7 +3357,7 @@
   animation: pa-march 1.6s linear infinite;
 }
 .pa-lane-in {
-  stroke: #fb923c;
+  stroke: rgb(var(--pa-accent));
 }
 .pa-lane-out {
   stroke: #2de8d5;
@@ -3412,7 +3414,7 @@
   width: 220px;
   height: 128px;
   margin-right: 0.5rem;
-  background-color: #c2410c;
+  background-color: #00d1d1;
   border-radius: 0;
   shape-outside: var(--pa-chevron);
   clip-path: var(--pa-chevron);

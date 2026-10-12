@@ -13,7 +13,6 @@ import ChatbotCta from "../components/chatbot/ChatbotCta";
 import Awards from "../sections/Awards";
 import Portfolio from "../sections/Portfolio";
 import FAQ from "../sections/FAQ";
-import Contact from "../sections/Contact";
 
 import Seo from "../seo/Seo";
 import { faqPageSchema, serviceSchema } from "../seo/schema";
@@ -61,7 +60,6 @@ export default function ChatbotDevelopmentPage() {
       <Awards />
       <ChatbotCta />
       <FAQ id="cb-faq" eyebrow="AI chatbots, answered" items={faqs} />
-      <Contact />
     </div>
   );
 }

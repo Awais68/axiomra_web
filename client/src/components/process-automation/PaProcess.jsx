@@ -39,18 +39,18 @@ export default function PaProcess() {
           >
             <motion.div
               style={reduced ? undefined : { scaleY: fill }}
-              className="h-full w-full origin-top bg-[#FB923C] md:hidden"
+              className="h-full w-full origin-top bg-[#13D4D4] md:hidden"
             />
             <motion.div
               style={reduced ? undefined : { scaleX: fill }}
-              className="hidden h-full w-full origin-left bg-[#FB923C] md:block"
+              className="hidden h-full w-full origin-left bg-[#13D4D4] md:block"
             />
           </div>
 
           <ol className="relative grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-6">
             {process.steps.map((s, i) => (
               <Reveal as="li" key={s.title} delay={i * 0.12} className="relative pl-14 md:pl-0">
-                <span className="pa-step-dot absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full border-2 border-[#FB923C] bg-inverse font-mono text-sm font-semibold text-white md:relative">
+                <span className="pa-step-dot absolute left-0 top-0 grid h-10 w-10 place-items-center rounded-full border-2 border-[#13D4D4] bg-inverse font-mono text-sm font-semibold text-white md:relative">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="pa-glass mt-0 rounded-2xl p-5 md:mt-6 md:p-6">
@@ -82,7 +82,7 @@ export default function PaProcess() {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full bg-[#FB923C] px-7 py-3.5 text-base font-semibold text-[#1A0D02] transition-transform hover:-translate-y-0.5 focus-ring md:text-lg"
+            className="group inline-flex items-center gap-2 rounded-full bg-[#13D4D4] px-7 py-3.5 text-base font-semibold text-[#1A0D02] transition-transform hover:-translate-y-0.5 focus-ring md:text-lg"
           >
             {process.ctaText}
             <ArrowUpRight

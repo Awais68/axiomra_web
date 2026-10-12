@@ -12,7 +12,6 @@ import DsCta from "../components/data-science/DsCta";
 import Awards from "../sections/Awards";
 import Portfolio from "../sections/Portfolio";
 import FAQ from "../sections/FAQ";
-import Contact from "../sections/Contact";
 
 import Seo from "../seo/Seo";
 import { faqPageSchema, serviceSchema } from "../seo/schema";
@@ -57,7 +56,6 @@ export default function DataSciencePage() {
       <Awards />
       <DsCta />
       <FAQ id="ds-faq" eyebrow="Data science, answered" items={faqs} />
-      <Contact />
     </div>
   );
 }
