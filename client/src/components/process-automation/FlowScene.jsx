@@ -15,7 +15,7 @@ const OUT_LANES = 4;
 const PACKETS = 150;
 const SAMPLES = 96;
 const SPAN = 6.2;
-const ORANGE = new THREE.Color("#FB923C");
+const ORANGE = new THREE.Color("#13D4D4");
 const TEAL = new THREE.Color("#2DE8D5");
 
 /** Deterministic 0..1 hash; the scene stays identical across mounts. */
@@ -196,7 +196,7 @@ function Pipeline({ pointer }) {
         <lineBasicMaterial color="#2DE8D5" transparent opacity={0.9} />
       </line>
       <line ref={hubB} geometry={hexGeo} scale={1.7}>
-        <lineBasicMaterial color="#FB923C" transparent opacity={0.55} />
+        <lineBasicMaterial color="#13D4D4" transparent opacity={0.55} />
       </line>
       <mesh ref={core}>
         <circleGeometry args={[1, 6]} />

@@ -1,10 +1,10 @@
-import { BookOpen, Eye, Factory, LifeBuoy, Target, Workflow } from "lucide-react";
+import { TbBook2, TbBuildingFactory2, TbEye, TbLifebuoy, TbRoute, TbTarget } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import StatCounter from "../StatCounter";
 import { Stagger, StaggerItem } from "../motion/Reveal";
 import { whyUs } from "../../data/botAutomationData";
 
-const ICONS = [Factory, Workflow, LifeBuoy, BookOpen, Eye, Target];
+const ICONS = [TbBuildingFactory2, TbRoute, TbLifebuoy, TbBook2, TbEye, TbTarget];
 
 export default function BotWhyUs() {
   return (

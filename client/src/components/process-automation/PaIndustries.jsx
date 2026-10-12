@@ -57,7 +57,7 @@ export default function PaIndustries() {
                   </span>
                   <span className="pa-ind-plate pa-glass absolute inset-x-4 bottom-4 block rounded-2xl p-4 text-white">
                     <span className="block text-sm leading-relaxed text-white/85">{ind.line}</span>
-                    <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[#FB923C]">
+                    <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[#13D4D4]">
                       Explore {ind.label}
                       <ArrowUpRight size={15} aria-hidden="true" />
                     </span>

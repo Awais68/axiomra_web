@@ -66,7 +66,7 @@ export default function PaStats() {
               delay={i * 0.06}
               className="pa-glass-light flex items-center gap-3 rounded-2xl px-4 py-3"
             >
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-inverse text-[#FB923C]">
+              <span className="grid h-9 w-9 place-items-center rounded-xl bg-inverse text-[#13D4D4]">
                 <PaIcon name={b.icon} size={17} aria-hidden="true" />
               </span>
               <span>

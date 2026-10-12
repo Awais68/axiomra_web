@@ -12,7 +12,6 @@ import IndustriesTestimonials from "../components/industries/IndustriesTestimoni
 
 import Portfolio from "../sections/Portfolio";
 import FAQ from "../sections/FAQ";
-import Contact from "../sections/Contact";
 
 import Seo from "../seo/Seo";
 import { faqPageSchema, serviceSchema } from "../seo/schema";
@@ -68,7 +67,6 @@ export default function EnterpriseAiPage() {
       <EntWhyUs />
       <FAQ id="ent-faq" eyebrow="Enterprise AI, answered" items={faqs} />
       <EntCtaBand {...finalCta} />
-      <Contact flat />
     </div>
   );
 }

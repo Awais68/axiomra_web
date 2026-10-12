@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Hammer, Rocket, Search, ShieldCheck, TrendingUp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { TbRocket, TbShieldCheck, TbTool, TbTrendingUp, TbZoomQuestion } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import { Stagger, StaggerItem } from "../motion/Reveal";
 import { process } from "../../data/botAutomationData";
 
-const ICONS = [Search, Hammer, Rocket, TrendingUp];
+const ICONS = [TbZoomQuestion, TbTool, TbRocket, TbTrendingUp];
 
 /**
  * Four steps on a track. A connector draws itself across and a single
@@ -73,7 +74,7 @@ export default function BotProcess() {
           <ul className="grid gap-3 sm:grid-cols-2 md:gap-x-8">
             {process.guarantees.map((g) => (
               <li key={g} className="flex items-center gap-2.5 font-medium text-content">
-                <ShieldCheck size={19} className="shrink-0 text-accent" aria-hidden="true" />
+                <TbShieldCheck size={19} className="shrink-0 text-accent" aria-hidden="true" />
                 {g}
               </li>
             ))}

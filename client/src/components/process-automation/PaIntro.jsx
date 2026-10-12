@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Check, Timer } from "lucide-react";
+import { TbCircleCheck, TbClockBolt } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import { Reveal } from "../motion/Reveal";
 import PaTitle from "./PaTitle";
@@ -67,7 +67,7 @@ export default function PaIntro() {
             <p className="mt-6">
               <span className="pa-poly-float" aria-hidden="true">
                 <span className="flex h-full flex-col justify-center pl-4 pr-10 text-white">
-                  <Timer size={22} />
+                  <TbClockBolt size={22} />
                   <span className="mt-1.5 font-display text-sm font-semibold leading-tight">
                     {intro.badge}
                   </span>
@@ -96,7 +96,7 @@ export default function PaIntro() {
                   className="pa-glass flex items-start gap-3 rounded-2xl px-4 py-3.5 text-white/90"
                 >
                   <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#2DE8D5] text-[#04121A]">
-                    <Check size={12} strokeWidth={3} aria-hidden="true" />
+                    <TbCircleCheck size={12} strokeWidth={3} aria-hidden="true" />
                   </span>
                   {s}
                 </motion.li>

@@ -84,7 +84,7 @@ export const services = {
   items: [
     {
       id: "consulting",
-      icon: "Compass",
+      icon: "TbCompass",
       title: "BI Consulting",
       body:
         "An honest read of where your reporting stands and a roadmap to where it should be, " +
@@ -98,7 +98,7 @@ export const services = {
     },
     {
       id: "enterprise",
-      icon: "Building2",
+      icon: "TbBuilding",
       title: "Enterprise BI",
       body:
         "Governed, organisation-wide reporting with one semantic layer, role-based access and " +
@@ -112,7 +112,7 @@ export const services = {
     },
     {
       id: "warehousing",
-      icon: "Database",
+      icon: "TbDatabase",
       title: "Data Warehousing & ETL",
       body:
         "A modern warehouse or lakehouse fed by tested, documented pipelines, so every report " +
@@ -126,7 +126,7 @@ export const services = {
     },
     {
       id: "support",
-      icon: "LifeBuoy",
+      icon: "TbLifebuoy",
       title: "BI Support & Maintenance",
       body:
         "Ongoing care for dashboards, models and pipelines: failures caught before your users " +
@@ -140,7 +140,7 @@ export const services = {
     },
     {
       id: "analytics",
-      icon: "BarChart3",
+      icon: "TbChartBar",
       title: "Data Analytics",
       body:
         "Analysts who answer the question behind the request: cohort, funnel and margin analysis " +
@@ -154,7 +154,7 @@ export const services = {
     },
     {
       id: "implementation",
-      icon: "Rocket",
+      icon: "TbRocket",
       title: "BI Implementation",
       body:
         "End-to-end rollout of Power BI, Tableau, Looker or an open-source stack, on-premise or " +
@@ -168,7 +168,7 @@ export const services = {
     },
     {
       id: "migration",
-      icon: "ArrowRightLeft",
+      icon: "TbArrowsExchange",
       title: "BI Migration & Modernization",
       body:
         "Move from legacy reporting, spreadsheets or an ageing BI tool to a modern stack without " +
@@ -182,7 +182,7 @@ export const services = {
     },
     {
       id: "predictive",
-      icon: "TrendingUp",
+      icon: "TbTrendingUp",
       title: "Predictive Analytics",
       body:
         "Forecasting and machine learning built into the dashboards your team already opens: " +
@@ -196,7 +196,7 @@ export const services = {
     },
     {
       id: "extraction",
-      icon: "FileScan",
+      icon: "TbFileSearch",
       title: "Data Extraction",
       body:
         "OCR and document parsing that pulls structured data out of PDFs, invoices, forms, emails " +
@@ -210,7 +210,7 @@ export const services = {
     },
     {
       id: "scraping",
-      icon: "Globe",
+      icon: "TbWorld",
       title: "Web Scraping",
       body:
         "Scheduled collection of public web data, such as prices, listings and reviews, cleaned " +
@@ -225,7 +225,7 @@ export const services = {
     },
     {
       id: "self-service",
-      icon: "MousePointerClick",
+      icon: "TbPointer",
       title: "Self-Service BI",
       body:
         "Curated datasets and training so business users build their own reports safely, " +
@@ -250,28 +250,28 @@ export const pipeline = {
   stages: [
     {
       id: "sources",
-      icon: "Layers",
+      icon: "TbLayersIntersect",
       title: "Sources",
       line: "CRM, ERP, spreadsheets and APIs, connected where they live.",
       chips: ["CRM", "ERP", "Sheets", "APIs"],
     },
     {
       id: "warehouse",
-      icon: "Database",
+      icon: "TbDatabase",
       title: "Warehouse",
       line: "Everything lands in one governed store, refreshed on a schedule you set.",
       chips: ["Snowflake", "BigQuery", "Lakehouse"],
     },
     {
       id: "model",
-      icon: "Sparkles",
+      icon: "TbFilterCog",
       title: "Model & Clean",
       line: "Duplicates removed, definitions agreed, tests on every metric.",
       chips: ["dbt", "Tests", "Semantic layer"],
     },
     {
       id: "dashboard",
-      icon: "LayoutDashboard",
+      icon: "TbLayoutDashboard",
       title: "Dashboard",
       line: "Decision-ready views for every role, with forecasts built in.",
       chips: ["KPIs", "Forecasts", "Alerts"],
@@ -578,21 +578,21 @@ export const whyUs = {
   // TODO: client review (card copy)
   cards: [
     {
-      icon: "Layers3",
+      icon: "TbStack3",
       title: "Deep BI expertise across industries",
       body:
         `Engineers and analysts who have shipped data products in ${companyStats.industries} ` +
         "industries, from clinical reporting to retail forecasting.",
     },
     {
-      icon: "ShieldCheck",
+      icon: "TbShieldCheck",
       title: `${companyStats.supportDays}-day post-launch support`,
       body:
         `${companyStats.supportDays} days of fixes, tuning and small changes after go-live, ` +
         "at no extra cost.",
     },
     {
-      icon: "GraduationCap",
+      icon: "TbSchool",
       title: "Free team training",
       body:
         "Role-based training for report builders and viewers, so adoption does not stall " +

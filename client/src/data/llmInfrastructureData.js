@@ -88,42 +88,42 @@ export const outgrown = {
   introImage: { src: chip800, alt: "A processor chip lit against a dark background" },
   pains: [
     {
-      icon: "ShieldAlert",
+      icon: "TbShieldLock",
       title: "Data Privacy Risk",
       body:
         "Every prompt sent to a public endpoint leaves your network. For patient records, " +
         "financials, contracts or strategy documents, that is not an acceptable default.",
     },
     {
-      icon: "Scale",
+      icon: "TbScale",
       title: "Compliance Exposure",
       body:
         "GDPR, HIPAA, SOC 2 and sector rules demand data residency and access control that " +
         "shared public APIs rarely give you out of the box.",
     },
     {
-      icon: "TrendingUp",
+      icon: "TbTrendingUp",
       title: "Unpredictable Costs",
       body:
         "Per-token pricing feels cheap at pilot volume. At enterprise volume it compounds. " +
         "Owned infrastructure turns that into a fixed, forecastable line item.",
     },
     {
-      icon: "Link2",
+      icon: "TbLockAccess",
       title: "Vendor Lock-In",
       body:
         "When one provider's price change, rate limit or policy update can stall your " +
         "product, your roadmap is not really yours. Private infrastructure gives it back.",
     },
     {
-      icon: "Timer",
+      icon: "TbClockBolt",
       title: "Latency On Critical Paths",
       body:
         "Round trips to an external API add latency to every AI-powered step. Inference " +
         "close to your data and users is measurably faster for real-time workflows.",
     },
     {
-      icon: "SlidersHorizontal",
+      icon: "TbAdjustmentsHorizontal",
       title: "No Control Over Model Behaviour",
       body:
         "Hosted models are updated on the provider's schedule. On your own stack you choose " +
@@ -520,17 +520,17 @@ export const whyUs = {
   introImage: { src: archive800, alt: "Rolling archive shelving units in a records room" },
   pillars: [
     {
-      icon: "Rocket",
+      icon: "TbRocket",
       title: "Built For Production, Not Demos",
       body: "A working notebook is not a system. Every engagement ships with evaluation, monitoring, rollback and a documented handoff, because that is where most enterprise AI stalls.",
     },
     {
-      icon: "Layers",
+      icon: "TbStack2",
       title: "One Team, The Full Stack",
       body: "Most vendors own one layer. We cover data architecture, model selection, deployment, serving and operations, so you never coordinate three suppliers to ship one system.",
     },
     {
-      icon: "LifeBuoy",
+      icon: "TbLifebuoy",
       title: "Engaged After Go-Live",
       body: "Structured post-launch support: monitoring, re-evaluation against your golden set and proactive recommendations when performance signals change.",
     },

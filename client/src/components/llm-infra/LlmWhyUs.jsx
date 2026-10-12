@@ -1,10 +1,10 @@
-import { LifeBuoy, Layers, Rocket } from "lucide-react";
+import { TbLifebuoy, TbRocket, TbStack2 } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import { Reveal, Stagger, StaggerItem } from "../motion/Reveal";
 import LlmTitle from "./LlmTitle";
 import { whyUs } from "../../data/llmInfrastructureData";
 
-const ICONS = { Rocket, Layers, LifeBuoy };
+const ICONS = { TbRocket, TbStack2, TbLifebuoy };
 
 // Same blob as public/shapes/llm-blob.svg (which shape-outside reads), cut out
 // of the unit square. evenodd turns "square + blob" into "square minus blob".

@@ -1,6 +1,6 @@
 import { useId } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { Check } from "lucide-react";
+import { TbCircleCheck } from "react-icons/tb";
 import SectionHeading from "../SectionHeading";
 import { Reveal } from "../motion/Reveal";
 import PaIcon from "./PaIcon";
@@ -30,7 +30,7 @@ const BLOB_100 =
 function RowHeader({ item, index }) {
   return (
     <div className="flex items-center gap-4">
-      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-inverse text-[#FB923C]">
+      <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-inverse text-[#13D4D4]">
         <PaIcon name={item.icon} size={22} aria-hidden="true" />
       </span>
       <span className="font-mono text-sm tracking-[0.2em] text-content-faint">
@@ -48,7 +48,7 @@ function Points({ points }) {
           key={p}
           className="pa-glass-light inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm text-content"
         >
-          <Check size={14} strokeWidth={3} aria-hidden="true" className="text-pa-accent" />
+          <TbCircleCheck size={14} strokeWidth={3} aria-hidden="true" className="text-pa-accent" />
           {p}
         </li>
       ))}

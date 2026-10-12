@@ -91,7 +91,7 @@ export default function PaCtaBand({
             <ol className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-3">
               {steps.map((s, i) => (
                 <li key={s.title} className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <span className="font-mono text-sm text-[#FB923C]">
+                  <span className="font-mono text-sm text-[#13D4D4]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <p className="mt-2 font-semibold text-white">{s.title}</p>
@@ -107,7 +107,7 @@ export default function PaCtaBand({
           target="_blank"
           rel="noopener noreferrer"
           className={`group mt-8 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold transition-transform hover:-translate-y-0.5 focus-ring md:text-lg ${
-            dark ? "bg-[#FB923C] text-[#1A0D02]" : "bg-inverse text-inverse-fg"
+            dark ? "bg-[#13D4D4] text-[#1A0D02]" : "bg-inverse text-inverse-fg"
           }`}
         >
           {buttonText}

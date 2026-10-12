@@ -1,8 +1,41 @@
 import { useId, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { TbChartDots3 } from "react-icons/tb";
+import BrandIcon from "../tech/BrandIcon";
 import { Reveal } from "../motion/Reveal";
 import DsTitle from "./DsTitle";
 import { techStack } from "../../data/dataScienceData";
+
+const TOOL_SLUGS = {
+  Python: "python",
+  "scikit-learn": "scikitlearn",
+  PyTorch: "pytorch",
+  TensorFlow: "tensorflow",
+  "Hugging Face": "huggingface",
+  MLflow: "mlflow",
+  "Apache Spark": "apachespark",
+  Airflow: "apacheairflow",
+  dbt: "dbt",
+  Kafka: "apachekafka",
+  Pandas: "pandas",
+  PostgreSQL: "postgresql",
+  MongoDB: "mongodb",
+  Snowflake: "snowflake",
+  Databricks: "databricks",
+  Docker: "docker",
+  Kubernetes: "kubernetes",
+};
+
+function ToolIcon({ name }) {
+  const slug = TOOL_SLUGS[name];
+  if (slug) return <BrandIcon name={name} slug={slug} size={24} tile />;
+
+  return (
+    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-white text-[rgb(var(--ds-accent))] shadow-[0_1px_2px_rgba(15,23,41,0.12)] ring-1 ring-black/5">
+      <TbChartDots3 size={20} aria-hidden="true" />
+    </span>
+  );
+}
 
 /** Tech stack: one glass card, a tab per tool group, chips that cascade in. */
 export default function DsTechStack() {
@@ -98,10 +131,7 @@ export default function DsTechStack() {
                     transition={{ duration: 0.3 }}
                     className="flex items-center gap-2.5 rounded-2xl border border-line bg-surface-card px-5 py-3 text-base font-medium text-content"
                   >
-                    <span
-                      className="h-2 w-2 rounded-full bg-[rgb(var(--ds-accent))]"
-                      aria-hidden="true"
-                    />
+                    <ToolIcon name={item} />
                     {item}
                   </motion.li>
                 ))}

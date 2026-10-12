@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Bot, SendHorizontal } from "lucide-react";
+import { TbMessageChatbot, TbSend2 } from "react-icons/tb";
 
 const TYPING_MS = 1300;
 const READ_MS = 1500;
@@ -57,7 +57,7 @@ export default function HeroChatWindow({ conversation, className = "" }) {
     >
       <div className="flex items-center gap-3 border-b border-white/10 px-5 py-4">
         <span className="grid h-10 w-10 place-items-center rounded-full bg-accent-vivid text-on-accent">
-          <Bot size={20} aria-hidden="true" />
+          <TbMessageChatbot size={20} aria-hidden="true" />
         </span>
         <div className="leading-tight">
           <p className="text-sm font-semibold text-white">Support Assistant</p>
@@ -107,7 +107,7 @@ export default function HeroChatWindow({ conversation, className = "" }) {
       >
         <span className="flex-1 truncate text-sm text-white/40">Ask anything…</span>
         <span className="grid h-9 w-9 place-items-center rounded-full bg-white/10 text-accent-vivid">
-          <SendHorizontal size={16} />
+          <TbSend2 size={16} />
         </span>
       </div>
     </div>

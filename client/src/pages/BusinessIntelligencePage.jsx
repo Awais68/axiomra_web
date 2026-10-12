@@ -15,7 +15,6 @@ import GradientCTA from "../components/GradientCTA";
 import Awards from "../sections/Awards";
 import Portfolio from "../sections/Portfolio";
 import FAQ from "../sections/FAQ";
-import Contact from "../sections/Contact";
 
 import Seo from "../seo/Seo";
 import { faqPageSchema, serviceSchema } from "../seo/schema";
@@ -67,7 +66,6 @@ export default function BusinessIntelligencePage() {
       <IndustriesTestimonials data={biTestimonials} flat />
       <GradientCTA title={cta.title} subtitle={cta.subtitle} buttonText={cta.buttonText} />
       <FAQ id="bi-faq" eyebrow="Business intelligence, answered" items={faqs} />
-      <Contact flat />
     </div>
   );
 }

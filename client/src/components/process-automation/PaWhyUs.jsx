@@ -22,7 +22,7 @@ export default function PaWhyUs() {
             >
               {/* Octagon badge cut with clip-path; turns a notch on hover. */}
               <span
-                className="grid h-14 w-14 place-items-center bg-inverse text-[#FB923C] transition-transform duration-500 group-hover:rotate-45"
+                className="grid h-14 w-14 place-items-center bg-inverse text-[#13D4D4] transition-transform duration-500 group-hover:rotate-45"
                 style={{
                   clipPath:
                     "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
