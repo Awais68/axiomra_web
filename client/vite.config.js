@@ -4,7 +4,7 @@ import path from "path";
 import { visualizer } from "rollup-plugin-visualizer";
 import compression from "vite-plugin-compression";
 
-export default defineConfig(({ command, mode, isSsrBuild }) => {
+export default defineConfig(({ command, mode }) => {
   // VITE_API_URL is inlined at build time, so a build without it would ship a
   // contact form that posts to nowhere. Fail the build instead. The dev server
   // alone gets the local API as a default.
@@ -44,28 +44,25 @@ export default defineConfig(({ command, mode, isSsrBuild }) => {
       },
     },
     build: {
-      // dist/.vite/manifest.json maps each page to its chunks, for the
-      // prerender's modulepreload links. The prerender deletes it afterwards.
-      manifest: !isSsrBuild,
-      // three.js alone clears the default 500 kB warning, and it is already
-      // isolated in its own lazily-loaded chunk.
-      chunkSizeWarningLimit: 900,
+      target: "es2020",
+      manifest: true,
+      cssCodeSplit: true,
+      chunkSizeWarningLimit: 800,
+
       rollupOptions: {
         output: {
-          // The prerender's server bundle (scripts/prerender.mjs) needs no
-          // cache-friendly chunking.
-          manualChunks: isSsrBuild
-            ? undefined
-            : {
-                // Rarely changes, so it stays cached across deploys.
-                "react-vendor": ["react", "react-dom", "react-router-dom"],
-                // Kept out of the entry chunk so a copy tweak does not invalidate it.
-                "motion-vendor": ["framer-motion"],
-                // Separate from framer-motion: only industry, portfolio and NLP
-                // pages use GSAP, and grouping the two made every home-page visit
-                // preload it.
-                gsap: ["gsap", "gsap/ScrollTrigger"],
-              },
+          manualChunks(id) {
+            if (!id.includes("node_modules")) return;
+            if (/node_modules\/gsap\//.test(id)) return "gsap";
+            if (/node_modules\/(framer-motion|motion|motion-dom|motion-utils)\//.test(id))
+              return "motion-vendor";
+            if (
+              /node_modules\/(react|react-dom|scheduler|react-router|react-router-dom|@remix-run)\//.test(
+                id
+              )
+            )
+              return "react-vendor";
+          },
         },
       },
     },
