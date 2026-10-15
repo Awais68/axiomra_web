@@ -14,7 +14,7 @@ export const DEFAULT_DESCRIPTION =
 
 // 1200x630 site-wide share image. Pages with their own image (case studies)
 // pass it in instead.
-export const DEFAULT_OG_IMAGE = "/og/default.jpg";
+export const DEFAULT_OG_IMAGE = "/og/header.jpg";
 
 export const TWITTER_HANDLE = "@Axiomra_co";
 
